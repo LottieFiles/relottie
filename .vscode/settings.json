@@ -1,0 +1,49 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+
+  // Eslint config
+  "eslint.runtime": "node",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "graphql"],
+
+  "files.associations": {
+    // Treat .json files as JSON-with-comments type
+    "*.json": "jsonc"
+  },
+
+  // Glob patterns for files to hide in file explorer
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+
+  // Glob patterns for excluding from file watching.
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/.history/**": true,
+    "**/.next/**": true,
+    "**/.swc/**": true,
+    "**/artifacts/**": true,
+    "**/dist/**": true,
+    "**/dist-storybook/**": true,
+    "**/build/**": true,
+    "**/node_modules/**": true,
+    "**/temp/**": true,
+    "**/tmp/**": true,
+    "**/coverage/**": true
+  },
+
+  // Jest config
+  "jest.autoRun": "off",
+  "jest.jestCommandLine": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+
+  // Typescript
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": true
+}

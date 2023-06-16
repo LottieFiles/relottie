@@ -1,0 +1,36 @@
+{
+  // See http://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    // Intelligent code complete
+    "visualstudioexptteam.vscodeintellicode",
+
+    // ESLint integration
+    "dbaeumer.vscode-eslint",
+
+    // Prettier integration
+    "esbenp.prettier-vscode",
+
+    // Editorconfig integration
+    "editorconfig.editorconfig",
+
+    // Jest integration
+    "Orta.vscode-jest",
+
+    // Use Github styling with Mermaid support in Markdown preview
+    "bierner.github-markdown-preview",
+    "bierner.markdown-mermaid",
+
+    // Remark integration
+    "unifiedjs.vscode-remark",
+
+    // Categorize and highlight comments
+    "aaron-bond.better-comments",
+
+    // Realtime debugging
+    "hediet.realtime-debugging",
+
+    // Add inline parameter annotations
+    "liamhammett.inline-parameters"
+  ]
+}
