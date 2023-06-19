@@ -146,6 +146,45 @@ importers:
       unified: 10.1.2
       vfile-reporter: 7.0.4
 
+  packages/relottie-stringify:
+    specifiers:
+      '@jest/globals': 28.1.3
+      '@lottiefiles/jest-config': 1.0.0
+      '@lottiefiles/last': workspace:*
+      '@lottiefiles/last-builder': workspace:*
+      '@lottiefiles/lottie-types': 1.2.0
+      '@lottiefiles/relottie-parse': workspace:*
+      '@types/jest': 28.1.6
+      '@types/lodash.merge': 4.6.7
+      '@types/node': 18.0.4
+      '@types/unist': 2.0.6
+      esbuild: 0.14.49
+      ts-node: 10.9.1
+      tsup: 6.1.3
+      typescript: 4.7.4
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
+      vfile: 5.3.7
+    dependencies:
+      '@lottiefiles/last': link:../last
+    devDependencies:
+      '@jest/globals': 28.1.3
+      '@lottiefiles/jest-config': 1.0.0_esbuild@0.14.49
+      '@lottiefiles/last-builder': link:../last-builder
+      '@lottiefiles/lottie-types': 1.2.0
+      '@lottiefiles/relottie-parse': link:../relottie-parse
+      '@types/jest': 28.1.6
+      '@types/lodash.merge': 4.6.7
+      '@types/node': 18.0.4
+      '@types/unist': 2.0.6
+      esbuild: 0.14.49
+      ts-node: 10.9.1_2zqz24ol5yhbv2blv4fh7akzrq
+      tsup: 6.1.3_6oasmw356qmm23djlsjgkwvrtm
+      typescript: 4.7.4
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
+      vfile: 5.3.7
+
   scripts:
     specifiers:
       zx: 7.0.7
@@ -15901,6 +15940,14 @@ packages:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
       unist-util-visit-parents: 4.1.1
+    dev: true
+
+  /unist-util-visit/4.1.1:
+    resolution: {integrity: sha512-n9KN3WV9k4h1DxYR1LoajgN93wpEi/7ZplVe02IoB4gH5ctI1AaF2670BLHQYbwj+pY83gFtyeySFiyMHJklrg==}
+    dependencies:
+      '@types/unist': 2.0.6
+      unist-util-is: 5.2.1
+      unist-util-visit-parents: 5.1.3
     dev: true
 
   /unist-util-visit/4.1.2:
