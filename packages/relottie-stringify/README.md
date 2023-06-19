@@ -47,15 +47,13 @@ Any contributions are welcome.
 
 ## Acknowledgments
 
-- [unified][]
-- [momoa][]
-- [lottie-docs][lottie-docs]
+*   [unified][]
+*   [momoa][]
+*   [lottie-docs][lottie-docs]
 
 ## Legal
 
 [License](license) © [LottieFiles][lottiefiles]
-
-<!-- Definitions -->
 
 [last]: https://github.com/LottieFiles/relottie/tree/main/packages/last
 

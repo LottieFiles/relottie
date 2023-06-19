@@ -7,9 +7,9 @@ Command line interface to inspect and change Lottie files with **[relottie][relo
 *   [What is this?](#what-is-this)
 *   [When should I use this?](#when-should-i-use-this)
 *   [Install](#install)
-*   [Use](#use)
 *   [CLI](#cli)
 *   [Examples](#examples)
+*   [Example: config files (JSON, YAML, JS)](#example-config-files-json-yaml-js)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
 *   [Acknowledgments](#acknowledgments)
@@ -42,8 +42,6 @@ In Node.js (version 14.14+, or 16.0+), install with [npm][]:
 ```sh
 npm install @lottiefiles/relottie-cli
 ```
-
-## Use
 
 ## CLI
 
@@ -109,8 +107,6 @@ More information on all these options is available at
 
 ## Examples
 
-### Example: generating LAST tree on the CLI
-
 This example converts LottieJSON into Lottie AST [last][] with `relottie-cli`.
 It assumes you’re in a Node.js package.
 
@@ -134,7 +130,7 @@ Now, add an npm script in your `package.json`:
 
 Observe that the above change adds a `relottie` plugins script, which can be run with
 `npm run generate:last`.
-It runs relottie on all lottie files under (`lottie-animation`) directory 
+It runs relottie on all lottie files under (`lottie-animation`) directory
 (it's better to specify the folder because Lottie files are JSON format) and rewrites them (`--output`).
 
 Run `./node_modules/.bin/relottie --help` for more info on the CLI.
@@ -251,13 +247,11 @@ By interacting with this repository, organization, or community you agree to abi
 
 ## Acknowledgments
 
-- [remark-cli][]
+*   [remark-cli][]
 
 ## License
 
 [License](./LICENSE) © [LottieFiles][]
-
-<!-- Definitions -->
 
 [license]: https://github.com/relottiejs/relottie/blob/main/license
 

@@ -8,9 +8,7 @@
 *   [When should I use this?](#when-should-i-use-this)
 *   [Install](#install)
 *   [API](#api)
-    *   [`(relottie)`](#relottie)
 *   [Examples](#examples)
-    *   [Example: passing options](#example-passing-options)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
@@ -41,7 +39,7 @@ output is not Lottie (you don’t need `relottie-stringify`), it’s recommended
 use unified directly.
 
 When you want to inspect and format Lottie files in a project on the command
-line, you can use [`relottie-cli`][relottie-cli].
+line, you can use \[`relottie-cli`]\[relottie-cli].
 
 ## Install
 
@@ -63,8 +61,6 @@ Create a new (unfrozen) `unified` processor that already uses `relottie-parse` a
 See [`unified`][unified] for more information.
 
 ## Examples
-
-### Example: passing options
 
 When you use `relottie-parse` and `relottie-stringify` manually you can pass
 options to `use`.
@@ -140,24 +136,30 @@ abide by its terms.
 
 ## Start
 
-1. `pnpm install`
-2. `pnpm ts-node playground.ts` for testing playground environment (if you are in the root folder you have to enter the package directory `cd packages/relottie`)
-3. for testing `pnpm test`
+1.  `pnpm install`
+2.  `pnpm ts-node playground.ts` for testing playground environment (if you are in the root folder you have to enter the package directory `cd packages/relottie`)
+3.  for testing `pnpm test`
 
 ## Legal
 
 [License](license) © [LottieFiles][lottiefiles]
 
-<!-- Definitions -->
-
 [lottiefiles]: https://github.com/LottieFiles
+
 [relottie]: https://github.com/LottieFiles/relottie
+
 [relottie-parse]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-parse
+
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
+
 [last]: https://github.com/LottieFiles/relottie/tree/main/packages/last
+
 [lottie-docs]: https://lottiefiles.github.io/lottie-docs/
 
 [npm]: https://docs.npmjs.com/cli/install
+
 [unified]: https://github.com/unifiedjs/unified
+
 [processor]: https://github.com/unifiedjs/unified#processor
+
 [typescript]: https://www.typescriptlang.org

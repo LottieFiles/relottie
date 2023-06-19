@@ -98,8 +98,6 @@ const output = rt([
 
 [License](license) © [LottieFiles][]
 
-<!-- Definitions -->
-
 [last]: https://github.com/LottieFiles/relottie/tree/main/packages/last
 
 [LottieFiles]: https://github.com/LottieFiles

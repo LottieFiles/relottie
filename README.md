@@ -4,8 +4,8 @@
 
 ## Feature highlights
 
-* [x] **[ASTs][syntax-tree]** (inspecting and changing content made easy)
-* [x] **[plugins][]** (plugins you can pick and choose from)
+*   \[x] **[ASTs][syntax-tree]** (inspecting and changing content made easy)
+*   \[x] **[plugins][]** (plugins you can pick and choose from)
 
 ## Intro
 
@@ -18,7 +18,7 @@ You can use the existing plugins or you can make your own.
 *   to learn Lottie, see this [lottie-docs][] and [what-is-lottie][]
 *   for more about us, see [lottiefiles][]
 *   for help, see [contribute][]
-*   for more about [unified][], see [unifiedjs.com][] 
+*   for more about [unified][], see [unifiedjs.com][]
 
 ## Contents
 
@@ -129,7 +129,7 @@ relottie plugins too.
 
 ## Examples
 
-- todo
+*   todo
 
 ## Syntax
 
@@ -205,45 +205,33 @@ As last properties can have [expressions][], and improper use of **last** can op
 
 ## Setting up Monorepo
 
-```
-git clone https://github.com/LottieFiles/relottie.git
+    git clone https://github.com/LottieFiles/relottie.git
 
-cd relottie
+    cd relottie
 
-pnpm install
-```
+    pnpm install
 
 ### Running in dev mode
 
-```
-pnpm dev
-```
+    pnpm dev
 
 ### Running test suite
 
-```
-pnpm test
-```
+    pnpm test
 
 ### Add a changelog message
 
 We use [changeset][]
 
-```
-pnpm changelog
-```
+    pnpm changelog
 
 ### Building
 
-```
-pnpm build
-```
+    pnpm build
 
 ### Linting
 
-```
-pnpm lint
-```
+    pnpm lint
 
 ## Contribute
 
@@ -251,14 +239,14 @@ Any contributions are welcome.
 
 ## Community & Support
 
-- [Github issues][issues]. For bugs and errors you encounter using this player.
-- [Discord][lf-discord]. For hanging out with the community and sharing your awesome Lottie animations!
+*   [Github issues][issues]. For bugs and errors you encounter using this player.
+*   [Discord][lf-discord]. For hanging out with the community and sharing your awesome Lottie animations!
 
 ## Acknowledgments
 
-- [unified][]
-- [momoa][]
-- [lottie-docs][]
+*   [unified][]
+*   [momoa][]
+*   [lottie-docs][]
 
 The initial release of this project was authored by
 [**@aidosmf**][author]
@@ -266,9 +254,6 @@ The initial release of this project was authored by
 ## License
 
 [MIT](license) © [LottieFiles][lottiefiles]
-
-
-<!-- Definitions -->
 
 [author]: http://github.com/aidosmf
 
@@ -317,7 +302,7 @@ The initial release of this project was authored by
 [lf-discord]: https://discord.com/invite/6K3fm7yE9v
 
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
- 
+
 [syntax]: #syntax
 
 [syntax-tree]: #syntax-tree

@@ -140,15 +140,13 @@ Any contributions are welcome.
 
 ## Acknowledgments
 
-- [unified][]
-- [momoa][]
-- [lottie-docs][]
+*   [unified][]
+*   [momoa][]
+*   [lottie-docs][]
 
 ## License
 
 [License](license) © [LottieFiles][lottiefiles]
-
-<!-- Definitions -->
 
 [unified]: https://github.com/unifiedjs/unified
 
@@ -165,21 +163,25 @@ Any contributions are welcome.
 [list-of-plugins]: https://github.com/LottieFiles/relottie/tree/main/packages
 
 [relottie]: https://github.com/LottieFiles/relottie
+
 [last]: https://github.com/LottieFiles/relottie/tree/main/packages/last
+
 [last-builder]: https://github.com/LottieFiles/relottie/tree/main/packages/last-builder
+
 [relottie-parse]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-parse
+
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
+
 [dotLottie.js]: https://github.com/dotlottie/dotlottie-js
+
 [lottie-docs]: https://lottiefiles.github.io/lottie-docs/
 
 [expressions]: https://lottiefiles.github.io/lottie-docs/expressions/#expressions
 
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
- 
+
 [syntax]: #syntax
 
 [syntax-tree]: #syntax-tree
-
-[plugins]: #plugins
 
 [contribute]: #contribute
