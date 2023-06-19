@@ -1,0 +1,60 @@
+{
+  "name": "@lottiefiles/last-builder",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Composable functions to easily build last structures",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LottieFiles/relottie.git",
+    "directory": "packages/last-builder"
+  },
+  "homepage": "https://github.com/LottieFiles/relottie#readme",
+  "bugs": "https://github.com/LottieFiles/relottie/issues",
+  "author": "LottieFiles",
+  "contributors": [
+    "Aidos Sabit <https://github.com/Aidosmf>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "unified",
+    "relottie",
+    "lottie",
+    "last",
+    "lottie-ast",
+    "ast",
+    "builder",
+    "dotlottie"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint --fix .",
+    "stats:eslint": "cross-env TIMING=1 eslint .",
+    "stats:ts": "tsc -p tsconfig.build.json --extendedDiagnostics",
+    "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
+    "test:coverage": "cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --coverage",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lottiefiles/last": "workspace:*",
+    "unist-builder": "3.0.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "28.1.3",
+    "@lottiefiles/jest-config": "1.0.0",
+    "@lottiefiles/lottie-types": "1.2.0",
+    "@types/jest": "28.1.6",
+    "@types/unist": "2.0.6",
+    "esbuild": "0.14.49",
+    "tsup": "6.1.3",
+    "typescript": "4.7.4"
+  }
+}
