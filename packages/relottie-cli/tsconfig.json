@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.dev.json",
+
+  "compilerOptions": {
+    "resolveJsonModule": true
+  },
+
+  "include": ["*.js"]
+}
