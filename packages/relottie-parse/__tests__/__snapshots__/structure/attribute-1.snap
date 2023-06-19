@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse() fixtures structure Test in attribute-1.json should parse correctly 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "primitive",
+          "value": "5.5.7",
+          "valueType": "string",
+        },
+      ],
+      "key": "v",
+      "title": "version",
+      "type": "attribute",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "type": "primitive",
+          "value": 0,
+          "valueType": "number",
+        },
+      ],
+      "key": "ip",
+      "title": "in-point",
+      "type": "attribute",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "type": "primitive",
+          "value": false,
+          "valueType": "boolean",
+        },
+      ],
+      "key": "c",
+      "title": "custom",
+      "type": "attribute",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "type": "primitive",
+          "value": null,
+          "valueType": "null",
+        },
+      ],
+      "key": "empty",
+      "title": "custom",
+      "type": "attribute",
+    },
+  ],
+  "hasExpressions": false,
+  "title": "animation",
+  "type": "root",
+}
+`;

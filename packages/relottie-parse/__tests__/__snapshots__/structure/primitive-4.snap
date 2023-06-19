@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse() fixtures structure Test in primitive-4.json should parse correctly 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "type": "primitive",
+                          "value": "text",
+                          "valueType": "string",
+                        },
+                        Object {
+                          "type": "primitive",
+                          "value": 0,
+                          "valueType": "number",
+                        },
+                        Object {
+                          "type": "primitive",
+                          "value": true,
+                          "valueType": "boolean",
+                        },
+                        Object {
+                          "type": "primitive",
+                          "value": null,
+                          "valueType": "null",
+                        },
+                      ],
+                      "title": "custom-children",
+                      "type": "array",
+                    },
+                  ],
+                  "key": "item2",
+                  "title": "custom",
+                  "type": "collection",
+                },
+              ],
+              "title": "custom",
+              "type": "object",
+            },
+          ],
+          "title": "custom-children",
+          "type": "array",
+        },
+      ],
+      "key": "item",
+      "title": "custom",
+      "type": "collection",
+    },
+  ],
+  "hasExpressions": false,
+  "title": "animation",
+  "type": "root",
+}
+`;

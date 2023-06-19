@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse() fixtures structure Test in attribute-3.json should parse correctly 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "type": "primitive",
+                              "value": "5.5.7",
+                              "valueType": "string",
+                            },
+                          ],
+                          "key": "v",
+                          "title": "custom",
+                          "type": "attribute",
+                        },
+                        Object {
+                          "children": Array [
+                            Object {
+                              "type": "primitive",
+                              "value": 0,
+                              "valueType": "number",
+                            },
+                          ],
+                          "key": "ip",
+                          "title": "custom",
+                          "type": "attribute",
+                        },
+                        Object {
+                          "children": Array [
+                            Object {
+                              "type": "primitive",
+                              "value": false,
+                              "valueType": "boolean",
+                            },
+                          ],
+                          "key": "c",
+                          "title": "custom",
+                          "type": "attribute",
+                        },
+                        Object {
+                          "children": Array [
+                            Object {
+                              "type": "primitive",
+                              "value": null,
+                              "valueType": "null",
+                            },
+                          ],
+                          "key": "empty",
+                          "title": "custom",
+                          "type": "attribute",
+                        },
+                      ],
+                      "title": "custom-children",
+                      "type": "object",
+                    },
+                  ],
+                  "key": "name",
+                  "title": "custom",
+                  "type": "element",
+                },
+              ],
+              "title": "custom",
+              "type": "object",
+            },
+          ],
+          "title": "custom-children",
+          "type": "array",
+        },
+      ],
+      "key": "item",
+      "title": "custom",
+      "type": "collection",
+    },
+  ],
+  "hasExpressions": false,
+  "title": "animation",
+  "type": "root",
+}
+`;

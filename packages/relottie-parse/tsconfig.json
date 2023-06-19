@@ -1,0 +1,16 @@
+{
+  // Extend from the build config
+  "extends": "../../tsconfig.dev.json",
+
+  // Compiler options
+  "compilerOptions": {
+    "typeRoots": ["./types", "./node_modules/@types"]
+  },
+
+  "ts-node": {
+    "esm": true
+  },
+
+  // extra
+  "include": ["./src", "./types"]
+}
