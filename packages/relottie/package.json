@@ -20,7 +20,8 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./*": "./dist/*.js"
+    "./*": "./dist/*.js",
+    "./package.json": "./package.json"
   },
   "typesVersions": {
     "*": {
