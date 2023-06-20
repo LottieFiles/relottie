@@ -13,7 +13,7 @@ module.exports = defineConfig({
   metafile: false,
   minify: true,
   outDir: 'dist',
-  platform: 'node',
+  platform: 'neutral',
   sourcemap: true,
   splitting: false,
   target: ['es2020', 'node18'],
