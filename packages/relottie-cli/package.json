@@ -40,20 +40,15 @@
     "build": "tsup",
     "lint": "eslint --fix .",
     "stats:eslint": "cross-env TIMING=1 eslint .",
-    "stats:ts": "tsc -p tsconfig.build.json --extendedDiagnostics",
-    "test": "node --conditions development test.js",
-    "test:coverage": "cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --coverage",
-    "type-check": "tsc --noEmit"
+    "test": "node --conditions development test.js"
   },
   "dependencies": {
     "@lottiefiles/relottie": "workspace:*",
     "unified-args": "10.0.0"
   },
   "devDependencies": {
-    "@types/tape": "^4.0.0",
-    "execa": "^6.0.0",
-    "tape": "^5.0.0",
-    "tsup": "6.1.3",
-    "typescript": "4.7.4"
+    "execa": "6.0.0",
+    "tape": "5.0.0",
+    "tsup": "6.1.3"
   }
 }
