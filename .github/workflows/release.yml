@@ -3,6 +3,7 @@ name: Release
 on:
   push:
     branches: [main]
+  pull_request:
 
 jobs:
   release:
@@ -28,6 +29,8 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
+          registry-url: https://npm.pkg.github.com/
+          scope: "@lottiefiles"
 
       - name: 📥 Install dependencies
         run: pnpm install
