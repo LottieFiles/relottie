@@ -15,21 +15,21 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - name: Checkout
+      - name: ⬇️ Checkout
         uses: actions/checkout@v2
 
-      - name: Setup pnpm
+      - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7.x
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: ⎔ Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
+      - name: 📥 Install dependencies
         run: pnpm install
 
       - name: Setup npmrc (NPM)
@@ -37,7 +37,7 @@ jobs:
           echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPMJS_TOKEN }}" >> ~/.npmrc
 
-      - name: Release to NPM
+      - name: 🚀 Release to NPM
         uses: changesets/action@v1
         with:
           commit: 'chore: update versions'
@@ -53,7 +53,7 @@ jobs:
           rm -rf ~/.npmrc
           rm -rf .npmrc
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: ⎔ Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           cache: 'pnpm'
@@ -64,7 +64,7 @@ jobs:
           echo "@lottiefiles:registry=https://npm.pkg.github.com/" >> ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
 
-      - name: Release to Github Packages
+      - name: 🚀 Release to Github Packages
         uses: changesets/action@v1
         with:
           commit: 'chore: update versions'
