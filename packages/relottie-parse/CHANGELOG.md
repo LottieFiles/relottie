@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-parse
 
+## 1.0.1
+
+### Patch Changes
+
+- a4e9867: feat: add extraCompositions child node titles
+
 ## 1.0.0
 
 ### Major Changes
