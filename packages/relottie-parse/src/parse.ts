@@ -2,7 +2,7 @@
  * Copyright 2022 Design Barn Inc.
  */
 
-import { parse as jsonParse, traverse as jsontraverse } from '@humanwhocodes/momoa';
+import { parse as jsonParse, traverse as jsonTraverse } from '@humanwhocodes/momoa';
 import type {
   ArrayNode,
   Collection,
@@ -538,7 +538,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   const info: Info = { hasExpressions: false };
 
-  jsontraverse(jsonAst, {
+  jsonTraverse(jsonAst, {
     enter(node: Momoa.AstNode, parent: Momoa.AstParent) {
       traverseJsonEnter(node, parent, lastStack, file, options);
     },

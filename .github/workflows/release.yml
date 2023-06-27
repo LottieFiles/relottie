@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     name: Release
-
+    if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -29,6 +29,8 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
+          scope: '@lottiefiles'
+          registry-url: 'https://npm.pkg.github.com/'
 
       - name: 📥 Install dependencies
         run: pnpm install
