@@ -834,6 +834,9 @@ export const objectEntity: NoKeyEntityMap = {
   [CT.textRanges]: {
     defaultTitle: OT.textRange,
   },
+  [CT.extraCompositions]: {
+    defaultTitle: OT.assetPrecomposition,
+  },
 };
 
 const createDependentTitles = (
