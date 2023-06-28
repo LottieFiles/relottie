@@ -50,5 +50,8 @@
     "execa": "6.0.0",
     "tape": "5.0.0",
     "tsup": "6.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
