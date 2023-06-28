@@ -51,7 +51,7 @@ jobs:
         run: pnpm test
 
       - name: ⎔ Setup .npmrc (Github Packages)
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.GPR_TOKEN }}" >> ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GPR_TOKEN }}" >> ~/.npmrc
 
       - name: 🚀 Release to Github Packages
         uses: changesets/action@v1
