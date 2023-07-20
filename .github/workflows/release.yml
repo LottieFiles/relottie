@@ -23,6 +23,8 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
