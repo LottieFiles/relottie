@@ -1,5 +1,12 @@
 # @lottiefiles/last
 
+## 1.0.3
+
+### Patch Changes
+
+- 329f72c: chore(package): typesVersions d.ts files
+- 329f72c: chore(package): add main and types
+
 ## 1.0.2
 
 ### Patch Changes
