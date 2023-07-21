@@ -28,7 +28,7 @@
     "*": {
       "*": [
         "dist/*",
-        "dist/index.d.ts"
+        "dist/*.d.ts"
       ]
     }
   },
