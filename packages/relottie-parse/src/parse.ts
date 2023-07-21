@@ -529,21 +529,20 @@ const traverseJsonExit = (
 
 // eslint-disable-next-line consistent-return
 export function parse(document: string, file: VFile, settings: SettingsOptions = {}): Root {
-  const jsonAst = jsonParse(document, { tokens: true });
+  const jsonAst = jsonParse(document, { tokens: false });
 
   const options: ParseOptions = merge(DEFAULT_OPTIONS, settings.parse);
 
-  const capacity = jsonAst.tokens.length;
-  const lastStack = new Stack<NodeValue>(capacity);
+  const stack = new Stack<NodeValue>();
 
   const info: Info = { hasExpressions: false };
 
   jsonTraverse(jsonAst, {
     enter(node: Momoa.AstNode, parent: Momoa.AstParent) {
-      traverseJsonEnter(node, parent, lastStack, file, options);
+      traverseJsonEnter(node, parent, stack, file, options);
     },
     exit(node: Momoa.AstNode, parent: Momoa.AstParent) {
-      traverseJsonExit(node, parent, lastStack, file, options, info);
+      traverseJsonExit(node, parent, stack, file, options, info);
     },
   });
 
@@ -557,7 +556,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   Object.assign(file.data, fileData);
 
-  const tree = lastStack.pop();
+  const tree = stack.pop();
 
   if (is<Root>(tree, 'root')) {
     tree.hasExpressions = info.hasExpressions;
