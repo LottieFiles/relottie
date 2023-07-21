@@ -18,14 +18,17 @@
   "engines": {
     "node": ">=18"
   },
+  "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*.js"
   },
+  "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "dist/*"
+        "dist/*",
+        "dist/index.d.ts"
       ]
     }
   },
