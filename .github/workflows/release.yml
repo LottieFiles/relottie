@@ -6,8 +6,8 @@ on:
   pull_request:
 
 jobs:
-  release:
-    name: release
+  validate:
+    name: validate
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -51,6 +51,39 @@ jobs:
 
       - name: 🛡️ Test
         run: pnpm test
+
+  release:
+    name: release
+    needs: validate
+    runs-on: ubuntu-latest
+    if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
+    strategy:
+      matrix:
+        node-version: ['18']
+    timeout-minutes: 20
+    steps:
+      - name: ⬇ Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: ⎔ Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: ⎔ Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          cache: 'pnpm'
+          node-version: ${{ matrix.node-version }}
+          scope: '@lottiefiles'
+          registry-url: 'https://npm.pkg.github.com/'
+
+      - name: 📥 Install dependencies
+        run: pnpm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
 
       - name: 🚀 Release to Github Packages
         uses: changesets/action@v1
