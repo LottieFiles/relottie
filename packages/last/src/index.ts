@@ -126,12 +126,4 @@ export interface Root extends Omit<ObjectNode, 'type'> {
 
 export type NodeValue = Root | Primitive | KeyNode | ArrayNode | ObjectNode | Attribute | Element | Collection;
 
-export type NodeValueType =
-  | Root['type']
-  | PrimitiveValueType
-  | KeyNode['type']
-  | ArrayNode['type']
-  | ObjectNode['type']
-  | Attribute['type']
-  | Element['type']
-  | Collection['type'];
+export type NodeValueType = NodeValue['type'];
