@@ -1,5 +1,14 @@
 # @lottiefiles/relottie-parse
 
+## 1.0.2
+
+### Patch Changes
+
+- 5f59978: feat: dont use jsonTokens & better stack var name
+- Updated dependencies [5f59978]
+  - @lottiefiles/last@1.0.2
+  - @lottiefiles/last-builder@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
