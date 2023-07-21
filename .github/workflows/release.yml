@@ -23,11 +23,9 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
@@ -36,6 +34,8 @@ jobs:
 
       - name: 📥 Install dependencies
         run: pnpm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
