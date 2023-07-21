@@ -52,9 +52,6 @@ jobs:
       - name: 🛡️ Test
         run: pnpm test
 
-      - name: ⎔ Setup .npmrc (Github Packages)
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-
       - name: 🚀 Release to Github Packages
         uses: changesets/action@v1
         with:
