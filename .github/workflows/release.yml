@@ -76,7 +76,7 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPMJS_TOKEN }}" >> ~/.npmrc
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for NPM
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
