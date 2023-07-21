@@ -47,7 +47,7 @@ jobs:
         run: pnpm format --check --no-write
 
       - name: 🕵️ Lint
-        run: pnpm lint
+        run: pnpm lint:prod
 
       - name: 🛡️ Test
         run: pnpm test
