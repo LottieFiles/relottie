@@ -18,7 +18,7 @@
   "engines": {
     "node": ">=18"
   },
-  "main": "dist/titles.js",
+  "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*.js"
@@ -28,7 +28,7 @@
     "*": {
       "*": [
         "dist/*",
-        "dist/*.d.ts"
+        "dist/index.d.ts"
       ]
     }
   },
