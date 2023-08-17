@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-stringify
 
+## 1.0.4
+
+### Patch Changes
+
+- a520179: chore(deps): remove unused @types/lodash.merge
+
 ## 1.0.3
 
 ### Patch Changes

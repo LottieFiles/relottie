@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-cli
 
+## 1.0.4
+
+### Patch Changes
+
+- @lottiefiles/relottie@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes
