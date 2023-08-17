@@ -3,7 +3,7 @@
  */
 
 import type { Root } from '@lottiefiles/last';
-import merge from 'lodash.merge';
+import merge from 'deepmerge';
 import type { ParserFunction, Plugin } from 'unified';
 
 import type { ParseOptions } from './options.js';
@@ -24,7 +24,7 @@ export type FileData = Partial<ParseFileData>;
 const relottieParse: Plugin<[Options?], string, Root> = function relottieParse(options: Options = {}): void {
   const settings = (this.data('settings') || { parse: {} }) as SettingsOptions;
 
-  settings.parse = merge(settings.parse, options);
+  settings.parse = merge(settings.parse || {}, options);
 
   const parser: ParserFunction<Root> = (doc, file) => {
     return parse(doc, file, settings);
