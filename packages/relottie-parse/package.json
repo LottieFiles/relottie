@@ -65,7 +65,7 @@
     "@humanwhocodes/momoa": "2.0.3",
     "@lottiefiles/last": "workspace:*",
     "@lottiefiles/last-builder": "workspace:*",
-    "lodash.merge": "4.6.2",
+    "deepmerge": "4.3.1",
     "unist-util-is": "5.1.1",
     "vfile": "5.3.7"
   },
@@ -75,7 +75,6 @@
     "@lottiefiles/lottie-types": "1.2.0",
     "@types/jest": "28.1.5",
     "@types/jest-specific-snapshot": "0.5.6",
-    "@types/lodash.merge": "4.6.7",
     "@types/node": "18.0.4",
     "@types/unist": "2.0.6",
     "esbuild": "0.14.49",

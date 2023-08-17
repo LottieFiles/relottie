@@ -29,13 +29,9 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
-          scope: '@lottiefiles'
-          registry-url: 'https://npm.pkg.github.com/'
 
       - name: 📥 Install dependencies
         run: pnpm install
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build

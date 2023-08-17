@@ -35,7 +35,7 @@ import {
   rt as rootNode,
 } from '@lottiefiles/last-builder';
 import type { PrimitiveParts } from '@lottiefiles/last-builder';
-import merge from 'lodash.merge';
+import merge from 'deepmerge';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
@@ -531,7 +531,7 @@ const traverseJsonExit = (
 export function parse(document: string, file: VFile, settings: SettingsOptions = {}): Root {
   const jsonAst = jsonParse(document, { tokens: false });
 
-  const options: ParseOptions = merge(DEFAULT_OPTIONS, settings.parse);
+  const options: ParseOptions = merge(DEFAULT_OPTIONS, settings.parse || {});
 
   const stack = new Stack<NodeValue>();
 
