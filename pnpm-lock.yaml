@@ -216,7 +216,7 @@ importers:
         specifier: workspace:*
         version: link:../last-builder
       deepmerge:
-        specifier: ^4.3.1
+        specifier: 4.3.1
         version: 4.3.1
       unist-util-is:
         specifier: 5.1.1
