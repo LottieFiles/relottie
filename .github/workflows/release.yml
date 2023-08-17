@@ -73,8 +73,6 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
-          scope: '@lottiefiles'
-          registry-url: 'https://npm.pkg.github.com/'
 
       - name: 📥 Install dependencies
         run: pnpm install
@@ -106,8 +104,6 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
-          scope: '@lottiefiles'
-          registry-url: https://registry.npmjs.org/
 
       - name: 🚀 Release to NPM
         uses: changesets/action@v1
