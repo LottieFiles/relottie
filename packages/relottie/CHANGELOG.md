@@ -1,5 +1,17 @@
 # @lottiefiles/relottie
 
+## 1.0.5
+
+### Patch Changes
+
+- 8005cea: build: enable splitting & treeshake
+- Updated dependencies [8005cea]
+- Updated dependencies [8005cea]
+- Updated dependencies [8005cea]
+  - @lottiefiles/relottie-parse@1.0.5
+  - @lottiefiles/last@1.0.5
+  - @lottiefiles/relottie-stringify@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes

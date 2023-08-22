@@ -1,5 +1,13 @@
 # @lottiefiles/last-builder
 
+## 1.0.5
+
+### Patch Changes
+
+- 8005cea: build: enable bundle, sourcemap, splitting & treeshake
+- Updated dependencies [8005cea]
+  - @lottiefiles/last@1.0.5
+
 ## 1.0.3
 
 ### Patch Changes

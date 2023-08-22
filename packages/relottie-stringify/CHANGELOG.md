@@ -1,5 +1,13 @@
 # @lottiefiles/relottie-stringify
 
+## 1.0.5
+
+### Patch Changes
+
+- 8005cea: build: enable splitting & treeshake; disable minify
+- Updated dependencies [8005cea]
+  - @lottiefiles/last@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes
