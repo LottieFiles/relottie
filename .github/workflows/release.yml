@@ -42,6 +42,12 @@ jobs:
       - name: 💅 Verify format
         run: pnpm format --check --no-write
 
+      - name: 📏 Report bundle size
+        uses: andresz1/size-limit-action@v1
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: 🕵️ Lint
         run: pnpm lint:prod
 
