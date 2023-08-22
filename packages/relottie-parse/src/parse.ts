@@ -35,7 +35,6 @@ import {
   rt as rootNode,
 } from '@lottiefiles/last-builder';
 import type { PrimitiveParts } from '@lottiefiles/last-builder';
-import merge from 'deepmerge';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
@@ -57,7 +56,7 @@ export interface Info {
 }
 
 const addWarningMessage = (file: VFile, message: string, options: ParseOptions): void => {
-  if (options.messages.warning) {
+  if (options.warningMessage) {
     file.message(message);
   }
 };
@@ -531,7 +530,7 @@ const traverseJsonExit = (
 export function parse(document: string, file: VFile, settings: SettingsOptions = {}): Root {
   const jsonAst = jsonParse(document, { tokens: false });
 
-  const options: ParseOptions = merge(DEFAULT_OPTIONS, settings.parse || {});
+  const options: ParseOptions = { ...DEFAULT_OPTIONS, ...settings.parse };
 
   const stack = new Stack<NodeValue>();
 
@@ -546,7 +545,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
     },
   });
 
-  const dataMessages = options.messages.warning && file.messages.length > 0 ? { messages: file.messages } : {};
+  const dataMessages = options.warningMessage && file.messages.length > 0 ? { messages: file.messages } : {};
 
   const fileData: ParseFileData = {
     parse: {

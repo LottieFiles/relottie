@@ -65,9 +65,7 @@
     "@humanwhocodes/momoa": "2.0.3",
     "@lottiefiles/last": "workspace:*",
     "@lottiefiles/last-builder": "workspace:*",
-    "deepmerge": "4.3.1",
-    "unist-util-is": "5.1.1",
-    "vfile": "5.3.7"
+    "unist-util-is": "5.1.1"
   },
   "devDependencies": {
     "@jest/globals": "28.1.3",
@@ -85,6 +83,7 @@
     "tsup": "6.1.3",
     "typescript": "4.7.4",
     "unified": "10.1.2",
+    "vfile": "5.3.7",
     "vfile-reporter": "7.0.4"
   },
   "publishConfig": {
