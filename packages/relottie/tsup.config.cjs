@@ -15,7 +15,8 @@ module.exports = defineConfig({
   outDir: 'dist',
   platform: 'neutral',
   sourcemap: true,
-  splitting: false,
+  splitting: true,
+  treeshake: true,
   target: ['es2020', 'node18'],
   tsconfig: 'tsconfig.build.json',
 });
