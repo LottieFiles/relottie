@@ -1,5 +1,13 @@
 # @lottiefiles/relottie-parse
 
+## 1.0.6
+
+### Patch Changes
+
+- 6d3a1dd: feat(options): rename messages.warning into warningMessage
+- 6d3a1dd: feat: remove deepmerge pkg
+- 6d3a1dd: chore: move vfile deps to devDeps
+
 ## 1.0.5
 
 ### Patch Changes
