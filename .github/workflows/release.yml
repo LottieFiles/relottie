@@ -122,5 +122,5 @@ jobs:
           version: pnpm release:version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NPMJS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
