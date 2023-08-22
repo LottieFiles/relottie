@@ -2,4 +2,4 @@
 "@lottiefiles/relottie-stringify": patch
 ---
 
-build: enable splitting and treeshake
+build: enable splitting & treeshake; disable minify
