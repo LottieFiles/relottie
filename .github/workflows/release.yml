@@ -115,7 +115,6 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
 
       - name: 🚀 Release to NPM
         uses: changesets/action@v1
