@@ -1,5 +1,12 @@
 # @lottiefiles/relottie-cli
 
+## 1.0.5
+
+### Patch Changes
+
+- Updated dependencies [8005cea]
+  - @lottiefiles/relottie@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes
