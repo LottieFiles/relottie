@@ -57,7 +57,7 @@ export interface Info {
 }
 
 const addWarningMessage = (file: VFile, message: string, options: ParseOptions): void => {
-  if (options.messages.warning) {
+  if (options.warningMessage) {
     file.message(message);
   }
 };
@@ -546,7 +546,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
     },
   });
 
-  const dataMessages = options.messages.warning && file.messages.length > 0 ? { messages: file.messages } : {};
+  const dataMessages = options.warningMessage && file.messages.length > 0 ? { messages: file.messages } : {};
 
   const fileData: ParseFileData = {
     parse: {
