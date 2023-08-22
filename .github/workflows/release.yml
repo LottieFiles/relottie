@@ -5,6 +5,10 @@ on:
     branches: [main]
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     name: validate
@@ -122,5 +126,5 @@ jobs:
           version: pnpm release:version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.NPMJS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
