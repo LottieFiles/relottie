@@ -58,7 +58,9 @@ jobs:
     name: release
     needs: validate
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
+    if:
+      ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' && github.ref ==
+      'refs/heads/changeset-release/main' }}
     strategy:
       matrix:
         node-version: ['18']
