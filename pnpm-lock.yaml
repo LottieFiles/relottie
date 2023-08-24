@@ -188,8 +188,8 @@ importers:
         specifier: 4.7.4
         version: 4.7.4
       vfile-reporter:
-        specifier: 7.0.4
-        version: 7.0.4
+        specifier: 7.0.5
+        version: 7.0.5
 
   packages/relottie-cli:
     dependencies:
@@ -274,8 +274,8 @@ importers:
         specifier: 5.3.7
         version: 5.3.7
       vfile-reporter:
-        specifier: 7.0.4
-        version: 7.0.4
+        specifier: 7.0.5
+        version: 7.0.5
 
   packages/relottie-stringify:
     dependencies:
@@ -15439,17 +15439,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.7
       unist-util-stringify-position: 3.0.3
-
-  /vfile-reporter@7.0.4:
-    resolution: {integrity: sha512-4cWalUnLrEnbeUQ+hARG5YZtaHieVK3Jp4iG5HslttkVl+MHunSGNAIrODOTLbtjWsNZJRMCkL66AhvZAYuJ9A==}
-    dependencies:
-      '@types/supports-color': 8.1.1
-      string-width: 5.1.2
-      supports-color: 9.4.0
-      unist-util-stringify-position: 3.0.3
-      vfile-sort: 3.0.1
-      vfile-statistics: 2.0.1
-    dev: true
 
   /vfile-reporter@7.0.5:
     resolution: {integrity: sha512-NdWWXkv6gcd7AZMvDomlQbK3MqFWL1RlGzMn++/O2TI+68+nqxCPTvLugdOtfSzXmjh+xUyhp07HhlrbJjT+mw==}
