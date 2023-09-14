@@ -141,6 +141,7 @@ export const TITLES = {
     assetDataSource: 'asset-data-source',
     assetImage: 'asset-image',
     assetPrecomposition: 'asset-precomposition',
+    assetFile: 'asset-file',
     bezier: 'bezier',
     characterData: 'character-data',
     characterPrecomp: 'character-precomp',
