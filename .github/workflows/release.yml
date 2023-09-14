@@ -107,7 +107,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.NPMJS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
-      - name: ⎔ Delete .npmrc (Github Packages)
+      - name: ⎔ Delete .npmrc (NPM)
         run: |
           rm -rf ~/.npmrc
           rm -rf .npmrc
