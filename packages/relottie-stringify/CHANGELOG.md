@@ -1,5 +1,12 @@
 # @lottiefiles/relottie-stringify
 
+## 1.0.7
+
+### Patch Changes
+
+- Updated dependencies [9c4f0a6]
+  - @lottiefiles/last@1.0.7
+
 ## 1.0.5
 
 ### Patch Changes
