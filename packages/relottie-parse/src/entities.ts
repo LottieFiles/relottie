@@ -285,6 +285,9 @@ export const objectEntity: NoKeyEntityMap = {
         title: IBT.extraComposition,
         parentTitle: OT.assetPrecomposition,
       },
+      { key: 'p', type: 'String', title: ST.filename, parentTitle: OT.assetFile },
+      { key: 'u', type: 'String', title: ST.path, parentTitle: OT.assetFile },
+      { key: 'e', type: 'Number', title: IBT.embedded, parentTitle: OT.assetFile },
     ],
   },
   [CT.effectList]: {
@@ -886,6 +889,7 @@ export const stringEntity: EntityMap<StringTitle> = {
       [OT.assetImage]: ST.filename,
       [OT.assetPrecomposition]: ST.filename,
       [OT.assetDataSource]: ST.filename,
+      [OT.assetFile]: ST.filename,
       // assets ends
     },
     sc: { [OT.layerSolidColor]: ST.hexColor },
@@ -926,6 +930,7 @@ export const stringEntity: EntityMap<StringTitle> = {
       [OT.assetImage]: ST.id,
       [OT.assetPrecomposition]: ST.id,
       [OT.assetDataSource]: ST.id,
+      [OT.assetFile]: ST.id,
       // assets ends
     },
     refId: {
@@ -940,6 +945,7 @@ export const stringEntity: EntityMap<StringTitle> = {
       [OT.assetImage]: ST.path,
       [OT.assetPrecomposition]: ST.path,
       [OT.assetDataSource]: ST.path,
+      [OT.assetFile]: ST.path,
       // assets ends
     },
     nm: {
@@ -948,6 +954,7 @@ export const stringEntity: EntityMap<StringTitle> = {
       [OT.assetImage]: ST.name,
       [OT.assetPrecomposition]: ST.name,
       [OT.assetDataSource]: ST.name,
+      [OT.assetFile]: ST.name,
       // assets ends
 
       [OT.textRange]: ST.name,
@@ -1363,6 +1370,7 @@ export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
     e: {
       [OT.assetImage]: IBT.embedded,
       [OT.assetDataSource]: IBT.embedded,
+      [OT.assetFile]: IBT.embedded,
     },
     en: {
       ...createDependentTitles(CT.effectList, IBT.enabled),
