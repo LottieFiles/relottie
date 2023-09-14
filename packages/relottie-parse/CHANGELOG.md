@@ -1,5 +1,14 @@
 # @lottiefiles/relottie-parse
 
+## 1.0.7
+
+### Patch Changes
+
+- 9c4f0a6: feat(entities): asset-file node
+- Updated dependencies [9c4f0a6]
+  - @lottiefiles/last@1.0.7
+  - @lottiefiles/last-builder@1.0.7
+
 ## 1.0.6
 
 ### Patch Changes
