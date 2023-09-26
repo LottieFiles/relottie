@@ -34,7 +34,6 @@ export const TITLES = {
     matchName: 'match-name',
     name: 'name',
     path: 'path',
-    referenceId: 'reference-id',
     shapeType: 'shape-type',
     strokeDashType: 'stroke-dash-type',
     text: 'text',
