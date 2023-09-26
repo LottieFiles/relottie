@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.0.8
+
+### Patch Changes
+
+- bc31556: fix: remove reference-id title duplicate
+
 ## 1.0.7
 
 ### Patch Changes
