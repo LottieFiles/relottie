@@ -1,5 +1,14 @@
 # @lottiefiles/relottie
 
+## 1.0.8
+
+### Patch Changes
+
+- Updated dependencies [bc31556]
+  - @lottiefiles/last@1.0.8
+  - @lottiefiles/relottie-parse@1.0.8
+  - @lottiefiles/relottie-stringify@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @lottiefiles/relottie-parse
 
+## 1.0.8
+
+### Patch Changes
+
+- bc31556: fix: remove reference-id title duplicate
+- Updated dependencies [bc31556]
+  - @lottiefiles/last@1.0.8
+  - @lottiefiles/last-builder@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes
