@@ -823,7 +823,7 @@ export const objectEntity: NoKeyEntityMap = {
     defaultTitle: OT.characterShapes,
     dependents: [
       { key: 'shapes', type: 'Array', title: CT.shapeList, parentTitle: OT.characterShapes },
-      { key: 'refId', type: 'String', title: ST.referenceId, parentTitle: OT.characterPrecomp },
+      { key: 'refId', type: 'String', title: ST.idReference, parentTitle: OT.characterPrecomp },
       { key: 'ks', type: 'Object', title: ET.layerTransform, parentTitle: OT.characterPrecomp },
       { key: 'ip', type: 'Number', title: NT.inPoint, parentTitle: OT.characterPrecomp },
       { key: 'op', type: 'Number', title: NT.outPoint, parentTitle: OT.characterPrecomp },
