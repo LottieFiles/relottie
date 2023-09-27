@@ -1179,6 +1179,16 @@ export const numberEntity: EntityMap<NumberTitle> = {
       [OT.layerText]: NT.matteTarget,
       // layer-visual ends
     },
+    tp: {
+      // layer-visual starts
+      [OT.layerPrecomposition]: NT.matteParent,
+      [OT.layerShape]: NT.matteParent,
+      [OT.layerSolidColor]: NT.matteParent,
+      [OT.layerImage]: NT.matteParent,
+      [OT.layerNull]: NT.matteParent,
+      [OT.layerText]: NT.matteParent,
+      // layer-visual ends
+    },
     ml: {
       // shape-base-stroke starts
       [OT.shapeGradientStroke]: NT.miterLimitValue,

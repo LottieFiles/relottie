@@ -72,6 +72,7 @@ export const TITLES = {
     markerTime: 'marker-time',
     matteMode: 'matte-mode',
     matteTarget: 'matte-target',
+    matteParent: 'matte-parent',
     mergeMode: 'merge-mode',
     miterLimitValue: 'miter-limit-value',
     multiple: 'multiple',
