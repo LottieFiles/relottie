@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.0.9
+
+### Patch Changes
+
+- 8ab4369: feat: tp MatteParent
+
 ## 1.0.8
 
 ### Patch Changes
