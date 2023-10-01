@@ -106,6 +106,7 @@ export const TITLES = {
   intBoolean: {
     animated: 'animated',
     autoOrient: 'auto-orient',
+    collapseTransformNew: 'collapse-transform-new',
     embedded: 'embedded',
     enabled: 'enabled',
     expressible: 'expressible',
