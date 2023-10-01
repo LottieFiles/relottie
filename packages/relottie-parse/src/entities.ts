@@ -840,6 +840,9 @@ export const objectEntity: NoKeyEntityMap = {
   [CT.extraCompositions]: {
     defaultTitle: OT.assetPrecomposition,
   },
+  [ET.selectorSmoothness]: {
+    ...animatedValueProp,
+  },
 };
 
 const createDependentTitles = (
