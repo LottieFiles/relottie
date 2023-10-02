@@ -941,6 +941,55 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.selectorSmoothness]: {
     ...animatedValueProp,
   },
+  [ET.slots]: {
+    defaultTitle: OT.slot,
+  },
+  [ET.slotIdValueProp]: {
+    defaultTitle: OT.animatedValue,
+    dependents: [
+      // how differentiate array
+      {
+        key: 'k',
+        type: 'Number',
+        title: OT.slot,
+        parentTitle: OT.animatedValueStatic,
+      },
+      {
+        key: 'k',
+        type: 'Array',
+        title: ET.slotIdValue,
+        childType: 'Object',
+        /**
+         * or OT.MultiDimensional(keyframe[])
+         * or OT.animatedColor(keyframe[])
+         * or animatedPosition(positionKeyframe[])
+         * or animatedShape(shapeKeyframe[])
+         * or animatedValue(keyframe[])
+         * */
+        parentTitle: OT.animatedValue,
+      },
+      // this good
+      {
+        key: 'k',
+        type: 'Array',
+        title: ET.slotIdValue,
+        childType: 'Number',
+        // or OT.animatedMultidimensionalStatic(number[])
+        parentTitle: OT.animatedPositionStatic,
+      },
+      // how differentiate object
+      {
+        key: 'k',
+        type: 'Object',
+        title: ET.slotIdValue,
+        /**
+         * or animatedShapeStatic(bezier)
+         * or animatedColorStatic(colorrgba)
+         * */
+        parentTitle: OT.animatedShapeStatic,
+      },
+    ],
+  },
 };
 
 const createDependentTitles = (
@@ -1144,6 +1193,18 @@ export const stringEntity: EntityMap<StringTitle> = {
       ...createDependentTitles(CT.composition, ST.layerXmlTagName),
     },
     t: { [OT.assetImage]: ST.assetImageType },
+    sid: {
+      [OT.animatedValue]: ST.slotID,
+      [OT.animatedValueStatic]: ST.slotID,
+      [OT.animatedShape]: ST.slotID,
+      [OT.animatedShapeStatic]: ST.slotID,
+      [OT.animatedPosition]: ST.slotID,
+      [OT.animatedPositionStatic]: ST.slotID,
+      [OT.animatedColor]: ST.slotID,
+      [OT.animatedColorStatic]: ST.slotID,
+      [OT.animatedMultidimensional]: ST.slotID,
+      [OT.animatedMultidimensionalStatic]: ST.slotID,
+    },
   },
 };
 
@@ -1704,6 +1765,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.shapeStar]: ET.animatedPositionProp,
       [OT.shapeRectangle]: ET.animatedPositionProp,
       [ET.textAnimatorData]: ET.textFollowPath,
+      [ET.slotIdValue]: ET.slotIdValueProp,
     },
     s: {
       [OT.shapeEllipse]: ET.shapeEllipseSize,
@@ -2139,6 +2201,9 @@ export const elementEntity: EntityMap<ElementTitle> = {
     of: {
       [OT.layerStyleGradientOverlay]: ET.shapeTrimOffset,
     },
+    slots: {
+      [OT.animation]: ET.slots,
+    },
   },
 };
 
@@ -2259,7 +2324,17 @@ export const getMemberEntity = (key: Key, member: Momoa.Member, parentTitle: Par
       return getCollectionData(key, parentTitle);
 
     case 'Object':
-      return getElementData(key, parentTitle);
+      // because OT.slot allows any "key" namings that has to match ST.slotId
+      if (parentTitle === OT.slot) {
+        return {
+          type: 'element',
+          title: ET.slotIdValue,
+          parentTitle,
+          required: false,
+        };
+      } else {
+        return getElementData(key, parentTitle);
+      }
 
     default:
       return getAttributeData(key, member, parentTitle);
