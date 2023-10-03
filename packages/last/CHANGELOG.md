@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.1.0
+
+### Minor Changes
+
+- 00baff8: feat: ct prop named collapse-transform-new
+
 ## 1.0.9
 
 ### Patch Changes
