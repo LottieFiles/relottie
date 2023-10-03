@@ -849,47 +849,78 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.slotIdValueProp]: {
     defaultTitle: OT.animatedValue,
     dependents: [
-      // how differentiate array
+      // good
       {
         key: 'k',
         type: 'Number',
-        title: OT.slot,
+        title: NT.staticValue,
         parentTitle: OT.animatedValueStatic,
       },
-      {
-        key: 'k',
-        type: 'Array',
-        title: ET.slotIdValue,
-        childType: 'Object',
-        /**
-         * or OT.MultiDimensional(keyframe[])
-         * or OT.animatedColor(keyframe[])
-         * or animatedPosition(positionKeyframe[])
-         * or animatedShape(shapeKeyframe[])
-         * or animatedValue(keyframe[])
-         * */
-        parentTitle: OT.animatedValue,
-      },
-      // this good
-      {
-        key: 'k',
-        type: 'Array',
-        title: ET.slotIdValue,
-        childType: 'Number',
-        // or OT.animatedMultidimensionalStatic(number[])
-        parentTitle: OT.animatedPositionStatic,
-      },
-      // how differentiate object
+      // good
       {
         key: 'k',
         type: 'Object',
-        title: ET.slotIdValue,
-        /**
-         * or animatedShapeStatic(bezier)
-         * or animatedColorStatic(colorrgba)
-         * */
+        title: ET.bezier,
         parentTitle: OT.animatedShapeStatic,
       },
+      // {
+      //   key: 'k',
+      //   type: 'Array',
+      //   title: ET.slotIdValue,
+      //   childType: 'Object',
+      //   childKey: [
+      //     // aaa
+      //     // or OT.animatedMultidimensionalStatic(number[])
+      //     {
+      //       key: 'k',
+      //       type: 'Array',
+      //       title: ET.slotIdValue,
+      //       childType: 'Number',
+      //       parentTitle: OT.animatedPositionStatic,
+      //     },
+
+      //     // bezier
+      //     {
+      //       key: 'c',
+      //       type: 'Boolean',
+      //       title: BT.closed,
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     {
+      //       key: 'i',
+      //       type: 'Array',
+      //       title: CT.inTangent,
+      //       // childType: 'Number',
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     {
+      //       key: 'o',
+      //       type: 'Array',
+      //       title: CT.outTangent,
+      //       // childType: 'Number',
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     {
+      //       key: 'v',
+      //       type: 'Array',
+      //       title: CT.ver,
+      //       childType: 'Number',
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     // aaa
+      //   ],
+      //   parentTitle: OT.animatedMultidimensionalStatic,
+      // },
+      // {
+      //   key: 'k',
+      //   type: 'Array',
+      //   title: CT.staticValues,
+      //   childType: 'Number',
+      //   /**
+      //    * could be animatedColorStatic or animatedMultidimensionalStatic
+      //    */
+      //   parentTitle: OT.animatedPositionProp,
+      // },
     ],
   },
 };
