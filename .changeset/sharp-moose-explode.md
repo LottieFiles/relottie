@@ -2,4 +2,4 @@
 "@lottiefiles/relottie-parse": minor
 ---
 
-feat: support slots, slot, slotId, slotIdValue, slotIdValueProp
+feat: support slots, slot, slotId, slotProperty

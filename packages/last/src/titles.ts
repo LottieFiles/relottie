@@ -51,7 +51,7 @@ export const TITLES = {
     text: 'text',
     themeColor: 'theme-color',
     version: 'version',
-    slotID: 'slot-id',
+    slotId: 'slot-id',
   },
   number: {
     adaptiveSampleLimit: 'adaptive-sample-limit',
@@ -367,7 +367,6 @@ export const TITLES = {
     strokeDashGap: 'stroke-dash-gap',
     strokeDashLength: 'stroke-dash-length',
     strokeDashOffset: 'stroke-dash-offset',
-    slot: 'slot',
     textFont: 'text-font',
     textRange: 'text-range',
     textDocumentKeyframe: 'text-document-keyframe',
@@ -553,8 +552,8 @@ export const TITLES = {
     textStyleSkewAxis: 'text-style-skew-axis',
     // skewAxis ends
     slots: 'slots',
-    slotIdValue: 'slot-id-value',
-    slotIdValueProp: 'slot-id-value-prop',
+    slot: 'slot',
+    slotProperty: 'slot-property',
     smoothness: 'smoothness',
     soften: 'soften',
     source: 'source',

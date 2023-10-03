@@ -44,6 +44,7 @@ import { getMemberEntity, getNoKeyEntity } from './entities.js';
 import { Stack } from './helpers.js';
 import { DEFAULT_OPTIONS } from './options.js';
 import type { ParseOptions } from './options.js';
+import { Slots } from './slots.js';
 import type { SettingsOptions } from './unified-relottie-parse.js';
 
 export interface ParseFileData extends Data {
@@ -51,7 +52,8 @@ export interface ParseFileData extends Data {
 }
 
 export interface Info {
-  hasExpressions: Root['hasExpressions'];
+  hasExpressions?: Root['hasExpressions'];
+  slots?: Slots;
 }
 
 const createValueType = (node: Momoa.AstNode, options: ParseOptions): PrimitiveParts<PrimitiveValueType> => {
@@ -254,7 +256,7 @@ const getArrayNodeTitle = (node: Momoa.Arr, parentNodeTitle: ParentTitle, file: 
   return (title || defaultTitle) as ArrayTitle;
 };
 
-const traverseJsonEnter = (
+export const traverseJsonEnter = (
   node: Momoa.AstNode,
   parent: Momoa.AstParent,
   stack: Stack<NodeValue>,
@@ -351,13 +353,13 @@ const traverseJsonEnter = (
   }
 };
 
-const traverseJsonExit = (
+export const traverseJsonExit = (
   node: Momoa.AstNode,
   parent: Momoa.AstParent,
   stack: Stack<NodeValue>,
   file: VFile,
   _options: ParseOptions,
-  info: Info,
+  info: Info = {},
 ): void => {
   switch (node.type) {
     case 'Document':
@@ -367,8 +369,16 @@ const traverseJsonExit = (
     case 'Member':
       const objectNodeValue = stack.pop() as ObjectNodeValue;
 
+      const parentNode = stack.peek() as Root | ObjectNode;
+
+      if (parentNode.type === 'root') {
+        parentNode.children.push(objectNodeValue);
+        break;
+      }
+
       switch (objectNodeValue.type) {
         case 'element':
+          info.slots?.setNode(objectNodeValue, parentNode, node);
           break;
 
         case 'collection':
@@ -377,25 +387,15 @@ const traverseJsonExit = (
         case 'attribute':
           if (!info.hasExpressions && objectNodeValue.title === 'expression') {
             info.hasExpressions = true;
+            break;
           }
 
+          info.slots?.setIdTitle(objectNodeValue, parentNode);
+
           break;
 
         default:
-          file.fail("Node's type has to be 'element', 'collection or 'attribute'");
-      }
-
-      const parentNode = stack.peek() as Root | ObjectNode;
-
-      switch (parentNode.type) {
-        case 'object':
-          break;
-
-        case 'root':
-          break;
-
-        default:
-          file.fail("ParentNode's type has to be 'object' or 'root'");
+          file.fail("Node's type has to be 'element', 'collection' or 'attribute'");
       }
 
       parentNode.children.push(objectNodeValue);
@@ -515,7 +515,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   const stack = new Stack<NodeValue>();
 
-  const info: Info = { hasExpressions: false };
+  const info: Info = { hasExpressions: false, slots: new Slots(file, options) };
 
   jsonTraverse(jsonAst, {
     enter(node: Momoa.AstNode, parent: Momoa.AstParent) {
@@ -526,10 +526,12 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
     },
   });
 
+  info.slots?.mutateNodeTitles();
+
   const tree = stack.pop();
 
   if (is<Root>(tree, 'root')) {
-    tree.hasExpressions = info.hasExpressions;
+    tree.hasExpressions = info.hasExpressions || false;
 
     return tree;
   } else {
