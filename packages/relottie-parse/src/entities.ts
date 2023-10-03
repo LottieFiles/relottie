@@ -840,6 +840,9 @@ export const objectEntity: NoKeyEntityMap = {
   [CT.extraCompositions]: {
     defaultTitle: OT.assetPrecomposition,
   },
+  [ET.selectorSmoothness]: {
+    ...animatedValueProp,
+  },
 };
 
 const createDependentTitles = (
@@ -1394,6 +1397,16 @@ export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
       [CT.positionKeyframeList]: IBT.hold,
       [OT.keyframeBezierHandle]: IBT.hold,
       [OT.shapeKeyframe]: IBT.hold,
+    },
+    ct: {
+      // layer-visual starts
+      [OT.layerPrecomposition]: IBT.collapseTransformNew,
+      [OT.layerShape]: IBT.collapseTransformNew,
+      [OT.layerSolidColor]: IBT.collapseTransformNew,
+      [OT.layerImage]: IBT.collapseTransformNew,
+      [OT.layerNull]: IBT.collapseTransformNew,
+      [OT.layerText]: IBT.collapseTransformNew,
+      // layer-visual ends
     },
   },
 };
