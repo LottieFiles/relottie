@@ -1,5 +1,18 @@
 # @lottiefiles/relottie-parse
 
+## 1.1.0
+
+### Minor Changes
+
+- 00baff8: feat: ct prop named collapse-transform-new
+- 00baff8: fix(entities): add missing selectorSmoothness value
+
+### Patch Changes
+
+- Updated dependencies [00baff8]
+  - @lottiefiles/last@1.1.0
+  - @lottiefiles/last-builder@1.1.0
+
 ## 1.0.9
 
 ### Patch Changes
