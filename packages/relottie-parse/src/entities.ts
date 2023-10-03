@@ -843,6 +843,86 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.selectorSmoothness]: {
     ...animatedValueProp,
   },
+  [ET.slots]: {
+    defaultTitle: OT.slot,
+  },
+  [ET.slotIdValueProp]: {
+    defaultTitle: OT.animatedValue,
+    dependents: [
+      // good
+      {
+        key: 'k',
+        type: 'Number',
+        title: NT.staticValue,
+        parentTitle: OT.animatedValueStatic,
+      },
+      // good
+      {
+        key: 'k',
+        type: 'Object',
+        title: ET.bezier,
+        parentTitle: OT.animatedShapeStatic,
+      },
+      // {
+      //   key: 'k',
+      //   type: 'Array',
+      //   title: ET.slotIdValue,
+      //   childType: 'Object',
+      //   childKey: [
+      //     // aaa
+      //     // or OT.animatedMultidimensionalStatic(number[])
+      //     {
+      //       key: 'k',
+      //       type: 'Array',
+      //       title: ET.slotIdValue,
+      //       childType: 'Number',
+      //       parentTitle: OT.animatedPositionStatic,
+      //     },
+
+      //     // bezier
+      //     {
+      //       key: 'c',
+      //       type: 'Boolean',
+      //       title: BT.closed,
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     {
+      //       key: 'i',
+      //       type: 'Array',
+      //       title: CT.inTangent,
+      //       // childType: 'Number',
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     {
+      //       key: 'o',
+      //       type: 'Array',
+      //       title: CT.outTangent,
+      //       // childType: 'Number',
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     {
+      //       key: 'v',
+      //       type: 'Array',
+      //       title: CT.ver,
+      //       childType: 'Number',
+      //       parentTitle: OT.animatedShapeStatic,
+      //     },
+      //     // aaa
+      //   ],
+      //   parentTitle: OT.animatedMultidimensionalStatic,
+      // },
+      // {
+      //   key: 'k',
+      //   type: 'Array',
+      //   title: CT.staticValues,
+      //   childType: 'Number',
+      //   /**
+      //    * could be animatedColorStatic or animatedMultidimensionalStatic
+      //    */
+      //   parentTitle: OT.animatedPositionProp,
+      // },
+    ],
+  },
 };
 
 const createDependentTitles = (
@@ -1046,6 +1126,18 @@ export const stringEntity: EntityMap<StringTitle> = {
       ...createDependentTitles(CT.composition, ST.layerXmlTagName),
     },
     t: { [OT.assetImage]: ST.assetImageType },
+    sid: {
+      [OT.animatedValue]: ST.slotID,
+      [OT.animatedValueStatic]: ST.slotID,
+      [OT.animatedShape]: ST.slotID,
+      [OT.animatedShapeStatic]: ST.slotID,
+      [OT.animatedPosition]: ST.slotID,
+      [OT.animatedPositionStatic]: ST.slotID,
+      [OT.animatedColor]: ST.slotID,
+      [OT.animatedColorStatic]: ST.slotID,
+      [OT.animatedMultidimensional]: ST.slotID,
+      [OT.animatedMultidimensionalStatic]: ST.slotID,
+    },
   },
 };
 
@@ -1622,6 +1714,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.shapeStar]: ET.animatedPositionProp,
       [OT.shapeRectangle]: ET.animatedPositionProp,
       [ET.textAnimatorData]: ET.textFollowPath,
+      [ET.slotIdValue]: ET.slotIdValueProp,
     },
     s: {
       [OT.shapeEllipse]: ET.shapeEllipseSize,
@@ -2060,6 +2153,9 @@ export const elementEntity: EntityMap<ElementTitle> = {
     of: {
       [OT.layerStyleGradientOverlay]: ET.offset,
     },
+    slots: {
+      [OT.animation]: ET.slots,
+    },
   },
 };
 
@@ -2144,7 +2240,17 @@ export const getMemberEntity = (key: Key, member: Momoa.Member, parentTitle: Par
       return getCollectionData(key, parentTitle);
 
     case 'Object':
-      return getElementData(key, parentTitle);
+      // because OT.slot allows any "key" namings that has to match ST.slotId
+      if (parentTitle === OT.slot) {
+        return {
+          type: 'element',
+          title: ET.slotIdValue,
+          parentTitle,
+          required: false,
+        };
+      } else {
+        return getElementData(key, parentTitle);
+      }
 
     default:
       return getAttributeData(key, member, parentTitle);
