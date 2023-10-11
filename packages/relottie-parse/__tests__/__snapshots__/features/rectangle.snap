@@ -358,7 +358,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -597,7 +597,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "size",
+                                          "title": "shape-rectangle-size",
                                           "type": "element",
                                         },
                                         Object {
@@ -1001,7 +1001,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {

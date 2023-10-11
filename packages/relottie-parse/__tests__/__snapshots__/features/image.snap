@@ -102,7 +102,7 @@ Object {
                     },
                   ],
                   "key": "id",
-                  "title": "id",
+                  "title": "id-asset-image",
                   "type": "attribute",
                 },
                 Object {
@@ -389,7 +389,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -500,7 +500,7 @@ Object {
                             },
                           ],
                           "key": "sk",
-                          "title": "skew",
+                          "title": "layer-transform-skew",
                           "type": "element",
                         },
                         Object {
@@ -537,7 +537,7 @@ Object {
                             },
                           ],
                           "key": "sa",
-                          "title": "skew-axis",
+                          "title": "layer-transform-skew-axis",
                           "type": "element",
                         },
                       ],
@@ -606,7 +606,7 @@ Object {
                     },
                   ],
                   "key": "bm",
-                  "title": "blend-mode",
+                  "title": "layer-blend-mode",
                   "type": "attribute",
                 },
                 Object {

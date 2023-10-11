@@ -507,7 +507,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                       ],
@@ -1359,7 +1359,7 @@ Object {
                                             },
                                           ],
                                           "key": "pt",
-                                          "title": "points",
+                                          "title": "shape-star-points",
                                           "type": "element",
                                         },
                                         Object {
@@ -1615,7 +1615,7 @@ Object {
                                             },
                                           ],
                                           "key": "or",
-                                          "title": "outer-radius",
+                                          "title": "shape-star-outer-radius",
                                           "type": "element",
                                         },
                                         Object {
@@ -1664,7 +1664,7 @@ Object {
                                             },
                                           ],
                                           "key": "os",
-                                          "title": "outer-roundness",
+                                          "title": "shape-star-outer-roundness",
                                           "type": "element",
                                         },
                                         Object {
@@ -1844,7 +1844,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -1868,7 +1868,7 @@ Object {
                                             },
                                           ],
                                           "key": "bm",
-                                          "title": "blend-mode",
+                                          "title": "shape-blend-mode",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -2102,7 +2102,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
@@ -2249,7 +2249,7 @@ Object {
                                             },
                                           ],
                                           "key": "sk",
-                                          "title": "skew",
+                                          "title": "shape-transform-skew",
                                           "type": "element",
                                         },
                                         Object {
@@ -2298,7 +2298,7 @@ Object {
                                             },
                                           ],
                                           "key": "sa",
-                                          "title": "skew-axis",
+                                          "title": "shape-transform-skew-axis",
                                           "type": "element",
                                         },
                                         Object {
@@ -2371,7 +2371,7 @@ Object {
                                 },
                               ],
                               "key": "bm",
-                              "title": "blend-mode",
+                              "title": "shape-blend-mode",
                               "type": "attribute",
                             },
                             Object {
@@ -2468,7 +2468,7 @@ Object {
                     },
                   ],
                   "key": "bm",
-                  "title": "blend-mode",
+                  "title": "layer-blend-mode",
                   "type": "attribute",
                 },
               ],
@@ -2867,7 +2867,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                       ],
@@ -3326,7 +3326,7 @@ Object {
                                             },
                                           ],
                                           "key": "bm",
-                                          "title": "blend-mode",
+                                          "title": "shape-blend-mode",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -3494,7 +3494,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -3518,7 +3518,7 @@ Object {
                                             },
                                           ],
                                           "key": "bm",
-                                          "title": "blend-mode",
+                                          "title": "shape-blend-mode",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -3752,7 +3752,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
@@ -3899,7 +3899,7 @@ Object {
                                             },
                                           ],
                                           "key": "sk",
-                                          "title": "skew",
+                                          "title": "shape-transform-skew",
                                           "type": "element",
                                         },
                                         Object {
@@ -3948,7 +3948,7 @@ Object {
                                             },
                                           ],
                                           "key": "sa",
-                                          "title": "skew-axis",
+                                          "title": "shape-transform-skew-axis",
                                           "type": "element",
                                         },
                                         Object {
@@ -4021,7 +4021,7 @@ Object {
                                 },
                               ],
                               "key": "bm",
-                              "title": "blend-mode",
+                              "title": "shape-blend-mode",
                               "type": "attribute",
                             },
                             Object {
@@ -4118,7 +4118,7 @@ Object {
                     },
                   ],
                   "key": "bm",
-                  "title": "blend-mode",
+                  "title": "layer-blend-mode",
                   "type": "attribute",
                 },
               ],
@@ -4517,7 +4517,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                       ],
@@ -4646,7 +4646,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "size",
+                                          "title": "shape-rectangle-size",
                                           "type": "element",
                                         },
                                         Object {
@@ -5025,7 +5025,7 @@ Object {
                                             },
                                           ],
                                           "key": "bm",
-                                          "title": "blend-mode",
+                                          "title": "shape-blend-mode",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -5193,7 +5193,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -5217,7 +5217,7 @@ Object {
                                             },
                                           ],
                                           "key": "bm",
-                                          "title": "blend-mode",
+                                          "title": "shape-blend-mode",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -5451,7 +5451,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
@@ -5598,7 +5598,7 @@ Object {
                                             },
                                           ],
                                           "key": "sk",
-                                          "title": "skew",
+                                          "title": "shape-transform-skew",
                                           "type": "element",
                                         },
                                         Object {
@@ -5647,7 +5647,7 @@ Object {
                                             },
                                           ],
                                           "key": "sa",
-                                          "title": "skew-axis",
+                                          "title": "shape-transform-skew-axis",
                                           "type": "element",
                                         },
                                         Object {
@@ -5720,7 +5720,7 @@ Object {
                                 },
                               ],
                               "key": "bm",
-                              "title": "blend-mode",
+                              "title": "shape-blend-mode",
                               "type": "attribute",
                             },
                             Object {
@@ -5817,7 +5817,7 @@ Object {
                     },
                   ],
                   "key": "bm",
-                  "title": "blend-mode",
+                  "title": "layer-blend-mode",
                   "type": "attribute",
                 },
               ],

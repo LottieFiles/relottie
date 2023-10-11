@@ -358,7 +358,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -610,7 +610,7 @@ Object {
                                             },
                                           ],
                                           "key": "or",
-                                          "title": "outer-radius",
+                                          "title": "shape-star-outer-radius",
                                           "type": "element",
                                         },
                                         Object {
@@ -684,7 +684,7 @@ Object {
                                             },
                                           ],
                                           "key": "pt",
-                                          "title": "points",
+                                          "title": "shape-star-points",
                                           "type": "element",
                                         },
                                         Object {
@@ -733,7 +733,7 @@ Object {
                                             },
                                           ],
                                           "key": "os",
-                                          "title": "outer-roundness",
+                                          "title": "shape-star-outer-roundness",
                                           "type": "element",
                                         },
                                       ],
@@ -1108,7 +1108,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -1335,7 +1335,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {

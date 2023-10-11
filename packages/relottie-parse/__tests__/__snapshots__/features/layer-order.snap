@@ -358,7 +358,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -917,7 +917,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -1144,7 +1144,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
@@ -1494,7 +1494,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -1757,7 +1757,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "size",
+                                          "title": "shape-rectangle-size",
                                           "type": "element",
                                         },
                                         Object {
@@ -2090,7 +2090,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -2317,7 +2317,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {

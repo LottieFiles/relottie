@@ -401,10 +401,46 @@ export const objectEntity: NoKeyEntityMap = {
   [CT.positionKeyframeList]: {
     defaultTitle: OT.positionKeyframe,
   },
-  [ET.inTangent]: {
+  [ET.keyframeInTangent]: {
     defaultTitle: OT.keyframeBezierHandle,
   },
-  [ET.outTangent]: {
+  [ET.keyframeListInTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.keyframeValueInTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.positionKeyframeInTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.positionKeyframeListInTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.keyframeBezierHandleInTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.shapeKeyframeInTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.keyframeOutTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.keyframeListOutTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.keyframeValueOutTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.positionKeyframeOutTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.positionKeyframeListOutTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.keyframeBezierHandleOutTangent]: {
+    defaultTitle: OT.keyframeBezierHandle,
+  },
+  [ET.shapeKeyframeOutTangent]: {
     defaultTitle: OT.keyframeBezierHandle,
   },
   [ET.translation]: {
@@ -440,7 +476,16 @@ export const objectEntity: NoKeyEntityMap = {
       { key: 'z', type: 'Object', title: ET.animatedValueProp, parentTitle: OT.splitVector },
     ],
   },
-  [ET.scale]: {
+  [ET.layerTransformScale]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.shapeTransformScale]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.transformRepeaterScale]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.textStyleScale]: {
     ...animatedMultidimensionalProp,
   },
   [ET.rotationClockwise]: {
@@ -458,31 +503,67 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.rotationZ]: {
     ...animatedValueProp,
   },
-  [ET.skew]: {
+  [ET.layerTransformSkew]: {
     ...animatedValueProp,
   },
-  [ET.skewAxis]: {
+  [ET.shapeTransformSkew]: {
     ...animatedValueProp,
   },
-  [ET.orientation]: {
+  [ET.transformRepeaterSkew]: {
+    ...animatedValueProp,
+  },
+  [ET.textStyleSkew]: {
+    ...animatedValueProp,
+  },
+  [ET.layerTransformSkewAxis]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeTransformSkewAxis]: {
+    ...animatedValueProp,
+  },
+  [ET.transformRepeaterSkewAxis]: {
+    ...animatedValueProp,
+  },
+  [ET.textStyleSkewAxis]: {
+    ...animatedValueProp,
+  },
+  [ET.layerTransformOrientation]: {
     ...animatedMultidimensionalProp,
   },
-  [ET.size]: {
+  [ET.shapeTransformOrientation]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.transformRepeaterOrientation]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.textStyleOrientation]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.shapeRectangleSize]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.layerStyleStrokeSize]: {
     ...animatedMultidimensionalProp,
   },
   [ET.rounded]: {
     ...animatedValueProp,
   },
-  [ET.level]: {
+  [ET.audioLevel]: {
     ...animatedMultidimensionalProp,
   },
   [ET.shapeEllipseSize]: {
     ...animatedMultidimensionalProp,
   },
-  [ET.startPoint]: {
+  [ET.shapeGradientFillStartPoint]: {
     ...animatedMultidimensionalProp,
   },
-  [ET.endPoint]: {
+  [ET.shapeGradientStrokeStartPoint]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.shapeGradientFillEndPoint]: {
+    ...animatedMultidimensionalProp,
+  },
+  [ET.shapeGradientStrokeEndPoint]: {
     ...animatedMultidimensionalProp,
   },
   [ET.splitX]: {
@@ -515,7 +596,19 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.effectValueSliderValue]: {
     ...animatedValueProp,
   },
-  [ET.opacity]: {
+  [ET.shapeFillOpacity]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeGradientFillOpacity]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeGradientStrokeOpacity]: {
+    ...animatedValueProp,
+  },
+  [ET.layerStyleOpacity]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeStrokeOpacity]: {
     ...animatedValueProp,
   },
   [ET.transformOpacity]: {
@@ -548,13 +641,25 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.strokeWidth]: {
     ...animatedValueProp,
   },
-  [ET.outerRadius]: {
+  [ET.shapePolygonOuterRadius]: {
     ...animatedValueProp,
   },
-  [ET.outerRoundness]: {
+  [ET.shapeStarOuterRadius]: {
     ...animatedValueProp,
   },
-  [ET.points]: {
+  [ET.shapePolygonOuterRoundness]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeStarOuterRoundness]: {
+    ...animatedValueProp,
+  },
+  [ET.shapePolygonPoints]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeStarPoints]: {
+    ...animatedValueProp,
+  },
+  [ET.shapeZigZagsPoints]: {
     ...animatedValueProp,
   },
   [ET.innerRadius]: {
@@ -569,7 +674,7 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.copies]: {
     ...animatedValueProp,
   },
-  [ET.offset]: {
+  [ET.shapeTrimOffset]: {
     ...animatedValueProp,
   },
   [ET.radius]: {
@@ -719,37 +824,37 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.strokeHue]: {
     ...animatedValueProp,
   },
-  [ET.fillColor]: {
+  [ET.textFillColor]: {
     ...animatedColorProp,
   },
-  [ET.fillHue]: {
+  [ET.textFillHue]: {
     ...animatedValueProp,
   },
-  [ET.fillSaturation]: {
+  [ET.textFillBrightness]: {
     ...animatedValueProp,
   },
-  [ET.fillOpacity]: {
+  [ET.textFillOpacity]: {
     ...animatedValueProp,
   },
-  [ET.fillBrightness]: {
+  [ET.textFillBrightness]: {
     ...animatedValueProp,
   },
   [ET.letterSpacing]: {
     ...animatedValueProp,
   },
-  [ET.blur]: {
+  [ET.textBlur]: {
     ...animatedValueProp,
   },
   [ET.lineSpacing]: {
     ...animatedValueProp,
   },
-  [ET.minEase]: {
+  [ET.textMinEase]: {
     ...animatedValueProp,
   },
-  [ET.maxEase]: {
+  [ET.textMaxEase]: {
     ...animatedValueProp,
   },
-  [ET.maxAmount]: {
+  [ET.textMaxAmount]: {
     ...animatedValueProp,
   },
   [ET.textSelectorStart]: {
@@ -776,7 +881,7 @@ export const objectEntity: NoKeyEntityMap = {
   [CT.documentFillColor]: {
     ...animatedColorProp,
   },
-  [ET.center]: {
+  [ET.shapeTrimCenter]: {
     ...animatedMultidimensionalProp,
   },
   [ET.textGroupAlignment]: {
@@ -930,10 +1035,10 @@ export const stringEntity: EntityMap<StringTitle> = {
     g: { [ET.metadata]: ST.generator },
     id: {
       // assets starts
-      [OT.assetImage]: ST.id,
-      [OT.assetPrecomposition]: ST.id,
-      [OT.assetDataSource]: ST.id,
-      [OT.assetFile]: ST.id,
+      [OT.assetImage]: ST.idAssetImage,
+      [OT.assetPrecomposition]: ST.idAssetPrecomposition,
+      [OT.assetDataSource]: ST.idAssetDataSource,
+      [OT.assetFile]: ST.idAssetFile,
       // assets ends
     },
     refId: {
@@ -1247,8 +1352,8 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
       ...createDependentTitles(CT.effectList, NT.effectType),
     },
     bm: {
-      ...createDependentTitles(CT.composition, NT.blendMode),
-      ...createDependentTitles(CT.shapeList, NT.blendMode),
+      ...createDependentTitles(CT.composition, NT.layerBlendMode),
+      ...createDependentTitles(CT.shapeList, NT.shapeBlendMode),
     },
     d: {
       [OT.shapeEllipse]: NT.shapeDirection,
@@ -1281,7 +1386,7 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
     },
     m: {
       [OT.shapeRepeater]: NT.composite,
-      [OT.shapeTrim]: NT.multiple,
+      [OT.shapeTrim]: NT.trimMultipleShapes,
       [ET.textFollowPath]: NT.textMask,
     },
     r: {
@@ -1335,20 +1440,20 @@ export const nullEntity: EntityMap<AttributeTitle> = {
 export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
   required: {
     x: {
-      [OT.keyframe]: IBT.xAxisValue,
-      [CT.keyframeList]: IBT.xAxisValue,
-      [CT.keyframeValue]: IBT.xAxisValue,
-      [OT.positionKeyframe]: IBT.xAxisValue,
-      [CT.positionKeyframeList]: IBT.xAxisValue,
-      [OT.keyframeBezierHandle]: IBT.xAxisValue,
+      [OT.keyframe]: IBT.keyframeXAxis,
+      [CT.keyframeList]: IBT.keyframeListXAxis,
+      [CT.keyframeValue]: IBT.keyframeValueXAxis,
+      [OT.positionKeyframe]: IBT.positionKeyframeXAxis,
+      [CT.positionKeyframeList]: IBT.positionKeyframeListXAxis,
+      [OT.keyframeBezierHandle]: IBT.keyframeBezierHandleXAxis,
     },
     y: {
-      [OT.keyframe]: IBT.yAxisValue,
-      [CT.keyframeList]: IBT.yAxisValue,
-      [CT.keyframeValue]: IBT.yAxisValue,
-      [OT.positionKeyframe]: IBT.yAxisValue,
-      [CT.positionKeyframeList]: IBT.yAxisValue,
-      [OT.keyframeBezierHandle]: IBT.yAxisValue,
+      [OT.keyframe]: IBT.keyframeYAxis,
+      [CT.keyframeList]: IBT.keyframeListYAxis,
+      [CT.keyframeValue]: IBT.keyframeValueYAxis,
+      [OT.positionKeyframe]: IBT.positionKeyframeYAxis,
+      [CT.positionKeyframeList]: IBT.positionKeyframeListYAxis,
+      [OT.keyframeBezierHandle]: IBT.keyframeBezierHandleYAxis,
     },
     t: { [ET.textSelector]: IBT.expressible },
   },
@@ -1478,10 +1583,10 @@ export const collectionEntity: EntityMap<CollectionTitle> = {
       ...createDependentTitles(CT.effectList, CT.effectParameters),
     },
     i: {
-      [OT.bezier]: CT.inTangents,
+      [OT.bezier]: CT.bezierInTangents,
     },
-    o: { [OT.bezier]: CT.outTangents },
-    v: { [OT.bezier]: CT.vertices },
+    o: { [OT.bezier]: CT.bezierOutTangents },
+    v: { [OT.bezier]: CT.bezierVertices },
     k: {
       [ET.textAnimatedDocument]: CT.textDocumentKeyframes,
       [OT.animatedValue]: CT.keyframeList,
@@ -1498,10 +1603,10 @@ export const collectionEntity: EntityMap<CollectionTitle> = {
       [ET.textAnimatorData]: CT.textRanges,
     },
     x: {
-      [OT.keyframeBezierHandle]: CT.xAxis,
+      [OT.keyframeBezierHandle]: CT.bezierXAxis,
     },
     y: {
-      [OT.keyframeBezierHandle]: CT.yAxis,
+      [OT.keyframeBezierHandle]: CT.bezierYAxis,
     },
     s: {
       [OT.shapeKeyframe]: CT.shapeKeyframeStart,
@@ -1569,10 +1674,10 @@ export const collectionEntity: EntityMap<CollectionTitle> = {
       [OT.shapeKeyframe]: CT.keyframeEndValue,
     },
     to: {
-      [OT.positionKeyframe]: CT.valueOutTangent,
+      [OT.positionKeyframe]: CT.positionKeyframeOutTangents,
     },
     ti: {
-      [OT.positionKeyframe]: CT.valueInTangent,
+      [OT.positionKeyframe]: CT.positionKeyframeInTangents,
     },
     sz: { [ET.textDocument]: CT.wrapSize },
     sc: {
@@ -1625,9 +1730,9 @@ export const elementEntity: EntityMap<ElementTitle> = {
     },
     s: {
       [OT.shapeEllipse]: ET.shapeEllipseSize,
-      [OT.shapeGradientFill]: ET.startPoint,
-      [OT.shapeGradientStroke]: ET.startPoint,
-      [OT.shapeRectangle]: ET.size,
+      [OT.shapeGradientFill]: ET.shapeGradientFillStartPoint,
+      [OT.shapeGradientStroke]: ET.shapeGradientStrokeStartPoint,
+      [OT.shapeRectangle]: ET.shapeRectangleSize,
       [OT.shapeTrim]: ET.shapeTrimStart,
       [OT.textDocumentKeyframe]: ET.textDocument,
 
@@ -1638,9 +1743,9 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.layerStyleSatin]: ET.blurSize,
     },
     o: {
-      [OT.shapeFill]: ET.opacity,
-      [OT.shapeGradientFill]: ET.opacity,
-      [OT.shapeTrim]: ET.offset,
+      [OT.shapeFill]: ET.shapeFillOpacity,
+      [OT.shapeGradientFill]: ET.shapeGradientFillOpacity,
+      [OT.shapeTrim]: ET.shapeTrimOffset,
 
       // shape-base-stroke starts
       [OT.shapeGradientStroke]: ET.strokeOpacity,
@@ -1653,8 +1758,8 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.shapeStroke]: ET.shapeStrokeColor,
     },
     e: {
-      [OT.shapeGradientFill]: ET.endPoint,
-      [OT.shapeGradientStroke]: ET.endPoint,
+      [OT.shapeGradientFill]: ET.shapeGradientFillEndPoint,
+      [OT.shapeGradientStroke]: ET.shapeGradientStrokeEndPoint,
       [OT.shapeTrim]: ET.shapeTrimEnd,
     },
     g: {
@@ -1662,16 +1767,16 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.shapeGradientStroke]: ET.animatedGradientColors,
     },
     or: {
-      [OT.shapePolygon]: ET.outerRadius,
-      [OT.shapeStar]: ET.outerRadius,
+      [OT.shapePolygon]: ET.shapePolygonOuterRadius,
+      [OT.shapeStar]: ET.shapeStarOuterRadius,
     },
     os: {
-      [OT.shapePolygon]: ET.outerRoundness,
-      [OT.shapeStar]: ET.outerRoundness,
+      [OT.shapePolygon]: ET.shapePolygonOuterRoundness,
+      [OT.shapeStar]: ET.shapeStarOuterRoundness,
     },
     pt: {
-      [OT.shapePolygon]: ET.points,
-      [OT.shapeStar]: ET.points,
+      [OT.shapePolygon]: ET.shapePolygonPoints,
+      [OT.shapeStar]: ET.shapeStarPoints,
     },
     ir: {
       [OT.shapeStar]: ET.innerRadius,
@@ -1686,7 +1791,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [CT.textCharacters]: ET.textCharacterData,
     },
     a: {
-      [ET.textSelector]: ET.maxAmount,
+      [ET.textSelector]: ET.textMaxAmount,
     },
     d: {
       [ET.textAnimatorData]: ET.textAnimatedDocument,
@@ -1695,7 +1800,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.animatedShapeStatic]: ET.animatedShapeBezier,
       [ET.animatedGradientColors]: ET.animatedMultidimensionalProp,
     },
-    lv: { [ET.layerAudioSettings]: ET.level },
+    lv: { [ET.layerAudioSettings]: ET.audioLevel },
     x: {
       [OT.splitVector]: ET.splitX,
     },
@@ -1720,10 +1825,10 @@ export const elementEntity: EntityMap<ElementTitle> = {
   },
   known: {
     xe: {
-      [ET.textSelector]: ET.maxEase,
+      [ET.textSelector]: ET.textMaxEase,
     },
     ne: {
-      [ET.textSelector]: ET.minEase,
+      [ET.textSelector]: ET.textMinEase,
     },
     meta: { [OT.animation]: ET.metadata },
     [ET.metadata]: { [OT.animation]: ET.userMetadata },
@@ -1769,10 +1874,10 @@ export const elementEntity: EntityMap<ElementTitle> = {
     },
     or: {
       // transform starts
-      [ET.layerTransform]: ET.orientation,
-      [OT.shapeTransform]: ET.orientation,
-      [ET.transformRepeater]: ET.orientation,
-      [ET.textStyle]: ET.orientation,
+      [ET.layerTransform]: ET.layerTransformOrientation,
+      [OT.shapeTransform]: ET.shapeTransformOrientation,
+      [ET.transformRepeater]: ET.transformRepeaterOrientation,
+      [ET.textStyle]: ET.textStyleOrientation,
       // transform ends
     },
     a: {
@@ -1790,7 +1895,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
 
       [OT.textRange]: ET.textStyle,
       [ET.textFollowPath]: ET.forceAlignment,
-      [ET.textSelector]: ET.maxAmount,
+      [ET.textSelector]: ET.textMaxAmount,
       [ET.textAlignmentOptions]: ET.textGroupAlignment,
 
       [OT.layerStyleDropShadow]: ET.angle,
@@ -1801,16 +1906,16 @@ export const elementEntity: EntityMap<ElementTitle> = {
     },
     s: {
       // transform starts
-      [ET.layerTransform]: ET.scale,
-      [OT.shapeTransform]: ET.scale,
-      [ET.transformRepeater]: ET.scale,
-      [ET.textStyle]: ET.scale,
+      [ET.layerTransform]: ET.layerTransformScale,
+      [OT.shapeTransform]: ET.shapeTransformScale,
+      [ET.transformRepeater]: ET.transformRepeaterScale,
+      [ET.textStyle]: ET.textStyleScale,
       // transform ends
 
       [OT.shapeZigZags]: ET.shapeZigZagSize,
       [OT.textRange]: ET.textSelector,
 
-      [OT.layerStyleStroke]: ET.size,
+      [OT.layerStyleStroke]: ET.layerStyleStrokeSize,
       [OT.layerStyleGradientOverlay]: ET.gradientOverlayScale,
       [ET.textSelector]: ET.textSelectorStart,
     },
@@ -1822,54 +1927,53 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [ET.textStyle]: ET.transformOpacity,
       // transform ends
 
-      [ET.textSelector]: ET.offset,
+      [ET.textSelector]: ET.shapeTrimOffset,
 
-      [OT.shapeFill]: ET.opacity,
-      [OT.shapeGradientFill]: ET.opacity,
-      [OT.shapeGradientStroke]: ET.opacity,
-      [OT.shapeStroke]: ET.opacity,
+      [OT.shapeFill]: ET.shapeFillOpacity,
+      [OT.shapeGradientFill]: ET.shapeGradientFillOpacity,
+      [OT.shapeGradientStroke]: ET.shapeGradientStrokeOpacity,
+      [OT.shapeStroke]: ET.shapeStrokeOpacity,
 
       [OT.mask]: ET.maskOpacity,
-      [OT.shapeGradientFill]: ET.opacity,
 
-      [OT.shapeRepeater]: ET.offset,
-      [OT.keyframe]: ET.outTangent,
-      [CT.keyframeList]: ET.outTangent,
-      [CT.keyframeValue]: ET.outTangent,
-      [OT.positionKeyframe]: ET.outTangent,
-      [CT.positionKeyframeList]: ET.outTangent,
-      [OT.keyframeBezierHandle]: ET.outTangent,
-      [OT.shapeKeyframe]: ET.outTangent,
-      [OT.layerStyleDropShadow]: ET.opacity,
-      [OT.layerStyleInnerShadow]: ET.opacity,
-      [OT.layerStyleBevelEmboss]: ET.opacity,
-      [OT.layerStyleSatin]: ET.opacity,
-      [OT.layerStyleColorOverlay]: ET.opacity,
-      [OT.layerStyleGradientOverlay]: ET.opacity,
+      [OT.shapeRepeater]: ET.shapeTrimOffset,
+      [OT.keyframe]: ET.keyframeOutTangent,
+      [CT.keyframeList]: ET.keyframeListOutTangent,
+      [CT.keyframeValue]: ET.keyframeValueOutTangent,
+      [OT.positionKeyframe]: ET.positionKeyframeOutTangent,
+      [CT.positionKeyframeList]: ET.positionKeyframeListOutTangent,
+      [OT.keyframeBezierHandle]: ET.keyframeBezierHandleOutTangent,
+      [OT.shapeKeyframe]: ET.shapeKeyframeOutTangent,
+      [OT.layerStyleDropShadow]: ET.layerStyleOpacity,
+      [OT.layerStyleInnerShadow]: ET.layerStyleOpacity,
+      [OT.layerStyleBevelEmboss]: ET.layerStyleOpacity,
+      [OT.layerStyleSatin]: ET.layerStyleOpacity,
+      [OT.layerStyleColorOverlay]: ET.layerStyleOpacity,
+      [OT.layerStyleGradientOverlay]: ET.layerStyleOpacity,
     },
     i: {
-      [OT.keyframe]: ET.inTangent,
-      [CT.keyframeList]: ET.inTangent,
-      [CT.keyframeValue]: ET.inTangent,
-      [OT.positionKeyframe]: ET.inTangent,
-      [CT.positionKeyframeList]: ET.inTangent,
-      [OT.keyframeBezierHandle]: ET.inTangent,
-      [OT.shapeKeyframe]: ET.inTangent,
+      [OT.keyframe]: ET.keyframeInTangent,
+      [CT.keyframeList]: ET.keyframeListInTangent,
+      [CT.keyframeValue]: ET.keyframeValueInTangent,
+      [OT.positionKeyframe]: ET.positionKeyframeInTangent,
+      [CT.positionKeyframeList]: ET.positionKeyframeListInTangent,
+      [OT.keyframeBezierHandle]: ET.keyframeBezierHandleInTangent,
+      [OT.shapeKeyframe]: ET.shapeKeyframeInTangent,
     },
     sk: {
       // transform starts
-      [ET.layerTransform]: ET.skew,
-      [OT.shapeTransform]: ET.skew,
-      [ET.transformRepeater]: ET.skew,
-      [ET.textStyle]: ET.skew,
+      [ET.layerTransform]: ET.layerTransformSkew,
+      [OT.shapeTransform]: ET.shapeTransformSkew,
+      [ET.transformRepeater]: ET.transformRepeaterSkew,
+      [ET.textStyle]: ET.textStyleSkew,
       // transform ends
     },
     sa: {
       // transform starts
-      [ET.layerTransform]: ET.skewAxis,
-      [OT.shapeTransform]: ET.skewAxis,
-      [ET.transformRepeater]: ET.skewAxis,
-      [ET.textStyle]: ET.skewAxis,
+      [ET.layerTransform]: ET.layerTransformSkewAxis,
+      [OT.shapeTransform]: ET.shapeTransformSkewAxis,
+      [ET.transformRepeater]: ET.transformRepeaterSkewAxis,
+      [ET.textStyle]: ET.textStyleSkewAxis,
       // transform ends
     },
     p: {
@@ -1883,7 +1987,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
     },
     pt: {
       [OT.mask]: ET.maskVertices,
-      [OT.shapeZigZags]: ET.points,
+      [OT.shapeZigZags]: ET.shapeZigZagsPoints,
     },
     x: { [OT.mask]: ET.dilate },
     tm: { [OT.layerPrecomposition]: ET.timeRemapping },
@@ -1892,7 +1996,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.shapeGradientStroke]: ET.highlightLength,
     },
     r: {
-      [OT.shapeGradientFill]: ET.fillRule,
+      [OT.shapeGradientFill]: ET.shapeGradientFillRule,
       [OT.shapeZigZags]: ET.roundness,
       [ET.textFollowPath]: ET.reversePath,
       [OT.layerStyleOuterGlow]: ET.range,
@@ -1910,7 +2014,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       // shape-base-stroke ends
     },
     c: {
-      [OT.shapeTrim]: ET.center,
+      [OT.shapeTrim]: ET.shapeTrimCenter,
       [OT.layerStyleStroke]: ET.layerStyleColor,
       [OT.layerStyleDropShadow]: ET.layerStyleColor,
       [OT.layerStyleInnerShadow]: ET.layerStyleColor,
@@ -1920,7 +2024,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
     ml: { [OT.shapeOffsetPath]: ET.miterLimit },
     so: {
       [OT.layerStyleBevelEmboss]: ET.shadowOpacity,
-      [OT.layerStyleColorOverlay]: ET.opacity,
+      [OT.layerStyleColorOverlay]: ET.layerStyleOpacity,
       [ET.transformRepeater]: ET.startOpacity,
     },
     eo: {
@@ -1955,25 +2059,25 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [ET.textStyle]: ET.strokeBrightness,
     },
     fc: {
-      [ET.textStyle]: ET.fillColor,
+      [ET.textStyle]: ET.textFillColor,
     },
     fh: {
-      [ET.textStyle]: ET.fillHue,
+      [ET.textStyle]: ET.textFillHue,
     },
     fs: {
-      [ET.textStyle]: ET.fillSaturation,
+      [ET.textStyle]: ET.textFillSaturation,
     },
     fo: {
-      [ET.textStyle]: ET.fillOpacity,
+      [ET.textStyle]: ET.textFillOpacity,
     },
     fb: {
-      [ET.textStyle]: ET.fillBrightness,
+      [ET.textStyle]: ET.textFillBrightness,
     },
     t: {
       [ET.textStyle]: ET.letterSpacing,
     },
     bl: {
-      [ET.textStyle]: ET.blur,
+      [ET.textStyle]: ET.textBlur,
     },
     ls: {
       [ET.textStyle]: ET.lineSpacing,
@@ -2058,7 +2162,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.layerStyleGradientOverlay]: ET.align,
     },
     of: {
-      [OT.layerStyleGradientOverlay]: ET.offset,
+      [OT.layerStyleGradientOverlay]: ET.shapeTrimOffset,
     },
   },
 };
