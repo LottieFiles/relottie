@@ -2204,6 +2204,18 @@ export const getElementData = (key: Key, parentTitle: ParentTitle): Entity<Eleme
   return getEntityData<ElementTitle>(key, parentTitle, elementEntity, 'element');
 };
 
+export const getNumberEntityData = (key: Key, parentTitle: ParentTitle): Entity<AttributeTitle> => {
+  const numberEntityData = getEntityData<AttributeTitle>(key, parentTitle, numberEntity, 'attribute');
+
+  if (numberEntityData.title !== CUSTOM) return numberEntityData;
+
+  const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, numberConstantEntity, 'constant');
+
+  if (constantEntity.title !== CUSTOM) return constantEntity;
+
+  return getEntityData<AttributeTitle>(key, parentTitle, integerBooleanEntity, 'integer-boolean');
+};
+
 export const getAttributeData = (key: Key, member: Momoa.Member, parentTitle: ParentTitle): Entity<AttributeTitle> => {
   switch (member.value.type) {
     case 'String':
@@ -2217,17 +2229,7 @@ export const getAttributeData = (key: Key, member: Momoa.Member, parentTitle: Pa
       return getEntityData<BooleanTitle>(key, parentTitle, booleanEntity, 'attribute');
 
     case 'Number':
-      const numberEntityData = getEntityData<AttributeTitle>(key, parentTitle, numberEntity, 'attribute');
-
-      if (numberEntityData.title === CUSTOM) {
-        const constantTitles = getEntityData<AttributeTitle>(key, parentTitle, numberConstantEntity, 'constant');
-
-        return constantTitles.title === CUSTOM
-          ? getEntityData<AttributeTitle>(key, parentTitle, integerBooleanEntity, 'integer-boolean')
-          : constantTitles;
-      } else {
-        return numberEntityData;
-      }
+      return getNumberEntityData(key, parentTitle);
 
     case 'Null':
       return getEntityData<AttributeTitle>(key, parentTitle, nullEntity, 'attribute');
