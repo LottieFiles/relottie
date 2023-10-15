@@ -86,8 +86,7 @@ export const matteModeValues: ConstantNumMap = new Map<MatteMode.Value, string>(
 ]);
 
 export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
-  [NT.layerBlendMode, blendModeValues],
-  [NT.shapeBlendMode, blendModeValues],
+  [NT.blendMode, blendModeValues],
   [NT.composite, compositeValues],
   [NT.fillRuleValue, filleRuleValues],
   [NT.gradientType, gradientTypeValues],

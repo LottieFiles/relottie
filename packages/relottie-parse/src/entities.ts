@@ -1354,8 +1354,8 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
       ...createDependentTitles(CT.effectList, NT.effectType),
     },
     bm: {
-      ...createDependentTitles(CT.composition, NT.layerBlendMode),
-      ...createDependentTitles(CT.shapeList, NT.shapeBlendMode),
+      ...createDependentTitles(CT.composition, NT.blendMode),
+      ...createDependentTitles(CT.shapeList, NT.blendMode),
     },
     d: {
       [OT.shapeEllipse]: NT.shapeDirection,

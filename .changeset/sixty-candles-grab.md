@@ -2,7 +2,7 @@
 "@lottiefiles/last": minor
 "@lottiefiles/relottie-parse": minor
 ---
-- feat(titles): add shape & layer prefixes to blendMode
+- feat(titles): add constant blendMode titles
 
 - feat(titles): add keyframe, keyframeList, keyframeValue, positionKeyframe, positionKeyframeList, keyframeBezierHandle prefixes to xAxisValue & yAxisValue
 
