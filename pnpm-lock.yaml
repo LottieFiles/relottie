@@ -87,8 +87,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.14.49)(jest@27.5.1)
       '@lottiefiles/lottie-types':
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.4.0
+        version: 1.4.0
       '@types/jest':
         specifier: 28.1.8
         version: 28.1.8
@@ -121,8 +121,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.14.49)(jest@27.5.1)
       '@lottiefiles/lottie-types':
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.4.0
+        version: 1.4.0
       '@types/jest':
         specifier: 28.1.8
         version: 28.1.8
@@ -232,8 +232,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.14.49)(jest@28.1.3)
       '@lottiefiles/lottie-types':
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.4.0
+        version: 1.4.0
       '@types/jest':
         specifier: 28.1.8
         version: 28.1.8
@@ -293,8 +293,8 @@ importers:
         specifier: workspace:*
         version: link:../last-builder
       '@lottiefiles/lottie-types':
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.4.0
+        version: 1.4.0
       '@lottiefiles/relottie-parse':
         specifier: workspace:*
         version: link:../relottie-parse
@@ -2142,6 +2142,7 @@ packages:
 
   /@lottiefiles/commitlint-config@2.0.0(@commitlint/cli@17.0.3):
     resolution: {integrity: sha512-9UYYFp/jGHXWUhT+y/Vn+KcqPwKfBUL1Yy9nu7FqQ9RUtsbZ26PpuEi2r3lgwHns1+K9oqM9bOAsS9JeZkSE0Q==, tarball: https://npm.pkg.github.com/download/@LottieFiles/commitlint-config/2.0.0/7470f16f5b9786c5dd284c456b08a91c16356857}
+    engines: {node: '>= 14'}
     peerDependencies:
       '@commitlint/cli': '*'
     dependencies:
@@ -2151,11 +2152,22 @@ packages:
 
   /@lottiefiles/eslint-plugin@3.0.0(@types/node@20.5.1)(eslint@7.32.0)(graphql@16.8.1)(jest@28.1.3)(prettier@2.7.1)(typescript@4.7.4):
     resolution: {integrity: sha512-NifgSAG/ccHfxWEKh4EKwRmVUq7fYWkL+bZdFDktopp/CLYugW/02cAfZa+Su6u+3uzlcKKgl3J7LQd+dRXO/w==, tarball: https://npm.pkg.github.com/download/@LottieFiles/eslint-plugin/3.0.0/648e4d9b17378d22d876fa054ff6e3eeb7639403}
+    engines: {node: '>= 14'}
     peerDependencies:
       eslint: '*'
       graphql: '*'
+      jest: '*'
       prettier: '*'
       typescript: '*'
+    peerDependenciesMeta:
+      graphql:
+        optional: true
+      jest:
+        optional: true
+      prettier:
+        optional: true
+      typescript:
+        optional: true
     dependencies:
       '@graphql-eslint/eslint-plugin': 3.8.0(@types/node@20.5.1)(graphql@16.8.1)(typescript@4.7.4)
       '@next/eslint-plugin-next': 12.1.0
@@ -2192,6 +2204,7 @@ packages:
       eslint-plugin-tsdoc: 0.2.14
       eslint-plugin-typescript-sort-keys: 2.1.0(@typescript-eslint/parser@5.13.0)(eslint@7.32.0)(typescript@4.7.4)
       graphql: 16.8.1
+      jest: 28.1.3(@types/node@20.5.1)(ts-node@10.9.1)
       prettier: 2.7.1
       typescript: 4.7.4
     transitivePeerDependencies:
@@ -2199,13 +2212,13 @@ packages:
       - bufferutil
       - encoding
       - eslint-import-resolver-webpack
-      - jest
       - supports-color
       - utf-8-validate
     dev: true
 
   /@lottiefiles/jest-config@1.0.0(esbuild@0.14.49)(jest@27.5.1):
     resolution: {integrity: sha512-a7rir3rlrgXAIuvlScLmFGvhpqFaB5aGn2TVn1eqJ1JF2efqn4ANoIx0pEOEbfB8rm34fK0ADJeT+hJZHXrp8w==, tarball: https://npm.pkg.github.com/download/@LottieFiles/jest-config/1.0.0/dbdc4873816736f8f5fdf8945d82a9ed0f666624}
+    engines: {node: '>= 14'}
     peerDependencies:
       esbuild: '*'
       jest: '*'
@@ -2226,6 +2239,7 @@ packages:
 
   /@lottiefiles/jest-config@1.0.0(esbuild@0.14.49)(jest@28.1.3):
     resolution: {integrity: sha512-a7rir3rlrgXAIuvlScLmFGvhpqFaB5aGn2TVn1eqJ1JF2efqn4ANoIx0pEOEbfB8rm34fK0ADJeT+hJZHXrp8w==, tarball: https://npm.pkg.github.com/download/@LottieFiles/jest-config/1.0.0/dbdc4873816736f8f5fdf8945d82a9ed0f666624}
+    engines: {node: '>= 14'}
     peerDependencies:
       esbuild: '*'
       jest: '*'
@@ -2244,14 +2258,15 @@ packages:
       - supports-color
     dev: true
 
-  /@lottiefiles/lottie-types@1.2.1:
-    resolution: {integrity: sha512-NUOgEoygkkCuf6lXr0RwX7BOrJGg5q5ur192q7jRwvnRw0cc1Jw0Cz3v6+kmPleR0HsQGJwmCQrrX0V3Bz2D9w==, tarball: https://npm.pkg.github.com/download/@LottieFiles/lottie-types/1.2.1/12fb1757b00bd2c28a487013a6609c5c8bbdf119}
+  /@lottiefiles/lottie-types@1.4.0:
+    resolution: {integrity: sha512-rlH8hGGXormONvEV88tJnt3HP2J+13dU0Q+d3XNlKvlDOy0uXxTCmWqfq5BT4kZ+c6UWj01YJho7cEDa/JDrWQ==, tarball: https://npm.pkg.github.com/download/@LottieFiles/lottie-types/1.4.0/b74f81d61f9b66dc25bb9be6b6142a4e2d270d09}
     dependencies:
       '@changesets/cli': 2.23.2
     dev: true
 
   /@lottiefiles/prettier-config@3.0.0(prettier@2.7.1):
     resolution: {integrity: sha512-gHQ5fZ15M2z72hDZDwe8AjOyUXI4fddiB3q1aw20a+wWtCPBg5qHp0+AKZX4to3hHmiTqfFKUh8VGt5WdFLTrw==, tarball: https://npm.pkg.github.com/download/@LottieFiles/prettier-config/3.0.0/afc9686569ec81268d8d51c3d3137d4d715a6094}
+    engines: {node: '>= 14'}
     peerDependencies:
       prettier: '*'
     dependencies:
@@ -2263,6 +2278,7 @@ packages:
 
   /@lottiefiles/tsconfig@2.0.0(typescript@4.7.4):
     resolution: {integrity: sha512-rcDiXVc+WlDCL72IHjW/BCLp9TdEi/DGYAPrpT/GbCaKs5a3UoD8N7zyZt9gRIAjU+XmdHLFTxr8oL5IvqqR8Q==, tarball: https://npm.pkg.github.com/download/@LottieFiles/tsconfig/2.0.0/f8914c6cf8d1a4955a2e1e451a4b64da656bdafa}
+    engines: {node: '>= 14'}
     peerDependencies:
       typescript: '*'
     dependencies:
@@ -8178,6 +8194,7 @@ packages:
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       safer-buffer: 2.1.2
     dev: true
