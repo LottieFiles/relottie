@@ -18,6 +18,8 @@ import type {
 } from '@lottiefiles/last';
 import { TITLES } from '@lottiefiles/last';
 
+import { constantNumValues, constantStrValues } from './constants.js';
+
 const {
   boolean: BT,
   collection: CT,
@@ -2204,16 +2206,46 @@ export const getElementData = (key: Key, parentTitle: ParentTitle): Entity<Eleme
   return getEntityData<ElementTitle>(key, parentTitle, elementEntity, 'element');
 };
 
-export const getNumberEntityData = (key: Key, parentTitle: ParentTitle): Entity<AttributeTitle> => {
-  const numberEntityData = getEntityData<AttributeTitle>(key, parentTitle, numberEntity, 'attribute');
-
-  if (numberEntityData.title !== CUSTOM) return numberEntityData;
-
+export const getNumberConstantEntity = (
+  key: Key,
+  member: Momoa.Num,
+  parentTitle: ParentTitle,
+): Entity<AttributeTitle> => {
   const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, numberConstantEntity, 'constant');
 
-  if (constantEntity.title !== CUSTOM) return constantEntity;
+  if (constantEntity.title !== CUSTOM) {
+    const constantValues = constantNumValues.get(constantEntity.title);
+
+    if (!constantValues) return constantEntity;
+
+    const constValue = constantValues.get(member.value);
+
+    if (constValue) constantEntity.title = `${constantEntity.title}-${constValue}` as AttributeTitle;
+
+    return constantEntity;
+  }
 
   return getEntityData<AttributeTitle>(key, parentTitle, integerBooleanEntity, 'integer-boolean');
+};
+
+export const getStringConstantEntity = (
+  key: Key,
+  member: Momoa.Str,
+  parentTitle: ParentTitle,
+): Entity<AttributeTitle> => {
+  const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, stringConstantEntity, 'constant');
+
+  if (constantEntity.title !== CUSTOM) {
+    const constantValues = constantStrValues.get(constantEntity.title);
+
+    if (!constantValues) return constantEntity;
+
+    const constValue = constantValues.get(member.value);
+
+    if (constValue) constantEntity.title = `${constantEntity.title}-${constValue}` as AttributeTitle;
+  }
+
+  return constantEntity;
 };
 
 export const getAttributeData = (key: Key, member: Momoa.Member, parentTitle: ParentTitle): Entity<AttributeTitle> => {
@@ -2221,15 +2253,19 @@ export const getAttributeData = (key: Key, member: Momoa.Member, parentTitle: Pa
     case 'String':
       const stringTitles = getEntityData<AttributeTitle>(key, parentTitle, stringEntity, 'attribute');
 
-      return stringTitles.title === CUSTOM
-        ? getEntityData<StringTitle>(key, parentTitle, stringConstantEntity, 'constant')
-        : stringTitles;
+      if (stringTitles.title !== CUSTOM) return stringTitles;
+
+      return getStringConstantEntity(key, member.value, parentTitle);
 
     case 'Boolean':
       return getEntityData<BooleanTitle>(key, parentTitle, booleanEntity, 'attribute');
 
     case 'Number':
-      return getNumberEntityData(key, parentTitle);
+      const numberEntityData = getEntityData<AttributeTitle>(key, parentTitle, numberEntity, 'attribute');
+
+      if (numberEntityData.title !== CUSTOM) return numberEntityData;
+
+      return getNumberConstantEntity(key, member.value, parentTitle);
 
     case 'Null':
       return getEntityData<AttributeTitle>(key, parentTitle, nullEntity, 'attribute');
