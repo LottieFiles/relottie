@@ -324,8 +324,8 @@ export const objectEntity: NoKeyEntityMap = {
       },
     ],
   },
-  [CT.effectParameters]: {
-    defaultTitle: OT.effectValueSlider,
+  [CT.effectParamList]: {
+    defaultTitle: OT.effectParamSlider,
     dependents: [
       {
         key: 'ty',
@@ -333,7 +333,7 @@ export const objectEntity: NoKeyEntityMap = {
         title: NT.effectValueType,
         parentTitle: {
           defaultValue: 0,
-          prefix: 'effect-value',
+          prefix: 'effect-param',
           values: {
             4: 'checkbox',
             2: 'color',
@@ -577,25 +577,25 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.splitZ]: {
     ...animatedValueProp,
   },
-  [ET.effectValueAngleValue]: {
+  [ET.effectValueAngle]: {
     ...animatedValueProp,
   },
-  [ET.effectValueCheckboxValue]: {
+  [ET.effectValueCheckbox]: {
     ...animatedValueProp,
   },
-  [ET.effectValueColorValue]: {
+  [ET.effectValueColor]: {
     ...animatedColorProp,
   },
-  [ET.effectValueDropdownValue]: {
+  [ET.effectValueDropdown]: {
     ...animatedValueProp,
   },
-  [ET.effectValueLayerValue]: {
+  [ET.effectValueLayer]: {
     ...animatedValueProp,
   },
-  [ET.effectValuePointValue]: {
+  [ET.effectValuePoint]: {
     ...animatedMultidimensionalProp,
   },
-  [ET.effectValueSliderValue]: {
+  [ET.effectValueSlider]: {
     ...animatedValueProp,
   },
   [ET.shapeFillOpacity]: {
@@ -1080,7 +1080,7 @@ export const stringEntity: EntityMap<StringTitle> = {
       [OT.animatedColorStatic]: ST.name,
       [OT.animatedMultidimensional]: ST.name,
       [OT.animatedMultidimensionalStatic]: ST.name,
-      ...createDependentTitles(CT.effectParameters, ST.name),
+      ...createDependentTitles(CT.effectParamList, ST.name),
       ...createDependentTitles(CT.effectList, ST.name),
       [OT.mask]: ST.name,
       ...createDependentTitles(CT.composition, ST.name),
@@ -1115,7 +1115,7 @@ export const stringEntity: EntityMap<StringTitle> = {
       [OT.animatedColorStatic]: ST.matchName,
       [OT.animatedMultidimensional]: ST.matchName,
       [OT.animatedMultidimensionalStatic]: ST.matchName,
-      ...createDependentTitles(CT.effectParameters, ST.matchName),
+      ...createDependentTitles(CT.effectParamList, ST.matchName),
       ...createDependentTitles(CT.effectList, ST.matchName),
       [OT.mask]: ST.matchName,
       ...createDependentTitles(CT.composition, ST.matchName),
@@ -1226,7 +1226,7 @@ export const numberEntity: EntityMap<NumberTitle> = {
     },
   },
   known: {
-    v: { [OT.effectValueIgnored]: NT.effectValueIgnoredValue },
+    v: { [OT.effectParamIgnored]: NT.effectValueIgnored },
     tm: { [OT.marker]: NT.markerTime },
     dr: { [OT.marker]: NT.markerDuration },
     sa: { [ET.motionBlur]: NT.shutterAngle },
@@ -1236,7 +1236,7 @@ export const numberEntity: EntityMap<NumberTitle> = {
     ix: {
       ...createDependentTitles(CT.shapeList, NT.propertyIndex),
       ...createDependentTitles(CT.effectList, NT.propertyIndex),
-      ...createDependentTitles(CT.effectParameters, NT.propertyIndex),
+      ...createDependentTitles(CT.effectParamList, NT.propertyIndex),
       [OT.animatedValue]: NT.propertyIndex,
       [OT.animatedValueStatic]: NT.propertyIndex,
       [OT.animatedShape]: NT.propertyIndex,
@@ -1336,7 +1336,7 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
     ty: {
       ...createDependentTitles(CT.composition, NT.layerType),
       ...createDependentTitles(CT.layerStyleList, NT.layerStyleType),
-      ...createDependentTitles(CT.effectParameters, NT.effectType),
+      ...createDependentTitles(CT.effectParamList, NT.effectType),
       ...createDependentTitles(CT.effectList, NT.effectType),
     },
     bm: {
@@ -1567,8 +1567,8 @@ export const collectionEntity: EntityMap<CollectionTitle> = {
       [OT.characterShapes]: CT.shapeList,
     },
     ef: {
-      [OT.effect]: CT.effectParameters,
-      ...createDependentTitles(CT.effectList, CT.effectParameters),
+      [OT.effect]: CT.effectParamList,
+      ...createDependentTitles(CT.effectList, CT.effectParamList),
     },
     i: {
       [OT.bezier]: CT.bezierInTangents,
@@ -1827,13 +1827,13 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.strokeDashGap]: ET.strokeLength,
       [OT.strokeDashOffset]: ET.strokeLength,
 
-      [OT.effectValueAngle]: ET.effectValueAngleValue,
-      [OT.effectValueCheckbox]: ET.effectValueCheckboxValue,
-      [OT.effectValueColor]: ET.effectValueColorValue,
-      [OT.effectValueDropdown]: ET.effectValueDropdownValue,
-      [OT.effectValueLayer]: ET.effectValueLayerValue,
-      [OT.effectValuePoint]: ET.effectValuePointValue,
-      [OT.effectValueSlider]: ET.effectValueSliderValue,
+      [OT.effectParamAngle]: ET.effectValueAngle,
+      [OT.effectParamCheckbox]: ET.effectValueCheckbox,
+      [OT.effectParamColor]: ET.effectValueColor,
+      [OT.effectParamDropdown]: ET.effectValueDropdown,
+      [OT.effectParamLayer]: ET.effectValueLayer,
+      [OT.effectParamPoint]: ET.effectValuePoint,
+      [OT.effectParamSlider]: ET.effectValueSlider,
     },
     rx: {
       // transform starts

@@ -57,3 +57,11 @@
 - fix: rename effectList numberOfProperties title to effectPropertyCount
 
 - refactor: remove unused ind titles for effectList and effectParams
+
+- feat: rename effectValueAngle, effectValueCheckbox, effectValueColor, effectValueDropdown, effectValueLayer, effectValuePoint, effectValueSlider to effectParamAngle, effectParamCheckbox, effectParamColor, effectParamDropdown, effectParamLayer, effectParamPoint, effectParamSlider
+
+- feat: rename effectParameters to effectParamList
+
+- feat: add effectPropertyCount title
+
+- feat(titles): rename effectValueAngleValue, effectValueCheckboxValue, effectValueColorValue, effectValueDropdownValue, effectValueLayerValue, effectValuePointValue, effectValueSliderValue to effectValueAngle, effectValueCheckbox, effectValueColor, effectValueDropdown, effectValueLayer, effectValuePoint, effectValueSlider
