@@ -164,7 +164,15 @@ export const TITLES = {
     textTypeJustify: 'text-type-justify',
     textTypeShape: 'text-type-shape',
     textTypeVerticalJustify: 'text-type-vertical-justify',
-    time: 'time',
+
+    keyframeTime: 'keyframe-time',
+    keyframeListTime: 'keyframe-list-time',
+    keyframeValueTime: 'keyframe-value-time',
+    positionKeyframeTime: 'position-keyframe-time',
+    positionKeyframeListTime: 'position-keyframe-list-time',
+    keyframeBezierHandleTime: 'keyframe-bezier-handle-time',
+    shapeKeyframeTime: 'shape-keyframe-time',
+
     timeStart: 'start-time',
     timeStretch: 'time-stretch',
     value: 'value',

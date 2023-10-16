@@ -47,3 +47,5 @@
 - feat(titles): rename multiple to trimMultipleShapes
 
 - feat(titles): rename closed to bezierClosed
+
+- feat: add time titles for keyframe, keyframeList, keyframeValue, positionKeyframe, positionKeyframeList, keyframeBezierHandle, shapeKeyframe 
