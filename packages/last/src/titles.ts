@@ -175,7 +175,8 @@ export const TITLES = {
 
     timeStart: 'start-time',
     timeStretch: 'time-stretch',
-    value: 'value',
+    effectValueIgnoredValue: 'effect-value-ignored-value',
+    effectPropertyCount: "effect-property-count",
     width: 'width',
   },
   intBoolean: {
@@ -386,7 +387,6 @@ export const TITLES = {
     effectValueCheckboxValue: 'effect-value-checkbox-value',
     effectValueColorValue: 'effect-value-color-value',
     effectValueDropdownValue: 'effect-value-dropdown-value',
-    effectValueIgnoredValue: 'effect-value-ignored-value',
     effectValueLayerValue: 'effect-value-layer-value',
     effectValuePointValue: 'effect-value-point-value',
     effectValueSliderValue: 'effect-value-slider-value',

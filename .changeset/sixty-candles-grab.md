@@ -49,3 +49,9 @@
 - feat(titles): rename closed to bezierClosed
 
 - feat: add time titles for keyframe, keyframeList, keyframeValue, positionKeyframe, positionKeyframeList, keyframeBezierHandle, shapeKeyframe 
+
+- fix: effectIgnoredValue.v title and placement
+
+- fix: numberOfProperties parent titles
+
+- fix: rename effectList numberOfProperties title to effectPropertyCount
