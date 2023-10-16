@@ -138,6 +138,11 @@ export const verticalJustifyValues: ConstantNumMap = new Map<TextType.VerticalJu
   [2, 'bottom'],
 ]);
 
+export const rangeUnitsValues: ConstantNumMap = new Map<number, string>([
+  [1, 'percent'],
+  [2, 'index'],
+]);
+
 export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.blendMode, blendModeValues],
   [NT.composite, compositeValues],
@@ -155,6 +160,7 @@ export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.textVerticalJustify, textShapeValues],
   [NT.fontPathOrigin, fontPathOriginValues],
   [NT.textVerticalJustify, verticalJustifyValues],
+  [NT.rangeUnits, rangeUnitsValues],
 ]);
 
 export type ConstantStrMap = Map<string, string>;

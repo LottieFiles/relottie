@@ -81,4 +81,6 @@
 
 - feat(titles): replace textType with fontPathOrigin, fontPathOriginLocal, fontPathOriginCssUrl, fontPathOriginScriptUrl, fontPathOriginFonturl
 
-- feat(titles): replace textTypeVerticalJustify with textVerticalJustify, textVerticalJustifyTop, textVerticalJustifyCenter, textVerticalJustifyBottom,
+- feat(titles): replace textTypeVerticalJustify with textVerticalJustify, textVerticalJustifyTop, textVerticalJustifyCenter, textVerticalJustifyBottom
+
+- feat(titles): detect & add rangeUnitsPercent & rangeUnitsIndex

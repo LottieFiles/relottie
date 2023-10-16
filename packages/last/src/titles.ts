@@ -145,7 +145,11 @@ export const TITLES = {
     outPoint: 'out-point',
     parentIndex: 'parent-index',
     propertyIndex: 'property-index',
+    
     rangeUnits: 'range-units',
+    rangeUnitsPercent: 'range-units-percent',
+    rangeUnitsIndex: 'range-units-index',
+
     samplesPerFrame: 'samples-per-frame',
 
     shapeDirection: 'shape-direction',
