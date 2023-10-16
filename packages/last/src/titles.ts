@@ -83,7 +83,6 @@ export const TITLES = {
     compositionIndex: 'composition-index',
     count: 'count',
     dataSourceType: 'data-source-type',
-    effectListIndex: 'effect-list-index',
     effectParametersIndex: 'effect-parameters-index',
     effectType: 'effect-type',
     effectValueType: 'effect-value-type',

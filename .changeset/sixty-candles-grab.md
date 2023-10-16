@@ -55,3 +55,5 @@
 - fix: numberOfProperties parent titles
 
 - fix: rename effectList numberOfProperties title to effectPropertyCount
+
+- refactor: remove unused ind titles for effectList and effectParams

@@ -1251,8 +1251,6 @@ export const numberEntity: EntityMap<NumberTitle> = {
     ind: {
       ...createDependentTitles(CT.composition, NT.compositionIndex),
       [OT.shapePath]: NT.shapePathIndex,
-      ...createDependentTitles(CT.effectParameters, NT.effectParametersIndex),
-      ...createDependentTitles(CT.effectList, NT.effectListIndex),
     },
     cix: {
       ...createDependentTitles(CT.shapeList, NT.expressionPropertyIndex),
