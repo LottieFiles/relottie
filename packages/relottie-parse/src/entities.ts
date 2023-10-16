@@ -259,7 +259,7 @@ export const objectEntity: NoKeyEntityMap = {
       },
     ],
   },
-  assets: {
+  [CT.assets]: {
     defaultTitle: OT.assetPrecomposition,
     dependents: [
       { key: 'w', type: 'Number', title: NT.width, parentTitle: OT.assetImage },
