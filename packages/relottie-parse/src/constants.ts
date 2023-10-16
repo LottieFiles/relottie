@@ -141,7 +141,7 @@ export const verticalJustifyValues: ConstantNumMap = new Map<TextType.VerticalJu
 export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.blendMode, blendModeValues],
   [NT.composite, compositeValues],
-  [NT.fillRuleValue, filleRuleValues],
+  [NT.fillRule, filleRuleValues],
   [NT.gradientType, gradientTypeValues],
   [NT.lineCap, lineCapValues],
   [NT.lineJoin, lineJoinValues],

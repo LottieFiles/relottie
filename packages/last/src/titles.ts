@@ -93,9 +93,9 @@ export const TITLES = {
     effectValueType: 'effect-value-type',
     expressionPropertyIndex: 'expression-property-index',
 
-    fillRuleValue: 'fill-rule-value',
-    fillRuleValueNonZero: 'fill-rule-value-non-zero',
-    fillRuleValueEvenOdd: 'fill-rule-value-even-odd',
+    fillRule: 'fill-rule',
+    fillRuleNonZero: 'fill-rule-non-zero',
+    fillRuleEvenOdd: 'fill-rule-even-odd',
 
     fontSize: 'font-size',
     framerate: 'framerate',

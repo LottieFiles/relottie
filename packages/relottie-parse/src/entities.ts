@@ -1378,8 +1378,8 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
       [ET.textFollowPath]: NT.textMask,
     },
     r: {
-      [OT.shapeFill]: NT.fillRuleValue,
-      [OT.shapeGradientFill]: NT.fillRuleValue,
+      [OT.shapeFill]: NT.fillRule,
+      [OT.shapeGradientFill]: NT.fillRule,
     },
     t: {
       [OT.shapeGradientFill]: NT.gradientType,
