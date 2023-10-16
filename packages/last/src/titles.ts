@@ -195,7 +195,7 @@ export const TITLES = {
     keyframeBezierHandleYAxis: 'keyframe-bezier-handle-y-axis',
   },
   boolean: {
-    closed: 'closed',
+    bezierClosed: 'bezier-closed',
     collapseTransform: 'collapse-transform',
     hasMask: 'has-mask',
     hidden: 'hidden',

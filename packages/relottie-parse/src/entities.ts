@@ -1526,7 +1526,7 @@ export const booleanEntity: EntityMap<BooleanTitle> = {
   },
   known: {
     c: {
-      [OT.bezier]: BT.closed,
+      [OT.bezier]: BT.bezierClosed,
     },
     inv: { [OT.mask]: BT.inverted },
     hd: {

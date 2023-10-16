@@ -45,3 +45,5 @@
 - feat(titles): add shapePolygon, shapeStar, shapeZigZags prefixes to points
 
 - feat(titles): rename multiple to trimMultipleShapes
+
+- feat(titles): rename closed to bezierClosed
