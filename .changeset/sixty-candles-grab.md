@@ -67,3 +67,18 @@
 - feat(titles): rename effectValueAngleValue, effectValueCheckboxValue, effectValueColorValue, effectValueDropdownValue, effectValueLayerValue, effectValuePointValue, effectValueSliderValue to effectValueAngle, effectValueCheckbox, effectValueColor, effectValueDropdown, effectValueLayer, effectValuePoint, effectValueSlider
 
 - feat: remove unused OT.effect title
+
+- feat(titles): replace textTypeCaps with textCaps, textCapsRegular, textCapsAll, textCapsSmall
+
+- feat(titles): add textBasedCharacters,
+ textBasedCharacterExcludingSpaces, textBasedWords, textBasedLines
+
+- feat(titles): replace textTypeGrouping with textGrouping, textGroupingCharacters, textGroupingWords, textGroupingLine, textGroupingAll
+
+- feat(titles): replace textTypeJustify with textJustityLeft, textJustityRight, textJustityCenter, textJustityWithLastLineLeft, textJustityWithLastLineRight, textJustityWithLastLineCenter, textJustityWithLastLineFull
+
+- feat(titles): replace textTypeShape with textShape, textShapeSquare, textShapeRampUp, textShapeRampDown, textShapeTriangle, textShapeRound, textShapeSmooth
+
+- feat(titles): replace textType with fontPathOrigin, fontPathOriginLocal, fontPathOriginCssUrl, fontPathOriginScriptUrl, fontPathOriginFonturl
+
+- feat(titles): replace textTypeVerticalJustify with textVerticalJustify, textVerticalJustifyTop, textVerticalJustifyCenter, textVerticalJustifyBottom,

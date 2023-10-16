@@ -1353,12 +1353,12 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
     t: {
       [OT.assetDataSource]: NT.dataSourceType,
     },
-    origin: { [OT.textFont]: NT.textType },
+    origin: { [OT.textFont]: NT.fontPathOrigin },
     b: {
-      [ET.textSelector]: NT.basedOn,
+      [ET.textSelector]: NT.textBased,
     },
     sh: {
-      [ET.textSelector]: NT.textTypeShape,
+      [ET.textSelector]: NT.textShape,
     },
   },
   known: {
@@ -1406,16 +1406,16 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
       [OT.shapeStar]: NT.shapePolygonStarType,
     },
     g: {
-      [ET.textAlignmentOptions]: NT.textTypeGrouping,
+      [ET.textAlignmentOptions]: NT.textGrouping,
     },
     j: {
-      [ET.textDocument]: NT.textTypeJustify,
+      [ET.textDocument]: NT.textJustify,
     },
     ca: {
-      [ET.textDocument]: NT.textTypeCaps,
+      [ET.textDocument]: NT.textCaps,
     },
     vj: {
-      [ET.textDocument]: NT.textTypeVerticalJustify,
+      [ET.textDocument]: NT.textVerticalJustify,
     },
   },
 };

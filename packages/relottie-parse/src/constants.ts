@@ -14,6 +14,7 @@ import type {
   TrimMultipleShapes,
   MatteMode,
   MaskMode,
+  TextType,
 } from '@lottiefiles/lottie-types';
 
 const { number: NT, string: ST } = TITLES;
@@ -85,6 +86,58 @@ export const matteModeValues: ConstantNumMap = new Map<MatteMode.Value, string>(
   [4, 'inverted-luma'],
 ]);
 
+export const textBasedValues: ConstantNumMap = new Map<TextType.Based, string>([
+  [1, 'characters'],
+  [2, 'character-excluding-spaces'],
+  [3, 'words'],
+  [4, 'lines'],
+]);
+
+export const textCapsValues: ConstantNumMap = new Map<TextType.Caps, string>([
+  [0, 'regular'],
+  [1, 'all'],
+  [2, 'small'],
+]);
+
+export const textGroupingValues: ConstantNumMap = new Map<TextType.Grouping, string>([
+  [1, 'characters'],
+  [2, 'words'],
+  [3, 'line'],
+  [4, 'all'],
+]);
+
+export const textJustifyValues: ConstantNumMap = new Map<TextType.Justify, string>([
+  [0, 'left'],
+  [1, 'right'],
+  [2, 'center'],
+  [3, 'with-last-line-left'],
+  [4, 'with-last-line-right'],
+  [5, 'with-last-line-center'],
+  [6, 'with-last-line-full'],
+]);
+
+export const textShapeValues: ConstantNumMap = new Map<TextType.Shape, string>([
+  [1, 'square'],
+  [2, 'ramp-up'],
+  [3, 'ramp-down'],
+  [4, 'triangle'],
+  [5, 'round'],
+  [6, 'smooth'],
+]);
+
+export const fontPathOriginValues: ConstantNumMap = new Map<TextType.FontPathOrigin, string>([
+  [0, 'local'],
+  [1, 'css-url'],
+  [2, 'script-url'],
+  [3, 'fonturl'],
+]);
+
+export const verticalJustifyValues: ConstantNumMap = new Map<TextType.VerticalJustify, string>([
+  [0, 'top'],
+  [1, 'center'],
+  [2, 'bottom'],
+]);
+
 export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.blendMode, blendModeValues],
   [NT.composite, compositeValues],
@@ -95,6 +148,13 @@ export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.shapeDirection, shapeDirectionValues],
   [NT.trimMultipleShapes, trimMultipleShapesValues],
   [NT.matteMode, matteModeValues],
+  [NT.textBased, textBasedValues],
+  [NT.textCaps, textCapsValues],
+  [NT.textGrouping, textGroupingValues],
+  [NT.textJustify, textJustifyValues],
+  [NT.textVerticalJustify, textShapeValues],
+  [NT.fontPathOrigin, fontPathOriginValues],
+  [NT.textVerticalJustify, verticalJustifyValues],
 ]);
 
 export type ConstantStrMap = Map<string, string>;

@@ -55,7 +55,13 @@ export const TITLES = {
   number: {
     adaptiveSampleLimit: 'adaptive-sample-limit',
     ascent: 'ascent',
-    basedOn: 'based-on',
+
+    textBased: 'text-based',
+    textBasedCharacters: 'text-based-characters',
+    textBasedCharacterExcludingSpaces: 'text-based-character-excluding-spaces',
+    textBasedWords: 'text-based-words',
+    textBasedLines: 'text-based-lines',
+
     baselineShift: 'baseline-shift',
 
     blendMode: 'blend-mode',
@@ -156,12 +162,45 @@ export const TITLES = {
     textMask: 'text-mask',
     textRangeSelectorMode: 'text-range-selector-mode',
     textTracking: 'text-tracking',
-    textType: 'text-type',
-    textTypeCaps: 'text-type-caps',
-    textTypeGrouping: 'text-type-grouping',
-    textTypeJustify: 'text-type-justify',
-    textTypeShape: 'text-type-shape',
-    textTypeVerticalJustify: 'text-type-vertical-justify',
+
+    fontPathOrigin: 'font-path-origin',
+    fontPathOriginLocal: 'font-path-origin-local',
+    fontPathOriginCssUrl: 'font-path-origin-css-url',
+    fontPathOriginScriptUrl: 'font-path-origin-script-url',
+    fontPathOriginFonturl: 'font-path-origin-fonturl',
+
+    textCaps: 'text-caps',
+    textCapsRegular: 'text-caps-regular',
+    textCapsAll: 'text-caps-all',
+    textCapsSmall: 'text-caps-small',
+
+    textGrouping: 'text-grouping',
+    textGroupingCharacters: 'text-grouping-characters',
+    textGroupingWords: 'text-grouping-words',
+    textGroupingLine: 'text-grouping-line',
+    textGroupingAll: 'text-grouping-all',
+
+    textJustify: 'text-justify',
+    textJustiftyLeft: 'text-justifty-left',
+    textJustiftyRight: 'text-justifty-right',
+    textJustiftyCenter: 'text-justifty-center',
+    textJustiftyWithLastLineLeft: 'text-justifty-with-last-line-left',
+    textJustiftyWithLastLineRight: 'text-justifty-with-last-line-right',
+    textJustiftyWithLastLineCenter: 'text-justifty-with-last-line-center',
+    textJustiftyWithLastLineFull: 'text-justifty-with-last-line-full',
+
+    textShape: 'text-shape',
+    textShapeSquare: 'text-shape-square',
+    textShapeRampUp: 'text-shape-ramp-up',
+    textShapeRampDown: 'text-shape-ramp-down',
+    textShapeTriangle: 'text-shape-triangle',
+    textShapeRound: 'text-shape-round',
+    textShapeSmooth: 'text-shape-smooth',
+
+    textVerticalJustify: 'text-vertical-justify',
+    textVerticalJustifyTop: 'text-vertical-justify-top',
+    textVerticalJustifyCenter: 'text-vertical-justify-center',
+    textVerticalJustifyBottom: 'text-vertical-justify-bottom',
 
     keyframeTime: 'keyframe-time',
     keyframeListTime: 'keyframe-list-time',
