@@ -1567,7 +1567,6 @@ export const collectionEntity: EntityMap<CollectionTitle> = {
       [OT.characterShapes]: CT.shapeList,
     },
     ef: {
-      [OT.effect]: CT.effectParamList,
       ...createDependentTitles(CT.effectList, CT.effectParamList),
     },
     i: {

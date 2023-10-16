@@ -231,7 +231,6 @@ export const TITLES = {
     characterData: 'character-data',
     characterPrecomp: 'character-precomp',
     characterShapes: 'character-shapes',
-    effect: 'effect',
     effectCustom: 'effect-custom',
     effectDisplacementMap: 'effect-displacement-map',
     effectDropShadow: 'effect-drop-shadow',

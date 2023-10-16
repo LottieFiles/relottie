@@ -65,3 +65,5 @@
 - feat: add effectPropertyCount title
 
 - feat(titles): rename effectValueAngleValue, effectValueCheckboxValue, effectValueColorValue, effectValueDropdownValue, effectValueLayerValue, effectValuePointValue, effectValueSliderValue to effectValueAngle, effectValueCheckbox, effectValueColor, effectValueDropdown, effectValueLayer, effectValuePoint, effectValueSlider
+
+- feat: remove unused OT.effect title
