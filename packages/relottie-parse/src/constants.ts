@@ -55,13 +55,13 @@ export const gradientTypeValues: ConstantNumMap = new Map<GradientType.Value, st
   [2, 'radial'],
 ]);
 
-export const lineCapTypeValues: ConstantNumMap = new Map<LineCap.Value, string>([
+export const lineCapValues: ConstantNumMap = new Map<LineCap.Value, string>([
   [1, 'butt'],
   [2, 'round'],
   [3, 'square'],
 ]);
 
-export const lineJoinTypeValues: ConstantNumMap = new Map<LineJoin.Value, string>([
+export const lineJoinValues: ConstantNumMap = new Map<LineJoin.Value, string>([
   [1, 'miter'],
   [2, 'round'],
   [3, 'bevel'],
@@ -143,8 +143,8 @@ export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.composite, compositeValues],
   [NT.fillRuleValue, filleRuleValues],
   [NT.gradientType, gradientTypeValues],
-  [NT.lineCapType, lineCapTypeValues],
-  [NT.lineJoinType, lineJoinTypeValues],
+  [NT.lineCap, lineCapValues],
+  [NT.lineJoin, lineJoinValues],
   [NT.shapeDirection, shapeDirectionValues],
   [NT.trimMultipleShapes, trimMultipleShapesValues],
   [NT.matteMode, matteModeValues],

@@ -1390,14 +1390,14 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
     },
     lc: {
       // shape-base-stroke starts
-      [OT.shapeGradientStroke]: NT.lineCapType,
-      [OT.shapeStroke]: NT.lineCapType,
+      [OT.shapeGradientStroke]: NT.lineCap,
+      [OT.shapeStroke]: NT.lineCap,
       // shape-base-stroke ends
     },
     lj: {
       // shape-base-stroke starts
-      [OT.shapeGradientStroke]: NT.lineJoinType,
-      [OT.shapeStroke]: NT.lineJoinType,
+      [OT.shapeGradientStroke]: NT.lineJoin,
+      [OT.shapeStroke]: NT.lineJoin,
       // shape-base-stroke ends
       [OT.shapeOffsetPath]: NT.lineJoin,
     },

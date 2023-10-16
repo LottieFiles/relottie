@@ -3,4 +3,4 @@
 "@lottiefiles/relottie-parse": minor
 ---
 
-feat: find unique titles for string and number constant nodes: blendMode, composite, fillRule, lineCapType, lineJoinType, shapeDirection, trimMultipleShapes, matteMode & maskMode
+feat: find unique titles for string and number constant nodes: blendMode, composite, fillRule, lineCap, lineJoin, shapeDirection, trimMultipleShapes, matteMode & maskMode

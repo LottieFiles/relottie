@@ -110,18 +110,17 @@ export const TITLES = {
     layerType: 'layer-type',
     length: 'length',
 
-    lineCapType: 'line-cap-type',
-    lineCapTypeButt: 'line-cap-type-butt',
-    lineCapTypeRound: 'line-cap-type-round',
-    lineCapTypeSquare: 'line-cap-type-square',
+    lineCap: 'line-cap',
+    lineCapButt: 'line-cap-butt',
+    lineCapRound: 'line-cap-round',
+    lineCapSquare: 'line-cap-square',
 
     lineHeight: 'line-height',
     lineJoin: 'line-join',
 
-    lineJoinType: 'line-join-type',
-    lineJoinTypeMiter: 'line-join-type-miter',
-    lineJoinTypeRound: 'line-join-type-round',
-    lineJoinTypeBevel: 'line-join-type-bevel',
+    lineJoinMiter: 'line-join-miter',
+    lineJoinRound: 'line-join-round',
+    lineJoinBevel: 'line-join-bevel',
 
     markerDuration: 'marker-duration',
     markerTime: 'marker-time',
