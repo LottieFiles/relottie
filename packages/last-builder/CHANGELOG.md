@@ -1,5 +1,15 @@
 # @lottiefiles/last-builder
 
+## 1.2.0
+
+### Patch Changes
+
+- 4a54598: chore: bump lottie-types to v1.4.0
+- Updated dependencies [4a54598]
+- Updated dependencies [4a54598]
+- Updated dependencies [4a54598]
+  - @lottiefiles/last@1.2.0
+
 ## 1.1.0
 
 ### Patch Changes

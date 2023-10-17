@@ -1,5 +1,77 @@
 # @lottiefiles/relottie-parse
 
+## 1.2.0
+
+### Minor Changes
+
+- 4a54598: feat: find unique titles for string and number constant nodes: blendMode, composite, fillRule, lineCap,
+  lineJoin, shapeDirection, trimMultipleShapes, matteMode & maskMode
+- 4a54598: feat(titles): add constant blendMode titles
+- 4a54598: feat(titles): add keyframe, keyframeList, keyframeValue, positionKeyframe, positionKeyframeList,
+    keyframeBezierHandle prefixes to xAxisValue & yAxisValue
+- 4a54598: feat(titles): add bezier prefix to inTangents, outTangents and vertices
+- 4a54598: feat(titles): add keyframe, keyframeList, keyframeValue, positionKeyframe, positionKeyframeList,
+    keyframeBezierHandle, shapeKeyframe to inTangent and outTangent
+- 4a54598: feat(titles): add text- prefix to fillBrightness, fillColor, fillHue, fillOpacity, fillSaturation
+- 4a54598: feat(titles): add shapeFillOpacity, shapeGradientFillOpacity, shapeGradientStrokeOpacity, layerStyleOpacity,
+    shapeStrokeOpacity prefixes to opacity
+- 4a54598: feat(titles): add audio prefix to level
+- 4a54598: feat(titles): add text prefix to maxAmount, maxEase, minEase
+- 4a54598: feat(titles): add shapeTrim prefix to offset
+- 4a54598: feat(titles): add layerTransform, shapeTransform, transformRepeater, textStyle prefix to orientation
+- 4a54598: feat(titles): add shapeRectangleSize,layerStyleStrokeSize prefixes to size
+- 4a54598: feat(titles): rename valueOutTangent to positionKeyframeOutTangents
+- 4a54598: feat(titles): rename valueInTangent to positionKeyframeInTangents
+- 4a54598: feat(titles): add layerTransform, shapeTransform, transformRepeater, textStyle prefixes to skew & skewAxis
+- 4a54598: feat(titles): add layerTransforms, shapeTransforms, transformRepeaters, textStyles prefixes to scale
+- 4a54598: feat(titles): add shapePolygon & shapeStar prefixes to outerRoundness & outerRadius
+- 4a54598: feat(titles): add shapeGradientFill, shapeGradientStroke prefixes to startPoint & endPoint
+- 4a54598: feat(titles): add assetImage, assetPrecomposition, assetDataSource, assetFile prefixes to id
+- 4a54598: feat(titles): rename blur to textBlur
+- 4a54598: feat(titles): rename center to shapeTrimCenter
+- 4a54598: feat(titles): add shapePolygon, shapeStar, shapeZigZags prefixes to points
+- 4a54598: feat(titles): rename multiple to trimMultipleShapes
+- 4a54598: feat(titles): rename closed to bezierClosed
+- 4a54598: feat: add time titles for keyframe, keyframeList, keyframeValue, positionKeyframe, positionKeyframeList,
+    keyframeBezierHandle, shapeKeyframe
+- 4a54598: fix: effectIgnoredValue.v title and placement
+- 4a54598: fix: numberOfProperties parent titles
+- 4a54598: fix: rename effectList numberOfProperties title to effectPropertyCount
+- 4a54598: refactor: remove unused ind titles for effectList and effectParams
+- 4a54598: feat: rename effectValueAngle, effectValueCheckbox, effectValueColor, effectValueDropdown, effectValueLayer,
+    effectValuePoint, effectValueSlider to effectParamAngle, effectParamCheckbox, effectParamColor, effectParamDropdown,
+    effectParamLayer, effectParamPoint, effectParamSlider
+- 4a54598: feat: rename effectParameters to effectParamList
+- 4a54598: feat: add effectPropertyCount title
+- 4a54598: feat(titles): rename effectValueAngleValue, effectValueCheckboxValue, effectValueColorValue,
+    effectValueDropdownValue, effectValueLayerValue, effectValuePointValue, effectValueSliderValue to effectValueAngle,
+    effectValueCheckbox, effectValueColor, effectValueDropdown, effectValueLayer, effectValuePoint, effectValueSlider
+- 4a54598: feat: remove unused OT.effect title
+- 4a54598: feat(titles): replace textTypeCaps with textCaps, textCapsRegular, textCapsAll, textCapsSmall
+- 4a54598: feat(titles): add textBasedCharacters, textBasedCharacterExcludingSpaces, textBasedWords, textBasedLines
+- 4a54598: feat(titles): replace textTypeGrouping with textGrouping, textGroupingCharacters, textGroupingWords,
+    textGroupingLine, textGroupingAll
+- 4a54598: feat(titles): replace textTypeJustify with textJustityLeft, textJustityRight, textJustityCenter,
+    textJustityWithLastLineLeft, textJustityWithLastLineRight, textJustityWithLastLineCenter,
+    textJustityWithLastLineFull
+- 4a54598: feat(titles): replace textTypeShape with textShape, textShapeSquare, textShapeRampUp, textShapeRampDown,
+    textShapeTriangle, textShapeRound, textShapeSmooth
+- 4a54598: feat(titles): replace textType with fontPathOrigin, fontPathOriginLocal, fontPathOriginCssUrl,
+    fontPathOriginScriptUrl, fontPathOriginFonturl
+- 4a54598: feat(titles): replace textTypeVerticalJustify with textVerticalJustify, textVerticalJustifyTop,
+    textVerticalJustifyCenter, textVerticalJustifyBottom
+- 4a54598: feat(titles): detect & add rangeUnitsPercent & rangeUnitsIndex
+
+### Patch Changes
+
+- 4a54598: chore: bump lottie-types to v1.4.0
+- 4a54598: feat: improve Momoa primitive types
+- Updated dependencies [4a54598]
+- Updated dependencies [4a54598]
+- Updated dependencies [4a54598]
+  - @lottiefiles/last@1.2.0
+  - @lottiefiles/last-builder@1.2.0
+
 ## 1.1.0
 
 ### Minor Changes
