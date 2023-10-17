@@ -34,6 +34,10 @@ jobs:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com/'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets. NPM_TOKEN }}
 
       - name: 📥 Install dependencies
         run: pnpm install --frozen-lockfile
