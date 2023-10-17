@@ -33,6 +33,11 @@ jobs:
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
       - name: 📥 Install dependencies
         run: pnpm install
