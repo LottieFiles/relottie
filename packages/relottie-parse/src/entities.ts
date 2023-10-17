@@ -1449,7 +1449,7 @@ export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
     rn: { [ET.textSelector]: IBT.randomize },
     ddd: {
       [OT.animation]: IBT.threedimensional,
-      ...createDependentTitles(CT.composition, IBT.threedimensional),
+      ...createDependentTitles(CT.composition, IBT.layerThreedimensional),
     },
     ao: {
       // layer-visual starts
