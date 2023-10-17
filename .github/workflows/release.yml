@@ -28,22 +28,15 @@ jobs:
         with:
           version: latest
 
-      - name: ⎔ Setup Node.js ${{ matrix.node-version }}
+      - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
         uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
-
-      - name: ⎔ Setup .npmrc (NPM)
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPMJS_TOKEN }}" >> ~/.npmrc
+          registry-url: 'https://npm.pkg.github.com/'
 
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
