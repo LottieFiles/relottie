@@ -230,6 +230,7 @@ export const TITLES = {
     hold: 'hold',
     randomize: 'randomize',
     threedimensional: 'threedimensional',
+    layerThreedimensional: 'layer-threedimensional',
     keyframeXAxis: 'keyframe-x-axis',
     keyframeListXAxis: 'keyframe-list-x-axis',
     keyframeValueXAxis: 'keyframe-value-x-axis',
