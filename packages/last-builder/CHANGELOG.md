@@ -1,5 +1,12 @@
 # @lottiefiles/last-builder
 
+## 1.2.1
+
+### Patch Changes
+
+- Updated dependencies [5901e60]
+  - @lottiefiles/last@1.2.1
+
 ## 1.2.0
 
 ### Patch Changes
