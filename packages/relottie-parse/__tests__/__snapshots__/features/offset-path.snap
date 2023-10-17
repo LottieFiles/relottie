@@ -358,7 +358,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -610,7 +610,7 @@ Object {
                                             },
                                           ],
                                           "key": "or",
-                                          "title": "outer-radius",
+                                          "title": "shape-star-outer-radius",
                                           "type": "element",
                                         },
                                         Object {
@@ -721,7 +721,7 @@ Object {
                                             },
                                           ],
                                           "key": "pt",
-                                          "title": "points",
+                                          "title": "shape-star-points",
                                           "type": "element",
                                         },
                                         Object {
@@ -770,7 +770,7 @@ Object {
                                             },
                                           ],
                                           "key": "os",
-                                          "title": "outer-roundness",
+                                          "title": "shape-star-outer-roundness",
                                           "type": "element",
                                         },
                                         Object {
@@ -898,7 +898,7 @@ Object {
                                             },
                                           ],
                                           "key": "lj",
-                                          "title": "line-join",
+                                          "title": "line-join-round",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -1079,7 +1079,7 @@ Object {
                                             },
                                           ],
                                           "key": "lc",
-                                          "title": "line-cap-type",
+                                          "title": "line-cap-round",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -1091,7 +1091,7 @@ Object {
                                             },
                                           ],
                                           "key": "lj",
-                                          "title": "line-join-type",
+                                          "title": "line-join-round",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -1302,7 +1302,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {

@@ -32,40 +32,37 @@ declare namespace Momoa {
     type: string;
   }
 
-  type PunctuatorValue = '{' | '}' | '[' | ']' | ':' | ',';
-
-  type PrimitiveTypes = 'String' | 'Number' | 'Boolean' | 'Null';
-
-  type PrimitiveValue = string | number | boolean | null;
-
-  interface Token extends Node {
-    type: PrimitiveTypes | 'Punctuator' | 'LineComment' | 'BlockComment';
-    value: PunctuatorValue | string;
-  }
-
-  interface Primitive extends Node {
-    type: PrimitiveTypes;
-    value: PrimitiveValue;
-  }
-
-  interface Str extends Primitive {
+  interface Str extends Node {
     type: 'String';
     value: string;
   }
 
-  interface Num extends Primitive {
+  interface Num extends Node {
     type: 'Number';
     value: number;
   }
 
-  interface Bool extends Primitive {
+  interface Bool extends Node {
     type: 'Boolean';
     value: boolean;
   }
 
-  interface Nul extends Primitive {
+  interface Nul extends Node {
     type: 'Null';
     value: null;
+  }
+
+  type Primitive = Str | Num | Bool | Nul;
+
+  type PunctuatorValue = '{' | '}' | '[' | ']' | ':' | ',';
+
+  type PrimitiveValue = Primitive['value'];
+
+  type PrimitiveTypes = Primitive['type'];
+
+  interface Token extends Node {
+    type: PrimitiveTypes | 'Punctuator' | 'LineComment' | 'BlockComment';
+    value: PunctuatorValue | string;
   }
 
   type Element = Primitive | Arr | Obj;

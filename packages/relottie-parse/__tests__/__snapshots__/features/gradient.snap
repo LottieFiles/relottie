@@ -358,7 +358,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -683,7 +683,7 @@ Object {
                                                                                                 },
                                                                                               ],
                                                                                               "key": "c",
-                                                                                              "title": "closed",
+                                                                                              "title": "bezier-closed",
                                                                                               "type": "attribute",
                                                                                             },
                                                                                             Object {
@@ -703,7 +703,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -719,7 +719,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -735,7 +735,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -751,7 +751,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -767,7 +767,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -783,7 +783,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -799,7 +799,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -815,7 +815,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -831,7 +831,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -847,7 +847,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -863,7 +863,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -879,7 +879,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -895,7 +895,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -911,7 +911,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -927,7 +927,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -943,7 +943,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -959,7 +959,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -975,7 +975,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -991,16 +991,16 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                   ],
-                                                                                                  "title": "vertices-children",
+                                                                                                  "title": "bezier-vertices-children",
                                                                                                   "type": "array",
                                                                                                 },
                                                                                               ],
                                                                                               "key": "v",
-                                                                                              "title": "vertices",
+                                                                                              "title": "bezier-vertices",
                                                                                               "type": "collection",
                                                                                             },
                                                                                             Object {
@@ -1020,7 +1020,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1036,7 +1036,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1052,7 +1052,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1068,7 +1068,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1084,7 +1084,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1100,7 +1100,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1116,7 +1116,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1132,7 +1132,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1148,7 +1148,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1164,7 +1164,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1180,7 +1180,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1196,7 +1196,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1212,7 +1212,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1228,7 +1228,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1244,7 +1244,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1260,7 +1260,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1276,7 +1276,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1292,7 +1292,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1308,16 +1308,16 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                   ],
-                                                                                                  "title": "in-tangents-children",
+                                                                                                  "title": "bezier-in-tangents-children",
                                                                                                   "type": "array",
                                                                                                 },
                                                                                               ],
                                                                                               "key": "i",
-                                                                                              "title": "in-tangents",
+                                                                                              "title": "bezier-in-tangents",
                                                                                               "type": "collection",
                                                                                             },
                                                                                             Object {
@@ -1337,7 +1337,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1353,7 +1353,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1369,7 +1369,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1385,7 +1385,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1401,7 +1401,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1417,7 +1417,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1433,7 +1433,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1449,7 +1449,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1465,7 +1465,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1481,7 +1481,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1497,7 +1497,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1513,7 +1513,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1529,7 +1529,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1545,7 +1545,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1561,7 +1561,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1577,7 +1577,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1593,7 +1593,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1609,7 +1609,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1625,16 +1625,16 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                   ],
-                                                                                                  "title": "out-tangents-children",
+                                                                                                  "title": "bezier-out-tangents-children",
                                                                                                   "type": "array",
                                                                                                 },
                                                                                               ],
                                                                                               "key": "o",
-                                                                                              "title": "out-tangents",
+                                                                                              "title": "bezier-out-tangents",
                                                                                               "type": "collection",
                                                                                             },
                                                                                           ],
@@ -1726,7 +1726,7 @@ Object {
                                                                                                 },
                                                                                               ],
                                                                                               "key": "c",
-                                                                                              "title": "closed",
+                                                                                              "title": "bezier-closed",
                                                                                               "type": "attribute",
                                                                                             },
                                                                                             Object {
@@ -1746,7 +1746,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1762,7 +1762,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1778,7 +1778,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1794,7 +1794,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1810,7 +1810,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1826,16 +1826,16 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "vertices",
+                                                                                                      "title": "bezier-vertices",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                   ],
-                                                                                                  "title": "vertices-children",
+                                                                                                  "title": "bezier-vertices-children",
                                                                                                   "type": "array",
                                                                                                 },
                                                                                               ],
                                                                                               "key": "v",
-                                                                                              "title": "vertices",
+                                                                                              "title": "bezier-vertices",
                                                                                               "type": "collection",
                                                                                             },
                                                                                             Object {
@@ -1855,7 +1855,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1871,7 +1871,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1887,7 +1887,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1903,7 +1903,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1919,7 +1919,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1935,16 +1935,16 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "in-tangents",
+                                                                                                      "title": "bezier-in-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                   ],
-                                                                                                  "title": "in-tangents-children",
+                                                                                                  "title": "bezier-in-tangents-children",
                                                                                                   "type": "array",
                                                                                                 },
                                                                                               ],
                                                                                               "key": "i",
-                                                                                              "title": "in-tangents",
+                                                                                              "title": "bezier-in-tangents",
                                                                                               "type": "collection",
                                                                                             },
                                                                                             Object {
@@ -1964,7 +1964,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1980,7 +1980,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -1996,7 +1996,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -2012,7 +2012,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -2028,7 +2028,7 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                     Object {
@@ -2044,16 +2044,16 @@ Object {
                                                                                                           "valueType": "number",
                                                                                                         },
                                                                                                       ],
-                                                                                                      "title": "out-tangents",
+                                                                                                      "title": "bezier-out-tangents",
                                                                                                       "type": "array",
                                                                                                     },
                                                                                                   ],
-                                                                                                  "title": "out-tangents-children",
+                                                                                                  "title": "bezier-out-tangents-children",
                                                                                                   "type": "array",
                                                                                                 },
                                                                                               ],
                                                                                               "key": "o",
-                                                                                              "title": "out-tangents",
+                                                                                              "title": "bezier-out-tangents",
                                                                                               "type": "collection",
                                                                                             },
                                                                                           ],
@@ -2233,7 +2233,7 @@ Object {
                                                                                 },
                                                                               ],
                                                                               "key": "s",
-                                                                              "title": "scale",
+                                                                              "title": "shape-transform-scale",
                                                                               "type": "element",
                                                                             },
                                                                             Object {
@@ -2482,7 +2482,7 @@ Object {
                                                                     },
                                                                   ],
                                                                   "key": "s",
-                                                                  "title": "scale",
+                                                                  "title": "shape-transform-scale",
                                                                   "type": "element",
                                                                 },
                                                                 Object {
@@ -2648,7 +2648,7 @@ Object {
                                                         },
                                                       ],
                                                       "key": "o",
-                                                      "title": "opacity",
+                                                      "title": "shape-fill-opacity",
                                                       "type": "element",
                                                     },
                                                     Object {
@@ -2713,7 +2713,7 @@ Object {
                                                         },
                                                       ],
                                                       "key": "r",
-                                                      "title": "fill-rule-value",
+                                                      "title": "fill-rule-non-zero",
                                                       "type": "attribute",
                                                     },
                                                   ],
@@ -2875,7 +2875,7 @@ Object {
                                                         },
                                                       ],
                                                       "key": "s",
-                                                      "title": "scale",
+                                                      "title": "shape-transform-scale",
                                                       "type": "element",
                                                     },
                                                     Object {
@@ -3124,7 +3124,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
@@ -3411,7 +3411,7 @@ Object {
                                                                                     },
                                                                                   ],
                                                                                   "key": "c",
-                                                                                  "title": "closed",
+                                                                                  "title": "bezier-closed",
                                                                                   "type": "attribute",
                                                                                 },
                                                                                 Object {
@@ -3431,7 +3431,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3447,7 +3447,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3463,7 +3463,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3479,7 +3479,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3495,7 +3495,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3511,7 +3511,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3527,7 +3527,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3543,7 +3543,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3559,7 +3559,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3575,7 +3575,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3591,7 +3591,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3607,7 +3607,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3623,7 +3623,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3639,7 +3639,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3655,7 +3655,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3671,7 +3671,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3687,7 +3687,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3703,7 +3703,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3719,7 +3719,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3735,7 +3735,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3751,7 +3751,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3767,7 +3767,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3783,7 +3783,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3799,7 +3799,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3815,7 +3815,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3831,7 +3831,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3847,7 +3847,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3863,7 +3863,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3879,7 +3879,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3895,7 +3895,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3911,16 +3911,16 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "vertices",
+                                                                                          "title": "bezier-vertices",
                                                                                           "type": "array",
                                                                                         },
                                                                                       ],
-                                                                                      "title": "vertices-children",
+                                                                                      "title": "bezier-vertices-children",
                                                                                       "type": "array",
                                                                                     },
                                                                                   ],
                                                                                   "key": "v",
-                                                                                  "title": "vertices",
+                                                                                  "title": "bezier-vertices",
                                                                                   "type": "collection",
                                                                                 },
                                                                                 Object {
@@ -3940,7 +3940,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3956,7 +3956,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3972,7 +3972,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -3988,7 +3988,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4004,7 +4004,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4020,7 +4020,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4036,7 +4036,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4052,7 +4052,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4068,7 +4068,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4084,7 +4084,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4100,7 +4100,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4116,7 +4116,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4132,7 +4132,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4148,7 +4148,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4164,7 +4164,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4180,7 +4180,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4196,7 +4196,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4212,7 +4212,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4228,7 +4228,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4244,7 +4244,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4260,7 +4260,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4276,7 +4276,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4292,7 +4292,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4308,7 +4308,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4324,7 +4324,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4340,7 +4340,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4356,7 +4356,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4372,7 +4372,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4388,7 +4388,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4404,7 +4404,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4420,16 +4420,16 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "in-tangents",
+                                                                                          "title": "bezier-in-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                       ],
-                                                                                      "title": "in-tangents-children",
+                                                                                      "title": "bezier-in-tangents-children",
                                                                                       "type": "array",
                                                                                     },
                                                                                   ],
                                                                                   "key": "i",
-                                                                                  "title": "in-tangents",
+                                                                                  "title": "bezier-in-tangents",
                                                                                   "type": "collection",
                                                                                 },
                                                                                 Object {
@@ -4449,7 +4449,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4465,7 +4465,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4481,7 +4481,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4497,7 +4497,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4513,7 +4513,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4529,7 +4529,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4545,7 +4545,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4561,7 +4561,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4577,7 +4577,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4593,7 +4593,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4609,7 +4609,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4625,7 +4625,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4641,7 +4641,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4657,7 +4657,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4673,7 +4673,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4689,7 +4689,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4705,7 +4705,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4721,7 +4721,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4737,7 +4737,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4753,7 +4753,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4769,7 +4769,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4785,7 +4785,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4801,7 +4801,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4817,7 +4817,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4833,7 +4833,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4849,7 +4849,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4865,7 +4865,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4881,7 +4881,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4897,7 +4897,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4913,7 +4913,7 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                         Object {
@@ -4929,16 +4929,16 @@ Object {
                                                                                               "valueType": "number",
                                                                                             },
                                                                                           ],
-                                                                                          "title": "out-tangents",
+                                                                                          "title": "bezier-out-tangents",
                                                                                           "type": "array",
                                                                                         },
                                                                                       ],
-                                                                                      "title": "out-tangents-children",
+                                                                                      "title": "bezier-out-tangents-children",
                                                                                       "type": "array",
                                                                                     },
                                                                                   ],
                                                                                   "key": "o",
-                                                                                  "title": "out-tangents",
+                                                                                  "title": "bezier-out-tangents",
                                                                                   "type": "collection",
                                                                                 },
                                                                               ],
@@ -5035,7 +5035,7 @@ Object {
                                                                     },
                                                                   ],
                                                                   "key": "o",
-                                                                  "title": "opacity",
+                                                                  "title": "shape-fill-opacity",
                                                                   "type": "element",
                                                                 },
                                                                 Object {
@@ -5100,7 +5100,7 @@ Object {
                                                                     },
                                                                   ],
                                                                   "key": "r",
-                                                                  "title": "fill-rule-value",
+                                                                  "title": "fill-rule-non-zero",
                                                                   "type": "attribute",
                                                                 },
                                                               ],
@@ -5262,7 +5262,7 @@ Object {
                                                                     },
                                                                   ],
                                                                   "key": "s",
-                                                                  "title": "scale",
+                                                                  "title": "shape-transform-scale",
                                                                   "type": "element",
                                                                 },
                                                                 Object {
@@ -5511,7 +5511,7 @@ Object {
                                                         },
                                                       ],
                                                       "key": "s",
-                                                      "title": "scale",
+                                                      "title": "shape-transform-scale",
                                                       "type": "element",
                                                     },
                                                     Object {
@@ -5760,7 +5760,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
@@ -6110,7 +6110,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -6373,7 +6373,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "size",
+                                          "title": "shape-rectangle-size",
                                           "type": "element",
                                         },
                                         Object {
@@ -6477,7 +6477,7 @@ Object {
                                             },
                                           ],
                                           "key": "o",
-                                          "title": "opacity",
+                                          "title": "shape-gradient-fill-opacity",
                                           "type": "element",
                                         },
                                         Object {
@@ -6489,7 +6489,7 @@ Object {
                                             },
                                           ],
                                           "key": "r",
-                                          "title": "fill-rule-value",
+                                          "title": "fill-rule-non-zero",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -6537,7 +6537,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "start-point",
+                                          "title": "shape-gradient-fill-start-point",
                                           "type": "element",
                                         },
                                         Object {
@@ -6585,7 +6585,7 @@ Object {
                                             },
                                           ],
                                           "key": "e",
-                                          "title": "end-point",
+                                          "title": "shape-gradient-fill-end-point",
                                           "type": "element",
                                         },
                                         Object {
@@ -6597,7 +6597,7 @@ Object {
                                             },
                                           ],
                                           "key": "t",
-                                          "title": "gradient-type",
+                                          "title": "gradient-type-linear",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -6986,7 +6986,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {

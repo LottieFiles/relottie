@@ -28,14 +28,19 @@ jobs:
         with:
           version: latest
 
-      - name: ⎔ Setup Node.js ${{ matrix.node-version }}
+      - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
         uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
           node-version: ${{ matrix.node-version }}
+          registry-url: 'https://npm.pkg.github.com/'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets. NPM_TOKEN }}
 
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
@@ -46,17 +51,17 @@ jobs:
       - name: 💅 Verify format
         run: pnpm format --check --no-write
 
-      - name: 📏 Report bundle size
-        uses: andresz1/size-limit-action@v1
-        continue-on-error: true
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: 🕵️ Lint
         run: pnpm lint:prod
 
       - name: 🛡️ Test
         run: pnpm test
+
+      - name: 📏 Report bundle size
+        uses: andresz1/size-limit-action@v1
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.GPR_TOKEN }}
 
   release:
     name: release

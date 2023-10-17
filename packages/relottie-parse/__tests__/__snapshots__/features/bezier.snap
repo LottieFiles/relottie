@@ -358,7 +358,7 @@ Object {
                             },
                           ],
                           "key": "s",
-                          "title": "scale",
+                          "title": "layer-transform-scale",
                           "type": "element",
                         },
                         Object {
@@ -533,43 +533,43 @@ Object {
                                                             },
                                                           ],
                                                           "key": "c",
-                                                          "title": "closed",
+                                                          "title": "bezier-closed",
                                                           "type": "attribute",
                                                         },
                                                         Object {
                                                           "children": Array [
                                                             Object {
                                                               "children": Array [],
-                                                              "title": "vertices-children",
+                                                              "title": "bezier-vertices-children",
                                                               "type": "array",
                                                             },
                                                           ],
                                                           "key": "v",
-                                                          "title": "vertices",
+                                                          "title": "bezier-vertices",
                                                           "type": "collection",
                                                         },
                                                         Object {
                                                           "children": Array [
                                                             Object {
                                                               "children": Array [],
-                                                              "title": "in-tangents-children",
+                                                              "title": "bezier-in-tangents-children",
                                                               "type": "array",
                                                             },
                                                           ],
                                                           "key": "i",
-                                                          "title": "in-tangents",
+                                                          "title": "bezier-in-tangents",
                                                           "type": "collection",
                                                         },
                                                         Object {
                                                           "children": Array [
                                                             Object {
                                                               "children": Array [],
-                                                              "title": "out-tangents-children",
+                                                              "title": "bezier-out-tangents-children",
                                                               "type": "array",
                                                             },
                                                           ],
                                                           "key": "o",
-                                                          "title": "out-tangents",
+                                                          "title": "bezier-out-tangents",
                                                           "type": "collection",
                                                         },
                                                       ],
@@ -731,7 +731,7 @@ Object {
                                             },
                                           ],
                                           "key": "lc",
-                                          "title": "line-cap-type",
+                                          "title": "line-cap-round",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -743,7 +743,7 @@ Object {
                                             },
                                           ],
                                           "key": "lj",
-                                          "title": "line-join-type",
+                                          "title": "line-join-round",
                                           "type": "attribute",
                                         },
                                         Object {
@@ -954,7 +954,7 @@ Object {
                                             },
                                           ],
                                           "key": "s",
-                                          "title": "scale",
+                                          "title": "shape-transform-scale",
                                           "type": "element",
                                         },
                                         Object {
