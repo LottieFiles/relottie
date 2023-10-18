@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.2.2
+
+### Patch Changes
+
+- 566cb4c: fix(titles): text-justify typos
+
 ## 1.2.1
 
 ### Patch Changes
