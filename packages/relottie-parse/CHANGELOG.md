@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-parse
 
+## 1.2.3
+
+### Patch Changes
+
+- a60e86a: fix: textDocument width (sw) node
+
 ## 1.2.2
 
 ### Patch Changes
