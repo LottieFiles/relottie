@@ -1201,6 +1201,7 @@ export const numberEntity: EntityMap<NumberTitle> = {
     },
     sw: {
       [OT.layerSolidColor]: NT.width,
+      [ET.textDocument]: NT.width,
     },
     h: {
       [OT.animation]: NT.height,
@@ -2028,7 +2029,6 @@ export const elementEntity: EntityMap<ElementTitle> = {
     },
     sw: {
       [ET.textStyle]: ET.strokeWidth,
-      [ET.textDocument]: ET.strokeWidth,
     },
     sc: {
       [ET.textStyle]: ET.strokeColor,
