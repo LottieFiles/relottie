@@ -23,14 +23,16 @@ function emptyCompiler(this: Plugin<[], Root, string>): void {
   Object.assign(this, { Compiler: compiler });
 }
 
-const path = '../../__fixtures__/features/switch.json';
+const name = 'switch';
+const path = `../../__fixtures__/features/${name}.json`;
 
 const lottieJsonFile = readFileSync(path, 'utf8');
 
 const processor = unified().use(relottieParse, { warningMessage: true }).use(emptyCompiler);
 
 // const tree = processor.parse(lottieJsonFile);
-// console.log(tree);
+
+// writeFileSync(`${name}-tree.json`, JSON.stringify(tree, null, 2), 'utf8');
 
 const vfile = processor.processSync(lottieJsonFile);
 
@@ -38,4 +40,4 @@ const vfile = processor.processSync(lottieJsonFile);
 
 console.log(vfile.data);
 
-// writeFileSync('lottie.json', JSON.stringify(tree, null, 2), 'utf8');
+// writeFileSync(`${name}.json`, JSON.stringify(tree, null, 2), 'utf8');
