@@ -1225,6 +1225,22 @@ export const numberEntity: EntityMap<NumberTitle> = {
     s: {
       [ET.textDocument]: NT.fontSize,
     },
+    x: {
+      [OT.keyframe]: NT.keyframeXAxis,
+      [CT.keyframeList]: NT.keyframeListXAxis,
+      [CT.keyframeValue]: NT.keyframeValueXAxis,
+      [OT.positionKeyframe]: NT.positionKeyframeXAxis,
+      [CT.positionKeyframeList]: NT.positionKeyframeListXAxis,
+      [OT.keyframeBezierHandle]: NT.keyframeBezierHandleXAxis,
+    },
+    y: {
+      [OT.keyframe]: NT.keyframeYAxis,
+      [CT.keyframeList]: NT.keyframeListYAxis,
+      [CT.keyframeValue]: NT.keyframeValueYAxis,
+      [OT.positionKeyframe]: NT.positionKeyframeYAxis,
+      [CT.positionKeyframeList]: NT.positionKeyframeListYAxis,
+      [OT.keyframeBezierHandle]: NT.keyframeBezierHandleYAxis,
+    },
   },
   known: {
     v: { [OT.effectParamIgnored]: NT.effectValueIgnored },
@@ -1278,16 +1294,6 @@ export const numberEntity: EntityMap<NumberTitle> = {
     parent: {
       ...createDependentTitles(CT.composition, NT.parentIndex),
     },
-    td: {
-      // layer-visual starts
-      [OT.layerPrecomposition]: NT.matteTarget,
-      [OT.layerShape]: NT.matteTarget,
-      [OT.layerSolidColor]: NT.matteTarget,
-      [OT.layerImage]: NT.matteTarget,
-      [OT.layerNull]: NT.matteTarget,
-      [OT.layerText]: NT.matteTarget,
-      // layer-visual ends
-    },
     tp: {
       // layer-visual starts
       [OT.layerPrecomposition]: NT.matteParent,
@@ -1308,17 +1314,11 @@ export const numberEntity: EntityMap<NumberTitle> = {
       [OT.shapeGroup]: NT.numberOfProperties,
       ...createDependentTitles(CT.effectList, NT.effectPropertyCount),
     },
-    mm: {
-      [OT.shapeMerge]: NT.mergeMode,
-    },
     ip: {
       [OT.characterPrecomp]: NT.inPoint,
     },
     ascent: {
       [OT.textFont]: NT.ascent,
-    },
-    r: {
-      [ET.textSelector]: NT.rangeUnits,
     },
     lh: {
       [ET.textDocument]: NT.lineHeight,
@@ -1378,9 +1378,13 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
       [OT.shapeTrim]: NT.trimMultipleShapes,
       [ET.textFollowPath]: NT.textMask,
     },
+    mm: {
+      [OT.shapeMerge]: NT.mergeMode,
+    },
     r: {
       [OT.shapeFill]: NT.fillRule,
       [OT.shapeGradientFill]: NT.fillRule,
+      [ET.textSelector]: NT.rangeUnits,
     },
     t: {
       [OT.shapeGradientFill]: NT.gradientType,
@@ -1428,22 +1432,6 @@ export const nullEntity: EntityMap<AttributeTitle> = {
 
 export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
   required: {
-    x: {
-      [OT.keyframe]: IBT.keyframeXAxis,
-      [CT.keyframeList]: IBT.keyframeListXAxis,
-      [CT.keyframeValue]: IBT.keyframeValueXAxis,
-      [OT.positionKeyframe]: IBT.positionKeyframeXAxis,
-      [CT.positionKeyframeList]: IBT.positionKeyframeListXAxis,
-      [OT.keyframeBezierHandle]: IBT.keyframeBezierHandleXAxis,
-    },
-    y: {
-      [OT.keyframe]: IBT.keyframeYAxis,
-      [CT.keyframeList]: IBT.keyframeListYAxis,
-      [CT.keyframeValue]: IBT.keyframeValueYAxis,
-      [OT.positionKeyframe]: IBT.positionKeyframeYAxis,
-      [CT.positionKeyframeList]: IBT.positionKeyframeListYAxis,
-      [OT.keyframeBezierHandle]: IBT.keyframeBezierHandleYAxis,
-    },
     t: { [ET.textSelector]: IBT.expressible },
   },
   known: {
@@ -1500,6 +1488,16 @@ export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
       [OT.layerImage]: IBT.collapseTransformNew,
       [OT.layerNull]: IBT.collapseTransformNew,
       [OT.layerText]: IBT.collapseTransformNew,
+      // layer-visual ends
+    },
+    td: {
+      // layer-visual starts
+      [OT.layerPrecomposition]: IBT.matteTarget,
+      [OT.layerShape]: IBT.matteTarget,
+      [OT.layerSolidColor]: IBT.matteTarget,
+      [OT.layerImage]: IBT.matteTarget,
+      [OT.layerNull]: IBT.matteTarget,
+      [OT.layerText]: IBT.matteTarget,
       // layer-visual ends
     },
   },

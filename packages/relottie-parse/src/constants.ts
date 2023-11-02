@@ -143,6 +143,14 @@ export const rangeUnitsValues: ConstantNumMap = new Map<number, string>([
   [2, 'index'],
 ]);
 
+export const mergeModeValues: ConstantNumMap = new Map<number, string>([
+  [1, 'normal'],
+  [2, 'add'],
+  [3, 'substract'],
+  [4, 'intersect'],
+  [5, 'exclude-intersections'],
+]);
+
 export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.blendMode, blendModeValues],
   [NT.composite, compositeValues],
@@ -157,10 +165,11 @@ export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.textCaps, textCapsValues],
   [NT.textGrouping, textGroupingValues],
   [NT.textJustify, textJustifyValues],
-  [NT.textVerticalJustify, textShapeValues],
+  [NT.textShape, textShapeValues],
   [NT.fontPathOrigin, fontPathOriginValues],
   [NT.textVerticalJustify, verticalJustifyValues],
   [NT.rangeUnits, rangeUnitsValues],
+  [NT.mergeMode, mergeModeValues],
 ]);
 
 export type ConstantStrMap = Map<string, string>;
