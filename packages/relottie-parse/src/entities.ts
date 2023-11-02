@@ -1314,9 +1314,6 @@ export const numberEntity: EntityMap<NumberTitle> = {
       [OT.shapeGroup]: NT.numberOfProperties,
       ...createDependentTitles(CT.effectList, NT.effectPropertyCount),
     },
-    mm: {
-      [OT.shapeMerge]: NT.mergeMode,
-    },
     ip: {
       [OT.characterPrecomp]: NT.inPoint,
     },
@@ -1383,6 +1380,9 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
       [OT.shapeRepeater]: NT.composite,
       [OT.shapeTrim]: NT.trimMultipleShapes,
       [ET.textFollowPath]: NT.textMask,
+    },
+    mm: {
+      [OT.shapeMerge]: NT.mergeMode,
     },
     r: {
       [OT.shapeFill]: NT.fillRule,

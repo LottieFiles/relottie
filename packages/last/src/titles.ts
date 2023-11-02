@@ -133,7 +133,14 @@ export const TITLES = {
     matteModeInvertedLuma: 'matte-mode-inverted-luma',
 
     matteParent: 'matte-parent',
+
     mergeMode: 'merge-mode',
+    mergeModeNormal: 'merge-mode-normal',
+    mergeModeAdd: 'merge-mode-add',
+    mergeModeSubtract: 'merge-mode-subtract',
+    mergeModeIntersect: 'merge-mode-intersect',
+    mergeModeExcludeIntersections: 'merge-mode-exclude-intersections',
+
     miterLimitValue: 'miter-limit-value',
 
     trimMultipleShapes: 'trim-multiple-shapes',
@@ -211,7 +218,7 @@ export const TITLES = {
     positionKeyframeListTime: 'position-keyframe-list-time',
     keyframeBezierHandleTime: 'keyframe-bezier-handle-time',
     shapeKeyframeTime: 'shape-keyframe-time',
-    
+
     keyframeXAxis: 'keyframe-x-axis',
     keyframeListXAxis: 'keyframe-list-x-axis',
     keyframeValueXAxis: 'keyframe-value-x-axis',
