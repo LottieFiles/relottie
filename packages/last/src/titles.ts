@@ -132,7 +132,6 @@ export const TITLES = {
     matteModeLuma: 'matte-mode-luma',
     matteModeInvertedLuma: 'matte-mode-inverted-luma',
 
-    matteTarget: 'matte-target',
     matteParent: 'matte-parent',
     mergeMode: 'merge-mode',
     miterLimitValue: 'miter-limit-value',
@@ -231,6 +230,7 @@ export const TITLES = {
     randomize: 'randomize',
     threedimensional: 'threedimensional',
     layerThreedimensional: 'layer-threedimensional',
+    matteTarget: 'matte-target',
     keyframeXAxis: 'keyframe-x-axis',
     keyframeListXAxis: 'keyframe-list-x-axis',
     keyframeValueXAxis: 'keyframe-value-x-axis',

@@ -1278,16 +1278,6 @@ export const numberEntity: EntityMap<NumberTitle> = {
     parent: {
       ...createDependentTitles(CT.composition, NT.parentIndex),
     },
-    td: {
-      // layer-visual starts
-      [OT.layerPrecomposition]: NT.matteTarget,
-      [OT.layerShape]: NT.matteTarget,
-      [OT.layerSolidColor]: NT.matteTarget,
-      [OT.layerImage]: NT.matteTarget,
-      [OT.layerNull]: NT.matteTarget,
-      [OT.layerText]: NT.matteTarget,
-      // layer-visual ends
-    },
     tp: {
       // layer-visual starts
       [OT.layerPrecomposition]: NT.matteParent,
@@ -1500,6 +1490,16 @@ export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
       [OT.layerImage]: IBT.collapseTransformNew,
       [OT.layerNull]: IBT.collapseTransformNew,
       [OT.layerText]: IBT.collapseTransformNew,
+      // layer-visual ends
+    },
+    td: {
+      // layer-visual starts
+      [OT.layerPrecomposition]: IBT.matteTarget,
+      [OT.layerShape]: IBT.matteTarget,
+      [OT.layerSolidColor]: IBT.matteTarget,
+      [OT.layerImage]: IBT.matteTarget,
+      [OT.layerNull]: IBT.matteTarget,
+      [OT.layerText]: IBT.matteTarget,
       // layer-visual ends
     },
   },
