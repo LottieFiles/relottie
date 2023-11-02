@@ -1320,9 +1320,6 @@ export const numberEntity: EntityMap<NumberTitle> = {
     ascent: {
       [OT.textFont]: NT.ascent,
     },
-    r: {
-      [ET.textSelector]: NT.rangeUnits,
-    },
     lh: {
       [ET.textDocument]: NT.lineHeight,
     },
@@ -1387,6 +1384,7 @@ export const numberConstantEntity: EntityMap<NumberTitle> = {
     r: {
       [OT.shapeFill]: NT.fillRule,
       [OT.shapeGradientFill]: NT.fillRule,
+      [ET.textSelector]: NT.rangeUnits,
     },
     t: {
       [OT.shapeGradientFill]: NT.gradientType,
