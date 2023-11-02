@@ -1,5 +1,23 @@
 # @lottiefiles/relottie-parse
 
+## 1.3.0
+
+### Minor Changes
+
+- c217b08: fix: move matteTarget to intBoolean
+- c217b08: fix: move rangeUnits to numberConstantEntity
+- c217b08: fix: detect constant textShapeValues for textShape
+- c217b08: fix: detect mergeMode constant values & move to numberConstantEntity
+- c217b08: fix: move keyframe x and y titles to number type entity & titles
+
+### Patch Changes
+
+- Updated dependencies [c217b08]
+- Updated dependencies [c217b08]
+- Updated dependencies [c217b08]
+  - @lottiefiles/last@1.3.0
+  - @lottiefiles/last-builder@1.3.0
+
 ## 1.2.3
 
 ### Patch Changes

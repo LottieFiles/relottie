@@ -1,5 +1,13 @@
 # @lottiefiles/last
 
+## 1.3.0
+
+### Minor Changes
+
+- c217b08: fix: move matteTarget to intBoolean
+- c217b08: fix: detect mergeMode constant values & move to numberConstantEntity
+- c217b08: fix: move keyframe x and y titles to number type entity & titles
+
 ## 1.2.2
 
 ### Patch Changes
