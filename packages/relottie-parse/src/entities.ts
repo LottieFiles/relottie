@@ -1225,6 +1225,22 @@ export const numberEntity: EntityMap<NumberTitle> = {
     s: {
       [ET.textDocument]: NT.fontSize,
     },
+    x: {
+      [OT.keyframe]: NT.keyframeXAxis,
+      [CT.keyframeList]: NT.keyframeListXAxis,
+      [CT.keyframeValue]: NT.keyframeValueXAxis,
+      [OT.positionKeyframe]: NT.positionKeyframeXAxis,
+      [CT.positionKeyframeList]: NT.positionKeyframeListXAxis,
+      [OT.keyframeBezierHandle]: NT.keyframeBezierHandleXAxis,
+    },
+    y: {
+      [OT.keyframe]: NT.keyframeYAxis,
+      [CT.keyframeList]: NT.keyframeListYAxis,
+      [CT.keyframeValue]: NT.keyframeValueYAxis,
+      [OT.positionKeyframe]: NT.positionKeyframeYAxis,
+      [CT.positionKeyframeList]: NT.positionKeyframeListYAxis,
+      [OT.keyframeBezierHandle]: NT.keyframeBezierHandleYAxis,
+    },
   },
   known: {
     v: { [OT.effectParamIgnored]: NT.effectValueIgnored },
@@ -1418,22 +1434,6 @@ export const nullEntity: EntityMap<AttributeTitle> = {
 
 export const integerBooleanEntity: EntityMap<IntegerBooleanTitle> = {
   required: {
-    x: {
-      [OT.keyframe]: IBT.keyframeXAxis,
-      [CT.keyframeList]: IBT.keyframeListXAxis,
-      [CT.keyframeValue]: IBT.keyframeValueXAxis,
-      [OT.positionKeyframe]: IBT.positionKeyframeXAxis,
-      [CT.positionKeyframeList]: IBT.positionKeyframeListXAxis,
-      [OT.keyframeBezierHandle]: IBT.keyframeBezierHandleXAxis,
-    },
-    y: {
-      [OT.keyframe]: IBT.keyframeYAxis,
-      [CT.keyframeList]: IBT.keyframeListYAxis,
-      [CT.keyframeValue]: IBT.keyframeValueYAxis,
-      [OT.positionKeyframe]: IBT.positionKeyframeYAxis,
-      [CT.positionKeyframeList]: IBT.positionKeyframeListYAxis,
-      [OT.keyframeBezierHandle]: IBT.keyframeBezierHandleYAxis,
-    },
     t: { [ET.textSelector]: IBT.expressible },
   },
   known: {
