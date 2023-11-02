@@ -165,7 +165,7 @@ export const constantNumValues: Map<AttributeTitle, ConstantNumMap> = new Map([
   [NT.textCaps, textCapsValues],
   [NT.textGrouping, textGroupingValues],
   [NT.textJustify, textJustifyValues],
-  [NT.textVerticalJustify, textShapeValues],
+  [NT.textShape, textShapeValues],
   [NT.fontPathOrigin, fontPathOriginValues],
   [NT.textVerticalJustify, verticalJustifyValues],
   [NT.rangeUnits, rangeUnitsValues],
