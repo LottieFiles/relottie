@@ -119,7 +119,7 @@ jobs:
     name: release-gpr
     needs: release-npm
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/heads/changeset-release/main'
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'changeset-release/main'
     strategy:
       matrix:
         node-version: ['18']
