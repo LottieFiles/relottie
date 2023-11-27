@@ -28,7 +28,7 @@ const path = `../../__fixtures__/features/${name}.json`;
 
 const lottieJsonFile = readFileSync(path, 'utf8');
 
-const processor = unified().use(relottieParse, { warningMessage: true }).use(emptyCompiler);
+const processor = unified().use(relottieParse).use(emptyCompiler);
 
 // const tree = processor.parse(lottieJsonFile);
 
