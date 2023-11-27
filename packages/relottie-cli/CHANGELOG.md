@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-cli
 
+## 1.3.3
+
+### Patch Changes
+
+- 5314f1d: docs: small readme change for test release
+
 ## 1.3.2
 
 ### Patch Changes
