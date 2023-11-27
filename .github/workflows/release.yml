@@ -93,6 +93,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
+      - name: Debug Output
+        run: echo "The value of github.ref is ${{ github.ref }}"
+
       - name: ⎔ Setup .npmrc (NPM)
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPMJS_TOKEN }}" >> ~/.npmrc
 
