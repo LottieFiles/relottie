@@ -6,7 +6,6 @@ import type { Root } from '@lottiefiles/last';
 import type { Plugin, CompilerFunction } from 'unified';
 
 import type { StringifyOptions } from './options.js';
-import type { StringifyFileData } from './stringify';
 import { stringify } from './stringify.js';
 
 export type Options = Partial<StringifyOptions>;
@@ -17,8 +16,6 @@ export type Options = Partial<StringifyOptions>;
 export interface SettingsOptions extends Record<string, unknown> {
   stringify?: Options;
 }
-
-export type FileData = Partial<StringifyFileData>;
 
 const relottieStringify: Plugin<[Options?], Root, string> = function relottieStringify(options: Options = {}) {
   const settings = (this.data('settings') || { stringify: {} }) as SettingsOptions;

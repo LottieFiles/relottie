@@ -19,6 +19,10 @@ import type {
 
 const { number: NT, string: ST } = TITLES;
 
+export const fileConstants = {
+  sourceId: 'relottie-parse',
+} as const;
+
 export type ConstantNumMap = Map<number, string>;
 
 export const blendModeValues: ConstantNumMap = new Map<BlendMode.Value, string>([

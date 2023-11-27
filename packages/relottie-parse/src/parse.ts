@@ -38,6 +38,7 @@ import type { PrimitiveParts } from '@lottiefiles/last-builder';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
+import { fileConstants } from './constants.js';
 import type { Dependent } from './entities.js';
 import { getMemberEntity, getNoKeyEntity } from './entities.js';
 import { Stack } from './helpers.js';
@@ -46,20 +47,12 @@ import type { ParseOptions } from './options.js';
 import type { SettingsOptions } from './unified-relottie-parse.js';
 
 export interface ParseFileData extends Data {
-  parse: {
-    messages?: VFile['messages'];
-  };
+  parse?: object;
 }
 
 export interface Info {
   hasExpressions: Root['hasExpressions'];
 }
-
-const addWarningMessage = (file: VFile, message: string, options: ParseOptions): void => {
-  if (options.warningMessage) {
-    file.message(message);
-  }
-};
 
 const createValueType = (node: Momoa.AstNode, options: ParseOptions): PrimitiveParts<PrimitiveValueType> => {
   if (!options.valueType || node.type === 'Array' || node.type === 'Object' || node.type === 'Document') {
@@ -157,7 +150,6 @@ const getTitleFromMemberValue = (
   parentNodeTitle: ParentTitle,
   dependent: Dependent,
   file: VFile,
-  options: ParseOptions,
 ): AnyTitle | undefined => {
   const { key, parentTitle, type } = dependent;
 
@@ -178,7 +170,7 @@ const getTitleFromMemberValue = (
       if (!constTitle) {
         const message = `[${parentNodeTitle}] '${constantKey}' is missing in "dependent.parentTitle.values"`;
 
-        addWarningMessage(file, message, options);
+        file.message(message, node, fileConstants.sourceId);
       }
 
       const title = typeof constTitle === 'undefined' ? defaultConstTitle : constTitle;
@@ -198,7 +190,7 @@ const getTitleFromMemberValue = (
       if (type !== node.type) {
         const message = `${parentNodeTitle}'s '${key}' type is ${node.type} but has to be ${type}`;
 
-        addWarningMessage(file, message, options);
+        file.message(message, node, fileConstants.sourceId);
         break;
       }
 
@@ -213,7 +205,6 @@ const getDependentTitle = (
   members: Momoa.Member[],
   dependents: Dependent[],
   file: VFile,
-  options: ParseOptions,
 ): AnyTitle | undefined => {
   const memberKeyValue = members.reduce((acc, member) => {
     const key = member.name.value;
@@ -229,7 +220,7 @@ const getDependentTitle = (
 
     if (!node) continue;
 
-    const title = getTitleFromMemberValue(node, parentTitle, dependent, file, options);
+    const title = getTitleFromMemberValue(node, parentTitle, dependent, file);
 
     if (title) return title;
   }
@@ -237,29 +228,19 @@ const getDependentTitle = (
   return undefined;
 };
 
-const getObjectNodeTitle = (
-  node: Momoa.Obj,
-  parentNodeTitle: ParentTitle,
-  file: VFile,
-  options: ParseOptions,
-): ObjectTitle => {
+const getObjectNodeTitle = (node: Momoa.Obj, parentNodeTitle: ParentTitle, file: VFile): ObjectTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
   const { defaultTitle, dependents } = entity;
 
   if (!dependents) return defaultTitle as ObjectTitle;
 
-  const title = getDependentTitle(parentNodeTitle, node.members, dependents, file, options);
+  const title = getDependentTitle(parentNodeTitle, node.members, dependents, file);
 
   return (title || defaultTitle) as ObjectTitle;
 };
 
-const getArrayNodeTitle = (
-  node: Momoa.Arr,
-  parentNodeTitle: ParentTitle,
-  file: VFile,
-  options: ParseOptions,
-): ArrayTitle => {
+const getArrayNodeTitle = (node: Momoa.Arr, parentNodeTitle: ParentTitle, file: VFile): ArrayTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
   const { defaultTitle, dependents } = entity;
@@ -268,7 +249,7 @@ const getArrayNodeTitle = (
 
   const members = getMembersFromArrNode(node);
 
-  const title = getDependentTitle(parentNodeTitle, members, dependents, file, options);
+  const title = getDependentTitle(parentNodeTitle, members, dependents, file);
 
   return (title || defaultTitle) as ArrayTitle;
 };
@@ -307,7 +288,7 @@ const traverseJsonEnter = (
           const element = stack.peek();
 
           assertNodeType<Element>(element, 'element', file);
-          const elementValueTitle = getObjectNodeTitle(node, element.title, file, options);
+          const elementValueTitle = getObjectNodeTitle(node, element.title, file);
 
           stack.push(objectNode(elementValueTitle, [], { ...position }));
           break;
@@ -316,7 +297,7 @@ const traverseJsonEnter = (
           const array = stack.peek();
 
           assertNodeType<ArrayNode>(array, 'array', file);
-          const objectTitle = getObjectNodeTitle(node, array.title, file, options);
+          const objectTitle = getObjectNodeTitle(node, array.title, file);
 
           stack.push(objectNode(objectTitle, [], { ...position }));
           break;
@@ -332,7 +313,7 @@ const traverseJsonEnter = (
           const collection = stack.peek();
 
           assertNodeType<Collection>(collection, 'collection', file);
-          const collectionValueTitle = getArrayNodeTitle(node, collection.title, file, options);
+          const collectionValueTitle = getArrayNodeTitle(node, collection.title, file);
 
           stack.push(arrayNode(collectionValueTitle, [], { ...position }));
           break;
@@ -341,7 +322,7 @@ const traverseJsonEnter = (
           const array = stack.peek();
 
           assertNodeType<ArrayNode>(array, 'array', file);
-          const arrayTitle = getArrayNodeTitle(node, array.title, file, options);
+          const arrayTitle = getArrayNodeTitle(node, array.title, file);
 
           stack.push(arrayNode(arrayTitle, [], { ...position }));
           break;
@@ -544,16 +525,6 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
       traverseJsonExit(node, parent, stack, file, options, info);
     },
   });
-
-  const dataMessages = options.warningMessage && file.messages.length > 0 ? { messages: file.messages } : {};
-
-  const fileData: ParseFileData = {
-    parse: {
-      ...dataMessages,
-    },
-  };
-
-  Object.assign(file.data, fileData);
 
   const tree = stack.pop();
 
