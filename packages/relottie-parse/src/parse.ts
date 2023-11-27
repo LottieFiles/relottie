@@ -46,7 +46,9 @@ import { DEFAULT_OPTIONS } from './options.js';
 import type { ParseOptions } from './options.js';
 import type { SettingsOptions } from './unified-relottie-parse.js';
 
-export interface ParseFileData extends Data {}
+export interface ParseFileData extends Data {
+  parse?: object;
+}
 
 export interface Info {
   hasExpressions: Root['hasExpressions'];

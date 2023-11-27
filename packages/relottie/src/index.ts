@@ -3,7 +3,7 @@
  */
 
 import type { Root } from '@lottiefiles/last';
-import parse, { type Options as ParseOptions, type FileData as ParseFileData } from '@lottiefiles/relottie-parse';
+import parse, { type Options as ParseOptions, type ParseFileData } from '@lottiefiles/relottie-parse';
 import stringify, { type Options as StringifyOptions } from '@lottiefiles/relottie-stringify';
 import { unified, type FrozenProcessor } from 'unified';
 
