@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TITLES should match snapshots: ./__snapshots__/-titles.snap 1`] = `
-Object {
-  "array": Object {
+{
+  "array": {
     "outTangentsValue": "out-tangents-value",
   },
-  "boolean": Object {
+  "boolean": {
     "bezierClosed": "bezier-closed",
     "collapseTransform": "collapse-transform",
     "hasMask": "has-mask",
@@ -15,7 +15,7 @@ Object {
     "splitEnabled": "split-enabled",
     "strokeOverFill": "stroke-over-fill",
   },
-  "collection": Object {
+  "collection": {
     "assets": "assets",
     "bezierInTangents": "bezier-in-tangents",
     "bezierOutTangents": "bezier-out-tangents",
@@ -53,7 +53,7 @@ Object {
     "wrapSize": "wrap-size",
   },
   "custom": "custom",
-  "element": Object {
+  "element": {
     "align": "align",
     "altitude": "altitude",
     "amount": "amount",
@@ -227,7 +227,7 @@ Object {
     "translation": "translation",
     "userMetadata": "user-metadata",
   },
-  "intBoolean": Object {
+  "intBoolean": {
     "animated": "animated",
     "autoOrient": "auto-orient",
     "collapseTransformNew": "collapse-transform-new",
@@ -241,7 +241,7 @@ Object {
     "randomize": "randomize",
     "threedimensional": "threedimensional",
   },
-  "number": Object {
+  "number": {
     "adaptiveSampleLimit": "adaptive-sample-limit",
     "ascent": "ascent",
     "baselineShift": "baseline-shift",
@@ -395,7 +395,7 @@ Object {
     "trimMultipleShapesSimultaneously": "trim-multiple-shapes-simultaneously",
     "width": "width",
   },
-  "object": Object {
+  "object": {
     "animatedColor": "animated-color",
     "animatedColorStatic": "animated-color-static",
     "animatedMultidimensional": "animated-multidimensional",
@@ -503,7 +503,7 @@ Object {
     "textFont": "text-font",
     "textRange": "text-range",
   },
-  "string": Object {
+  "string": {
     "assetImageType": "asset-image-type",
     "assetType": "asset-type",
     "author": "author",
