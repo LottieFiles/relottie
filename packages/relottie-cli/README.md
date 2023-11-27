@@ -37,7 +37,7 @@ If not, you can always use [`relottie`][relottie] itself manually in a script.
 ## Install
 
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
-In Node.js (version 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+, or 16.0+) install with [npm][]:
 
 ```sh
 npm install @lottiefiles/relottie-cli
