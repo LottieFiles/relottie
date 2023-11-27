@@ -9,7 +9,7 @@ import { readFileSync } from 'fs';
 import type { Root } from '@lottiefiles/last';
 import type { CompilerFunction, Plugin } from 'unified';
 import { unified } from 'unified';
-// import { reporter } from 'vfile-reporter';
+import { reporter } from 'vfile-reporter';
 
 import relottieParse from './src/index.js';
 
@@ -36,7 +36,7 @@ const processor = unified().use(relottieParse).use(emptyCompiler);
 
 const vfile = processor.processSync(lottieJsonFile);
 
-// console.log(reporter(vfile));
+console.log(reporter(vfile));
 
 console.log(vfile.data);
 

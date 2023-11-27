@@ -38,6 +38,7 @@ import type { PrimitiveParts } from '@lottiefiles/last-builder';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
+import { fileConstants } from './constants.js';
 import type { Dependent } from './entities.js';
 import { getMemberEntity, getNoKeyEntity } from './entities.js';
 import { Stack } from './helpers.js';
@@ -167,7 +168,7 @@ const getTitleFromMemberValue = (
       if (!constTitle) {
         const message = `[${parentNodeTitle}] '${constantKey}' is missing in "dependent.parentTitle.values"`;
 
-        file.message(message);
+        file.message(message, node, fileConstants.sourceId);
       }
 
       const title = typeof constTitle === 'undefined' ? defaultConstTitle : constTitle;
@@ -187,7 +188,7 @@ const getTitleFromMemberValue = (
       if (type !== node.type) {
         const message = `${parentNodeTitle}'s '${key}' type is ${node.type} but has to be ${type}`;
 
-        file.message(message);
+        file.message(message, node, fileConstants.sourceId);
         break;
       }
 
