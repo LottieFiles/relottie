@@ -1,5 +1,18 @@
 # @lottiefiles/relottie
 
+## 1.3.1
+
+### Patch Changes
+
+- a8e9a62: feat: FileData extends StringifyFileData type
+- a8e9a62: feat: rename export relottie-parse's FileData type into ParseFileData
+- Updated dependencies [a8e9a62]
+- Updated dependencies [a8e9a62]
+- Updated dependencies [a8e9a62]
+- Updated dependencies [a8e9a62]
+  - @lottiefiles/relottie-parse@1.3.1
+  - @lottiefiles/relottie-stringify@1.3.1
+
 ## 1.3.0
 
 ### Patch Changes

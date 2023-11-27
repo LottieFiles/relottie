@@ -1,5 +1,14 @@
 # @lottiefiles/relottie-parse
 
+## 1.3.1
+
+### Patch Changes
+
+- a8e9a62: feat: do not duplicate log messages with the vfile.messages and remove the unnecessary "warningMessage"
+  option
+- a8e9a62: feat: rename export relottie-parse's FileData type into ParseFileData
+- a8e9a62: feat: add position and sourceId info when adding a vfile message
+
 ## 1.3.0
 
 ### Minor Changes
