@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-stringify
 
+## 1.3.2
+
+### Patch Changes
+
+- f9ee6f7: feat: export fileConstants values for vfile messages
+
 ## 1.3.1
 
 ### Patch Changes
