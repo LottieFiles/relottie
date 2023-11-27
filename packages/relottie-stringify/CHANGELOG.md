@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-stringify
 
+## 1.3.1
+
+### Patch Changes
+
+- a8e9a62: feat: rename export FileData type into StringifyFileData
+
 ## 1.3.0
 
 ### Patch Changes
