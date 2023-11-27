@@ -2,7 +2,6 @@ name: Release
 
 on:
   push:
-    branches: [main]
   pull_request:
 
 concurrency:
@@ -67,7 +66,7 @@ jobs:
     name: release-npm
     needs: validate
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
+    if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
         node-version: ['18']
@@ -112,6 +111,26 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
+
+  release-gpr:
+    name: release-gpr
+    needs: release-npm
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/changeset-release/main'
+    strategy:
+      matrix:
+        node-version: ['18']
+    timeout-minutes: 20
+    steps:
+      - name: ⬇ Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: ⎔ Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: Remove existing .npmrc for NPM
         run: rm -f "$HOME/.npmrc"
