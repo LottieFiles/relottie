@@ -114,7 +114,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
       - name: 🚀 Release to Github Packages
-        if: steps.changesets.outputs.publishedPackages == 'true'
+        if: steps.changesets.outputs.hasChangesets == 'false'
         run: rm -f "$HOME/.npmrc" && pnpm install && npm publish --registry=https://npm.pkg.github.com/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
