@@ -124,7 +124,8 @@ jobs:
   release-gpr:
     name: release-gpr
     needs: release-npm
-    if: needs.release-npm.outputs.steps.changesetsId.outputs.published == 'true'
+    # if: github.ref == 'refs/heads/changeset-release/main' && github.event.pull_request.merged == 'true'
+    if: false
     runs-on: ubuntu-latest
     strategy:
       matrix:
