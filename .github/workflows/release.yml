@@ -101,7 +101,7 @@ jobs:
 
       - name: 🚀 Create Release Pull Request or Release to NPM
         uses: changesets/action@v1
-        id: changesets
+        id: changesetsId
         with:
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
@@ -112,15 +112,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
-      - name: 📝 Debug Github Output
-        run: echo "The value of github is ${{ github }}"
+      - name: 📝 Print Changeset Context for Output
+        run: echo "The value of changeset is ${{ steps.changesetsId.outputs.published }}"
 
-      - name: 📝 Debug Changeset Output
-        run: echo "The value of github is ${{ steps.changesets }}"
+      - name: Print GitHub Context for Debugging
+        run: |
+          echo "Event Name: ${{ github.event_name }}"
+          echo "Full Context:"
+          echo "${{ toJson(github) }}"
 
   release-gpr:
     name: release-gpr
-    # if: needs['release-npm'].steps.changesets.outputs.published == 'true'
+    needs: release-npm
+    if: needs.release-npm.outputs.steps.changesetsId.outputs.published == 'true'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -136,9 +140,6 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-
-      - name: 📝 Debug needs Output
-        run: echo "The value of needs is ${{ needs }}"
 
       - name: Remove existing .npmrc for NPM
         run: rm -f "$HOME/.npmrc"
