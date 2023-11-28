@@ -112,11 +112,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
+      - name: 📝 Debug Github Output
+        run: echo "The value of github is ${{ github }}"
+
+      - name: 📝 Debug Changeset Output
+        run: echo "The value of github is ${{ steps.changesets }}"
+
   release-gpr:
     name: release-gpr
-    needs: release-npm
+    # if: needs['release-npm'].steps.changesets.outputs.published == 'true'
     runs-on: ubuntu-latest
-    # if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'changeset-release/main'
     strategy:
       matrix:
         node-version: ['18']
@@ -131,6 +136,9 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
+
+      - name: 📝 Debug needs Output
+        run: echo "The value of needs is ${{ needs }}"
 
       - name: Remove existing .npmrc for NPM
         run: rm -f "$HOME/.npmrc"
