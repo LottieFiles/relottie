@@ -1,0 +1,1246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-extract-features fixtures features Test in lock.json should have correct data 1`] = `
+{
+  "used": Map {
+    "version" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "framerate" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "in-point" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 4,
+    },
+    "out-point" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 4,
+    },
+    "width" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "height" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "threedimensional" => {
+      "n": 1,
+      "parents": Map {
+        "animation" => {
+          "n": 1,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+    "assets" => {
+      "n": 1,
+      "parents": Map {
+        "animation" => {
+          "n": 1,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+    "assets-children" => {
+      "n": 1,
+      "parents": Map {
+        "assets" => {
+          "n": 1,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+    "composition" => {
+      "n": 0,
+      "parents": Map {
+        "animation" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "composition-children" => {
+      "n": 0,
+      "parents": Map {
+        "composition" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "layer-shape" => {
+      "n": 0,
+      "parents": Map {
+        "composition-children" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "composition-index" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "name" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-group" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 7,
+    },
+    "layer-transform" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "layer-transform-children" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "translation" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform-children" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 7,
+    },
+    "animated-position-static" => {
+      "n": 0,
+      "parents": Map {
+        "translation" => {
+          "n": 0,
+          "y": 6,
+        },
+        "anchor-point" => {
+          "n": 0,
+          "y": 7,
+        },
+        "animated-position-prop" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 15,
+    },
+    "animated" => {
+      "n": 0,
+      "parents": Map {
+        "animated-position-static" => {
+          "n": 0,
+          "y": 15,
+        },
+        "animated-multidimensional" => {
+          "n": 0,
+          "y": 4,
+        },
+        "animated-value-static" => {
+          "n": 0,
+          "y": 30,
+        },
+        "animated-shape" => {
+          "n": 0,
+          "y": 2,
+        },
+        "animated-multidimensional-static" => {
+          "n": 0,
+          "y": 8,
+        },
+        "animated-color" => {
+          "n": 0,
+          "y": 2,
+        },
+        "animated-position" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 62,
+    },
+    "static-values" => {
+      "n": 0,
+      "parents": Map {
+        "animated-position-static" => {
+          "n": 0,
+          "y": 15,
+        },
+        "animated-multidimensional-static" => {
+          "n": 0,
+          "y": 8,
+        },
+      },
+      "y": 23,
+    },
+    "static-values-children" => {
+      "n": 0,
+      "parents": Map {
+        "static-values" => {
+          "n": 0,
+          "y": 23,
+        },
+      },
+      "y": 23,
+    },
+    "anchor-point" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform-children" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 7,
+    },
+    "layer-transform-scale" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform-children" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "animated-multidimensional" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform-scale" => {
+          "n": 0,
+          "y": 2,
+        },
+        "shape-stroke-color" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 4,
+    },
+    "keyframe-list" => {
+      "n": 0,
+      "parents": Map {
+        "animated-multidimensional" => {
+          "n": 0,
+          "y": 4,
+        },
+        "animated-color" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 6,
+    },
+    "keyframe-list-children" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-list" => {
+          "n": 0,
+          "y": 6,
+        },
+      },
+      "y": 6,
+    },
+    "keyframe" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-list-children" => {
+          "n": 0,
+          "y": 12,
+        },
+      },
+      "y": 12,
+    },
+    "keyframe-time" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe" => {
+          "n": 0,
+          "y": 12,
+        },
+      },
+      "y": 12,
+    },
+    "keyframe-value" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe" => {
+          "n": 0,
+          "y": 12,
+        },
+        "position-keyframe" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 14,
+    },
+    "keyframe-value-children" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-value" => {
+          "n": 0,
+          "y": 14,
+        },
+      },
+      "y": 14,
+    },
+    "keyframe-in-tangent" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe" => {
+          "n": 0,
+          "y": 6,
+        },
+      },
+      "y": 6,
+    },
+    "keyframe-bezier-handle" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-in-tangent" => {
+          "n": 0,
+          "y": 6,
+        },
+        "keyframe-out-tangent" => {
+          "n": 0,
+          "y": 6,
+        },
+        "shape-keyframe-in-tangent" => {
+          "n": 0,
+          "y": 5,
+        },
+        "shape-keyframe-out-tangent" => {
+          "n": 0,
+          "y": 5,
+        },
+        "position-keyframe-in-tangent" => {
+          "n": 0,
+          "y": 1,
+        },
+        "position-keyframe-out-tangent" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 24,
+    },
+    "bezier-x-axis" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-bezier-handle" => {
+          "n": 0,
+          "y": 24,
+        },
+      },
+      "y": 24,
+    },
+    "bezier-x-axis-children" => {
+      "n": 0,
+      "parents": Map {
+        "bezier-x-axis" => {
+          "n": 0,
+          "y": 24,
+        },
+      },
+      "y": 24,
+    },
+    "bezier-y-axis" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-bezier-handle" => {
+          "n": 0,
+          "y": 24,
+        },
+      },
+      "y": 24,
+    },
+    "bezier-y-axis-children" => {
+      "n": 0,
+      "parents": Map {
+        "bezier-y-axis" => {
+          "n": 0,
+          "y": 24,
+        },
+      },
+      "y": 24,
+    },
+    "keyframe-out-tangent" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe" => {
+          "n": 0,
+          "y": 6,
+        },
+      },
+      "y": 6,
+    },
+    "keyframe-end-value" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe" => {
+          "n": 0,
+          "y": 6,
+        },
+        "shape-keyframe" => {
+          "n": 0,
+          "y": 5,
+        },
+        "position-keyframe" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 12,
+    },
+    "keyframe-end-value-children" => {
+      "n": 0,
+      "parents": Map {
+        "keyframe-end-value" => {
+          "n": 0,
+          "y": 12,
+        },
+      },
+      "y": 12,
+    },
+    "rotation-clockwise" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform-children" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 7,
+    },
+    "animated-value-static" => {
+      "n": 0,
+      "parents": Map {
+        "rotation-clockwise" => {
+          "n": 0,
+          "y": 7,
+        },
+        "transform-opacity" => {
+          "n": 0,
+          "y": 7,
+        },
+        "stroke-opacity" => {
+          "n": 0,
+          "y": 3,
+        },
+        "stroke-width" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-transform-skew" => {
+          "n": 0,
+          "y": 4,
+        },
+        "shape-transform-skew-axis" => {
+          "n": 0,
+          "y": 4,
+        },
+        "shape-fill-opacity" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 30,
+    },
+    "static-value" => {
+      "n": 0,
+      "parents": Map {
+        "animated-value-static" => {
+          "n": 0,
+          "y": 30,
+        },
+      },
+      "y": 30,
+    },
+    "transform-opacity" => {
+      "n": 0,
+      "parents": Map {
+        "layer-transform-children" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 7,
+    },
+    "auto-orient" => {
+      "n": 3,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 3,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+    "start-time" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "blend-mode-normal" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "time-stretch" => {
+      "n": 3,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 3,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+    "layer-type" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "shape-list" => {
+      "n": 1,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 1,
+          "y": 2,
+        },
+        "shape-group" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 6,
+    },
+    "shape-list-children" => {
+      "n": 1,
+      "parents": Map {
+        "shape-list" => {
+          "n": 1,
+          "y": 6,
+        },
+      },
+      "y": 6,
+    },
+    "shape-group" => {
+      "n": 0,
+      "parents": Map {
+        "shape-list-children" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 4,
+    },
+    "shape-type" => {
+      "n": 0,
+      "parents": Map {
+        "shape-group" => {
+          "n": 0,
+          "y": 4,
+        },
+        "shape-path" => {
+          "n": 0,
+          "y": 2,
+        },
+        "shape-stroke" => {
+          "n": 0,
+          "y": 3,
+        },
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+        "shape-ellipse" => {
+          "n": 0,
+          "y": 2,
+        },
+        "shape-fill" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 17,
+    },
+    "shape-path" => {
+      "n": 0,
+      "parents": Map {
+        "shape-list-children" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-direction-clockwise" => {
+      "n": 0,
+      "parents": Map {
+        "shape-path" => {
+          "n": 0,
+          "y": 2,
+        },
+        "shape-ellipse" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 4,
+    },
+    "animated-shape-prop" => {
+      "n": 0,
+      "parents": Map {
+        "shape-path" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "animated-shape" => {
+      "n": 0,
+      "parents": Map {
+        "animated-shape-prop" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-keyframe-list" => {
+      "n": 0,
+      "parents": Map {
+        "animated-shape" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-keyframe-list-children" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe-list" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-keyframe" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe-list-children" => {
+          "n": 0,
+          "y": 7,
+        },
+      },
+      "y": 7,
+    },
+    "shape-keyframe-in-tangent" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe" => {
+          "n": 0,
+          "y": 5,
+        },
+      },
+      "y": 5,
+    },
+    "shape-keyframe-out-tangent" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe" => {
+          "n": 0,
+          "y": 5,
+        },
+      },
+      "y": 5,
+    },
+    "shape-keyframe-time" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe" => {
+          "n": 0,
+          "y": 7,
+        },
+      },
+      "y": 7,
+    },
+    "shape-keyframe-start" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe" => {
+          "n": 0,
+          "y": 5,
+        },
+      },
+      "y": 5,
+    },
+    "shape-keyframe-start-children" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe-start" => {
+          "n": 0,
+          "y": 5,
+        },
+      },
+      "y": 5,
+    },
+    "bezier" => {
+      "n": 0,
+      "parents": Map {
+        "shape-keyframe-start-children" => {
+          "n": 0,
+          "y": 5,
+        },
+        "keyframe-end-value-children" => {
+          "n": 0,
+          "y": 5,
+        },
+      },
+      "y": 10,
+    },
+    "bezier-in-tangents" => {
+      "n": 0,
+      "parents": Map {
+        "bezier" => {
+          "n": 0,
+          "y": 10,
+        },
+        "bezier-in-tangents-children" => {
+          "n": 0,
+          "y": 66,
+        },
+      },
+      "y": 76,
+    },
+    "bezier-in-tangents-children" => {
+      "n": 0,
+      "parents": Map {
+        "bezier-in-tangents" => {
+          "n": 0,
+          "y": 10,
+        },
+      },
+      "y": 10,
+    },
+    "bezier-out-tangents" => {
+      "n": 0,
+      "parents": Map {
+        "bezier" => {
+          "n": 0,
+          "y": 10,
+        },
+        "bezier-out-tangents-children" => {
+          "n": 0,
+          "y": 66,
+        },
+      },
+      "y": 76,
+    },
+    "bezier-out-tangents-children" => {
+      "n": 0,
+      "parents": Map {
+        "bezier-out-tangents" => {
+          "n": 0,
+          "y": 10,
+        },
+      },
+      "y": 10,
+    },
+    "bezier-vertices" => {
+      "n": 0,
+      "parents": Map {
+        "bezier" => {
+          "n": 0,
+          "y": 10,
+        },
+        "bezier-vertices-children" => {
+          "n": 0,
+          "y": 66,
+        },
+      },
+      "y": 76,
+    },
+    "bezier-vertices-children" => {
+      "n": 0,
+      "parents": Map {
+        "bezier-vertices" => {
+          "n": 0,
+          "y": 10,
+        },
+      },
+      "y": 10,
+    },
+    "bezier-closed" => {
+      "n": 0,
+      "parents": Map {
+        "bezier" => {
+          "n": 0,
+          "y": 10,
+        },
+      },
+      "y": 10,
+    },
+    "custom" => {
+      "n": 0,
+      "parents": Map {
+        "animated-shape" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-stroke" => {
+      "n": 0,
+      "parents": Map {
+        "shape-list-children" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "shape-stroke-color" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "stroke-opacity" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "stroke-width" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "line-cap-round" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "line-join-miter" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "miter-limit-value" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 3,
+        },
+      },
+      "y": 3,
+    },
+    "shape-transform" => {
+      "n": 0,
+      "parents": Map {
+        "shape-list-children" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 4,
+    },
+    "shape-transform-scale" => {
+      "n": 0,
+      "parents": Map {
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 4,
+    },
+    "animated-multidimensional-static" => {
+      "n": 0,
+      "parents": Map {
+        "shape-transform-scale" => {
+          "n": 0,
+          "y": 4,
+        },
+        "shape-ellipse-size" => {
+          "n": 0,
+          "y": 2,
+        },
+        "shape-stroke-color" => {
+          "n": 0,
+          "y": 1,
+        },
+        "layer-transform-scale" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 8,
+    },
+    "shape-transform-skew" => {
+      "n": 0,
+      "parents": Map {
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 4,
+    },
+    "shape-transform-skew-axis" => {
+      "n": 0,
+      "parents": Map {
+        "shape-transform" => {
+          "n": 0,
+          "y": 4,
+        },
+      },
+      "y": 4,
+    },
+    "hidden" => {
+      "n": 0,
+      "parents": Map {
+        "shape-group" => {
+          "n": 0,
+          "y": 4,
+        },
+        "shape-fill" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 6,
+    },
+    "shape-ellipse" => {
+      "n": 0,
+      "parents": Map {
+        "shape-list-children" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-ellipse-size" => {
+      "n": 0,
+      "parents": Map {
+        "shape-ellipse" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "animated-position-prop" => {
+      "n": 0,
+      "parents": Map {
+        "shape-ellipse" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-fill" => {
+      "n": 0,
+      "parents": Map {
+        "shape-list-children" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-fill-color" => {
+      "n": 0,
+      "parents": Map {
+        "shape-fill" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "animated-color" => {
+      "n": 0,
+      "parents": Map {
+        "shape-fill-color" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "shape-fill-opacity" => {
+      "n": 0,
+      "parents": Map {
+        "shape-fill" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "fill-rule-non-zero" => {
+      "n": 0,
+      "parents": Map {
+        "shape-fill" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "animated-position" => {
+      "n": 0,
+      "parents": Map {
+        "translation" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "position-keyframe-list" => {
+      "n": 0,
+      "parents": Map {
+        "animated-position" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "position-keyframe-list-children" => {
+      "n": 0,
+      "parents": Map {
+        "position-keyframe-list" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "position-keyframe" => {
+      "n": 0,
+      "parents": Map {
+        "position-keyframe-list-children" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "position-keyframe-time" => {
+      "n": 0,
+      "parents": Map {
+        "position-keyframe" => {
+          "n": 0,
+          "y": 2,
+        },
+      },
+      "y": 2,
+    },
+    "position-keyframe-in-tangent" => {
+      "n": 0,
+      "parents": Map {
+        "position-keyframe" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "position-keyframe-out-tangent" => {
+      "n": 0,
+      "parents": Map {
+        "position-keyframe" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "line-cap-butt" => {
+      "n": 0,
+      "parents": Map {
+        "shape-stroke" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "layer-xml-id" => {
+      "n": 0,
+      "parents": Map {
+        "layer-shape" => {
+          "n": 0,
+          "y": 1,
+        },
+      },
+      "y": 1,
+    },
+    "markers" => {
+      "n": 1,
+      "parents": Map {
+        "animation" => {
+          "n": 1,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+    "markers-children" => {
+      "n": 1,
+      "parents": Map {
+        "markers" => {
+          "n": 1,
+          "y": 0,
+        },
+      },
+      "y": 0,
+    },
+  },
+}
+`;
