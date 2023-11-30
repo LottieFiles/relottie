@@ -3,6 +3,7 @@ name: Release
 on:
   push:
   pull_request:
+    types: [closed]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -36,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets. NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: 📥 Install dependencies
         run: pnpm install --frozen-lockfile
@@ -66,7 +67,9 @@ jobs:
     name: release-npm
     needs: validate
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if:
+      github.event_name == 'pull_request' && github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'main'
     strategy:
       matrix:
         node-version: ['18']
@@ -101,7 +104,7 @@ jobs:
 
       - name: 🚀 Create Release Pull Request or Release to NPM
         uses: changesets/action@v1
-        id: changesets
+        id: changesetsId
         with:
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
@@ -112,15 +115,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GPR_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
-      - name: 📝 Debug Github Output
-        run: echo "The value of github is ${{ github }}"
-
-      - name: 📝 Debug Changeset Output
-        run: echo "The value of github is ${{ steps.changesets }}"
+      - name: Print GitHub Context for Debugging
+        run: |
+          echo "Event Name: ${{ github.event_name }}"
+          echo "Full Context:"
+          echo "${{ toJson(github) }}"
 
   release-gpr:
     name: release-gpr
-    # if: needs['release-npm'].steps.changesets.outputs.published == 'true'
+    needs: [validate, release-npm]
+    if: >
+      github.event_name == 'pull_request' && github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref == 'changeset-release/main'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -136,9 +142,6 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-
-      - name: 📝 Debug needs Output
-        run: echo "The value of needs is ${{ needs }}"
 
       - name: Remove existing .npmrc for NPM
         run: rm -f "$HOME/.npmrc"
@@ -165,4 +168,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets. NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
