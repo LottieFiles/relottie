@@ -133,7 +133,7 @@ relottie plugins too.
 
 ## Syntax
 
-relottie follows [last][] definitions and [lottie-docs][] title names (with a few changes) Some syntax extensions are supported through plugins.
+relottie follows [last][] definitions, [lottie-types][] and [lottie-docs][] title names (with a few changes) Some syntax extensions are supported through plugins.
 
 We use [momoa][] JSON parser for our parsing.
 See its documentation for more information.
@@ -228,7 +228,7 @@ It represents Lottie constructs as JSON objects.
 
 The relottie organization and the unified as a whole is fully typed
 with [TypeScript][].
-Types for last are available in [last][].
+Types for last are available in [last][]. Also have a look at [lottie-types][].
 
 For TypeScript to work, it is particularly important to type your plugins
 correctly.
@@ -349,6 +349,8 @@ The initial release of this project was authored by
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
 
 [relottie-cli]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-cli
+
+[lottie-types]: https://www.npmjs.com/package/@lottiefiles/lottie-types
 
 [dotlottie.js]: https://github.com/dotlottie/dotlottie-js/
 
