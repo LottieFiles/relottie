@@ -92,6 +92,8 @@ This GitHub repository is a monorepo that contains the following packages:
     — plugin to take a syntax tree (last) and turn it into Lottie as output
 *   [`relottie-cli`][relottie-cli]
     — Command line interface to inspect and change Lottie files with relottie
+* [`relottie-extract-features`][relottie-extract-features]
+    — plugin to extract Lottie features from the document and store them in vfile
 
 ## When should I use this?
 
@@ -349,6 +351,8 @@ The initial release of this project was authored by
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
 
 [relottie-cli]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-cli
+
+[relottie-extract-features]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-extract-features
 
 [lottie-types]: https://www.npmjs.com/package/@lottiefiles/lottie-types
 
