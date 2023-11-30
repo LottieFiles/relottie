@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.3.4
+
+### Patch Changes
+
+- fd0cd8f: chore(devDeps): bump esbuild to 0.19.5"
+
 ## 1.3.0
 
 ### Minor Changes

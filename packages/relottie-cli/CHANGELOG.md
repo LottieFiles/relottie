@@ -1,5 +1,14 @@
 # @lottiefiles/relottie-cli
 
+## 1.3.4
+
+### Patch Changes
+
+- 24e81c2: chore(devDeps): bump execa to 6.1.0
+- Updated dependencies [f75c7fd]
+- Updated dependencies [fd0cd8f]
+  - @lottiefiles/relottie@1.3.4
+
 ## 1.3.3
 
 ### Patch Changes

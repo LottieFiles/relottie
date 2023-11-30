@@ -1,5 +1,14 @@
 # @lottiefiles/last-builder
 
+## 1.3.4
+
+### Patch Changes
+
+- c420329: chore: bump unist-builder to v3.0.1
+- fd0cd8f: chore(devDeps): bump esbuild to 0.19.5"
+- Updated dependencies [fd0cd8f]
+  - @lottiefiles/last@1.3.4
+
 ## 1.3.0
 
 ### Patch Changes
