@@ -107,7 +107,7 @@ If the output is Lottie JSON file, you can use `relottie-stringify` with `unifie
 relottie plugins deal with Lottie.
 Some popular examples are:
 
-*   todo
+*   [relottie-style][]
 
 These plugins are exemplary because what they do and how they do it is quite
 different, respectively to extend Lottie syntax, inspect trees, change trees,
@@ -122,14 +122,14 @@ Here are three good ways to find plugins:
     — any tagged repo on GitHub
 
 Some plugins are maintained by us here in the [`@lottiefiles`][lottiefiles] organization while
-others are maintained by folks elsewhere (not yet).
+others are maintained by folks elsewhere.
 Anyone can make relottie plugins, so as always when choosing whether to include
 dependencies in your project, make sure to carefully assess the quality of
 relottie plugins too.
 
 ## Examples
 
-*   todo
+*   be the first one ;)
 
 ## Syntax
 
@@ -151,22 +151,75 @@ It represents Lottie constructs as JSON objects.
 
 **Out**:
 
-```js
+```json
 {
-  type: 'root',
-  title: 'animation',
-  hasExpressions: false,
-  children: [
-    {
-      type: 'attribute', 
-      key: "v",
-      title: "version",
-      children: [{
-        type: 'primitive', 
-        value: '6.0.0', 
-        valueType: 'string' 
-      }]
+  "type": "root",
+  "title": "animation",
+  "hasExpressions": false,
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
     },
+    "end": {
+      "line": 1,
+      "column": 17,
+      "offset": 16
+    }
+  },
+  "children": [
+    {
+      "type": "attribute",
+      "key": {
+        "type": "key",
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 3,
+            "offset": 2
+          },
+          "end": {
+            "line": 1,
+            "column": 6,
+            "offset": 5
+          }
+        },
+        "value": "v"
+      },
+      "title": "version",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 3,
+          "offset": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 15,
+          "offset": 14
+        }
+      },
+      "children": [
+        {
+          "type": "primitive",
+          "value": "6.0.0",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 8,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 15,
+              "offset": 14
+            }
+          },
+          "valueType": "string"
+        }
+      ]
+    }
   ]
 }
 ```
@@ -290,6 +343,8 @@ The initial release of this project was authored by
 [relottie-pkg]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie
 
 [relottie-parse]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-parse
+
+[relottie-style]: https://github.com/LottieFiles/lottie-styler/pkgs/npm/relottie-style
 
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
 
