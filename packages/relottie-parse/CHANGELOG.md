@@ -1,5 +1,17 @@
 # @lottiefiles/relottie-parse
 
+## 1.3.4
+
+### Patch Changes
+
+- f75c7fd: chore(devDeps): bump types/node to 18.18.9
+- 7a3556e: chore: bump momoa version to 2.0.4
+- fd0cd8f: chore(devDeps): bump esbuild to 0.19.5"
+- Updated dependencies [c420329]
+- Updated dependencies [fd0cd8f]
+  - @lottiefiles/last-builder@1.3.4
+  - @lottiefiles/last@1.3.4
+
 ## 1.3.1
 
 ### Patch Changes

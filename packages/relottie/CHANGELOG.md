@@ -1,5 +1,18 @@
 # @lottiefiles/relottie
 
+## 1.3.4
+
+### Patch Changes
+
+- f75c7fd: chore(devDeps): bump types/node to 18.18.9
+- fd0cd8f: chore(devDeps): bump esbuild to 0.19.5"
+- Updated dependencies [f75c7fd]
+- Updated dependencies [7a3556e]
+- Updated dependencies [fd0cd8f]
+  - @lottiefiles/relottie-stringify@1.3.4
+  - @lottiefiles/relottie-parse@1.3.4
+  - @lottiefiles/last@1.3.4
+
 ## 1.3.2
 
 ### Patch Changes
