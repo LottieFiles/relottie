@@ -213,8 +213,8 @@ importers:
   packages/relottie-parse:
     dependencies:
       '@humanwhocodes/momoa':
-        specifier: 2.0.3
-        version: 2.0.3
+        specifier: 2.0.4
+        version: 2.0.4
       '@lottiefiles/last':
         specifier: workspace:*
         version: link:../last
@@ -1627,8 +1627,8 @@ packages:
       - supports-color
     dev: true
 
-  /@humanwhocodes/momoa@2.0.3:
-    resolution: {integrity: sha512-SytjS6gJk+LXSWFuEm0V9ASdgxlX/BDq6A+6gfh7TaHM90xppBydjcM3SFaziZP4ikKmhUOhPkDi2KktzElnQQ==}
+  /@humanwhocodes/momoa@2.0.4:
+    resolution: {integrity: sha512-RE815I4arJFtt+FVeU1Tgp9/Xvecacji8w/V6XtXsWWH/wz/eNkNbhb+ny/+PlVZjV0rxQpRSQKNKE3lcktHEA==}
     engines: {node: '>=10.10.0'}
     dev: false
 
