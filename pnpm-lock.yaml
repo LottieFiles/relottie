@@ -111,8 +111,8 @@ importers:
         specifier: workspace:*
         version: link:../last
       unist-builder:
-        specifier: 3.0.0
-        version: 3.0.0
+        specifier: 3.0.1
+        version: 3.0.1
     devDependencies:
       '@jest/globals':
         specifier: 29.7.0
@@ -15284,8 +15284,8 @@ packages:
       crypto-random-string: 4.0.0
     dev: true
 
-  /unist-builder@3.0.0:
-    resolution: {integrity: sha512-GFxmfEAa0vi9i5sd0R2kcrI9ks0r82NasRq5QHh2ysGngrc6GiqD5CDf1FjPenY4vApmFASBIIlk/jj5J5YbmQ==}
+  /unist-builder@3.0.1:
+    resolution: {integrity: sha512-gnpOw7DIpCA0vpr6NqdPvTWnlPTApCTRzr+38E6hCWx3rz/cjo83SsKIlS1Z+L5ttScQ2AwutNnb8+tAvpb6qQ==}
     dependencies:
       '@types/unist': 2.0.7
     dev: false
