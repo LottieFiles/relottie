@@ -1,6 +1,6 @@
 # @lottiefiles/relottie-extract-features
 
-## 2.0.0
+## 1.3.4
 
 ### Major Changes
 
