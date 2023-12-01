@@ -14,4 +14,7 @@ module.exports = [
   {
     path: 'packages/relottie-stringify/dist/index.js',
   },
+  {
+    path: 'packages/relottie-extract-features/dist/index.js',
+  },
 ];
