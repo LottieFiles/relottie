@@ -1,5 +1,10 @@
 # `relottie-parse`
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/relottie-parse)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/%40lottiefiles%2Frelottie-parse)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/relottie-parse)
+![npm](https://img.shields.io/npm/l/@lottiefiles/relottie-parse)
+
 **[relottie][]** plugin to add support for parsing Lottie input.
 
 ## Contents

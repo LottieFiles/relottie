@@ -1,5 +1,9 @@
 # relottie-cli
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/relottie-cli)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/relottie-cli)
+![npm](https://img.shields.io/npm/l/@lottiefiles/relottie-cli)
+
 Command line interface to inspect and change Lottie files with **[relottie][relottie-core]**.
 
 ## Contents

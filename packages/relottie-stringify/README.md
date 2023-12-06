@@ -1,5 +1,10 @@
 # relottie-stringify
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/relottie-stringify)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/%40lottiefiles%2Frelottie-stringify)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/relottie-stringify)
+![npm](https://img.shields.io/npm/l/@lottiefiles/relottie-stringify)
+
 Compiler for [unified]. Serializes [last] syntax trees to LottieJSON
 
 ## Use

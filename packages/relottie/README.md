@@ -1,5 +1,9 @@
 # relottie
 
+![CI](https://github.com/lottiefiles/relottie/workflows/Release/badge.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/LottieFiles/relottie)
+![GitHub](https://img.shields.io/github/license/LottieFiles/relottie)
+
 **[unified][]** processor with support for parsing Lottie input and serializing Lottie as output
 
 ## Contents

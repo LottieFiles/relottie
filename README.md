@@ -1,5 +1,10 @@
 # relottie
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/relottie)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/%40lottiefiles%2Frelottie)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/relottie)
+![npm](https://img.shields.io/npm/l/@lottiefiles/relottie)
+
 **relottie** is a tool that transforms Lotties with plugins. These plugins can inspect and change.
 
 ## Feature highlights

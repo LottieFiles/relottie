@@ -1,5 +1,10 @@
 # \[last]
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/last)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/%40lottiefiles%2Flast)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/last)
+![npm](https://img.shields.io/npm/l/@lottiefiles/last)
+
 **L**ottie **A**bstract **S**yntax **T**ree.
 
 ***

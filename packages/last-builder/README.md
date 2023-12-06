@@ -1,5 +1,10 @@
 # last-builder
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/last-builder)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/%40lottiefiles%2Flast-builder)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/last-builder)
+![npm](https://img.shields.io/npm/l/@lottiefiles/last-builder)
+
 Use composable functions to build up a [last] structure
 
 ## Use
