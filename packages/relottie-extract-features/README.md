@@ -1,5 +1,9 @@
 # relottie-extract-features
 
+![npm](https://img.shields.io/npm/v/@lottiefiles/relottie-extract-features)
+![npm](https://img.shields.io/npm/dt/%40lottiefiles/relottie-extract-features)
+![npm](https://img.shields.io/npm/l/@lottiefiles/relottie-extract-features)
+
 A [relottie] plugin to extract Lottie features from the document and store them in vfile.
 
 ## FileData
