@@ -1,8 +1,9 @@
 # relottie
 
-![CI](https://github.com/lottiefiles/relottie/workflows/Release/badge.svg)
-![GitHub contributors](https://img.shields.io/github/contributors/LottieFiles/relottie)
-![GitHub](https://img.shields.io/github/license/LottieFiles/relottie)
+![CI](https://github.com/LottieFiles/dotlottie-web/workflows/main/badge.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/LottieFiles/dotlottie-web)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+![GitHub](https://img.shields.io/github/license/LottieFiles/dotlottie-web)
 
 **[unified][]** processor with support for parsing Lottie input and serializing Lottie as output
 
