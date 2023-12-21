@@ -350,7 +350,7 @@ The initial release of this project was authored by
 
 [relottie-parse]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-parse
 
-[relottie-style]: https://github.com/LottieFiles/lottie-styler/pkgs/npm/relottie-style
+[relottie-style]: https://www.npmjs.com/package/@lottiefiles/relottie-style
 
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
 
