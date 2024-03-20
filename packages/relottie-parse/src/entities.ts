@@ -640,9 +640,6 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.miterLimitAlternative]: {
     ...animatedValueProp,
   },
-  [ET.strokeWidth]: {
-    ...animatedValueProp,
-  },
   [ET.shapePolygonOuterRadius]: {
     ...animatedValueProp,
   },
@@ -823,9 +820,6 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.strokeOpacity]: {
     ...animatedValueProp,
   },
-  [ET.strokeHue]: {
-    ...animatedValueProp,
-  },
   [ET.textFillColor]: {
     ...animatedColorProp,
   },
@@ -836,9 +830,6 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedValueProp,
   },
   [ET.textFillOpacity]: {
-    ...animatedValueProp,
-  },
-  [ET.textFillBrightness]: {
     ...animatedValueProp,
   },
   [ET.letterSpacing]: {
