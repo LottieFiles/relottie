@@ -41,10 +41,10 @@ import type { VFile, Data } from 'vfile';
 import { fileConstants } from './constants.js';
 import type { Dependent } from './entities.js';
 import { getMemberEntity, getNoKeyEntity } from './entities.js';
-import { Stack } from './helpers.js';
 import { DEFAULT_OPTIONS } from './options.js';
 import type { ParseOptions } from './options.js';
 import { Slots } from './slots.js';
+import { Stack } from './stack.js';
 import type { SettingsOptions } from './unified-relottie-parse.js';
 
 export interface ParseFileData extends Data {

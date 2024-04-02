@@ -8,9 +8,9 @@ import { type Attribute, type ObjectNode, type Element, type NodeValue, TITLES }
 import type { VFile } from 'vfile';
 
 import { fileConstants } from './constants.js';
-import { Stack } from './helpers.js';
 import type { ParseOptions } from './options.js';
 import { traverseJsonEnter, traverseJsonExit } from './parse.js';
+import { Stack } from './stack.js';
 
 const { element: ET, string: ST } = TITLES;
 
