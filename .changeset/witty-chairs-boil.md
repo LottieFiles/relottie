@@ -2,4 +2,4 @@
 '@lottiefiles/last': patch
 ---
 
-test: remove unnecessary snapshots
+test: remove unnecessary snapshots, jest dev deps & scripts

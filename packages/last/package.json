@@ -52,15 +52,10 @@
     "lint": "eslint --fix .",
     "stats:eslint": "cross-env TIMING=1 eslint .",
     "stats:ts": "tsc -p tsconfig.build.json --extendedDiagnostics",
-    "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
-    "test:coverage": "cross-env NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --coverage",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@jest/globals": "29.7.0",
-    "@lottiefiles/jest-config": "1.0.0",
     "@lottiefiles/lottie-types": "1.4.0",
-    "@types/jest": "29.5.8",
     "@types/unist": "2.0.7",
     "esbuild": "0.19.5",
     "tsup": "6.1.3",
