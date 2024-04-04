@@ -35,7 +35,7 @@ export const TITLES = {
     markerComment: 'marker-comment',
 
     maskMode: 'mask-mode',
-    maskModeNo: 'mask-mode-no',
+    maskModeNone: 'mask-mode-none',
     maskModeAdd: 'mask-mode-add',
     maskModeSubtract: 'mask-mode-subtract',
     maskModeIntersect: 'mask-mode-intersect',
