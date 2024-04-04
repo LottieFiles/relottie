@@ -78,8 +78,8 @@ export const shapeDirectionValues: ConstantNumMap = new Map<ShapeDirection.Value
 ]);
 
 export const trimMultipleShapesValues: ConstantNumMap = new Map<TrimMultipleShapes.Value, string>([
-  [1, 'individually'],
-  [2, 'simultaneously'],
+  [1, 'simultaneously'],
+  [2, 'individually'],
 ]);
 
 export const matteModeValues: ConstantNumMap = new Map<MatteMode.Value, string>([
