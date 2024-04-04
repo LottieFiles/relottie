@@ -1144,6 +1144,20 @@ export const stringEntity: EntityMap<StringTitle> = {
       ...createDependentTitles(CT.composition, ST.layerXmlTagName),
     },
     t: { [OT.assetImage]: ST.assetImageType },
+    sid: {
+      [OT.animatedValue]: ST.slotId,
+      [OT.animatedValueStatic]: ST.slotId,
+      [OT.animatedShape]: ST.slotId,
+      [OT.animatedShapeStatic]: ST.slotId,
+      [OT.animatedPosition]: ST.slotId,
+      [OT.animatedPositionStatic]: ST.slotId,
+      [OT.animatedColor]: ST.slotId,
+      [OT.animatedColorStatic]: ST.slotId,
+      [OT.animatedMultidimensional]: ST.slotId,
+      [OT.animatedMultidimensionalStatic]: ST.slotId,
+      [ET.textAnimatedDocument]: ST.slotId,
+      [OT.assetImage]: ST.slotId,
+    },
   },
 };
 
@@ -1704,6 +1718,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [OT.shapeStar]: ET.animatedPositionProp,
       [OT.shapeRectangle]: ET.animatedPositionProp,
       [ET.textAnimatorData]: ET.textFollowPath,
+      [ET.slot]: ET.slotProperty,
     },
     s: {
       [OT.shapeEllipse]: ET.shapeEllipseSize,
@@ -2138,6 +2153,9 @@ export const elementEntity: EntityMap<ElementTitle> = {
     },
     of: {
       [OT.layerStyleGradientOverlay]: ET.shapeTrimOffset,
+    },
+    slots: {
+      [OT.animation]: ET.slots,
     },
   },
 };

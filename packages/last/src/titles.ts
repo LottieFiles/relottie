@@ -51,6 +51,7 @@ export const TITLES = {
     text: 'text',
     themeColor: 'theme-color',
     version: 'version',
+    slotId: 'slot-id',
   },
   number: {
     adaptiveSampleLimit: 'adaptive-sample-limit',
@@ -550,6 +551,9 @@ export const TITLES = {
     transformRepeaterSkewAxis: 'transform-repeater-skew-axis',
     textStyleSkewAxis: 'text-style-skew-axis',
     // skewAxis ends
+    slots: 'slots',
+    slot: 'slot',
+    slotProperty: 'slot-property',
     smoothness: 'smoothness',
     soften: 'soften',
     source: 'source',
