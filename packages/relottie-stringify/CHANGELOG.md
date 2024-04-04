@@ -1,5 +1,16 @@
 # @lottiefiles/relottie-stringify
 
+## 1.4.0
+
+### Patch Changes
+
+- 6f55f2c: chore: bump lottie-types to v1.5.0
+- Updated dependencies [cdd475b]
+- Updated dependencies [e2a3cf0]
+- Updated dependencies [6f55f2c]
+- Updated dependencies [63c9ffe]
+  - @lottiefiles/last@1.4.0
+
 ## 1.3.4
 
 ### Patch Changes

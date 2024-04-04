@@ -1,5 +1,24 @@
 # @lottiefiles/relottie-parse
 
+## 1.4.0
+
+### Minor Changes
+
+- bb20b89: fix(constants): trimMultipleShapesValues values"
+- e2a3cf0: feat: support slots, slot, slotId, slotProperty
+
+### Patch Changes
+
+- e2a3cf0: refactor(parse): move traverse assistent logic to helpers & Stack to its own file
+- 6f55f2c: chore: bump lottie-types to v1.5.0
+- ff8bfa9: refactor(entities): remove duplicate strokeWidth, strokeHue, textFillBrightness props from objectEntity
+- Updated dependencies [cdd475b]
+- Updated dependencies [e2a3cf0]
+- Updated dependencies [6f55f2c]
+- Updated dependencies [63c9ffe]
+  - @lottiefiles/last@1.4.0
+  - @lottiefiles/last-builder@1.4.0
+
 ## 1.3.4
 
 ### Patch Changes

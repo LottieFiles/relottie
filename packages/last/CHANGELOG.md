@@ -1,5 +1,17 @@
 # @lottiefiles/last
 
+## 1.4.0
+
+### Minor Changes
+
+- e2a3cf0: feat(titles): slots, slot, slotId, slotProperty
+
+### Patch Changes
+
+- cdd475b: fix(titles): mask-mode-no has to be mask-mode-none
+- 6f55f2c: chore: bump lottie-types to v1.5.0
+- 63c9ffe: test: remove unnecessary snapshots, jest dev deps & scripts
+
 ## 1.3.4
 
 ### Patch Changes
