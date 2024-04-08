@@ -63,7 +63,7 @@ Say we have the following module `example.ts`:
 
 ```ts
 import { unified } from 'unified'
-import relottieParse, { type Options } from 'relottie-parse'
+import relottieParse, { type Options } from '@lottiefiles/relottie-parse'
 
 const parseOptions: Options = {
   position: false
