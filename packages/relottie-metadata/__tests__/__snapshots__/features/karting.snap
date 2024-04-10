@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in karting.json should have correct data 1`] = `
+{
+  "colors": Set {},
+  "fileSize": {
+    "bytes": 110122,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "107.54",
+    },
+  },
+  "framerate": 25,
+  "frames": 101,
+  "generator": "LottieFiles AE 1.0.0",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 101,
+  "version": "4.8.0",
+  "width": 512,
+}
+`;

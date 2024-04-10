@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in landscape-with-images.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#1e1d1d",
+  },
+  "fileSize": {
+    "bytes": 15518128,
+    "formated": {
+      "exponent": 2,
+      "symbol": "MiB",
+      "unit": "MiB",
+      "value": "14.8",
+    },
+  },
+  "framerate": 25,
+  "frames": 70,
+  "generator": "",
+  "height": 1080,
+  "inPoint": 0,
+  "outPoint": 70,
+  "version": "5.6.2",
+  "width": 1920,
+}
+`;

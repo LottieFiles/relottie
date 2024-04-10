@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in 100-frames.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#ffffff",
+  },
+  "fileSize": {
+    "bytes": 13021,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "12.72",
+    },
+  },
+  "framerate": 30,
+  "frames": 100,
+  "generator": "@lottiefiles/toolkit-js 0.8.1",
+  "height": 500,
+  "inPoint": 0,
+  "outPoint": 100,
+  "version": "5.5.5",
+  "width": 500,
+}
+`;

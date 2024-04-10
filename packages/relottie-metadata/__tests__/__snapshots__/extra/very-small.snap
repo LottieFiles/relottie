@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in very-small.json should have correct data 1`] = `
+{
+  "colors": Set {},
+  "fileSize": {
+    "bytes": 25340,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "24.75",
+    },
+  },
+  "framerate": 60,
+  "frames": 224,
+  "generator": "LottieFiles AE 0.1.20",
+  "height": 530,
+  "inPoint": 0,
+  "outPoint": 224,
+  "version": "5.5.7",
+  "width": 530,
+}
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in parenting.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#fffa48",
+    "#3250b0",
+  },
+  "fileSize": {
+    "bytes": 4057,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "3.96",
+    },
+  },
+  "framerate": 60,
+  "frames": 180,
+  "generator": "Glaxnimate 0.4.6-32-gb62899be",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 180,
+  "version": "5.7.1",
+  "width": 512,
+}
+`;

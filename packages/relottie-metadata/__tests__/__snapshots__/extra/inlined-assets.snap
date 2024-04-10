@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in inlined-assets.json should have correct data 1`] = `
+{
+  "colors": Set {},
+  "fileSize": {
+    "bytes": 41860,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "40.88",
+    },
+  },
+  "framerate": 60,
+  "frames": 400,
+  "generator": "",
+  "height": 744,
+  "inPoint": 0,
+  "outPoint": 400,
+  "version": "5.5.1",
+  "width": 1080,
+}
+`;

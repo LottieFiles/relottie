@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in effects-bulge.json should have correct data 1`] = `
+{
+  "colors": Set {},
+  "fileSize": {
+    "bytes": 1193,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "1.17",
+    },
+  },
+  "framerate": 60,
+  "frames": 1800,
+  "generator": "",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 1800,
+  "version": "5.9.0",
+  "width": 512,
+}
+`;

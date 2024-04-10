@@ -1,0 +1,13 @@
+{
+  // Extend from the build config
+  "extends": "../../tsconfig.dev.json",
+
+  // Compiler options
+  "compilerOptions": {
+    "resolveJsonModule": true
+  },
+
+  "ts-node": {
+    "esm": true
+  }
+}

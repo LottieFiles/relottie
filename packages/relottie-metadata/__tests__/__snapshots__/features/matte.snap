@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in matte.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#f01d0a",
+    "#3250b0",
+    "#c4d9f5",
+  },
+  "fileSize": {
+    "bytes": 2839,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "2.77",
+    },
+  },
+  "framerate": 60,
+  "frames": 180,
+  "generator": "Glaxnimate 0.4.6-26-g7b05e75c",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 180,
+  "version": "5.5.7",
+  "width": 512,
+}
+`;

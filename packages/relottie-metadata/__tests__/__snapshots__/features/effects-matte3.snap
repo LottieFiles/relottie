@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in effects-matte3.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#3250b0",
+    "#c4d9f5",
+    "#f01d0a",
+  },
+  "fileSize": {
+    "bytes": 4282,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "4.18",
+    },
+  },
+  "framerate": 29.9700012207031,
+  "frames": 900.000036657751,
+  "generator": "",
+  "height": 1080,
+  "inPoint": 0,
+  "outPoint": 900.000036657751,
+  "version": "5.9.0",
+  "width": 1920,
+}
+`;

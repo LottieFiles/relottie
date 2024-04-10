@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in fractal.json should have correct data 1`] = `
+{
+  "colors": Set {},
+  "fileSize": {
+    "bytes": 7608,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "7.43",
+    },
+  },
+  "framerate": 30,
+  "frames": 100,
+  "generator": "",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 100,
+  "version": "5.5.2",
+  "width": 512,
+}
+`;

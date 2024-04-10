@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in switch.json should have correct data 1`] = `
+{
+  "colors": Set {},
+  "fileSize": {
+    "bytes": 8198,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "8.01",
+    },
+  },
+  "framerate": 29.9700012207031,
+  "frames": 110.000004480392,
+  "generator": "",
+  "height": 600,
+  "inPoint": 0,
+  "outPoint": 110.000004480392,
+  "version": "4.5.3",
+  "width": 600,
+}
+`;
