@@ -85,4 +85,4 @@ export function rgbaToHex(rgba: number[], file?: VFile): string {
   return `#${hexTokens.join('')}`;
 }
 
-export const isHexValid = (value: string): boolean => /^#[\da-f]{6}$/iu.test(value);
+export const isHexValid = (value: string): boolean => /^#([\da-f]{3}|[\da-f]{4}|[\da-f]{6}|[\da-f]{8})$/iu.test(value);
