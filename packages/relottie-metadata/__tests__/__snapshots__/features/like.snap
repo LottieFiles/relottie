@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in like.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#f03b30ff",
+  },
+  "fileSize": {
+    "bytes": 4984,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "4.87",
+    },
+  },
+  "framerate": 60,
+  "frames": 120,
+  "generator": "",
+  "height": 45,
+  "inPoint": 0,
+  "outPoint": 120,
+  "version": "4.5.0",
+  "width": 45,
+}
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in unicorn-stretching.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#f7c2dbff",
+    "#f9e0edff",
+    "#2b305dff",
+    "#adcfd0ff",
+    "#aba6cbff",
+    "#e19abcff",
+  },
+  "fileSize": {
+    "bytes": 51574,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "50.37",
+    },
+  },
+  "framerate": 24,
+  "frames": 60,
+  "generator": "LottieFiles AE ",
+  "height": 223,
+  "inPoint": 0,
+  "outPoint": 60,
+  "version": "4.8.0",
+  "width": 205,
+}
+`;

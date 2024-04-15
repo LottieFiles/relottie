@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in precomp-circle.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#3250b0",
+  },
+  "fileSize": {
+    "bytes": 1135,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "1.11",
+    },
+  },
+  "framerate": 60,
+  "frames": 60,
+  "generator": "Glaxnimate 0.5.0-93-g187709f5",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 60,
+  "version": "5.7.1",
+  "width": 512,
+}
+`;

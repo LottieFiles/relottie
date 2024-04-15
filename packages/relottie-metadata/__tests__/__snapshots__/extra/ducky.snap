@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in ducky.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#ffffffff",
+    "#37bfc5ff",
+    "#edb41eff",
+    "#4d2f1eff",
+    "#ffcc33ff",
+    "#e35e47ff",
+  },
+  "fileSize": {
+    "bytes": 27948,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "27.29",
+    },
+  },
+  "framerate": 60,
+  "frames": 120,
+  "generator": "LottieFiles AE ",
+  "height": 1024,
+  "inPoint": 0,
+  "outPoint": 120,
+  "version": "4.8.0",
+  "width": 1024,
+}
+`;

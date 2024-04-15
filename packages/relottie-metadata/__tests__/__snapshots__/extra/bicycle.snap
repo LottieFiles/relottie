@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures extra Test in bicycle.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#00c3a4ff",
+    "#06d7b6ff",
+    "#000922ff",
+    "#021a4fff",
+    "#f3c6b1ff",
+    "#252d42ff",
+    "#b3d5ddff",
+    "#eb9f7bff",
+    "#02b699ff",
+    "#8bbfcbff",
+    "#4a2800ff",
+    "#008fefff",
+    "#00090cff",
+    "#ffffff",
+  },
+  "fileSize": {
+    "bytes": 145803,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "142.39",
+    },
+  },
+  "framerate": 29.9700012207031,
+  "frames": 150.000006109625,
+  "generator": "",
+  "height": 800,
+  "inPoint": 0,
+  "outPoint": 150.000006109625,
+  "version": "5.6.3",
+  "width": 800,
+}
+`;

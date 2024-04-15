@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in font-local.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#ffffff",
+  },
+  "fileSize": {
+    "bytes": 605,
+    "formated": {
+      "exponent": 0,
+      "symbol": "B",
+      "unit": "B",
+      "value": "605",
+    },
+  },
+  "framerate": 60,
+  "frames": 120,
+  "generator": "",
+  "height": 100,
+  "inPoint": 0,
+  "outPoint": 120,
+  "version": "5.5.2",
+  "width": 300,
+}
+`;

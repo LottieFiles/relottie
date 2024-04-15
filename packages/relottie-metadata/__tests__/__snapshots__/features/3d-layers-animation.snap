@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in 3d-layers-animation.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#3250b0",
+    "#ffff4d",
+  },
+  "fileSize": {
+    "bytes": 1159,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "1.13",
+    },
+  },
+  "framerate": 60,
+  "frames": 120,
+  "generator": "",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 120,
+  "version": "5.9.2",
+  "width": 512,
+}
+`;

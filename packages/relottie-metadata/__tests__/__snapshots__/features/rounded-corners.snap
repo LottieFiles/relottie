@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in rounded-corners.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#fffa48",
+  },
+  "fileSize": {
+    "bytes": 1417,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "1.38",
+    },
+  },
+  "framerate": 60,
+  "frames": 180,
+  "generator": "Glaxnimate 0.4.6-26-g7b05e75c",
+  "height": 512,
+  "inPoint": 0,
+  "outPoint": 180,
+  "version": "5.5.7",
+  "width": 512,
+}
+`;

@@ -17,4 +17,7 @@ module.exports = [
   {
     path: 'packages/relottie-extract-features/dist/index.js',
   },
+  {
+    path: 'packages/relottie-metadata/dist/index.js',
+  },
 ];
