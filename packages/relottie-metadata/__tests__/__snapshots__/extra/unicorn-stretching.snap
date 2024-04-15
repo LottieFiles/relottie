@@ -2,7 +2,14 @@
 
 exports[`relottie-metadata fixtures extra Test in unicorn-stretching.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#f7c2dbff",
+    "#f9e0edff",
+    "#2b305dff",
+    "#adcfd0ff",
+    "#aba6cbff",
+    "#e19abcff",
+  },
   "fileSize": {
     "bytes": 51574,
     "formated": {

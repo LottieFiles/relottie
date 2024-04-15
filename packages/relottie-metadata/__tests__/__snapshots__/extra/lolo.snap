@@ -2,7 +2,9 @@
 
 exports[`relottie-metadata fixtures extra Test in lolo.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#22292fff",
+  },
   "fileSize": {
     "bytes": 36135,
     "formated": {

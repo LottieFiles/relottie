@@ -2,7 +2,12 @@
 
 exports[`relottie-metadata fixtures features Test in slots.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#1aff80ff",
+    "#f5c244ff",
+    "#1d1d1dff",
+    "#272727ff",
+  },
   "fileSize": {
     "bytes": 3134,
     "formated": {

@@ -2,7 +2,13 @@
 
 exports[`relottie-metadata fixtures features Test in karting.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#e2e2e2ff",
+    "#0433ffff",
+    "#ff65ffff",
+    "#e7e7e7ff",
+    "#b1eeffff",
+  },
   "fileSize": {
     "bytes": 110122,
     "formated": {

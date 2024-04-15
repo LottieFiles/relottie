@@ -2,7 +2,10 @@
 
 exports[`relottie-metadata fixtures features Test in effects-tint.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#000000ff",
+    "#00ff00ff",
+  },
   "fileSize": {
     "bytes": 520,
     "formated": {

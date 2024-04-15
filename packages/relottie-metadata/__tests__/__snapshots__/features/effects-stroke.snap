@@ -2,7 +2,10 @@
 
 exports[`relottie-metadata fixtures features Test in effects-stroke.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#000000ff",
+    "#ffe600ff",
+  },
   "fileSize": {
     "bytes": 737,
     "formated": {

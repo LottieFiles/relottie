@@ -2,7 +2,9 @@
 
 exports[`relottie-metadata fixtures features Test in effects-shadow.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#000000ff",
+  },
   "fileSize": {
     "bytes": 570,
     "formated": {

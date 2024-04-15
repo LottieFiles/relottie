@@ -2,7 +2,14 @@
 
 exports[`relottie-metadata fixtures extra Test in ducky.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#ffffffff",
+    "#37bfc5ff",
+    "#edb41eff",
+    "#4d2f1eff",
+    "#ffcc33ff",
+    "#e35e47ff",
+  },
   "fileSize": {
     "bytes": 27948,
     "formated": {

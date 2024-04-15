@@ -2,7 +2,14 @@
 
 exports[`relottie-metadata fixtures extra Test in very-small.json should have correct data 1`] = `
 {
-  "colors": Set {},
+  "colors": Set {
+    "#5d9ce8ff",
+    "#2b1400ff",
+    "#a7c1f9ff",
+    "#000000ff",
+    "#8cb1f2ff",
+    "#140900ff",
+  },
   "fileSize": {
     "bytes": 25340,
     "formated": {
