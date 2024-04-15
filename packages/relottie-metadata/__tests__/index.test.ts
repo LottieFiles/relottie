@@ -35,19 +35,17 @@ describe('relottie-metadata', () => {
 
       const files = readdirSync(dirPath);
 
-      files.forEach((file) => {
+      test.each(files)('Test in %s should have correct data', (file) => {
         const jsonFile = readFileSync(dirPath + file, 'utf8');
         const fileName = path.parse(file).name;
 
-        test(`Test in ${file} should have correct data`, () => {
-          const vfile = unified()
-            .use(relottieParse, { position: false })
-            .use(relottieMetadata)
-            .use(relottieStringify)
-            .processSync(jsonFile);
+        const vfile = unified()
+          .use(relottieParse, { position: false })
+          .use(relottieMetadata)
+          .use(relottieStringify)
+          .processSync(jsonFile);
 
-          expect(vfile.data['metadata']).toMatchSpecificSnapshot(`${snapshotDirPath + fileName}.snap`);
-        });
+        expect(vfile.data['metadata']).toMatchSpecificSnapshot(`${snapshotDirPath + fileName}.snap`);
       });
     });
 
@@ -57,19 +55,17 @@ describe('relottie-metadata', () => {
 
       const files = readdirSync(dirPath);
 
-      files.forEach((file) => {
+      test.each(files)('Test in %s should have correct data', (file) => {
         const jsonFile = readFileSync(dirPath + file, 'utf8');
         const fileName = path.parse(file).name;
 
-        test(`Test in ${file} should have correct data`, () => {
-          const vfile = unified()
-            .use(relottieParse, { position: false })
-            .use(relottieMetadata)
-            .use(relottieStringify)
-            .processSync(jsonFile);
+        const vfile = unified()
+          .use(relottieParse, { position: false })
+          .use(relottieMetadata)
+          .use(relottieStringify)
+          .processSync(jsonFile);
 
-          expect(vfile.data['metadata']).toMatchSpecificSnapshot(`${snapshotDirPath + fileName}.snap`);
-        });
+        expect(vfile.data['metadata']).toMatchSpecificSnapshot(`${snapshotDirPath + fileName}.snap`);
       });
     });
   });
