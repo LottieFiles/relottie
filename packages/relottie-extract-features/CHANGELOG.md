@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.4.1
+
+### Patch Changes
+
+- eb58451: chore: fix GPR release
+
 ## 1.4.0
 
 ### Patch Changes
