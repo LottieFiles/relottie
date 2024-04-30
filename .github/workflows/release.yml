@@ -25,7 +25,7 @@ jobs:
       - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 8
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
         uses: actions/setup-node@v3
@@ -83,7 +83,7 @@ jobs:
       - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 8
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for NPM
         uses: actions/setup-node@v3
@@ -135,7 +135,7 @@ jobs:
       - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 8
 
       - name: Remove existing .npmrc for NPM
         run: rm -f "$HOME/.npmrc"
