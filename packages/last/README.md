@@ -295,7 +295,7 @@ By interacting with this repository, organization, or community you agree to abi
 
 [relottie]: https://github.com/LottieFiles/relottie
 
-[lac]: https://github.com/lottie-animation-community/
+[lac]: https://lottie.github.io/
 
 [dfn-unist-parent]: https://github.com/syntax-tree/unist#parent
 
