@@ -1,4 +1,4 @@
-# \[last]
+# [last]
 
 ![npm](https://img.shields.io/npm/v/@lottiefiles/last)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/%40lottiefiles%2Flast)
@@ -9,9 +9,9 @@
 
 ***
 
-**last** is a specification for representing Lottie JSON in a \[syntax
-tree]\[syntax-tree].
-It implements **\[unist]\[]**.
+**last** is a specification for representing Lottie JSON in a [syntax
+tree][syntax-tree].
+It implements **[unist][]**.
 
 ## Contents
 
@@ -41,8 +41,8 @@ It implements **\[unist]\[]**.
 
 ## Introduction
 
-This document defines a format for representing \[lottie]\[] as an \[abstract
-syntax tree]\[syntax-tree].
+This document defines a format for representing [lottie][] as an [abstract
+syntax tree][syntax-tree].
 Development of last started in 2022.
 
 ## Install
@@ -53,16 +53,16 @@ yarn add @lottiefiles/last
 
 ### Where this specification fits
 
-last extends \[unist]\[], a format for syntax trees, to benefit from its
-\[ecosystem of utilities]\[utilities].
+last extends [unist][], a format for syntax trees, to benefit from its
+[ecosystem of utilities][utilities].
 
-last relates to \[JavaScript]\[] in that it has a rich \[ecosystem of
-utilities]\[list-of-utilities] for working with compliant syntax trees in
+last relates to [JavaScript][] in that it has a rich [ecosystem of
+utilities][list-of-utilities] for working with compliant syntax trees in
 JavaScript.
 However, **last** is not limited to JavaScript and can be used in other programming
 languages.
 
-last relates to the \[unified]\[] and \[relottie]\[] projects in that last syntax
+last relates to the [unified][] and [relottie][] projects in that last syntax
 trees are used throughout their ecosystems.
 
 ## Nodes
@@ -78,7 +78,7 @@ interface Parent extends UnistParent {
 }
 ```
 
-**Parent** (\[**UnistParent**]\[dfn-unist-parent]) represents an abstract interface in **last**, containing other nodes (said to be \[*children*]\[term-child]). In addition, has `title` prop which contains Lottie qualified name that can be found in [titles.ts](src/titles.ts) (that based on \[lottie-json-schema]\[])
+**Parent** ([**UnistParent**][dfn-unist-parent]) represents an abstract interface in **last**, containing other nodes (said to be [*children*][term-child]). In addition, has `title` prop which contains Lottie qualified name that can be found in [titles.ts](src/titles.ts) (that based on [lottie-json-schema][])
 
 ### `Literal`
 
@@ -86,7 +86,7 @@ interface Parent extends UnistParent {
 interface Literal extends UnistLiteral {}
 ```
 
-**Literal** (\[**UnistLiteral**]\[dfn-unist-literal]) represents an abstract
+**Literal** ([**UnistLiteral**][dfn-unist-literal]) represents an abstract
 interface in last containing a value.
 
 ### `Root`
@@ -99,12 +99,12 @@ interface Root extends Omit<ObjectNode, 'type'> {
 }
 ```
 
-**Root** (\[**Parent**]\[dfn-parent]) represents a Lottie JSON.
+**Root** ([**Parent**][dfn-parent]) represents a Lottie JSON.
 
-**Root** can be used as the \[*root*]\[term-root] of a \[*tree*]\[term-tree], never
-as a \[*child*]\[term-child].
+**Root** can be used as the [*root*][term-root] of a [*tree*][term-tree], never
+as a [*child*][term-child].
 
-**Root** also has `hasExpressions` prop that tells whether the Lottie animation contains JS \[expressions]\[]. It is important to identify it early because of the [security](#security) concerns.
+**Root** also has `hasExpressions` prop that tells whether the Lottie animation contains JS [expressions][]. It is important to identify it early because of the [security](#security) concerns.
 
 ### `Primitive`
 
@@ -120,7 +120,7 @@ interface Primitive extends Literal {
 }
 ```
 
-**Primitive** (\[**Literal**]\[dfn-literal]) represents a JSON property's value
+**Primitive** ([**Literal**][dfn-literal]) represents a JSON property's value
 
 ### `KeyNode`
 
@@ -131,7 +131,7 @@ interface KeyNode extends Literal {
 }
 ```
 
-**KeyNode** (\[**Literal**]\[dfn-literal]) represents a JSON property key.
+**KeyNode** ([**Literal**][dfn-literal]) represents a JSON property key.
 
 ### `Member`
 
@@ -148,7 +148,7 @@ interface Member extends Parent {
 }
 ```
 
-**Member** (\[**Parent**]\[dfn-parent]) represents the main interface for nodes that have a JSON property key that could be (\[**KeyNode**]\[dfn-keynode]) or a string value.
+**Member** ([**Parent**][dfn-parent]) represents the main interface for nodes that have a JSON property key that could be ([**KeyNode**][dfn-keynode]) or a string value.
 
 ### `ObjectNode`
 
@@ -162,7 +162,7 @@ interface ObjectNode extends Parent {
 }
 ```
 
-**ObjectNode** (\[**Parent**]\[dfn-parent]) represents a JSON object value.
+**ObjectNode** ([**Parent**][dfn-parent]) represents a JSON object value.
 
 ### `ArrayNode`
 
@@ -176,7 +176,7 @@ interface ArrayNode extends Parent {
 }
 ```
 
-**ArrayNode** (\[**Parent**]\[dfn-parent]) represents a JSON array value.
+**ArrayNode** ([**Parent**][dfn-parent]) represents a JSON array value.
 
 ### `Attribute`
 
@@ -188,7 +188,7 @@ interface Attribute extends Member {
 }
 ```
 
-**Attribute** (\[**Member**]\[dfn-member]) represents a Member node which value is (\[**Primitive**]\[dfn-primitive]).
+**Attribute** ([**Member**][dfn-member]) represents a Member node which value is ([**Primitive**][dfn-primitive]).
 
 ### `Element`
 
@@ -200,7 +200,7 @@ interface Element extends Member {
 }
 ```
 
-**Element** (\[**Member**]\[dfn-member]) represents a Member node which value is (\[**ObjectNode**]\[dfn-objectnode]).
+**Element** ([**Member**][dfn-member]) represents a Member node which value is ([**ObjectNode**][dfn-objectnode]).
 
 ### `Collection`
 
@@ -212,15 +212,15 @@ interface Collection extends Member {
 }
 ```
 
-**Collection** (\[**Member**]\[dfn-member]) represents a Member node which value is (\[**ArrayNode**]\[dfn-arraynode]).
+**Collection** ([**Member**][dfn-member]) represents a Member node which value is ([**ArrayNode**][dfn-arraynode]).
 
 ## Glossary
 
-See the \[unist glossary]\[glossary].
+See the [unist glossary][glossary].
 
 ## List of utilities
 
-See the \[unist list of utilities]\[utilities] for more utilities.
+See the [unist list of utilities][utilities] for more utilities.
 
 *   [`last-builder`]()
     — build last structures with composable functions
@@ -228,20 +228,19 @@ See the \[unist list of utilities]\[utilities] for more utilities.
 ## References
 
 *   **unist**:
-    \[Universal Syntax Tree]\[unist].
+    [Universal Syntax Tree][unist].
     T. Wormer; et al.
 *   **lottie-web**:
-    \[Lottie Web Player]\[lottie-web].
+    [Lottie Web Player][lottie-web].
     H. Torrisi; et al.
 *   **lottie-docs**:
-    \[A human's guide to the Lottie format]\[lottie].
+    [A human's guide to the Lottie format][lottie].
     M. Basaglia; et al.
-*   **lottie-animation-community**:
-    \[Lottie Animation Format Documentation]\[lac]
+* **[Lottie Animation Format Documentation][lac]**
 
 ## Security
 
-As last properties can have \[expressions]\[], and improper use of **last** can open you up to cross-site scripting \[cross-site scripting (XSS)]\[XSS]. Carefully assess each plugin and the risks involved in using them.
+As last properties can have [expressions][], and improper use of **last** can open you up to cross-site scripting [cross-site scripting (XSS)][XSS]. Carefully assess each plugin and the risks involved in using them.
 
 ## Related
 
@@ -256,13 +255,78 @@ By interacting with this repository, organization, or community you agree to abi
 
 ## Acknowledgments
 
-*   \[unified]\[]
-*   \[remark]\[]
-*   \[lottie-docs]\[lottie]
+*   [unified][]
+*   [remark][]
+*   [lottie-docs][lottie]
 
-The initial release of this project was authored by
-\[**@aidosmf**]\[author]
+<!-- Definitions -->
 
-## License
+[list-of-utilities]: #list-of-utilities
 
-[MIT](LICENSE) © [LottieFiles](https://www.lottiefiles.com)
+[unist]: https://github.com/syntax-tree/unist
+
+[syntax-tree]: https://github.com/syntax-tree/unist#syntax-tree
+
+[javascript]: https://www.ecma-international.org/ecma-262/9.0/index.html
+
+[glossary]: https://github.com/syntax-tree/unist#glossary
+
+[utilities]: https://github.com/syntax-tree/unist#list-of-utilities
+
+[unified]: https://github.com/unifiedjs/unified
+
+[remark]: https://github.com/remarkjs/remark
+
+[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
+
+[hast]: https://github.com/syntax-tree/hast
+
+[lottie]: https://lottiefiles.github.io/lottie-docs/
+
+[expressions]: https://lottiefiles.github.io/lottie-docs/expressions/#expressions
+
+[LottieFiles]: https://github.com/LottieFiles
+
+[momoa]: https://github.com/humanwhocodes/momoa
+
+[lottie-json-schema]: https://lottiefiles.github.io/lottie-docs/schema/
+
+[lottie-web]: https://github.com/airbnb/lottie-web
+
+[relottie]: https://github.com/LottieFiles/relottie
+
+[lac]: https://github.com/lottie-animation-community/
+
+[dfn-unist-parent]: https://github.com/syntax-tree/unist#parent
+
+[dfn-unist-literal]: https://github.com/syntax-tree/unist#literal
+
+[dfn-parent]: #parent
+
+[dfn-literal]: #literal
+
+[dfn-member]: #member
+
+[dfn-primitive]: #primitive
+
+[dfn-objectnode]: #objectnode
+
+[dfn-arraynode]: #arraynode
+
+[dfn-attribute]: #attribute
+
+[dfn-element]: #element
+
+[dfn-collection]: #collection
+
+[dfn-keynode]: #keynode
+
+[term-tree]: https://github.com/syntax-tree/unist#tree
+
+[term-child]: https://github.com/syntax-tree/unist#child
+
+[term-sibling]: https://github.com/syntax-tree/unist#sibling
+
+[term-root]: https://github.com/syntax-tree/unist#root
+
+[term-head]: https://github.com/syntax-tree/unist#head

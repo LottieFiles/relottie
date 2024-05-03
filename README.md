@@ -8,8 +8,8 @@
 
 ## Feature highlights
 
-*   \[x] **[ASTs][syntax-tree]** (inspecting and changing content made easy)
-*   \[x] **[plugins][]** (plugins you can pick and choose from)
+* [x] **[ASTs][syntax-tree]** (inspecting and changing content made easy)
+* [x] **[plugins][]** (plugins you can pick and choose from)
 
 ## Intro
 

@@ -44,7 +44,7 @@ output is not Lottie (you don’t need `relottie-stringify`), it’s recommended
 use unified directly.
 
 When you want to inspect and format Lottie files in a project on the command
-line, you can use \[`relottie-cli`]\[relottie-cli].
+line, you can use [`relottie-cli`][relottie-cli].
 
 ## Install
 
