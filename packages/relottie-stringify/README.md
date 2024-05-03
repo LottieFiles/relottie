@@ -34,7 +34,7 @@ const output = processor.stringify(tree);
 
 `output` will equal
 
-```string
+```json
 {"new_v":"5.5.7"}
 ```
 
