@@ -66,7 +66,7 @@ const output = data['extract-features']
 
 `output`:
 
-```snap
+```
 Object {
   "used": Map {
     "composition" => Object {

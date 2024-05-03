@@ -35,7 +35,7 @@ const output = data['metadata']
 
 `output`:
 
-```snap
+```
 {
   "colors": Set {
     "#3250b0",
