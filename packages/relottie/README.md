@@ -157,6 +157,8 @@ abide by its terms.
 
 [relottie-stringify]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-stringify
 
+[relottie-cli]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-cli
+
 [last]: https://github.com/LottieFiles/relottie/tree/main/packages/last
 
 [lottie-docs]: https://lottiefiles.github.io/lottie-docs/
