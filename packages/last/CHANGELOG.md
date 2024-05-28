@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.5.0
+
+### Minor Changes
+
+- bbe5425: chore: use OSS lottie-types by Lottie Animation Community (LAC)
+
 ## 1.4.0
 
 ### Minor Changes
