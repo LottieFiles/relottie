@@ -363,7 +363,7 @@ The initial release of this project was authored by
 
 [relottie-metadata]: https://github.com/LottieFiles/relottie/tree/main/packages/relottie-metadata
 
-[lottie-types]: https://www.npmjs.com/package/@lottiefiles/lottie-types
+[lottie-types]: https://www.npmjs.com/package/@lottie-animation-community/lottie-types
 
 [dotlottie.js]: https://github.com/dotlottie/dotlottie-js/
 

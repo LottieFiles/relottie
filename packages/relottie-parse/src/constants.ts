@@ -2,7 +2,6 @@
  * Copyright 2023 Design Barn Inc.
  */
 
-import { TITLES, type AttributeTitle } from '@lottiefiles/last';
 import type {
   BlendMode,
   Composite,
@@ -15,7 +14,8 @@ import type {
   MatteMode,
   MaskMode,
   TextType,
-} from '@lottiefiles/lottie-types';
+} from '@lottie-animation-community/lottie-types';
+import { TITLES, type AttributeTitle } from '@lottiefiles/last';
 
 const { number: NT, string: ST } = TITLES;
 
