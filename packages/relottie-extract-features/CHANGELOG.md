@@ -1,5 +1,16 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.5.0
+
+### Minor Changes
+
+- bbe5425: chore: use OSS lottie-types by Lottie Animation Community (LAC)
+
+### Patch Changes
+
+- Updated dependencies [bbe5425]
+  - @lottiefiles/last@1.5.0
+
 ## 1.4.1
 
 ### Patch Changes
