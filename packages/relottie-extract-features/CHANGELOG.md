@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.5.1
+
+### Patch Changes
+
+- 8c19bf1: fix: dilate is disabled and not used if its static-value is 0
+
 ## 1.5.0
 
 ### Minor Changes
