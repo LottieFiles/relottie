@@ -892,14 +892,14 @@ exports[`relottie-extract-features fixtures features Test in karting.json should
       "y": 1,
     },
     "dilate" => {
-      "n": 0,
+      "n": 1,
       "parents": Map {
         "mask" => {
-          "n": 0,
-          "y": 1,
+          "n": 1,
+          "y": 0,
         },
       },
-      "y": 1,
+      "y": 0,
     },
     "shape-list" => {
       "n": 0,

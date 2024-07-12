@@ -14,7 +14,7 @@ import type {
   Root,
 } from '@lottiefiles/last';
 
-const { intBoolean: IBT, number: NT } = TITLES;
+const { element: ET, intBoolean: IBT, number: NT, object: OT } = TITLES;
 
 export type NodeWithTitle = Root | ArrayNode | ObjectNode | Attribute | Element | Collection;
 
@@ -116,6 +116,27 @@ export const timeStretchChecker: IsFeatureUsedChecker<Attribute> = (node): boole
   }
 };
 
+/**
+ * If dilate's (aka Mask Expansion) non-animated static-value is set to 0 then it's disabled and not used.
+ */
+export const dilateChecker: IsFeatureUsedChecker<Element> = (node): boolean => {
+  const valueNode = node.children[0];
+
+  if (!valueNode) return false;
+
+  if (valueNode.title !== OT.animatedValueStatic) return objectNodeChecker(valueNode);
+
+  const staticValueNode = valueNode.children.find((child) => child.title === NT.staticValue);
+
+  const targetNode = staticValueNode?.children[0];
+
+  if (targetNode?.type !== 'primitive') return false;
+
+  if (targetNode.value === 0) return false;
+
+  return true;
+};
+
 export const FEATURE_CHECKERS = new Map<
   AnyTitle,
   | IsFeatureUsedChecker<Attribute>
@@ -136,6 +157,7 @@ export const FEATURE_CHECKERS = new Map<
   [IBT.randomize, intBooleanNodeChecker],
   [IBT.matteTarget, intBooleanNodeChecker],
   [NT.timeStretch, timeStretchChecker],
+  [ET.dilate, dilateChecker],
 ]);
 
 export const isFeatureUsed = (feature: AnyTitle, node: NodeWithTitle): boolean => {
