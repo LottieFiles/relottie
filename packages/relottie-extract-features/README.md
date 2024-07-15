@@ -148,5 +148,3 @@ Map {
 <!-- Definitions -->
 
 [relottie]: https://github.com/LottieFiles/relottie
-
-[unified]: https://github.com/unifiedjs/unified
