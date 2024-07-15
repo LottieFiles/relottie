@@ -41,17 +41,19 @@ yarn add @lottiefiles/relottie-extract-features
 ```
 
 ```ts
-import { relottie } from '@lottiefiles/relottie';
 import relottieParse, { type ParseFileData } from '@lottiefiles/relottie-parse';
+import relottieStringify, { type StringifyFileData } from '@lottiefiles/relottie-stringify';
 import relottieExtractFeatures, { type ExtractFeaturesFileData } from '@lottiefiles/relottie-extract-features';
+import { unified } from 'unified';
 
-type FileData = ParseFileData & ExtractFeaturesFileData
+type FileData = ParseFileData & StringifyFileData & ExtractFeaturesFileData
 
 const lottie = '{ "layers": [ { "nm": "foo", "mn": "bar", "ddd": 0, "ty": 2 } ] }';
 
-const vfile = relottie()
+const vfile = unified()
   .use(relottieParse)
   .use(relottieExtractFeatures)
+  .use(relottieStringify)
   .processSync(lottie);
 
 const data = vfile.data as FileData
@@ -148,3 +150,5 @@ Map {
 <!-- Definitions -->
 
 [relottie]: https://github.com/LottieFiles/relottie
+
+[unified]: https://github.com/unifiedjs/unified
