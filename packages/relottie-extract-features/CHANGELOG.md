@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.6.0
+
+### Minor Changes
+
+- 092218c: refactor: simplify extract-features return payload to be more semantically accurate
+
 ## 1.5.1
 
 ### Patch Changes
