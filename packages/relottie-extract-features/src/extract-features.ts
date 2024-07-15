@@ -31,9 +31,7 @@ export type Used = Map<
 >;
 
 export interface ExtractFeaturesFileData extends Data {
-  'extract-features': {
-    used: Used;
-  };
+  'extract-features': Used;
 }
 
 type AncestorChildNode = Exclude<NodeValue, KeyNode>;
@@ -90,9 +88,7 @@ const extractFeatures: Plugin<[Options?], Root> = (_ops: Options = {}) => {
     });
 
     const data: ExtractFeaturesFileData = {
-      'extract-features': {
-        used: usedData,
-      },
+      'extract-features': usedData,
     };
 
     Object.assign(file.data, data);
