@@ -119,7 +119,7 @@ export const timeStretchChecker: IsFeatureUsedChecker<Attribute> = (node): boole
 /**
  * If dilate's (aka Mask Expansion) non-animated static-value is set to 0 then it's disabled and not used.
  */
-export const dilateChecker: IsFeatureUsedChecker<Element> = (node): boolean => {
+export const animatedValueStaticChecker: IsFeatureUsedChecker<Element> = (node): boolean => {
   const valueNode = node.children[0];
 
   if (!valueNode) return false;
@@ -157,7 +157,7 @@ export const FEATURE_CHECKERS = new Map<
   [IBT.randomize, intBooleanNodeChecker],
   [IBT.matteTarget, intBooleanNodeChecker],
   [NT.timeStretch, timeStretchChecker],
-  [ET.dilate, dilateChecker],
+  [ET.dilate, animatedValueStaticChecker],
 ]);
 
 export const isFeatureUsed = (feature: AnyTitle, node: NodeWithTitle): boolean => {
