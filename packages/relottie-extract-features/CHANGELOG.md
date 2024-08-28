@@ -1,5 +1,15 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.7.0
+
+### Minor Changes
+
+- bfbe50b: fix: transform skew is disabled and not used if its static-value is 0
+
+### Patch Changes
+
+- d470856: refactor: break a loop when static-value is found in animatedValueStaticChecker
+
 ## 1.6.0
 
 ### Minor Changes
