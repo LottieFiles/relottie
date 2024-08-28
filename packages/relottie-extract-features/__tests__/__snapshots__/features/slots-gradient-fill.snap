@@ -1005,14 +1005,14 @@ Map {
     "y": 1,
   },
   "shape-transform-skew" => {
-    "n": 0,
+    "n": 1,
     "parents": Map {
       "shape-transform" => {
-        "n": 0,
-        "y": 1,
+        "n": 1,
+        "y": 0,
       },
     },
-    "y": 1,
+    "y": 0,
   },
   "shape-transform-skew-axis" => {
     "n": 0,
