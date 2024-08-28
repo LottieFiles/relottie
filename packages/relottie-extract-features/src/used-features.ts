@@ -126,13 +126,15 @@ export const animatedValueStaticChecker: IsFeatureUsedChecker<Element> = (node):
 
   if (valueNode.title !== OT.animatedValueStatic) return objectNodeChecker(valueNode);
 
-  const staticValueNode = valueNode.children.find((child) => child.title === NT.staticValue);
+  for (const childNode of valueNode.children) {
+    if (childNode.title !== NT.staticValue) continue;
 
-  const targetNode = staticValueNode?.children[0];
+    const staticValueNode = childNode.children[0];
 
-  if (targetNode?.type !== 'primitive') return false;
+    if (staticValueNode?.value === 0) return false;
 
-  if (targetNode.value === 0) return false;
+    return true
+  }
 
   return true;
 };
