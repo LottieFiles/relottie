@@ -133,7 +133,7 @@ export const animatedValueStaticChecker: IsFeatureUsedChecker<Element> = (node):
 
     if (staticValueNode?.value === 0) return false;
 
-    return true
+    return true;
   }
 
   return true;
