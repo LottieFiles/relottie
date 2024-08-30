@@ -1,5 +1,18 @@
 # @lottiefiles/relottie-parse
 
+## 1.8.0
+
+### Minor Changes
+
+- b6b912c: fix(blend-mode): include missing Add & HardMix consts
+- b6b912c: chore: bump lottie-types pkg to v1.2.0
+
+### Patch Changes
+
+- Updated dependencies [b6b912c]
+  - @lottiefiles/last-builder@1.8.0
+  - @lottiefiles/last@1.8.0
+
 ## 1.5.0
 
 ### Minor Changes

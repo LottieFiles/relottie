@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.8.0
+
+### Minor Changes
+
+- b6b912c: chore: bump lottie-types pkg to v1.2.0
+
 ## 1.5.0
 
 ### Minor Changes
