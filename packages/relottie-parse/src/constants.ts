@@ -42,6 +42,8 @@ export const blendModeValues: ConstantNumMap = new Map<BlendMode.Value, string>(
   [13, 'saturation'],
   [14, 'color'],
   [15, 'luminosity'],
+  [16, 'add'],
+  [17, 'hard-mix'],
 ]);
 
 export const compositeValues: ConstantNumMap = new Map<Composite.Value, string>([
