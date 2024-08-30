@@ -1,5 +1,16 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.8.0
+
+### Minor Changes
+
+- b6b912c: chore: bump lottie-types pkg to v1.2.0
+
+### Patch Changes
+
+- Updated dependencies [b6b912c]
+  - @lottiefiles/last@1.8.0
+
 ## 1.7.0
 
 ### Minor Changes
