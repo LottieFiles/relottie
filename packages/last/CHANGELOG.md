@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.9.0
+
+### Minor Changes
+
+- 773d802: feat(titles): blend-mode-add & blend-mode-hard-mix
+
 ## 1.8.0
 
 ### Minor Changes
