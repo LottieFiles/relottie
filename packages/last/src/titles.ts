@@ -82,6 +82,8 @@ export const TITLES = {
     blendModeSaturation: 'blend-mode-saturation',
     blendModeColor: 'blend-mode-color',
     blendModeLuminosity: 'blend-mode-luminosity',
+    blendModeAdd: 'blend-mode-add',
+    blendModeHardMix: 'blend-mode-hard-mix',
 
     composite: 'composite',
     compositeAbove: 'composite-above',
