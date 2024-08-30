@@ -81,8 +81,8 @@ importers:
   packages/last:
     devDependencies:
       '@lottie-animation-community/lottie-types':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       '@types/unist':
         specifier: 2.0.7
         version: 2.0.7
@@ -109,8 +109,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0
       '@lottie-animation-community/lottie-types':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       '@lottiefiles/jest-config':
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.19.5)(jest@27.5.1)
@@ -214,8 +214,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0
       '@lottie-animation-community/lottie-types':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       '@lottiefiles/jest-config':
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.19.5)(jest@29.7.0)
@@ -357,8 +357,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0
       '@lottie-animation-community/lottie-types':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       '@lottiefiles/jest-config':
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.19.5)(jest@29.7.0)
@@ -415,8 +415,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0
       '@lottie-animation-community/lottie-types':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.2.0
+        version: 1.2.0
       '@lottiefiles/jest-config':
         specifier: 1.0.0
         version: 1.0.0(esbuild@0.19.5)(jest@27.5.1)
@@ -2471,8 +2471,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@lottie-animation-community/lottie-types@1.1.0:
-    resolution: {integrity: sha512-xMPpJWnBKHrC8WMmL4DImXOIlJArNqL0eWKAHDw8UGGgiQfrlJp+YdKkV8p4Zr4EqWE1YqxB2iFI0GrTkGz3jA==}
+  /@lottie-animation-community/lottie-types@1.2.0:
+    resolution: {integrity: sha512-/TKbYhDbjneATE++7yxuBJU1PsiSvXFFZgjB4SyOehTrkUmIaSFSb1mHj/Em9YIWpF5TRkxzqRwJZIh5/g0cSA==}
     dev: true
 
   /@lottiefiles/commitlint-config@2.0.0(@commitlint/cli@17.8.1):
