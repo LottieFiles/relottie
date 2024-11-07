@@ -70,6 +70,10 @@ jobs:
     if:
       github.event_name == 'pull_request' && github.event.pull_request.merged == true &&
       github.event.pull_request.base.ref == 'main'
+    permissions:
+      contents: read
+      id-token: write # Required for provenance
+      packages: write # Required for publishing
     strategy:
       matrix:
         node-version: ['18']
