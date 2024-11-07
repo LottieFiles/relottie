@@ -1,8 +1,9 @@
 name: Release
 
 on:
+  push:
+    branches: main
   pull_request:
-    types: [opened, synchronize, reopened, closed, ready_for_review]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -14,32 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ['18']
-    timeout-minutes: 20
+        node-version: ['20']
     steps:
-      - name: ⬇ Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - name: ⬇ Checkout repo
+        uses: actions/checkout@v4
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        uses: pnpm/action-setup@v4
 
-      - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
-        uses: actions/setup-node@v3
+      - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Validate
+        uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
+          cache: pnpm
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://npm.pkg.github.com/'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: 📥 Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
@@ -57,108 +48,100 @@ jobs:
         run: pnpm test
 
       - name: 📏 Report bundle size
-        if: github.event.pull_request.merged == false
+        if: github.event.pull_request.merged == 'pull_request'
         uses: andresz1/size-limit-action@v1
         continue-on-error: true
         with:
-          github_token: ${{ secrets.GPR_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
   release-npm:
     name: release-npm
     needs: validate
     runs-on: ubuntu-latest
-    if:
-      github.event_name == 'pull_request' && github.event.pull_request.merged == true &&
-      github.event.pull_request.base.ref == 'main'
-    permissions:
-      contents: read
-      id-token: write # Required for provenance
-      packages: write # Required for publishing
+    if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
     strategy:
       matrix:
-        node-version: ['18']
-    timeout-minutes: 20
+        node-version: ['20']
+
+    permissions:
+      contents: write # Allow creating a release in the repository
+      id-token: write # Required for provenance
+      packages: write # Required for publishing
+
     steps:
-      - name: ⬇ Checkout
-        uses: actions/checkout@v2
+      - name: ⬇ Checkout repo
+        uses: actions/checkout@v4
         with:
+          # https://github.com/changesets/action/issues/201#issuecomment-1206088289
+          # check out all commits and tags so changeset can skip duplicate tags
           fetch-depth: 0
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+        uses: pnpm/action-setup@v4
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for NPM
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
+          cache: pnpm
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
-
-      - name: ⎔ Setup .npmrc (NPM)
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPMJS_TOKEN }}" >> ~/.npmrc
+          registry-url: https://registry.npmjs.org
 
       - name: 📥 Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
       - name: 🚀 Create Release Pull Request or Release to NPM
         uses: changesets/action@v1
-        id: changesetsId
         with:
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
           publish: pnpm release:publish
           version: pnpm release:version
+          createGithubReleases: false
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPMJS_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
+
+      - name: Remove existing NPM .npmrc
+        run: rm -f "$HOME/.npmrc"
 
   release-gpr:
     name: release-gpr
-    needs: [validate, release-npm]
-    if: >
-      github.event_name == 'pull_request' && github.event.pull_request.merged == true &&
-      github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref == 'changeset-release/main'
-    permissions:
-      contents: read
-      id-token: write # Required for provenance
-      packages: write # Required for publishing
+    needs: validate
     runs-on: ubuntu-latest
+    if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
     strategy:
       matrix:
-        node-version: ['18']
-    timeout-minutes: 20
+        node-version: ['20']
+
+    permissions:
+      contents: write # Allow creating a release in the repository
+      id-token: write # Required for provenance
+      packages: write # Required for publishing
+
     steps:
-      - name: ⬇ Checkout
-        uses: actions/checkout@v2
+      - name: ⬇ Checkout repo
+        uses: actions/checkout@v4
+        # https://github.com/changesets/action/issues/201#issuecomment-1206088289
+        # check out all commits and tags so changeset can skip duplicate tags
         with:
           fetch-depth: 0
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-      - name: Remove existing .npmrc for NPM
-        run: rm -f "$HOME/.npmrc"
+        uses: pnpm/action-setup@v4
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
+          cache: pnpm
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://npm.pkg.github.com/'
+          registry-url: https://npm.pkg.github.com/
 
       - name: 📥 Install dependencies for Github Packages
         run: pnpm install
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚀 Release to Github Packages
         uses: changesets/action@v1
@@ -167,7 +150,7 @@ jobs:
           title: 'chore: update versions'
           publish: pnpm release:publish
           version: pnpm release:version
+          createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
