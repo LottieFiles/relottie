@@ -125,6 +125,10 @@ jobs:
     if: >
       github.event_name == 'pull_request' && github.event.pull_request.merged == true &&
       github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref == 'changeset-release/main'
+    permissions:
+      contents: read
+      id-token: write # Required for provenance
+      packages: write # Required for publishing
     runs-on: ubuntu-latest
     strategy:
       matrix:
