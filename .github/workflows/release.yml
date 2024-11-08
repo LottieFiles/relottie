@@ -31,6 +31,8 @@ jobs:
 
       - name: 📥 Install dependencies
         run: pnpm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_TOKEN }}
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
