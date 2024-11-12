@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.9.1
+
+### Patch Changes
+
+- 3d3fed3: chore(package): add provenance to publishConfig
+
 ## 1.9.0
 
 ### Minor Changes
