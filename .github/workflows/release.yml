@@ -70,6 +70,7 @@ jobs:
       contents: write # Allow creating a release in the repository
       id-token: write # Required for provenance
       packages: write # Required for publishing
+      pull-requests: write # Required for creating a release PR
 
     steps:
       - name: ⬇ Checkout repo
@@ -119,6 +120,7 @@ jobs:
       contents: write # Allow creating a release in the repository
       id-token: write # Required for provenance
       packages: write # Required for publishing
+      pull-requests: write # Required for creating a release PR
 
     steps:
       - name: ⬇ Checkout repo
