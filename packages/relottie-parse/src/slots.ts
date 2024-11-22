@@ -67,7 +67,7 @@ export class Slots {
 
       const valueNode = node.children[0];
 
-     if (valueNode === undefined) continue;
+      if (valueNode === undefined) continue;
 
       const nodeKey = typeof node.key === 'string' ? node.key : node.key.value;
       const slotPropertyTitle = this.idTitles.get(nodeKey);
