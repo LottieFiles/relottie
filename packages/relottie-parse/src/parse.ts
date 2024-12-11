@@ -1,8 +1,15 @@
 /**
- * Copyright 2022 Design Barn Inc.
+ * Copyright 2024 Design Barn Inc.
  */
 
-import { parse as jsonParse, traverse as jsonTraverse } from '@humanwhocodes/momoa';
+import {
+  parse as jsonParse,
+  traverse as jsonTraverse,
+  type AnyNode as MomoaAnyNode,
+  type ContainerNode as MomoaContainerNode,
+  type ObjectNode as MomoaObject,
+  type ArrayNode as MomoaArray,
+} from '@humanwhocodes/momoa';
 import type { Root, NodeValue } from '@lottiefiles/last';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
@@ -23,9 +30,11 @@ export interface Info {
   slots?: Slots;
 }
 
+export type MomoaParent = MomoaContainerNode | MomoaArray | MomoaObject | undefined;
+
 // eslint-disable-next-line consistent-return
 export function parse(document: string, file: VFile, settings: SettingsOptions = {}): Root {
-  const jsonAst = jsonParse(document, { tokens: false });
+  const jsonAst = jsonParse(document);
 
   const options: ParseOptions = { ...DEFAULT_OPTIONS, ...settings.parse };
 
@@ -34,10 +43,10 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
   const info: Info = { hasExpressions: false, slots: new Slots(file, options) };
 
   jsonTraverse(jsonAst, {
-    enter(node: Momoa.AstNode, parent: Momoa.AstParent) {
+    enter(node: MomoaAnyNode, parent: MomoaParent) {
       traverseJsonEnter(node, parent, stack, file, options);
     },
-    exit(node: Momoa.AstNode, parent: Momoa.AstParent) {
+    exit(node: MomoaAnyNode, parent: MomoaParent) {
       traverseJsonExit(node, parent, stack, file, options, info);
     },
   });
@@ -51,6 +60,6 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
     return tree;
   } else {
-    file.fail(`Stack's last item has to be "root" but it's "${tree?.type}"`, tree);
+    file.fail(`Stack's last item has to be "root" but it's "${tree ? tree.type : 'unknown'}"`, tree);
   }
 }

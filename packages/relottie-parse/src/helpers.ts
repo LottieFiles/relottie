@@ -3,6 +3,20 @@
  */
 
 import type {
+  AnyNode as MomoaAnyNode,
+  ObjectNode as MomoaObject,
+  ArrayNode as MomoaArray,
+  BooleanNode as MomoaBoolean,
+  StringNode as MomoaString,
+  NumberNode as MomoaNumber,
+  NullNode as MomoaNull,
+  MemberNode as MomoaMember,
+  ValueNode as MomoaValue,
+  NaNNode as MomoaNan,
+  InfinityNode as MomoaInfinity,
+  IdentifierNode as MomoaIdentifier,
+} from '@humanwhocodes/momoa';
+import type {
   ArrayNode,
   Collection,
   Element,
@@ -41,10 +55,19 @@ import { fileConstants } from './constants.js';
 import type { Dependent } from './entities.js';
 import { getMemberEntity, getNoKeyEntity } from './entities.js';
 import type { ParseOptions } from './options.js';
-import type { Info } from './parse.js';
+import type { Info, MomoaParent } from './parse.js';
 import type { Stack } from './stack.js';
 
-const createValueType = (node: Momoa.AstNode, options: ParseOptions): PrimitiveParts<PrimitiveValueType> => {
+export type MomoaPrimitive =
+  | MomoaBoolean
+  | MomoaNumber
+  | MomoaString
+  | MomoaNull
+  | MomoaNan
+  | MomoaInfinity
+  | MomoaIdentifier;
+
+const createValueType = (node: MomoaAnyNode, options: ParseOptions): PrimitiveParts<PrimitiveValueType> => {
   if (!options.valueType || node.type === 'Array' || node.type === 'Object' || node.type === 'Document') {
     return {};
   }
@@ -57,7 +80,7 @@ const createValueType = (node: Momoa.AstNode, options: ParseOptions): PrimitiveP
  * @param options - Parse Options
  * @returns Last position prop or empty object
  */
-const createPositionProp = (node: Momoa.AstNode, options: ParseOptions): { position?: Position } => {
+const createPositionProp = (node: MomoaAnyNode, options: ParseOptions): { position?: Position } => {
   if (options.position) {
     return {
       position: { ...node.loc },
@@ -66,14 +89,45 @@ const createPositionProp = (node: Momoa.AstNode, options: ParseOptions): { posit
     return {};
   }
 };
-const createPrimitiveNode = (node: Momoa.Primitive, options: ParseOptions): Primitive => {
+
+export const getPrimitiveNodeValue = (node: MomoaPrimitive): string | number | boolean | null => {
+  switch (node.type) {
+    case 'Boolean':
+      return node.value;
+
+    case 'Number':
+      return node.value;
+
+    case 'String':
+      return node.value;
+
+    case 'Null':
+      return null;
+
+    case 'NaN':
+      return null;
+
+    case 'Infinity':
+      return null;
+
+    case 'Identifier':
+      return null;
+
+    default:
+      return null;
+  }
+};
+
+const createPrimitiveNode = (node: MomoaPrimitive, options: ParseOptions): Primitive => {
   const position = createPositionProp(node, options);
   const valueType = createValueType(node, options) as PrimitiveParts<PrimitiveValueType>;
+  const value = getPrimitiveNodeValue(node);
 
-  return primitiveNode(node.value, { ...position, ...valueType });
+  return primitiveNode(value, { ...position, ...valueType });
 };
-const createKeyNode = (node: Momoa.Member, options: ParseOptions): KeyValue => {
-  const value = node.name.value;
+
+const createKeyNode = (node: MomoaMember, options: ParseOptions): KeyValue => {
+  const value = node.name.type === 'String' ? node.name.value : node.name.name;
 
   if (options.position) {
     const posiiton = createPositionProp(node.name, options);
@@ -83,7 +137,8 @@ const createKeyNode = (node: Momoa.Member, options: ParseOptions): KeyValue => {
     return value;
   }
 };
-const createMemberNode = (node: Momoa.Member, parentTitle: ParentTitle, options: ParseOptions): ObjectNodeValue => {
+
+const createMemberNode = (node: MomoaMember, parentTitle: ParentTitle, options: ParseOptions): ObjectNodeValue => {
   const keyValue = createKeyNode(node, options);
   const key = typeof keyValue === 'string' ? keyValue : keyValue.value;
   const position = createPositionProp(node, options);
@@ -104,7 +159,12 @@ const createMemberNode = (node: Momoa.Member, parentTitle: ParentTitle, options:
       return attributeNode(keyValue, title as AttributeTitle, [], { ...parts });
   }
 };
-const isMomoaMemberValue = (node: Momoa.Primitive, parent: Momoa.Member): boolean => {
+
+const isMomoaMemberValue = (node: MomoaPrimitive, parent: MomoaMember): boolean => {
+  const nodeType = node.type;
+
+  if (nodeType === 'Identifier' || nodeType === 'NaN' || nodeType === 'Infinity') return false;
+
   return parent.loc.end.column === node.loc.end.column;
 };
 
@@ -117,19 +177,21 @@ function assertNodeType<T extends NodeValue>(
     file.fail(`Unexpected node type found ${node?.type}, has to be 'array'`);
   }
 }
-const getMembersFromArrNode = (node: Momoa.Arr): Momoa.Member[] => {
-  const members: Momoa.Member[] = [];
+const getMembersFromArrNode = (node: MomoaArray): MomoaMember[] => {
+  const members: MomoaMember[] = [];
 
   node.elements.forEach((element) => {
-    if (is<Momoa.Obj>(element, 'Object')) {
-      element.members.forEach((member) => members.push(member));
+    const elementValue = element.value;
+
+    if (is<MomoaObject>(elementValue, 'Object')) {
+      elementValue.members.forEach((member) => members.push(member));
     }
   });
 
   return members;
 };
 const getTitleFromMemberValue = (
-  node: Momoa.MemberValue,
+  node: MomoaValue,
   parentNodeTitle: ParentTitle,
   dependent: Dependent,
   file: VFile,
@@ -138,7 +200,7 @@ const getTitleFromMemberValue = (
 
   switch (type) {
     case 'Constant':
-      if (!is<Momoa.Str>(node, 'String') && !is<Momoa.Num>(node, 'Number')) break;
+      if (!is<MomoaString>(node, 'String') && !is<MomoaNumber>(node, 'Number')) break;
 
       const { defaultValue, prefix, values } = parentTitle;
 
@@ -161,9 +223,10 @@ const getTitleFromMemberValue = (
       return (prefix && prefix.length > 0 ? `${prefix}-${title}` : title) as AnyTitle;
 
     case 'Array':
-      if (!is<Momoa.Arr>(node, 'Array')) break;
+      if (!is<MomoaArray>(node, 'Array')) break;
       const childType = dependent.childType;
-      const matchedMember = childType ? node.elements.find((element) => element.type === childType) : undefined;
+
+      const matchedMember = childType ? node.elements.find((element) => element.value.type === childType) : undefined;
 
       if (!matchedMember) break;
 
@@ -184,17 +247,18 @@ const getTitleFromMemberValue = (
 };
 const getDependentTitle = (
   parentTitle: ParentTitle,
-  members: Momoa.Member[],
+  members: MomoaMember[],
   dependents: Dependent[],
   file: VFile,
 ): AnyTitle | undefined => {
   const memberKeyValue = members.reduce((acc, member) => {
-    const key = member.name.value;
+    const memberName = member.name;
+    const key = memberName.type === 'String' ? memberName.value : memberName.name;
 
     acc[key] = member.value;
 
     return acc;
-  }, {} as Record<string, Momoa.MemberValue>);
+  }, {} as Record<string, MomoaValue>);
 
   for (const dependent of dependents) {
     const { key } = dependent;
@@ -209,7 +273,7 @@ const getDependentTitle = (
 
   return undefined;
 };
-const getObjectNodeTitle = (node: Momoa.Obj, parentNodeTitle: ParentTitle, file: VFile): ObjectTitle => {
+const getObjectNodeTitle = (node: MomoaObject, parentNodeTitle: ParentTitle, file: VFile): ObjectTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
   const { defaultTitle, dependents } = entity;
@@ -220,7 +284,7 @@ const getObjectNodeTitle = (node: Momoa.Obj, parentNodeTitle: ParentTitle, file:
 
   return (title || defaultTitle) as ObjectTitle;
 };
-const getArrayNodeTitle = (node: Momoa.Arr, parentNodeTitle: ParentTitle, file: VFile): ArrayTitle => {
+const getArrayNodeTitle = (node: MomoaArray, parentNodeTitle: ParentTitle, file: VFile): ArrayTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
   const { defaultTitle, dependents } = entity;
@@ -235,8 +299,8 @@ const getArrayNodeTitle = (node: Momoa.Arr, parentNodeTitle: ParentTitle, file: 
 };
 
 export const traverseJsonEnter = (
-  node: Momoa.AstNode,
-  parent: Momoa.AstParent,
+  node: MomoaAnyNode,
+  parent: MomoaParent,
   stack: Stack<NodeValue>,
   file: VFile,
   options: ParseOptions,
@@ -258,6 +322,8 @@ export const traverseJsonEnter = (
       break;
 
     case 'Object':
+      if (!parent) break;
+
       switch (parent.type) {
         case 'Document':
           stack.push(rootNode([], { ...position }));
@@ -287,7 +353,12 @@ export const traverseJsonEnter = (
       }
       break;
 
+    case 'Element':
+      break;
+
     case 'Array':
+      if (!parent) break;
+
       switch (parent.type) {
         case 'Member':
           const collection = stack.peek();
@@ -313,6 +384,8 @@ export const traverseJsonEnter = (
       break;
 
     default:
+      if (!parent) break;
+
       switch (parent.type) {
         case 'Member':
           if (isMomoaMemberValue(node, parent)) {
@@ -320,7 +393,7 @@ export const traverseJsonEnter = (
           }
           break;
 
-        case 'Array':
+        case 'Element':
           stack.push(createPrimitiveNode(node, options));
           break;
 
@@ -332,8 +405,8 @@ export const traverseJsonEnter = (
 };
 
 export const traverseJsonExit = (
-  node: Momoa.AstNode,
-  parent: Momoa.AstParent,
+  node: MomoaAnyNode,
+  parent: MomoaParent,
   stack: Stack<NodeValue>,
   file: VFile,
   _options: ParseOptions,
@@ -380,6 +453,8 @@ export const traverseJsonExit = (
       break;
 
     case 'Object':
+      if (!parent) break;
+
       switch (parent.type) {
         case 'Document':
           // root node
@@ -416,7 +491,12 @@ export const traverseJsonExit = (
       }
       break;
 
+    case 'Element':
+      break;
+
     case 'Array':
+      if (!parent) break;
+
       switch (parent.type) {
         case 'Member':
           const collectionChild = stack.pop();
@@ -452,6 +532,8 @@ export const traverseJsonExit = (
       break;
 
     default:
+      if (!parent) break;
+
       switch (parent.type) {
         case 'Member':
           if (isMomoaMemberValue(node, parent)) {

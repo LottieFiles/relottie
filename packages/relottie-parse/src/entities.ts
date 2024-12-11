@@ -1,7 +1,16 @@
 /**
- * Copyright 2022 Design Barn Inc.
+ * Copyright 2024 Design Barn Inc.
  */
 
+import type {
+  ValueNode as MomoaValueNode,
+  ObjectNode as MomoaObject,
+  AnyNode as MomoaAnyNode,
+  ArrayNode as MomoaArray,
+  StringNode as MomoaString,
+  NumberNode as MomoaNumber,
+  MemberNode as MomoaMember,
+} from '@humanwhocodes/momoa';
 import type {
   Key,
   NodeValueType,
@@ -19,6 +28,7 @@ import type {
 import { TITLES } from '@lottiefiles/last';
 
 import { constantNumValues, constantStrValues } from './constants.js';
+import type { MomoaPrimitive } from './helpers.js';
 
 const {
   boolean: BT,
@@ -80,26 +90,26 @@ export interface DependentBase {
   /**
    * Dependent node's type
    */
-  type: Momoa.AstNode['type'] | 'Constant';
+  type: MomoaAnyNode['type'] | 'Constant';
 }
 
 export interface DependentPrimitive extends DependentBase {
   parentTitle: ParentTitle;
-  type: Momoa.PrimitiveTypes | Momoa.Obj['type'];
+  type: MomoaPrimitive['type'] | MomoaObject['type'];
 }
 
 export interface DependentObject extends DependentBase {
   parentTitle: ParentTitle;
-  type: Momoa.Obj['type'];
+  type: MomoaObject['type'];
 }
 
 export interface DependentArray extends DependentBase {
   /**
    * if present the "childType" will be checked as well
    */
-  childType?: Momoa.Element['type'];
+  childType?: MomoaValueNode['type'];
   parentTitle: ParentTitle;
-  type: Momoa.Arr['type'];
+  type: MomoaArray['type'];
 }
 
 export interface DependentConstant extends DependentBase {
@@ -970,7 +980,7 @@ const createDependentTitles = (
 
 export const arrayEntity: NoKeyEntityMap = {};
 
-export const getNoKeyEntity = (node: Momoa.Arr | Momoa.Obj, parentTitle: ParentTitle): NoKeyEntity => {
+export const getNoKeyEntity = (node: MomoaArray | MomoaObject, parentTitle: ParentTitle): NoKeyEntity => {
   switch (node.type) {
     case 'Object':
       return objectEntity[parentTitle] || { defaultTitle: parentTitle };
@@ -2199,7 +2209,7 @@ export const getElementData = (key: Key, parentTitle: ParentTitle): Entity<Eleme
 
 export const getNumberConstantEntity = (
   key: Key,
-  member: Momoa.Num,
+  member: MomoaNumber,
   parentTitle: ParentTitle,
 ): Entity<AttributeTitle> => {
   const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, numberConstantEntity, 'constant');
@@ -2221,7 +2231,7 @@ export const getNumberConstantEntity = (
 
 export const getStringConstantEntity = (
   key: Key,
-  member: Momoa.Str,
+  member: MomoaString,
   parentTitle: ParentTitle,
 ): Entity<AttributeTitle> => {
   const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, stringConstantEntity, 'constant');
@@ -2239,7 +2249,7 @@ export const getStringConstantEntity = (
   return constantEntity;
 };
 
-export const getAttributeData = (key: Key, member: Momoa.Member, parentTitle: ParentTitle): Entity<AttributeTitle> => {
+export const getAttributeData = (key: Key, member: MomoaMember, parentTitle: ParentTitle): Entity<AttributeTitle> => {
   switch (member.value.type) {
     case 'String':
       const stringTitles = getEntityData<AttributeTitle>(key, parentTitle, stringEntity, 'attribute');
@@ -2271,7 +2281,7 @@ export const getAttributeData = (key: Key, member: Momoa.Member, parentTitle: Pa
   }
 };
 
-export const getMemberEntity = (key: Key, member: Momoa.Member, parentTitle: ParentTitle): Entity => {
+export const getMemberEntity = (key: Key, member: MomoaMember, parentTitle: ParentTitle): Entity => {
   switch (member.value.type) {
     case 'Array':
       return getCollectionData(key, parentTitle);
