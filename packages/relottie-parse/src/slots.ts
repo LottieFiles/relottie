@@ -2,13 +2,17 @@
  * Copyright 2024 Design Barn Inc.
  */
 
-import { traverse as jsonTraverse } from '@humanwhocodes/momoa';
+import {
+  traverse as jsonTraverse,
+  type MemberNode as MomoaMember,
+  type AnyNode as MomoaAnyNode,
+} from '@humanwhocodes/momoa';
 import type { ElementTitle, ObjectTitle } from '@lottiefiles/last';
 import { type Attribute, type ObjectNode, type Element, type NodeValue, TITLES } from '@lottiefiles/last';
 import type { VFile } from 'vfile';
 
 import { fileConstants } from './constants.js';
-import { traverseJsonEnter, traverseJsonExit } from './helpers.js';
+import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
 import type { ParseOptions } from './options.js';
 import { Stack } from './stack.js';
 
@@ -18,7 +22,7 @@ interface SlotPropertyInfo {
   /**
    * SlotProperty node in the JsonAST
    */
-  jsonNode: Momoa.Member;
+  jsonNode: MomoaMember;
   /**
    * SlotProperty node in the LottieAST
    */
@@ -79,12 +83,17 @@ export class Slots {
       stack.push(node);
 
       jsonTraverse(jsonNode, {
-        enter(currNode: Momoa.AstNode, parentNode: Momoa.AstParent | undefined) {
+        enter(currNode: MomoaAnyNode, parentNode: MomoaParent) {
           if (!parentNode) return;
 
           traverseJsonEnter(currNode, parentNode, stack, file, options);
 
-          if (parentNode.type === 'Member' && currNode.type === 'Object' && parentNode.name.value === `p`) {
+          if (
+            parentNode.type === 'Member' &&
+            currNode.type === 'Object' &&
+            parentNode.name.type === 'String' &&
+            parentNode.name.value === `p`
+          ) {
             const slotPropertyValueNode = stack.peek();
 
             if (slotPropertyValueNode?.type !== 'object') return;
@@ -92,7 +101,7 @@ export class Slots {
             slotPropertyValueNode.title = slotPropertyTitle as ObjectTitle;
           }
         },
-        exit(currNode: Momoa.AstNode, parentNode: Momoa.AstParent | undefined) {
+        exit(currNode: MomoaAnyNode, parentNode: MomoaParent) {
           if (!parentNode) return;
 
           traverseJsonExit(currNode, parentNode, stack, file, options);
@@ -148,7 +157,7 @@ export class Slots {
    * @param jsonNode - SlotProperty node in the JsonAST
    * @returns void
    */
-  public setNode(node: Element, parent: ObjectNode, jsonNode: Momoa.Member): void {
+  public setNode(node: Element, parent: ObjectNode, jsonNode: MomoaMember): void {
     if (parent.title === `${ET.slots}`) {
       this.slotProperties.push({ node, jsonNode });
     }
