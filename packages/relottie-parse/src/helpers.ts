@@ -15,6 +15,7 @@ import type {
   NaNNode as MomoaNan,
   InfinityNode as MomoaInfinity,
   IdentifierNode as MomoaIdentifier,
+  ContainerNode as MomoaContainerNode,
 } from '@humanwhocodes/momoa';
 import type {
   ArrayNode,
@@ -55,8 +56,10 @@ import { fileConstants } from './constants.js';
 import type { Dependent } from './entities.js';
 import { getMemberEntity, getNoKeyEntity } from './entities.js';
 import type { ParseOptions } from './options.js';
-import type { Info, MomoaParent } from './parse.js';
+import type { Info } from './parse.js';
 import type { Stack } from './stack.js';
+
+export type MomoaParent = MomoaContainerNode | MomoaArray | MomoaObject | undefined;
 
 export type MomoaPrimitive =
   | MomoaBoolean
