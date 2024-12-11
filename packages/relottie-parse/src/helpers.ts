@@ -174,7 +174,7 @@ function assertNodeType<T extends NodeValue>(
   file: VFile,
 ): asserts node is T {
   if (!is<T>(node, type)) {
-    file.fail(`Unexpected node type found ${node?.type}, has to be 'array'`);
+    file.fail(`Unexpected node type found ${node?.type}, has to be ${type}`);
   }
 }
 const getMembersFromArrNode = (node: MomoaArray): MomoaMember[] => {
