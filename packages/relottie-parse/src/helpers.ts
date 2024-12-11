@@ -68,7 +68,7 @@ export type MomoaPrimitive =
   | MomoaIdentifier;
 
 const createValueType = (node: MomoaAnyNode, options: ParseOptions): PrimitiveParts<PrimitiveValueType> => {
-  if (!options.valueType || node.type === 'Array' || node.type === 'Object' || node.type === 'Document') {
+  if (!options.valueType || node.type === 'Element' || node.type === 'Object' || node.type === 'Document') {
     return {};
   }
 
@@ -339,7 +339,7 @@ export const traverseJsonEnter = (
           stack.push(objectNode(elementValueTitle, [], { ...position }));
           break;
 
-        case 'Array':
+        case 'Element':
           const array = stack.peek();
 
           assertNodeType<ArrayNode>(array, 'array', file);
@@ -369,7 +369,7 @@ export const traverseJsonEnter = (
           stack.push(arrayNode(collectionValueTitle, [], { ...position }));
           break;
 
-        case 'Array':
+        case 'Element':
           const array = stack.peek();
 
           assertNodeType<ArrayNode>(array, 'array', file);
@@ -476,7 +476,7 @@ export const traverseJsonExit = (
           element.children = [elementChild];
           break;
 
-        case 'Array':
+        case 'Element':
           const arrayChild = stack.pop();
 
           assertNodeType<ObjectNode>(arrayChild, 'object', file);
@@ -514,7 +514,7 @@ export const traverseJsonExit = (
           collection.children = [collectionChild];
           break;
 
-        case 'Array':
+        case 'Element':
           const arrayChild = stack.pop();
 
           assertNodeType<ArrayNode>(arrayChild, 'array', file);
@@ -548,7 +548,7 @@ export const traverseJsonExit = (
           }
           break;
 
-        case 'Array':
+        case 'Element':
           const arrayChild = stack.pop();
 
           assertNodeType<Primitive>(arrayChild, 'primitive', file);
