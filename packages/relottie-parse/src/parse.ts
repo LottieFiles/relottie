@@ -2,19 +2,12 @@
  * Copyright 2024 Design Barn Inc.
  */
 
-import {
-  parse as jsonParse,
-  traverse as jsonTraverse,
-  type AnyNode as MomoaAnyNode,
-  type ContainerNode as MomoaContainerNode,
-  type ObjectNode as MomoaObject,
-  type ArrayNode as MomoaArray,
-} from '@humanwhocodes/momoa';
+import { parse as jsonParse, traverse as jsonTraverse, type AnyNode as MomoaAnyNode } from '@humanwhocodes/momoa';
 import type { Root, NodeValue } from '@lottiefiles/last';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
-import { traverseJsonEnter, traverseJsonExit } from './helpers.js';
+import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
 import { DEFAULT_OPTIONS } from './options.js';
 import type { ParseOptions } from './options.js';
 import { Slots } from './slots.js';
@@ -29,8 +22,6 @@ export interface Info {
   hasExpressions?: Root['hasExpressions'];
   slots?: Slots;
 }
-
-export type MomoaParent = MomoaContainerNode | MomoaArray | MomoaObject | undefined;
 
 // eslint-disable-next-line consistent-return
 export function parse(document: string, file: VFile, settings: SettingsOptions = {}): Root {

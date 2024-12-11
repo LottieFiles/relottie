@@ -12,9 +12,8 @@ import { type Attribute, type ObjectNode, type Element, type NodeValue, TITLES }
 import type { VFile } from 'vfile';
 
 import { fileConstants } from './constants.js';
-import { traverseJsonEnter, traverseJsonExit } from './helpers.js';
+import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
 import type { ParseOptions } from './options.js';
-import type { MomoaParent } from './parse.js';
 import { Stack } from './stack.js';
 
 const { element: ET, string: ST } = TITLES;
