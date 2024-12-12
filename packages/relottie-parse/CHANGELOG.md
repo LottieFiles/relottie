@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-parse
 
+## 1.11.0
+
+### Minor Changes
+
+- 13a5a25: feat: bump Momoa to v3.3.5 with required changes
+
 ## 1.10.0
 
 ### Minor Changes
