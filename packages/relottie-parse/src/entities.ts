@@ -1833,7 +1833,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [ET.textSelector]: ET.textMinEase,
     },
     meta: { [OT.animation]: ET.metadata },
-    [ET.metadata]: { [OT.animation]: ET.userMetadata },
+    metadata: { [OT.animation]: ET.userMetadata },
     mb: { [OT.animation]: ET.motionBlur },
     fonts: { [OT.animation]: ET.textFonts },
     v: {
