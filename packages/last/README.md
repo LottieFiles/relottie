@@ -116,7 +116,6 @@ type PrimitiveValue = string | number | boolean | null;
 interface Primitive extends Literal {
   type: 'primitive';
   value: PrimitiveValue;
-  valueType?: PrimitiveValueType;
 }
 ```
 

@@ -50,7 +50,7 @@ export interface EntityMap<T extends AnyTitle> {
   required: EntityRecord<T>;
 }
 
-export type EntityType = NodeValueType | 'constant' | 'integer-boolean' | 'missing';
+export type EntityType = NodeValueType | 'Constant' | 'Integer-boolean' | 'Missing';
 
 export interface Entity<T = AnyTitle> {
   parentTitle: ParentTitle;
@@ -2200,11 +2200,11 @@ export const getEntityData = <T extends AnyTitle>(
 };
 
 export const getCollectionData = (key: Key, parentTitle: ParentTitle): Entity<CollectionTitle> => {
-  return getEntityData<CollectionTitle>(key, parentTitle, collectionEntity, 'collection');
+  return getEntityData<CollectionTitle>(key, parentTitle, collectionEntity, 'Collection');
 };
 
 export const getElementData = (key: Key, parentTitle: ParentTitle): Entity<ElementTitle> => {
-  return getEntityData<ElementTitle>(key, parentTitle, elementEntity, 'element');
+  return getEntityData<ElementTitle>(key, parentTitle, elementEntity, 'Element');
 };
 
 export const getNumberConstantEntity = (
@@ -2212,7 +2212,7 @@ export const getNumberConstantEntity = (
   member: MomoaNumber,
   parentTitle: ParentTitle,
 ): Entity<AttributeTitle> => {
-  const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, numberConstantEntity, 'constant');
+  const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, numberConstantEntity, 'Constant');
 
   if (constantEntity.title !== CUSTOM) {
     const constantValues = constantNumValues.get(constantEntity.title);
@@ -2226,7 +2226,7 @@ export const getNumberConstantEntity = (
     return constantEntity;
   }
 
-  return getEntityData<AttributeTitle>(key, parentTitle, integerBooleanEntity, 'integer-boolean');
+  return getEntityData<AttributeTitle>(key, parentTitle, integerBooleanEntity, 'Integer-boolean');
 };
 
 export const getStringConstantEntity = (
@@ -2234,7 +2234,7 @@ export const getStringConstantEntity = (
   member: MomoaString,
   parentTitle: ParentTitle,
 ): Entity<AttributeTitle> => {
-  const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, stringConstantEntity, 'constant');
+  const constantEntity = getEntityData<AttributeTitle>(key, parentTitle, stringConstantEntity, 'Constant');
 
   if (constantEntity.title !== CUSTOM) {
     const constantValues = constantStrValues.get(constantEntity.title);
@@ -2252,28 +2252,28 @@ export const getStringConstantEntity = (
 export const getAttributeData = (key: Key, member: MomoaMember, parentTitle: ParentTitle): Entity<AttributeTitle> => {
   switch (member.value.type) {
     case 'String':
-      const stringTitles = getEntityData<AttributeTitle>(key, parentTitle, stringEntity, 'attribute');
+      const stringTitles = getEntityData<AttributeTitle>(key, parentTitle, stringEntity, 'Attribute');
 
       if (stringTitles.title !== CUSTOM) return stringTitles;
 
       return getStringConstantEntity(key, member.value, parentTitle);
 
     case 'Boolean':
-      return getEntityData<BooleanTitle>(key, parentTitle, booleanEntity, 'attribute');
+      return getEntityData<BooleanTitle>(key, parentTitle, booleanEntity, 'Attribute');
 
     case 'Number':
-      const numberEntityData = getEntityData<AttributeTitle>(key, parentTitle, numberEntity, 'attribute');
+      const numberEntityData = getEntityData<AttributeTitle>(key, parentTitle, numberEntity, 'Attribute');
 
       if (numberEntityData.title !== CUSTOM) return numberEntityData;
 
       return getNumberConstantEntity(key, member.value, parentTitle);
 
     case 'Null':
-      return getEntityData<AttributeTitle>(key, parentTitle, nullEntity, 'attribute');
+      return getEntityData<AttributeTitle>(key, parentTitle, nullEntity, 'Attribute');
 
     default:
       return {
-        type: 'missing',
+        type: 'Missing',
         title: CUSTOM,
         parentTitle,
         required: false,

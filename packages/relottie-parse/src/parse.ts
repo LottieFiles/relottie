@@ -46,7 +46,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   const tree = stack.pop();
 
-  if (is<Root>(tree, 'root')) {
+  if (is<Root>(tree, 'Root')) {
     tree.hasExpressions = info.hasExpressions || false;
 
     return tree;

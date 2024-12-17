@@ -44,7 +44,14 @@ const extractFeatures: Plugin<[Options?], Root> = (_ops: Options = {}) => {
     const usedData: Used = new Map();
 
     visitParents(tree, (node: AncestorChildNode, ancestor: AncestorNode[]) => {
-      if (node.type === 'root' || node.type === 'primitive') return;
+      if (
+        node.type === 'Root' ||
+        node.type === 'String' ||
+        node.type === 'Number' ||
+        node.type === 'Boolean' ||
+        node.type === 'Null'
+      )
+        return;
 
       const feature = node.title;
       const parent = ancestor.at(-1);

@@ -213,12 +213,12 @@ const metadata: Plugin<[Options?], Root> = (ops: Options = {}) => {
 
     visit(tree, (node, _index, parent) => {
       switch (node.type) {
-        case 'attribute':
+        case 'Attribute':
           processAttributeNode(node, meta, parent as ObjectNode);
 
           break;
 
-        case 'collection':
+        case 'Collection':
           processCollectionNode(node, meta, file);
 
           break;
