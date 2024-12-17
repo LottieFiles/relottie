@@ -2,7 +2,7 @@
  * Copyright 2022 Design Barn Inc.
  */
 
-import type { Root, AnyTitle, NodeValue, KeyNode, Primitive } from '@lottiefiles/last';
+import type { Root, AnyTitle, NodeValue, KeyNode, PrimitiveNode } from '@lottiefiles/last';
 import type { Plugin } from 'unified';
 import { visitParents } from 'unist-util-visit-parents';
 import type { Data, VFile } from 'vfile';
@@ -35,7 +35,7 @@ export interface ExtractFeaturesFileData extends Data {
 }
 
 type AncestorChildNode = Exclude<NodeValue, KeyNode>;
-type AncestorNode = Exclude<AncestorChildNode, Primitive>;
+type AncestorNode = Exclude<AncestorChildNode, PrimitiveNode>;
 
 const extractFeatures: Plugin<[Options?], Root> = (_ops: Options = {}) => {
   // const options = { ...DEFAULT_OPTIONS, ...ops };

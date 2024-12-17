@@ -156,7 +156,7 @@ const getRgbaFromNode = (node: Collection): number[] => {
   if (!valueNode) return [];
 
   const rgbaColor = valueNode.children.reduce((acc, child) => {
-    if (child.type !== 'primitive') return acc;
+    if (child.type !== 'Number') return acc;
 
     const childValue = child.value;
 
