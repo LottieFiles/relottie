@@ -58,16 +58,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@lottiefiles/last": "*",
+    "@lottiefiles/last": "workspace:*",
     "unist-util-visit-parents": "6.0.1"
   },
   "devDependencies": {
     "@jest/globals": "29.7.0",
     "@lottie-animation-community/lottie-types": "1.2.0",
     "@lottiefiles/jest-config": "1.0.0",
-    "@lottiefiles/last-builder": "*",
-    "@lottiefiles/relottie-parse": "*",
-    "@lottiefiles/relottie-stringify": "*",
+    "@lottiefiles/last-builder": "workspace:*",
+    "@lottiefiles/relottie-parse": "workspace:*",
+    "@lottiefiles/relottie-stringify": "workspace:*",
     "@types/jest": "29.5.8",
     "@types/jest-specific-snapshot": "0.5.6",
     "@types/node": "18.18.9",
