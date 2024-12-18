@@ -48,18 +48,34 @@ export interface Data extends UnistData {}
 // General
 // -----------------------------------------------------------------------------
 
-export type PrimitiveValueType = 'string' | 'number' | 'boolean' | 'null';
-
-export type PrimitiveValue = string | number | boolean | null;
-
-export interface Primitive extends Literal {
-  type: 'primitive';
-  value: PrimitiveValue;
-  valueType?: PrimitiveValueType;
+export interface StringNode extends Literal {
+  type: 'String';
+  value: string;
 }
 
+export interface NumberNode extends Literal {
+  type: 'Number';
+  value: number;
+}
+
+export interface BooleanNode extends Literal {
+  type: 'Boolean';
+  value: boolean;
+}
+
+export interface NullNode extends Literal {
+  type: 'Null';
+  value: null;
+}
+
+export type PrimitiveNodeType = StringNode['type'] | NumberNode['type'] | BooleanNode['type'] | NullNode['type'];
+
+export type PrimitiveNodeValue = StringNode['value'] | NumberNode['value'] | BooleanNode['value'] | NullNode['value'];
+
+export type PrimitiveNode = StringNode | NumberNode | BooleanNode | NullNode;
+
 export interface KeyNode extends Literal {
-  type: 'key';
+  type: 'Key';
   value: string;
 }
 
@@ -83,33 +99,33 @@ export type ObjectNodeValue = Attribute | Element | Collection;
 export interface ObjectNode extends Parent {
   children: ObjectNodeValue[];
   title: ObjectTitle;
-  type: 'object';
+  type: 'Object';
 }
 
-export type ArrayNodeValue = Primitive | ObjectNode | ArrayNode;
+export type ArrayNodeValue = PrimitiveNode | ObjectNode | ArrayNode;
 
 export interface ArrayNode extends Parent {
   children: ArrayNodeValue[];
   title: ArrayTitle;
-  type: 'array';
+  type: 'Array';
 }
 
 export interface Attribute extends Member {
-  children: [Primitive] | [];
+  children: [PrimitiveNode] | [];
   title: AttributeTitle;
-  type: 'attribute';
+  type: 'Attribute';
 }
 
 export interface Element extends Member {
   children: [ObjectNode] | [];
   title: ElementTitle;
-  type: 'element';
+  type: 'Element';
 }
 
 export interface Collection extends Member {
   children: [ArrayNode] | [];
   title: CollectionTitle;
-  type: 'collection';
+  type: 'Collection';
 }
 
 /**
@@ -121,9 +137,9 @@ export interface Root extends Omit<ObjectNode, 'type'> {
    */
   hasExpressions: boolean;
   title: typeof TITLES.object.animation;
-  type: 'root';
+  type: 'Root';
 }
 
-export type NodeValue = Root | Primitive | KeyNode | ArrayNode | ObjectNode | Attribute | Element | Collection;
+export type NodeValue = Root | PrimitiveNode | KeyNode | ArrayNode | ObjectNode | Attribute | Element | Collection;
 
 export type NodeValueType = NodeValue['type'];

@@ -34,40 +34,34 @@ export function evaluate(node: NodeValue): JSONValue {
   };
 
   switch (node.type) {
-    case 'primitive':
-      switch (typeof node.value) {
-        case 'number':
-          return node.value;
+    case 'Number':
+      return node.value;
 
-        case 'string':
-          return node.value;
+    case 'String':
+      return node.value;
 
-        case 'boolean':
-          return node.value;
+    case 'Boolean':
+      return node.value;
 
-        case 'object':
-          return null;
+    case 'Null':
+      return null;
 
-        default:
-          throw new Error(`Unknown Primitive type ${node.type}.`);
-      }
-
-    case 'attribute':
+    case 'Attribute':
       return node.children[0] ? evaluate(node.children[0]) : null;
 
-    case 'collection':
+    case 'Collection':
       return node.children[0] ? evaluate(node.children[0]) : null;
 
-    case 'element':
+    case 'Element':
       return node.children[0] ? evaluate(node.children[0]) : null;
 
-    case 'array':
+    case 'Array':
       return node.children.map(evaluate);
 
-    case 'root':
+    case 'Root':
       return getObjectValue(node);
 
-    case 'object':
+    case 'Object':
       return getObjectValue(node);
 
     default:

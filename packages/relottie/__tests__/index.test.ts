@@ -22,7 +22,7 @@ describe('relottie', () => {
     const tree = relottie().data('settings', options).parse('{ "v": "6.0.0" }');
 
     expect(JSON.stringify(tree)).toEqual(
-      '{"type":"root","title":"animation","hasExpressions":false,"children":[{"type":"attribute","key":"v","title":"version","children":[{"type":"primitive","value":"6.0.0"}]}]}',
+      '{"type":"Root","title":"animation","hasExpressions":false,"children":[{"type":"Attribute","key":"v","title":"version","children":[{"type":"String","value":"6.0.0"}]}]}',
     );
   });
 });

@@ -156,7 +156,7 @@ const getRgbaFromNode = (node: Collection): number[] => {
   if (!valueNode) return [];
 
   const rgbaColor = valueNode.children.reduce((acc, child) => {
-    if (child.type !== 'primitive') return acc;
+    if (child.type !== 'Number') return acc;
 
     const childValue = child.value;
 
@@ -213,12 +213,12 @@ const metadata: Plugin<[Options?], Root> = (ops: Options = {}) => {
 
     visit(tree, (node, _index, parent) => {
       switch (node.type) {
-        case 'attribute':
+        case 'Attribute':
           processAttributeNode(node, meta, parent as ObjectNode);
 
           break;
 
-        case 'collection':
+        case 'Collection':
           processCollectionNode(node, meta, file);
 
           break;
