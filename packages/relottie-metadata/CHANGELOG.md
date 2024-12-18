@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-metadata
 
+## 1.11.1
+
+### Patch Changes
+
+- 54163ec: chore(deps): fix lottiefiles/last version to a fixed version using workspace
+
 ## 1.9.1
 
 ### Patch Changes
