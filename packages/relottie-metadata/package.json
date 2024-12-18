@@ -59,15 +59,15 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@lottiefiles/last": "*",
+    "@lottiefiles/last": "workspace:*",
     "filesize": "^10.1.1",
     "unist-util-visit": "4.1.2"
   },
   "devDependencies": {
     "@jest/globals": "29.7.0",
     "@lottiefiles/jest-config": "1.0.0",
-    "@lottiefiles/relottie-parse": "*",
-    "@lottiefiles/relottie-stringify": "*",
+    "@lottiefiles/relottie-parse": "workspace:*",
+    "@lottiefiles/relottie-stringify": "workspace:*",
     "@types/jest": "29.5.8",
     "@types/jest-specific-snapshot": "0.5.6",
     "@types/node": "18.18.9",
