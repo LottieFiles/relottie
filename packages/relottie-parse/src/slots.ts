@@ -96,7 +96,7 @@ export class Slots {
           ) {
             const slotPropertyValueNode = stack.peek();
 
-            if (slotPropertyValueNode?.type !== 'object') return;
+            if (slotPropertyValueNode?.type !== 'Object') return;
 
             slotPropertyValueNode.title = slotPropertyTitle as ObjectTitle;
           }

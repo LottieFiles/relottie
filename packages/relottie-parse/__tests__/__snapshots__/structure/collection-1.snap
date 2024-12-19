@@ -8,16 +8,16 @@ Object {
         Object {
           "children": Array [],
           "title": "custom-children",
-          "type": "array",
+          "type": "Array",
         },
       ],
       "key": "item",
       "title": "custom",
-      "type": "collection",
+      "type": "Collection",
     },
   ],
   "hasExpressions": false,
   "title": "animation",
-  "type": "root",
+  "type": "Root",
 }
 `;

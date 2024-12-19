@@ -9,7 +9,7 @@ import { relottie, type Options } from './src/index.js';
 const lottie = '{ "v": "6.0.0" }';
 
 const options: Options = {
-  parse: { position: false, valueType: false },
+  parse: { position: false },
   stringify: {},
 };
 

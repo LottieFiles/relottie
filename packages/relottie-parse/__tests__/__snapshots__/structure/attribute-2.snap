@@ -10,63 +10,59 @@ Object {
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "type": "String",
                   "value": "5.5.7",
-                  "valueType": "string",
                 },
               ],
               "key": "v",
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "type": "Number",
                   "value": 0,
-                  "valueType": "number",
                 },
               ],
               "key": "ip",
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "type": "Boolean",
                   "value": false,
-                  "valueType": "boolean",
                 },
               ],
               "key": "c",
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "type": "Null",
                   "value": null,
-                  "valueType": "null",
                 },
               ],
               "key": "empty",
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
           ],
           "title": "custom-children",
-          "type": "object",
+          "type": "Object",
         },
       ],
       "key": "name",
       "title": "custom",
-      "type": "element",
+      "type": "Element",
     },
   ],
   "hasExpressions": false,
   "title": "animation",
-  "type": "root",
+  "type": "Root",
 }
 `;
