@@ -15,7 +15,6 @@ describe('relottie', () => {
     const options = {
       parse: {
         position: false,
-        valueType: false,
       },
     };
 

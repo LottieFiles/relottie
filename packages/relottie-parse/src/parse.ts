@@ -51,6 +51,6 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
     return tree;
   } else {
-    file.fail(`Stack's last item has to be "root" but it's "${tree ? tree.type : 'unknown'}"`, tree);
+    file.fail(`Stack's last item has to be "Root" but it's "${tree ? tree.type : 'unknown'}"`, tree);
   }
 }

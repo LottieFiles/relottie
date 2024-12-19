@@ -94,7 +94,7 @@ interface in last containing a value.
 ```ts
 interface Root extends Omit<ObjectNode, 'type'> {
   title: 'animation';
-  type: 'root';
+  type: 'Root';
   hasExpressions: boolean
 }
 ```
@@ -106,17 +106,34 @@ as a [*child*][term-child].
 
 **Root** also has `hasExpressions` prop that tells whether the Lottie animation contains JS [expressions][]. It is important to identify it early because of the [security](#security) concerns.
 
-### `Primitive`
+### `Primitive Nodes`
 
 ```ts
-type PrimitiveValueType = 'string' | 'number' | 'boolean' | 'null';
-
-type PrimitiveValue = string | number | boolean | null;
-
-interface Primitive extends Literal {
-  type: 'primitive';
-  value: PrimitiveValue;
+interface StringNode extends Literal {
+  type: 'String';
+  value: string;
 }
+
+interface NumberNode extends Literal {
+  type: 'Number';
+  value: number;
+}
+
+interface BooleanNode extends Literal {
+  type: 'Boolean';
+  value: boolean;
+}
+
+interface NullNode extends Literal {
+  type: 'Null';
+  value: null;
+}
+
+type PrimitiveNodeType = StringNode['type'] | NumberNode['type'] | BooleanNode['type'] | NullNode['type'];
+
+type PrimitiveNodeValue = StringNode['value'] | NumberNode['value'] | BooleanNode['value'] | NullNode['value'];
+
+type PrimitiveNode = StringNode | NumberNode | BooleanNode | NullNode;
 ```
 
 **Primitive** ([**Literal**][dfn-literal]) represents a JSON property's value
@@ -125,7 +142,7 @@ interface Primitive extends Literal {
 
 ```ts
 interface KeyNode extends Literal {
-  type: 'key';
+  type: 'Key';
   value: string;
 }
 ```
@@ -157,7 +174,7 @@ type ObjectNodeValue = Attribute | Element | Collection;
 interface ObjectNode extends Parent {
   children: ObjectNodeValue[];
   title: ObjectTitle;
-  type: 'object';
+  type: 'Object';
 }
 ```
 
@@ -171,7 +188,7 @@ type ArrayNodeValue = Primitive | ObjectNode | ArrayNode;
 interface ArrayNode extends Parent {
   children: ArrayNodeValue[];
   title: ArrayTitle;
-  type: 'array';
+  type: 'Array';
 }
 ```
 
@@ -183,7 +200,7 @@ interface ArrayNode extends Parent {
 interface Attribute extends Member {
   children: [Primitive] | [];
   title: AttributeTitle;
-  type: 'attribute';
+  type: 'Attribute';
 }
 ```
 
@@ -195,7 +212,7 @@ interface Attribute extends Member {
 interface Element extends Member {
   children: [ObjectNode] | [];
   title: ElementTitle;
-  type: 'element';
+  type: 'Element';
 }
 ```
 
@@ -207,7 +224,7 @@ interface Element extends Member {
 interface Collection extends Member {
   children: [ArrayNode] | [];
   title: CollectionTitle;
-  type: 'collection';
+  type: 'Collection';
 }
 ```
 
