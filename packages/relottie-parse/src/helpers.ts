@@ -189,7 +189,7 @@ const getTitleFromMemberValue = (
   dependent: Dependent,
   file: VFile,
 ): AnyTitle | undefined => {
-  const { key, parentTitle, type } = dependent;
+  const { key, resultTitle: parentTitle, type } = dependent;
 
   switch (type) {
     case 'Constant':
@@ -256,11 +256,11 @@ const getDependentTitle = (
 
   for (const dependent of dependents) {
     const { key } = dependent;
-    const node = memberKeyValue[key];
+    const keyValue = memberKeyValue[key];
 
-    if (!node) continue;
+    if (!keyValue) continue;
 
-    const title = getTitleFromMemberValue(node, parentTitle, dependent, file);
+    const title = getTitleFromMemberValue(keyValue, parentTitle, dependent, file);
 
     if (title) return title;
   }

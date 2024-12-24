@@ -82,7 +82,7 @@ export interface DependentBase {
   /**
    * parentTitle dependent info for the parent node's title
    */
-  parentTitle: ParentTitle | ParentTitleConstant;
+  resultTitle: ParentTitle | ParentTitleConstant;
   /**
    * Dependent node's title
    */
@@ -94,12 +94,12 @@ export interface DependentBase {
 }
 
 export interface DependentPrimitive extends DependentBase {
-  parentTitle: ParentTitle;
+  resultTitle: ParentTitle;
   type: MomoaPrimitive['type'] | MomoaObject['type'];
 }
 
 export interface DependentObject extends DependentBase {
-  parentTitle: ParentTitle;
+  resultTitle: ParentTitle;
   type: MomoaObject['type'];
 }
 
@@ -108,12 +108,12 @@ export interface DependentArray extends DependentBase {
    * if present the "childType" will be checked as well
    */
   childType?: MomoaValueNode['type'];
-  parentTitle: ParentTitle;
+  resultTitle: ParentTitle;
   type: MomoaArray['type'];
 }
 
 export interface DependentConstant extends DependentBase {
-  parentTitle: ParentTitleConstant;
+  resultTitle: ParentTitleConstant;
   type: 'Constant';
 }
 
@@ -148,13 +148,13 @@ const animatedPropEntity = (parentTitle: AnimatedPropertyTitle, kTitle: AnyTitle
         type: 'Array',
         title: kTitle,
         childType: 'Object',
-        parentTitle,
+        resultTitle: parentTitle,
       },
       {
         key: 'a',
         type: 'Constant',
         title: IBT.animated,
-        parentTitle: {
+        resultTitle: {
           defaultValue: 0,
           values: {
             0: `${parentTitle}-static`,
@@ -194,7 +194,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'ty',
         type: 'Constant',
         title: NT.layerType,
-        parentTitle: {
+        resultTitle: {
           prefix: 'layer',
           defaultValue: 0,
           values: {
@@ -226,7 +226,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'ty',
         type: 'Constant',
         title: ST.shapeType,
-        parentTitle: {
+        resultTitle: {
           prefix: 'shape',
           defaultValue: 'rc',
           values: {
@@ -257,7 +257,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'sy',
         type: 'Constant',
         title: NT.shapePolygonStarType,
-        parentTitle: {
+        resultTitle: {
           prefix: 'shape',
           defaultValue: 1,
           values: {
@@ -272,13 +272,13 @@ export const objectEntity: NoKeyEntityMap = {
   [CT.assets]: {
     defaultTitle: OT.assetPrecomposition,
     dependents: [
-      { key: 'w', type: 'Number', title: NT.width, parentTitle: OT.assetImage },
-      { key: 'h', type: 'Number', title: NT.height, parentTitle: OT.assetImage },
+      { key: 'w', type: 'Number', title: NT.width, resultTitle: OT.assetImage },
+      { key: 'h', type: 'Number', title: NT.height, resultTitle: OT.assetImage },
       {
         key: 't',
         type: 'Constant',
         title: ST.assetType,
-        parentTitle: {
+        resultTitle: {
           prefix: 'asset',
           defaultValue: 'seq',
           values: {
@@ -287,19 +287,19 @@ export const objectEntity: NoKeyEntityMap = {
           },
         },
       },
-      { key: 'layers', type: 'Array', title: CT.composition, parentTitle: OT.assetPrecomposition },
-      { key: 'mn', type: 'String', title: ST.matchName, parentTitle: OT.assetPrecomposition },
-      { key: 'fr', type: 'Number', title: NT.framerate, parentTitle: OT.assetPrecomposition },
+      { key: 'layers', type: 'Array', title: CT.composition, resultTitle: OT.assetPrecomposition },
+      { key: 'mn', type: 'String', title: ST.matchName, resultTitle: OT.assetPrecomposition },
+      { key: 'fr', type: 'Number', title: NT.framerate, resultTitle: OT.assetPrecomposition },
       {
         key: 'xt',
         // integer-boolean
         type: 'Number',
         title: IBT.extraComposition,
-        parentTitle: OT.assetPrecomposition,
+        resultTitle: OT.assetPrecomposition,
       },
-      { key: 'p', type: 'String', title: ST.filename, parentTitle: OT.assetFile },
-      { key: 'u', type: 'String', title: ST.path, parentTitle: OT.assetFile },
-      { key: 'e', type: 'Number', title: IBT.embedded, parentTitle: OT.assetFile },
+      { key: 'p', type: 'String', title: ST.filename, resultTitle: OT.assetFile },
+      { key: 'u', type: 'String', title: ST.path, resultTitle: OT.assetFile },
+      { key: 'e', type: 'Number', title: IBT.embedded, resultTitle: OT.assetFile },
     ],
   },
   [CT.effectList]: {
@@ -309,7 +309,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'ty',
         type: 'Constant',
         title: NT.effectType,
-        parentTitle: {
+        resultTitle: {
           prefix: 'effect',
           defaultValue: 5,
           values: {
@@ -341,7 +341,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'ty',
         type: 'Constant',
         title: NT.effectValueType,
-        parentTitle: {
+        resultTitle: {
           defaultValue: 0,
           prefix: 'effect-param',
           values: {
@@ -365,7 +365,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'ty',
         type: 'Constant',
         title: NT.layerStyleType,
-        parentTitle: {
+        resultTitle: {
           prefix: CT.layerStyle,
           defaultValue: 0,
           values: {
@@ -463,13 +463,13 @@ export const objectEntity: NoKeyEntityMap = {
         type: 'Array',
         title: CT.positionKeyframeList,
         childType: 'Object',
-        parentTitle: OT.animatedPosition,
+        resultTitle: OT.animatedPosition,
       },
       {
         key: 'a',
         type: 'Constant',
         title: IBT.animated,
-        parentTitle: {
+        resultTitle: {
           defaultValue: 0,
           values: {
             0: OT.animatedPositionStatic,
@@ -481,11 +481,11 @@ export const objectEntity: NoKeyEntityMap = {
         key: 's',
         type: 'Boolean',
         title: BT.splitEnabled,
-        parentTitle: OT.splitVector,
+        resultTitle: OT.splitVector,
       },
-      { key: 'x', type: 'Object', title: ET.animatedValueProp, parentTitle: OT.splitVector },
-      { key: 'y', type: 'Object', title: ET.animatedValueProp, parentTitle: OT.splitVector },
-      { key: 'z', type: 'Object', title: ET.animatedValueProp, parentTitle: OT.splitVector },
+      { key: 'x', type: 'Object', title: ET.animatedValueProp, resultTitle: OT.splitVector },
+      { key: 'y', type: 'Object', title: ET.animatedValueProp, resultTitle: OT.splitVector },
+      { key: 'z', type: 'Object', title: ET.animatedValueProp, resultTitle: OT.splitVector },
     ],
   },
   [ET.layerTransformScale]: {
@@ -909,7 +909,7 @@ export const objectEntity: NoKeyEntityMap = {
         key: 'n',
         type: 'Constant',
         title: ST.strokeDashType,
-        parentTitle: {
+        resultTitle: {
           prefix: 'stroke-dash',
           defaultValue: 'd',
           values: {
@@ -930,13 +930,13 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.textCharacterData]: {
     defaultTitle: OT.characterShapes,
     dependents: [
-      { key: 'shapes', type: 'Array', title: CT.shapeList, parentTitle: OT.characterShapes },
-      { key: 'refId', type: 'String', title: ST.idReference, parentTitle: OT.characterPrecomp },
-      { key: 'ks', type: 'Object', title: ET.layerTransform, parentTitle: OT.characterPrecomp },
-      { key: 'ip', type: 'Number', title: NT.inPoint, parentTitle: OT.characterPrecomp },
-      { key: 'op', type: 'Number', title: NT.outPoint, parentTitle: OT.characterPrecomp },
-      { key: 'sr', type: 'Number', title: NT.timeStretch, parentTitle: OT.characterPrecomp },
-      { key: 'st', type: 'Number', title: NT.timeStart, parentTitle: OT.characterPrecomp },
+      { key: 'shapes', type: 'Array', title: CT.shapeList, resultTitle: OT.characterShapes },
+      { key: 'refId', type: 'String', title: ST.idReference, resultTitle: OT.characterPrecomp },
+      { key: 'ks', type: 'Object', title: ET.layerTransform, resultTitle: OT.characterPrecomp },
+      { key: 'ip', type: 'Number', title: NT.inPoint, resultTitle: OT.characterPrecomp },
+      { key: 'op', type: 'Number', title: NT.outPoint, resultTitle: OT.characterPrecomp },
+      { key: 'sr', type: 'Number', title: NT.timeStretch, resultTitle: OT.characterPrecomp },
+      { key: 'st', type: 'Number', title: NT.timeStart, resultTitle: OT.characterPrecomp },
     ],
   },
   [CT.textDocumentKeyframes]: {
@@ -960,11 +960,11 @@ const createDependentTitles = (
 ): Record<string, AnyTitle> => {
   const entityMap = objectEntity[parentTitle];
   const dependents = entityMap?.dependents;
-  const node = dependents?.find((item) => item.key === dependentKey);
+  const dependent = dependents?.find((item) => item.key === dependentKey);
 
-  if (node?.type !== 'Constant') return {};
+  if (dependent?.type !== 'Constant') return {};
 
-  const { prefix, values } = node.parentTitle;
+  const { prefix, values } = dependent.resultTitle;
 
   const prefixTitle = prefix ? `${prefix}-` : '';
 
