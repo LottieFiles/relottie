@@ -245,7 +245,7 @@ const getDependentTitle = (
   dependents: Dependent[],
   file: VFile,
 ): AnyTitle | undefined => {
-  const memberKeyValue = members.reduce((acc, member) => {
+  const membersKeyValueMap = members.reduce((acc, member) => {
     const memberName = member.name;
     const key = memberName.type === 'String' ? memberName.value : memberName.name;
 
@@ -256,11 +256,11 @@ const getDependentTitle = (
 
   for (const dependent of dependents) {
     const { key } = dependent;
-    const keyValue = memberKeyValue[key];
+    const memberNodeValue = membersKeyValueMap[key];
 
-    if (!keyValue) continue;
+    if (!memberNodeValue) continue;
 
-    const title = getTitleFromMemberValue(keyValue, parentTitle, dependent, file);
+    const title = getTitleFromMemberValue(memberNodeValue, parentTitle, dependent, file);
 
     if (title) return title;
   }
