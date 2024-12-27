@@ -57,7 +57,7 @@ describe('parse()', () => {
         const fileName = path.parse(file).name;
 
         test(`Test in ${file} should parse correctly`, () => {
-          const tree = unified().use(relottieParse, { position: false }).parse(jsonFile);
+          const tree = unified().use(relottieParse, { position: true }).parse(jsonFile);
 
           expect(tree).toMatchSpecificSnapshot(`${snapshotDirPath + fileName}.snap`);
         });

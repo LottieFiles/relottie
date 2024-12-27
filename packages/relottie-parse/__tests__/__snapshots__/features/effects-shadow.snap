@@ -6,77 +6,350 @@ Object {
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 15,
+              "line": 2,
+              "offset": 16,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 2,
+              "offset": 9,
+            },
+          },
           "type": "String",
           "value": "5.5.2",
         },
       ],
-      "key": "v",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 6,
+            "line": 2,
+            "offset": 7,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 2,
+            "offset": 4,
+          },
+        },
+        "type": "Key",
+        "value": "v",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 15,
+          "line": 2,
+          "offset": 16,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+          "offset": 4,
+        },
+      },
       "title": "version",
       "type": "Attribute",
     },
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 11,
+              "line": 3,
+              "offset": 28,
+            },
+            "start": Object {
+              "column": 9,
+              "line": 3,
+              "offset": 26,
+            },
+          },
           "type": "Number",
           "value": 60,
         },
       ],
-      "key": "fr",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 7,
+            "line": 3,
+            "offset": 24,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 3,
+            "offset": 20,
+          },
+        },
+        "type": "Key",
+        "value": "fr",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 11,
+          "line": 3,
+          "offset": 28,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 3,
+          "offset": 20,
+        },
+      },
       "title": "framerate",
       "type": "Attribute",
     },
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 10,
+              "line": 4,
+              "offset": 39,
+            },
+            "start": Object {
+              "column": 9,
+              "line": 4,
+              "offset": 38,
+            },
+          },
           "type": "Number",
           "value": 0,
         },
       ],
-      "key": "ip",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 7,
+            "line": 4,
+            "offset": 36,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 4,
+            "offset": 32,
+          },
+        },
+        "type": "Key",
+        "value": "ip",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 10,
+          "line": 4,
+          "offset": 39,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 4,
+          "offset": 32,
+        },
+      },
       "title": "in-point",
       "type": "Attribute",
     },
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 11,
+              "line": 5,
+              "offset": 51,
+            },
+            "start": Object {
+              "column": 9,
+              "line": 5,
+              "offset": 49,
+            },
+          },
           "type": "Number",
           "value": 60,
         },
       ],
-      "key": "op",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 7,
+            "line": 5,
+            "offset": 47,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 5,
+            "offset": 43,
+          },
+        },
+        "type": "Key",
+        "value": "op",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 11,
+          "line": 5,
+          "offset": 51,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 5,
+          "offset": 43,
+        },
+      },
       "title": "out-point",
       "type": "Attribute",
     },
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 11,
+              "line": 6,
+              "offset": 63,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 6,
+              "offset": 60,
+            },
+          },
           "type": "Number",
           "value": 512,
         },
       ],
-      "key": "w",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 6,
+            "line": 6,
+            "offset": 58,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 6,
+            "offset": 55,
+          },
+        },
+        "type": "Key",
+        "value": "w",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 11,
+          "line": 6,
+          "offset": 63,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 6,
+          "offset": 55,
+        },
+      },
       "title": "width",
       "type": "Attribute",
     },
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 11,
+              "line": 7,
+              "offset": 75,
+            },
+            "start": Object {
+              "column": 8,
+              "line": 7,
+              "offset": 72,
+            },
+          },
           "type": "Number",
           "value": 512,
         },
       ],
-      "key": "h",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 6,
+            "line": 7,
+            "offset": 70,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 7,
+            "offset": 67,
+          },
+        },
+        "type": "Key",
+        "value": "h",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 11,
+          "line": 7,
+          "offset": 75,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 7,
+          "offset": 67,
+        },
+      },
       "title": "height",
       "type": "Attribute",
     },
     Object {
       "children": Array [
         Object {
+          "position": Object {
+            "end": Object {
+              "column": 11,
+              "line": 8,
+              "offset": 87,
+            },
+            "start": Object {
+              "column": 10,
+              "line": 8,
+              "offset": 86,
+            },
+          },
           "type": "Number",
           "value": 0,
         },
       ],
-      "key": "ddd",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 8,
+            "line": 8,
+            "offset": 84,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 8,
+            "offset": 79,
+          },
+        },
+        "type": "Key",
+        "value": "ddd",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 11,
+          "line": 8,
+          "offset": 87,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 8,
+          "offset": 79,
+        },
+      },
       "title": "threedimensional",
       "type": "Attribute",
     },
@@ -89,79 +362,364 @@ Object {
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 19,
+                          "line": 11,
+                          "offset": 127,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 11,
+                          "offset": 121,
+                        },
+                      },
                       "type": "String",
                       "value": "blep",
                     },
                   ],
-                  "key": "id",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 11,
+                        "offset": 119,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 11,
+                        "offset": 115,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "id",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 19,
+                      "line": 11,
+                      "offset": 127,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 11,
+                      "offset": 115,
+                    },
+                  },
                   "title": "id-asset-image",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 12,
+                          "offset": 143,
+                        },
+                        "start": Object {
+                          "column": 12,
+                          "line": 12,
+                          "offset": 140,
+                        },
+                      },
                       "type": "Number",
                       "value": 512,
                     },
                   ],
-                  "key": "h",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 10,
+                        "line": 12,
+                        "offset": 138,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 12,
+                        "offset": 135,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "h",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 12,
+                      "offset": 143,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 12,
+                      "offset": 135,
+                    },
+                  },
                   "title": "height",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 13,
+                          "offset": 159,
+                        },
+                        "start": Object {
+                          "column": 12,
+                          "line": 13,
+                          "offset": 156,
+                        },
+                      },
                       "type": "Number",
                       "value": 512,
                     },
                   ],
-                  "key": "w",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 10,
+                        "line": 13,
+                        "offset": 154,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 13,
+                        "offset": 151,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "w",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 13,
+                      "offset": 159,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 13,
+                      "offset": 151,
+                    },
+                  },
                   "title": "width",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 44,
+                          "line": 14,
+                          "offset": 204,
+                        },
+                        "start": Object {
+                          "column": 12,
+                          "line": 14,
+                          "offset": 172,
+                        },
+                      },
                       "type": "String",
                       "value": "/lottie-docs/examples/blep.png",
                     },
                   ],
-                  "key": "p",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 10,
+                        "line": 14,
+                        "offset": 170,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 14,
+                        "offset": 167,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "p",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 44,
+                      "line": 14,
+                      "offset": 204,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 14,
+                      "offset": 167,
+                    },
+                  },
                   "title": "filename",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 15,
+                          "offset": 219,
+                        },
+                        "start": Object {
+                          "column": 12,
+                          "line": 15,
+                          "offset": 217,
+                        },
+                      },
                       "type": "String",
                       "value": "",
                     },
                   ],
-                  "key": "u",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 10,
+                        "line": 15,
+                        "offset": 215,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 15,
+                        "offset": 212,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "u",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 15,
+                      "offset": 219,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 15,
+                      "offset": 212,
+                    },
+                  },
                   "title": "path",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 13,
+                          "line": 16,
+                          "offset": 233,
+                        },
+                        "start": Object {
+                          "column": 12,
+                          "line": 16,
+                          "offset": 232,
+                        },
+                      },
                       "type": "Number",
                       "value": 1,
                     },
                   ],
-                  "key": "e",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 10,
+                        "line": 16,
+                        "offset": 230,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 16,
+                        "offset": 227,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "e",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 13,
+                      "line": 16,
+                      "offset": 233,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 16,
+                      "offset": 227,
+                    },
+                  },
                   "title": "embedded",
                   "type": "Attribute",
                 },
               ],
+              "position": Object {
+                "end": Object {
+                  "column": 6,
+                  "line": 17,
+                  "offset": 239,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 10,
+                  "offset": 107,
+                },
+              },
               "title": "asset-image",
               "type": "Object",
             },
           ],
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 18,
+              "offset": 243,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 9,
+              "offset": 101,
+            },
+          },
           "title": "assets-children",
           "type": "Array",
         },
       ],
-      "key": "assets",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 11,
+            "line": 9,
+            "offset": 99,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 9,
+            "offset": 91,
+          },
+        },
+        "type": "Key",
+        "value": "assets",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 4,
+          "line": 18,
+          "offset": 243,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 9,
+          "offset": 91,
+        },
+      },
       "title": "assets",
       "type": "Collection",
     },
@@ -174,33 +732,150 @@ Object {
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 21,
+                          "offset": 279,
+                        },
+                        "start": Object {
+                          "column": 14,
+                          "line": 21,
+                          "offset": 278,
+                        },
+                      },
                       "type": "Number",
                       "value": 0,
                     },
                   ],
-                  "key": "ddd",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 12,
+                        "line": 21,
+                        "offset": 276,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 21,
+                        "offset": 271,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ddd",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 21,
+                      "offset": 279,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 21,
+                      "offset": 271,
+                    },
+                  },
                   "title": "layer-threedimensional",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 22,
+                          "offset": 294,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 22,
+                          "offset": 293,
+                        },
+                      },
                       "type": "Number",
                       "value": 2,
                     },
                   ],
-                  "key": "ty",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 22,
+                        "offset": 291,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 22,
+                        "offset": 287,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ty",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 22,
+                      "offset": 294,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 22,
+                      "offset": 287,
+                    },
+                  },
                   "title": "layer-type",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 23,
+                          "offset": 309,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 23,
+                          "offset": 308,
+                        },
+                      },
                       "type": "Number",
                       "value": 1,
                     },
                   ],
-                  "key": "sr",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 23,
+                        "offset": 306,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 23,
+                        "offset": 302,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "sr",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 23,
+                      "offset": 309,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 23,
+                      "offset": 302,
+                    },
+                  },
                   "title": "time-stretch",
                   "type": "Attribute",
                 },
@@ -217,39 +892,180 @@ Object {
                                     Object {
                                       "children": Array [
                                         Object {
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 18,
+                                              "line": 26,
+                                              "offset": 357,
+                                            },
+                                            "start": Object {
+                                              "column": 17,
+                                              "line": 26,
+                                              "offset": 356,
+                                            },
+                                          },
                                           "type": "Number",
                                           "value": 0,
                                         },
                                         Object {
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 21,
+                                              "line": 26,
+                                              "offset": 360,
+                                            },
+                                            "start": Object {
+                                              "column": 20,
+                                              "line": 26,
+                                              "offset": 359,
+                                            },
+                                          },
                                           "type": "Number",
                                           "value": 0,
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 22,
+                                          "line": 26,
+                                          "offset": 361,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 26,
+                                          "offset": 355,
+                                        },
+                                      },
                                       "title": "static-values-children",
                                       "type": "Array",
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 26,
+                                        "offset": 353,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 26,
+                                        "offset": 350,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 22,
+                                      "line": 26,
+                                      "offset": 361,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 26,
+                                      "offset": 350,
+                                    },
+                                  },
                                   "title": "static-values",
                                   "type": "Collection",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 27,
+                                          "offset": 379,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 27,
+                                          "offset": 378,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 27,
+                                        "offset": 376,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 27,
+                                        "offset": 373,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 27,
+                                      "offset": 379,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 27,
+                                      "offset": 373,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 28,
+                                  "offset": 389,
+                                },
+                                "start": Object {
+                                  "column": 14,
+                                  "line": 25,
+                                  "offset": 338,
+                                },
+                              },
                               "title": "animated-position-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "a",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 12,
+                                "line": 25,
+                                "offset": 336,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 25,
+                                "offset": 333,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "a",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 28,
+                              "offset": 389,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 25,
+                              "offset": 333,
+                            },
+                          },
                           "title": "anchor-point",
                           "type": "Element",
                         },
@@ -262,39 +1078,180 @@ Object {
                                     Object {
                                       "children": Array [
                                         Object {
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 18,
+                                              "line": 30,
+                                              "offset": 423,
+                                            },
+                                            "start": Object {
+                                              "column": 17,
+                                              "line": 30,
+                                              "offset": 422,
+                                            },
+                                          },
                                           "type": "Number",
                                           "value": 0,
                                         },
                                         Object {
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 21,
+                                              "line": 30,
+                                              "offset": 426,
+                                            },
+                                            "start": Object {
+                                              "column": 20,
+                                              "line": 30,
+                                              "offset": 425,
+                                            },
+                                          },
                                           "type": "Number",
                                           "value": 0,
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 22,
+                                          "line": 30,
+                                          "offset": 427,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 30,
+                                          "offset": 421,
+                                        },
+                                      },
                                       "title": "static-values-children",
                                       "type": "Array",
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 30,
+                                        "offset": 419,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 30,
+                                        "offset": 416,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 22,
+                                      "line": 30,
+                                      "offset": 427,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 30,
+                                      "offset": 416,
+                                    },
+                                  },
                                   "title": "static-values",
                                   "type": "Collection",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 31,
+                                          "offset": 445,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 31,
+                                          "offset": 444,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 31,
+                                        "offset": 442,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 31,
+                                        "offset": 439,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 31,
+                                      "offset": 445,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 31,
+                                      "offset": 439,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 32,
+                                  "offset": 455,
+                                },
+                                "start": Object {
+                                  "column": 14,
+                                  "line": 29,
+                                  "offset": 404,
+                                },
+                              },
                               "title": "animated-position-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "p",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 12,
+                                "line": 29,
+                                "offset": 402,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 29,
+                                "offset": 399,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "p",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 32,
+                              "offset": 455,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 29,
+                              "offset": 399,
+                            },
+                          },
                           "title": "translation",
                           "type": "Element",
                         },
@@ -307,39 +1264,180 @@ Object {
                                     Object {
                                       "children": Array [
                                         Object {
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 20,
+                                              "line": 34,
+                                              "offset": 491,
+                                            },
+                                            "start": Object {
+                                              "column": 17,
+                                              "line": 34,
+                                              "offset": 488,
+                                            },
+                                          },
                                           "type": "Number",
                                           "value": 100,
                                         },
                                         Object {
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 25,
+                                              "line": 34,
+                                              "offset": 496,
+                                            },
+                                            "start": Object {
+                                              "column": 22,
+                                              "line": 34,
+                                              "offset": 493,
+                                            },
+                                          },
                                           "type": "Number",
                                           "value": 100,
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 26,
+                                          "line": 34,
+                                          "offset": 497,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 34,
+                                          "offset": 487,
+                                        },
+                                      },
                                       "title": "static-values-children",
                                       "type": "Array",
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 34,
+                                        "offset": 485,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 34,
+                                        "offset": 482,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 26,
+                                      "line": 34,
+                                      "offset": 497,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 34,
+                                      "offset": 482,
+                                    },
+                                  },
                                   "title": "static-values",
                                   "type": "Collection",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 35,
+                                          "offset": 515,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 35,
+                                          "offset": 514,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 35,
+                                        "offset": 512,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 35,
+                                        "offset": 509,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 35,
+                                      "offset": 515,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 35,
+                                      "offset": 509,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 36,
+                                  "offset": 525,
+                                },
+                                "start": Object {
+                                  "column": 14,
+                                  "line": 33,
+                                  "offset": 470,
+                                },
+                              },
                               "title": "animated-multidimensional-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "s",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 12,
+                                "line": 33,
+                                "offset": 468,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 33,
+                                "offset": 465,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "s",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 36,
+                              "offset": 525,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 33,
+                              "offset": 465,
+                            },
+                          },
                           "title": "layer-transform-scale",
                           "type": "Element",
                         },
@@ -350,31 +1448,148 @@ Object {
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 38,
+                                          "offset": 558,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 38,
+                                          "offset": 557,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 38,
+                                        "offset": 555,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 38,
+                                        "offset": 552,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 38,
+                                      "offset": 558,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 38,
+                                      "offset": 552,
+                                    },
+                                  },
                                   "title": "static-value",
                                   "type": "Attribute",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 39,
+                                          "offset": 576,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 39,
+                                          "offset": 575,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 39,
+                                        "offset": 573,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 39,
+                                        "offset": 570,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 39,
+                                      "offset": 576,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 39,
+                                      "offset": 570,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 40,
+                                  "offset": 586,
+                                },
+                                "start": Object {
+                                  "column": 14,
+                                  "line": 37,
+                                  "offset": 540,
+                                },
+                              },
                               "title": "animated-value-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "r",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 12,
+                                "line": 37,
+                                "offset": 538,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 37,
+                                "offset": 535,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "r",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 40,
+                              "offset": 586,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 37,
+                              "offset": 535,
+                            },
+                          },
                           "title": "rotation-clockwise",
                           "type": "Element",
                         },
@@ -385,31 +1600,148 @@ Object {
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 19,
+                                          "line": 42,
+                                          "offset": 621,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 42,
+                                          "offset": 618,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 100,
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 42,
+                                        "offset": 616,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 42,
+                                        "offset": 613,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 19,
+                                      "line": 42,
+                                      "offset": 621,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 42,
+                                      "offset": 613,
+                                    },
+                                  },
                                   "title": "static-value",
                                   "type": "Attribute",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 43,
+                                          "offset": 639,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 43,
+                                          "offset": 638,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 43,
+                                        "offset": 636,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 43,
+                                        "offset": 633,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 43,
+                                      "offset": 639,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 43,
+                                      "offset": 633,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 44,
+                                  "offset": 649,
+                                },
+                                "start": Object {
+                                  "column": 14,
+                                  "line": 41,
+                                  "offset": 601,
+                                },
+                              },
                               "title": "animated-value-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "o",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 12,
+                                "line": 41,
+                                "offset": 599,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 41,
+                                "offset": 596,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "o",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 44,
+                              "offset": 649,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 41,
+                              "offset": 596,
+                            },
+                          },
                           "title": "transform-opacity",
                           "type": "Element",
                         },
@@ -420,31 +1752,148 @@ Object {
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 46,
+                                          "offset": 683,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 46,
+                                          "offset": 682,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 46,
+                                        "offset": 680,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 46,
+                                        "offset": 677,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 46,
+                                      "offset": 683,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 46,
+                                      "offset": 677,
+                                    },
+                                  },
                                   "title": "static-value",
                                   "type": "Attribute",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 47,
+                                          "offset": 701,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 47,
+                                          "offset": 700,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 47,
+                                        "offset": 698,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 47,
+                                        "offset": 695,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 47,
+                                      "offset": 701,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 47,
+                                      "offset": 695,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 48,
+                                  "offset": 711,
+                                },
+                                "start": Object {
+                                  "column": 15,
+                                  "line": 45,
+                                  "offset": 665,
+                                },
+                              },
                               "title": "animated-value-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "sk",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 13,
+                                "line": 45,
+                                "offset": 663,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 45,
+                                "offset": 659,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "sk",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 48,
+                              "offset": 711,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 45,
+                              "offset": 659,
+                            },
+                          },
                           "title": "layer-transform-skew",
                           "type": "Element",
                         },
@@ -455,106 +1904,496 @@ Object {
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 50,
+                                          "offset": 745,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 50,
+                                          "offset": 744,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "k",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 50,
+                                        "offset": 742,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 50,
+                                        "offset": 739,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "k",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 50,
+                                      "offset": 745,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 50,
+                                      "offset": 739,
+                                    },
+                                  },
                                   "title": "static-value",
                                   "type": "Attribute",
                                 },
                                 Object {
                                   "children": Array [
                                     Object {
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 17,
+                                          "line": 51,
+                                          "offset": 763,
+                                        },
+                                        "start": Object {
+                                          "column": 16,
+                                          "line": 51,
+                                          "offset": 762,
+                                        },
+                                      },
                                       "type": "Number",
                                       "value": 0,
                                     },
                                   ],
-                                  "key": "a",
+                                  "key": Object {
+                                    "position": Object {
+                                      "end": Object {
+                                        "column": 14,
+                                        "line": 51,
+                                        "offset": 760,
+                                      },
+                                      "start": Object {
+                                        "column": 11,
+                                        "line": 51,
+                                        "offset": 757,
+                                      },
+                                    },
+                                    "type": "Key",
+                                    "value": "a",
+                                  },
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 17,
+                                      "line": 51,
+                                      "offset": 763,
+                                    },
+                                    "start": Object {
+                                      "column": 11,
+                                      "line": 51,
+                                      "offset": 757,
+                                    },
+                                  },
                                   "title": "animated",
                                   "type": "Attribute",
                                 },
                               ],
+                              "position": Object {
+                                "end": Object {
+                                  "column": 10,
+                                  "line": 52,
+                                  "offset": 773,
+                                },
+                                "start": Object {
+                                  "column": 15,
+                                  "line": 49,
+                                  "offset": 727,
+                                },
+                              },
                               "title": "animated-value-static",
                               "type": "Object",
                             },
                           ],
-                          "key": "sa",
+                          "key": Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 13,
+                                "line": 49,
+                                "offset": 725,
+                              },
+                              "start": Object {
+                                "column": 9,
+                                "line": 49,
+                                "offset": 721,
+                              },
+                            },
+                            "type": "Key",
+                            "value": "sa",
+                          },
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 52,
+                              "offset": 773,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 49,
+                              "offset": 721,
+                            },
+                          },
                           "title": "layer-transform-skew-axis",
                           "type": "Element",
                         },
                       ],
+                      "position": Object {
+                        "end": Object {
+                          "column": 8,
+                          "line": 53,
+                          "offset": 781,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 24,
+                          "offset": 323,
+                        },
+                      },
                       "title": "layer-transform-children",
                       "type": "Object",
                     },
                   ],
-                  "key": "ks",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 24,
+                        "offset": 321,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 24,
+                        "offset": 317,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ks",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 8,
+                      "line": 53,
+                      "offset": 781,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 24,
+                      "offset": 317,
+                    },
+                  },
                   "title": "layer-transform",
                   "type": "Element",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 54,
+                          "offset": 796,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 54,
+                          "offset": 795,
+                        },
+                      },
                       "type": "Number",
                       "value": 0,
                     },
                   ],
-                  "key": "ao",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 54,
+                        "offset": 793,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 54,
+                        "offset": 789,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ao",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 54,
+                      "offset": 796,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 54,
+                      "offset": 789,
+                    },
+                  },
                   "title": "auto-orient",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 55,
+                          "offset": 811,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 55,
+                          "offset": 810,
+                        },
+                      },
                       "type": "Number",
                       "value": 0,
                     },
                   ],
-                  "key": "ip",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 55,
+                        "offset": 808,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 55,
+                        "offset": 804,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ip",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 55,
+                      "offset": 811,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 55,
+                      "offset": 804,
+                    },
+                  },
                   "title": "in-point",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 56,
+                          "offset": 827,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 56,
+                          "offset": 825,
+                        },
+                      },
                       "type": "Number",
                       "value": 60,
                     },
                   ],
-                  "key": "op",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 56,
+                        "offset": 823,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 56,
+                        "offset": 819,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "op",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 56,
+                      "offset": 827,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 56,
+                      "offset": 819,
+                    },
+                  },
                   "title": "out-point",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 57,
+                          "offset": 842,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 57,
+                          "offset": 841,
+                        },
+                      },
                       "type": "Number",
                       "value": 0,
                     },
                   ],
-                  "key": "st",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 57,
+                        "offset": 839,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 57,
+                        "offset": 835,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "st",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 57,
+                      "offset": 842,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 57,
+                      "offset": 835,
+                    },
+                  },
                   "title": "start-time",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 14,
+                          "line": 58,
+                          "offset": 857,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 58,
+                          "offset": 856,
+                        },
+                      },
                       "type": "Number",
                       "value": 0,
                     },
                   ],
-                  "key": "bm",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 58,
+                        "offset": 854,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 58,
+                        "offset": 850,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "bm",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 14,
+                      "line": 58,
+                      "offset": 857,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 58,
+                      "offset": 850,
+                    },
+                  },
                   "title": "blend-mode-normal",
                   "type": "Attribute",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 15,
+                          "line": 59,
+                          "offset": 873,
+                        },
+                        "start": Object {
+                          "column": 14,
+                          "line": 59,
+                          "offset": 872,
+                        },
+                      },
                       "type": "Number",
                       "value": 0,
                     },
                   ],
-                  "key": "ind",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 12,
+                        "line": 59,
+                        "offset": 870,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 59,
+                        "offset": 865,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ind",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 59,
+                      "offset": 873,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 59,
+                      "offset": 865,
+                    },
+                  },
                   "title": "composition-index",
                   "type": "Attribute",
                 },
@@ -567,11 +2406,50 @@ Object {
                             Object {
                               "children": Array [
                                 Object {
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 19,
+                                      "line": 62,
+                                      "offset": 917,
+                                    },
+                                    "start": Object {
+                                      "column": 17,
+                                      "line": 62,
+                                      "offset": 915,
+                                    },
+                                  },
                                   "type": "Number",
                                   "value": 25,
                                 },
                               ],
-                              "key": "ty",
+                              "key": Object {
+                                "position": Object {
+                                  "end": Object {
+                                    "column": 15,
+                                    "line": 62,
+                                    "offset": 913,
+                                  },
+                                  "start": Object {
+                                    "column": 11,
+                                    "line": 62,
+                                    "offset": 909,
+                                  },
+                                },
+                                "type": "Key",
+                                "value": "ty",
+                              },
+                              "position": Object {
+                                "end": Object {
+                                  "column": 19,
+                                  "line": 62,
+                                  "offset": 917,
+                                },
+                                "start": Object {
+                                  "column": 11,
+                                  "line": 62,
+                                  "offset": 909,
+                                },
+                              },
                               "title": "effect-type",
                               "type": "Attribute",
                             },
@@ -584,11 +2462,50 @@ Object {
                                         Object {
                                           "children": Array [
                                             Object {
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 22,
+                                                  "line": 65,
+                                                  "offset": 972,
+                                                },
+                                                "start": Object {
+                                                  "column": 21,
+                                                  "line": 65,
+                                                  "offset": 971,
+                                                },
+                                              },
                                               "type": "Number",
                                               "value": 2,
                                             },
                                           ],
-                                          "key": "ty",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 19,
+                                                "line": 65,
+                                                "offset": 969,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 65,
+                                                "offset": 965,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "ty",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 22,
+                                              "line": 65,
+                                              "offset": 972,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 65,
+                                              "offset": 965,
+                                            },
+                                          },
                                           "title": "effect-type",
                                           "type": "Attribute",
                                         },
@@ -601,51 +2518,228 @@ Object {
                                                     Object {
                                                       "children": Array [
                                                         Object {
+                                                          "position": Object {
+                                                            "end": Object {
+                                                              "column": 24,
+                                                              "line": 67,
+                                                              "offset": 1018,
+                                                            },
+                                                            "start": Object {
+                                                              "column": 23,
+                                                              "line": 67,
+                                                              "offset": 1017,
+                                                            },
+                                                          },
                                                           "type": "Number",
                                                           "value": 0,
                                                         },
                                                         Object {
+                                                          "position": Object {
+                                                            "end": Object {
+                                                              "column": 27,
+                                                              "line": 67,
+                                                              "offset": 1021,
+                                                            },
+                                                            "start": Object {
+                                                              "column": 26,
+                                                              "line": 67,
+                                                              "offset": 1020,
+                                                            },
+                                                          },
                                                           "type": "Number",
                                                           "value": 0,
                                                         },
                                                         Object {
+                                                          "position": Object {
+                                                            "end": Object {
+                                                              "column": 30,
+                                                              "line": 67,
+                                                              "offset": 1024,
+                                                            },
+                                                            "start": Object {
+                                                              "column": 29,
+                                                              "line": 67,
+                                                              "offset": 1023,
+                                                            },
+                                                          },
                                                           "type": "Number",
                                                           "value": 0,
                                                         },
                                                         Object {
+                                                          "position": Object {
+                                                            "end": Object {
+                                                              "column": 33,
+                                                              "line": 67,
+                                                              "offset": 1027,
+                                                            },
+                                                            "start": Object {
+                                                              "column": 32,
+                                                              "line": 67,
+                                                              "offset": 1026,
+                                                            },
+                                                          },
                                                           "type": "Number",
                                                           "value": 1,
                                                         },
                                                       ],
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 34,
+                                                          "line": 67,
+                                                          "offset": 1028,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 67,
+                                                          "offset": 1016,
+                                                        },
+                                                      },
                                                       "title": "color-rgba-children",
                                                       "type": "Array",
                                                     },
                                                   ],
-                                                  "key": "k",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 67,
+                                                        "offset": 1014,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 67,
+                                                        "offset": 1011,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "k",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 34,
+                                                      "line": 67,
+                                                      "offset": 1028,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 67,
+                                                      "offset": 1011,
+                                                    },
+                                                  },
                                                   "title": "color-rgba",
                                                   "type": "Collection",
                                                 },
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 23,
+                                                          "line": 68,
+                                                          "offset": 1052,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 68,
+                                                          "offset": 1051,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 0,
                                                     },
                                                   ],
-                                                  "key": "a",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 68,
+                                                        "offset": 1049,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 68,
+                                                        "offset": 1046,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "a",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 23,
+                                                      "line": 68,
+                                                      "offset": 1052,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 68,
+                                                      "offset": 1046,
+                                                    },
+                                                  },
                                                   "title": "animated",
                                                   "type": "Attribute",
                                                 },
                                               ],
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 16,
+                                                  "line": 69,
+                                                  "offset": 1068,
+                                                },
+                                                "start": Object {
+                                                  "column": 20,
+                                                  "line": 66,
+                                                  "offset": 993,
+                                                },
+                                              },
                                               "title": "animated-color-static",
                                               "type": "Object",
                                             },
                                           ],
-                                          "key": "v",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 18,
+                                                "line": 66,
+                                                "offset": 991,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 66,
+                                                "offset": 988,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "v",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 16,
+                                              "line": 69,
+                                              "offset": 1068,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 66,
+                                              "offset": 988,
+                                            },
+                                          },
                                           "title": "effect-value-color",
                                           "type": "Element",
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 14,
+                                          "line": 70,
+                                          "offset": 1082,
+                                        },
+                                        "start": Object {
+                                          "column": 13,
+                                          "line": 64,
+                                          "offset": 949,
+                                        },
+                                      },
                                       "title": "effect-param-color",
                                       "type": "Object",
                                     },
@@ -654,11 +2748,50 @@ Object {
                                         Object {
                                           "children": Array [
                                             Object {
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 22,
+                                                  "line": 72,
+                                                  "offset": 1119,
+                                                },
+                                                "start": Object {
+                                                  "column": 21,
+                                                  "line": 72,
+                                                  "offset": 1118,
+                                                },
+                                              },
                                               "type": "Number",
                                               "value": 0,
                                             },
                                           ],
-                                          "key": "ty",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 19,
+                                                "line": 72,
+                                                "offset": 1116,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 72,
+                                                "offset": 1112,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "ty",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 22,
+                                              "line": 72,
+                                              "offset": 1119,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 72,
+                                              "offset": 1112,
+                                            },
+                                          },
                                           "title": "effect-type",
                                           "type": "Attribute",
                                         },
@@ -669,35 +2802,164 @@ Object {
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 25,
+                                                          "line": 74,
+                                                          "offset": 1166,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 74,
+                                                          "offset": 1163,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 128,
                                                     },
                                                   ],
-                                                  "key": "k",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 74,
+                                                        "offset": 1161,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 74,
+                                                        "offset": 1158,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "k",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 25,
+                                                      "line": 74,
+                                                      "offset": 1166,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 74,
+                                                      "offset": 1158,
+                                                    },
+                                                  },
                                                   "title": "static-value",
                                                   "type": "Attribute",
                                                 },
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 23,
+                                                          "line": 75,
+                                                          "offset": 1190,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 75,
+                                                          "offset": 1189,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 0,
                                                     },
                                                   ],
-                                                  "key": "a",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 75,
+                                                        "offset": 1187,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 75,
+                                                        "offset": 1184,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "a",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 23,
+                                                      "line": 75,
+                                                      "offset": 1190,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 75,
+                                                      "offset": 1184,
+                                                    },
+                                                  },
                                                   "title": "animated",
                                                   "type": "Attribute",
                                                 },
                                               ],
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 16,
+                                                  "line": 76,
+                                                  "offset": 1206,
+                                                },
+                                                "start": Object {
+                                                  "column": 20,
+                                                  "line": 73,
+                                                  "offset": 1140,
+                                                },
+                                              },
                                               "title": "animated-value-static",
                                               "type": "Object",
                                             },
                                           ],
-                                          "key": "v",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 18,
+                                                "line": 73,
+                                                "offset": 1138,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 73,
+                                                "offset": 1135,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "v",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 16,
+                                              "line": 76,
+                                              "offset": 1206,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 73,
+                                              "offset": 1135,
+                                            },
+                                          },
                                           "title": "effect-value-slider",
                                           "type": "Element",
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 14,
+                                          "line": 77,
+                                          "offset": 1220,
+                                        },
+                                        "start": Object {
+                                          "column": 13,
+                                          "line": 71,
+                                          "offset": 1096,
+                                        },
+                                      },
                                       "title": "effect-param-slider",
                                       "type": "Object",
                                     },
@@ -706,11 +2968,50 @@ Object {
                                         Object {
                                           "children": Array [
                                             Object {
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 22,
+                                                  "line": 79,
+                                                  "offset": 1257,
+                                                },
+                                                "start": Object {
+                                                  "column": 21,
+                                                  "line": 79,
+                                                  "offset": 1256,
+                                                },
+                                              },
                                               "type": "Number",
                                               "value": 1,
                                             },
                                           ],
-                                          "key": "ty",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 19,
+                                                "line": 79,
+                                                "offset": 1254,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 79,
+                                                "offset": 1250,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "ty",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 22,
+                                              "line": 79,
+                                              "offset": 1257,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 79,
+                                              "offset": 1250,
+                                            },
+                                          },
                                           "title": "effect-type",
                                           "type": "Attribute",
                                         },
@@ -721,35 +3022,164 @@ Object {
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 25,
+                                                          "line": 81,
+                                                          "offset": 1304,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 81,
+                                                          "offset": 1301,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 135,
                                                     },
                                                   ],
-                                                  "key": "k",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 81,
+                                                        "offset": 1299,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 81,
+                                                        "offset": 1296,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "k",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 25,
+                                                      "line": 81,
+                                                      "offset": 1304,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 81,
+                                                      "offset": 1296,
+                                                    },
+                                                  },
                                                   "title": "static-value",
                                                   "type": "Attribute",
                                                 },
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 23,
+                                                          "line": 82,
+                                                          "offset": 1328,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 82,
+                                                          "offset": 1327,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 0,
                                                     },
                                                   ],
-                                                  "key": "a",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 82,
+                                                        "offset": 1325,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 82,
+                                                        "offset": 1322,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "a",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 23,
+                                                      "line": 82,
+                                                      "offset": 1328,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 82,
+                                                      "offset": 1322,
+                                                    },
+                                                  },
                                                   "title": "animated",
                                                   "type": "Attribute",
                                                 },
                                               ],
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 16,
+                                                  "line": 83,
+                                                  "offset": 1344,
+                                                },
+                                                "start": Object {
+                                                  "column": 20,
+                                                  "line": 80,
+                                                  "offset": 1278,
+                                                },
+                                              },
                                               "title": "animated-value-static",
                                               "type": "Object",
                                             },
                                           ],
-                                          "key": "v",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 18,
+                                                "line": 80,
+                                                "offset": 1276,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 80,
+                                                "offset": 1273,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "v",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 16,
+                                              "line": 83,
+                                              "offset": 1344,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 80,
+                                              "offset": 1273,
+                                            },
+                                          },
                                           "title": "effect-value-angle",
                                           "type": "Element",
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 14,
+                                          "line": 84,
+                                          "offset": 1358,
+                                        },
+                                        "start": Object {
+                                          "column": 13,
+                                          "line": 78,
+                                          "offset": 1234,
+                                        },
+                                      },
                                       "title": "effect-param-angle",
                                       "type": "Object",
                                     },
@@ -758,11 +3188,50 @@ Object {
                                         Object {
                                           "children": Array [
                                             Object {
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 22,
+                                                  "line": 86,
+                                                  "offset": 1395,
+                                                },
+                                                "start": Object {
+                                                  "column": 21,
+                                                  "line": 86,
+                                                  "offset": 1394,
+                                                },
+                                              },
                                               "type": "Number",
                                               "value": 0,
                                             },
                                           ],
-                                          "key": "ty",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 19,
+                                                "line": 86,
+                                                "offset": 1392,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 86,
+                                                "offset": 1388,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "ty",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 22,
+                                              "line": 86,
+                                              "offset": 1395,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 86,
+                                              "offset": 1388,
+                                            },
+                                          },
                                           "title": "effect-type",
                                           "type": "Attribute",
                                         },
@@ -773,35 +3242,164 @@ Object {
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 24,
+                                                          "line": 88,
+                                                          "offset": 1441,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 88,
+                                                          "offset": 1439,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 10,
                                                     },
                                                   ],
-                                                  "key": "k",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 88,
+                                                        "offset": 1437,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 88,
+                                                        "offset": 1434,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "k",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 24,
+                                                      "line": 88,
+                                                      "offset": 1441,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 88,
+                                                      "offset": 1434,
+                                                    },
+                                                  },
                                                   "title": "static-value",
                                                   "type": "Attribute",
                                                 },
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 23,
+                                                          "line": 89,
+                                                          "offset": 1465,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 89,
+                                                          "offset": 1464,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 0,
                                                     },
                                                   ],
-                                                  "key": "a",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 89,
+                                                        "offset": 1462,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 89,
+                                                        "offset": 1459,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "a",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 23,
+                                                      "line": 89,
+                                                      "offset": 1465,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 89,
+                                                      "offset": 1459,
+                                                    },
+                                                  },
                                                   "title": "animated",
                                                   "type": "Attribute",
                                                 },
                                               ],
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 16,
+                                                  "line": 90,
+                                                  "offset": 1481,
+                                                },
+                                                "start": Object {
+                                                  "column": 20,
+                                                  "line": 87,
+                                                  "offset": 1416,
+                                                },
+                                              },
                                               "title": "animated-value-static",
                                               "type": "Object",
                                             },
                                           ],
-                                          "key": "v",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 18,
+                                                "line": 87,
+                                                "offset": 1414,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 87,
+                                                "offset": 1411,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "v",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 16,
+                                              "line": 90,
+                                              "offset": 1481,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 87,
+                                              "offset": 1411,
+                                            },
+                                          },
                                           "title": "effect-value-slider",
                                           "type": "Element",
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 14,
+                                          "line": 91,
+                                          "offset": 1495,
+                                        },
+                                        "start": Object {
+                                          "column": 13,
+                                          "line": 85,
+                                          "offset": 1372,
+                                        },
+                                      },
                                       "title": "effect-param-slider",
                                       "type": "Object",
                                     },
@@ -810,11 +3408,50 @@ Object {
                                         Object {
                                           "children": Array [
                                             Object {
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 22,
+                                                  "line": 93,
+                                                  "offset": 1532,
+                                                },
+                                                "start": Object {
+                                                  "column": 21,
+                                                  "line": 93,
+                                                  "offset": 1531,
+                                                },
+                                              },
                                               "type": "Number",
                                               "value": 0,
                                             },
                                           ],
-                                          "key": "ty",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 19,
+                                                "line": 93,
+                                                "offset": 1529,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 93,
+                                                "offset": 1525,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "ty",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 22,
+                                              "line": 93,
+                                              "offset": 1532,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 93,
+                                              "offset": 1525,
+                                            },
+                                          },
                                           "title": "effect-type",
                                           "type": "Attribute",
                                         },
@@ -825,86 +3462,407 @@ Object {
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 23,
+                                                          "line": 95,
+                                                          "offset": 1577,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 95,
+                                                          "offset": 1576,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 7,
                                                     },
                                                   ],
-                                                  "key": "k",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 95,
+                                                        "offset": 1574,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 95,
+                                                        "offset": 1571,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "k",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 23,
+                                                      "line": 95,
+                                                      "offset": 1577,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 95,
+                                                      "offset": 1571,
+                                                    },
+                                                  },
                                                   "title": "static-value",
                                                   "type": "Attribute",
                                                 },
                                                 Object {
                                                   "children": Array [
                                                     Object {
+                                                      "position": Object {
+                                                        "end": Object {
+                                                          "column": 23,
+                                                          "line": 96,
+                                                          "offset": 1601,
+                                                        },
+                                                        "start": Object {
+                                                          "column": 22,
+                                                          "line": 96,
+                                                          "offset": 1600,
+                                                        },
+                                                      },
                                                       "type": "Number",
                                                       "value": 0,
                                                     },
                                                   ],
-                                                  "key": "a",
+                                                  "key": Object {
+                                                    "position": Object {
+                                                      "end": Object {
+                                                        "column": 20,
+                                                        "line": 96,
+                                                        "offset": 1598,
+                                                      },
+                                                      "start": Object {
+                                                        "column": 17,
+                                                        "line": 96,
+                                                        "offset": 1595,
+                                                      },
+                                                    },
+                                                    "type": "Key",
+                                                    "value": "a",
+                                                  },
+                                                  "position": Object {
+                                                    "end": Object {
+                                                      "column": 23,
+                                                      "line": 96,
+                                                      "offset": 1601,
+                                                    },
+                                                    "start": Object {
+                                                      "column": 17,
+                                                      "line": 96,
+                                                      "offset": 1595,
+                                                    },
+                                                  },
                                                   "title": "animated",
                                                   "type": "Attribute",
                                                 },
                                               ],
+                                              "position": Object {
+                                                "end": Object {
+                                                  "column": 16,
+                                                  "line": 97,
+                                                  "offset": 1617,
+                                                },
+                                                "start": Object {
+                                                  "column": 20,
+                                                  "line": 94,
+                                                  "offset": 1553,
+                                                },
+                                              },
                                               "title": "animated-value-static",
                                               "type": "Object",
                                             },
                                           ],
-                                          "key": "v",
+                                          "key": Object {
+                                            "position": Object {
+                                              "end": Object {
+                                                "column": 18,
+                                                "line": 94,
+                                                "offset": 1551,
+                                              },
+                                              "start": Object {
+                                                "column": 15,
+                                                "line": 94,
+                                                "offset": 1548,
+                                              },
+                                            },
+                                            "type": "Key",
+                                            "value": "v",
+                                          },
+                                          "position": Object {
+                                            "end": Object {
+                                              "column": 16,
+                                              "line": 97,
+                                              "offset": 1617,
+                                            },
+                                            "start": Object {
+                                              "column": 15,
+                                              "line": 94,
+                                              "offset": 1548,
+                                            },
+                                          },
                                           "title": "effect-value-slider",
                                           "type": "Element",
                                         },
                                       ],
+                                      "position": Object {
+                                        "end": Object {
+                                          "column": 14,
+                                          "line": 98,
+                                          "offset": 1631,
+                                        },
+                                        "start": Object {
+                                          "column": 13,
+                                          "line": 92,
+                                          "offset": 1509,
+                                        },
+                                      },
                                       "title": "effect-param-slider",
                                       "type": "Object",
                                     },
                                   ],
+                                  "position": Object {
+                                    "end": Object {
+                                      "column": 12,
+                                      "line": 99,
+                                      "offset": 1643,
+                                    },
+                                    "start": Object {
+                                      "column": 17,
+                                      "line": 63,
+                                      "offset": 935,
+                                    },
+                                  },
                                   "title": "effect-param-list-children",
                                   "type": "Array",
                                 },
                               ],
-                              "key": "ef",
+                              "key": Object {
+                                "position": Object {
+                                  "end": Object {
+                                    "column": 15,
+                                    "line": 63,
+                                    "offset": 933,
+                                  },
+                                  "start": Object {
+                                    "column": 11,
+                                    "line": 63,
+                                    "offset": 929,
+                                  },
+                                },
+                                "type": "Key",
+                                "value": "ef",
+                              },
+                              "position": Object {
+                                "end": Object {
+                                  "column": 12,
+                                  "line": 99,
+                                  "offset": 1643,
+                                },
+                                "start": Object {
+                                  "column": 11,
+                                  "line": 63,
+                                  "offset": 929,
+                                },
+                              },
                               "title": "effect-param-list",
                               "type": "Collection",
                             },
                           ],
+                          "position": Object {
+                            "end": Object {
+                              "column": 10,
+                              "line": 100,
+                              "offset": 1653,
+                            },
+                            "start": Object {
+                              "column": 9,
+                              "line": 61,
+                              "offset": 897,
+                            },
+                          },
                           "title": "effect-drop-shadow",
                           "type": "Object",
                         },
                       ],
+                      "position": Object {
+                        "end": Object {
+                          "column": 8,
+                          "line": 101,
+                          "offset": 1661,
+                        },
+                        "start": Object {
+                          "column": 13,
+                          "line": 60,
+                          "offset": 887,
+                        },
+                      },
                       "title": "effect-list-children",
                       "type": "Array",
                     },
                   ],
-                  "key": "ef",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 11,
+                        "line": 60,
+                        "offset": 885,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 60,
+                        "offset": 881,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "ef",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 8,
+                      "line": 101,
+                      "offset": 1661,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 60,
+                      "offset": 881,
+                    },
+                  },
                   "title": "effect-list",
                   "type": "Collection",
                 },
                 Object {
                   "children": Array [
                     Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 22,
+                          "line": 102,
+                          "offset": 1684,
+                        },
+                        "start": Object {
+                          "column": 16,
+                          "line": 102,
+                          "offset": 1678,
+                        },
+                      },
                       "type": "String",
                       "value": "blep",
                     },
                   ],
-                  "key": "refId",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 14,
+                        "line": 102,
+                        "offset": 1676,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 102,
+                        "offset": 1669,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "refId",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 22,
+                      "line": 102,
+                      "offset": 1684,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 102,
+                      "offset": 1669,
+                    },
+                  },
                   "title": "image-id",
                   "type": "Attribute",
                 },
               ],
+              "position": Object {
+                "end": Object {
+                  "column": 6,
+                  "line": 103,
+                  "offset": 1690,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 20,
+                  "offset": 263,
+                },
+              },
               "title": "layer-image",
               "type": "Object",
             },
           ],
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 104,
+              "offset": 1694,
+            },
+            "start": Object {
+              "column": 13,
+              "line": 19,
+              "offset": 257,
+            },
+          },
           "title": "composition-children",
           "type": "Array",
         },
       ],
-      "key": "layers",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 11,
+            "line": 19,
+            "offset": 255,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 19,
+            "offset": 247,
+          },
+        },
+        "type": "Key",
+        "value": "layers",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 4,
+          "line": 104,
+          "offset": 1694,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 19,
+          "offset": 247,
+        },
+      },
       "title": "composition",
       "type": "Collection",
     },
   ],
   "hasExpressions": false,
+  "position": Object {
+    "end": Object {
+      "column": 2,
+      "line": 105,
+      "offset": 1696,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
   "title": "animation",
   "type": "Root",
 }
