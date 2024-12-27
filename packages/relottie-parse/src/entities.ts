@@ -123,7 +123,7 @@ export interface NoKeyEntity {
   /**
    * defaultTitle will be used if couldn't find title in "dependent"
    */
-  defaultTitle: ParentTitle;
+  defaultResult: ParentTitle;
   /**
    * if dependent is undefined, the "defaultTitle" will be used
    */
@@ -141,7 +141,7 @@ type AnimatedPropertyTitle =
 
 const animatedPropEntity = (parentTitle: AnimatedPropertyTitle, kTitle: AnyTitle): NoKeyEntity => {
   return {
-    defaultTitle: `${parentTitle}-static` as ObjectTitle,
+    defaultResult: `${parentTitle}-static` as ObjectTitle,
     dependents: [
       {
         key: 'k',
@@ -188,7 +188,7 @@ const animatedMultidimensionalProp: NoKeyEntity = {
 
 export const objectEntity: NoKeyEntityMap = {
   [CT.composition]: {
-    defaultTitle: OT.layerPrecomposition,
+    defaultResult: OT.layerPrecomposition,
     dependents: [
       {
         key: 'ty',
@@ -220,7 +220,7 @@ export const objectEntity: NoKeyEntityMap = {
     ],
   },
   [CT.shapeList]: {
-    defaultTitle: OT.shapeRectangle,
+    defaultResult: OT.shapeRectangle,
     dependents: [
       {
         key: 'ty',
@@ -270,7 +270,7 @@ export const objectEntity: NoKeyEntityMap = {
     ],
   },
   [CT.assets]: {
-    defaultTitle: OT.assetPrecomposition,
+    defaultResult: OT.assetPrecomposition,
     dependents: [
       { key: 'w', type: 'Number', title: NT.width, resultTitle: OT.assetImage },
       { key: 'h', type: 'Number', title: NT.height, resultTitle: OT.assetImage },
@@ -303,7 +303,7 @@ export const objectEntity: NoKeyEntityMap = {
     ],
   },
   [CT.effectList]: {
-    defaultTitle: OT.effectCustom,
+    defaultResult: OT.effectCustom,
     dependents: [
       {
         key: 'ty',
@@ -335,7 +335,7 @@ export const objectEntity: NoKeyEntityMap = {
     ],
   },
   [CT.effectParamList]: {
-    defaultTitle: OT.effectParamSlider,
+    defaultResult: OT.effectParamSlider,
     dependents: [
       {
         key: 'ty',
@@ -359,7 +359,7 @@ export const objectEntity: NoKeyEntityMap = {
     ],
   },
   [CT.layerStyleList]: {
-    defaultTitle: OT.layerStyleStroke,
+    defaultResult: OT.layerStyleStroke,
     dependents: [
       {
         key: 'ty',
@@ -390,7 +390,7 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedShapeProp,
   },
   [ET.animatedShapeBezier]: {
-    defaultTitle: OT.bezier,
+    defaultResult: OT.bezier,
   },
   [ET.animatedColorProp]: {
     ...animatedColorProp,
@@ -402,81 +402,63 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedPositionProp,
   },
   [CT.keyframeList]: {
-    defaultTitle: OT.keyframe,
+    defaultResult: OT.keyframe,
   },
   [CT.keyframeValue]: {
-    defaultTitle: OT.bezier,
+    defaultResult: OT.bezier,
   },
   [CT.keyframeEndValue]: {
-    defaultTitle: OT.bezier,
+    defaultResult: OT.bezier,
   },
   [CT.positionKeyframeList]: {
-    defaultTitle: OT.positionKeyframe,
+    defaultResult: OT.positionKeyframe,
   },
   [ET.keyframeInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeListInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeValueInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.positionKeyframeInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.positionKeyframeListInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeBezierHandleInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.shapeKeyframeInTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeListOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeValueOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.positionKeyframeOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.positionKeyframeListOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.keyframeBezierHandleOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.shapeKeyframeOutTangent]: {
-    defaultTitle: OT.keyframeBezierHandle,
+    defaultResult: OT.keyframeBezierHandle,
   },
   [ET.translation]: {
-    defaultTitle: OT.animatedPositionStatic,
+    defaultResult: OT.animatedPositionStatic,
     dependents: [
-      {
-        key: 'k',
-        type: 'Array',
-        title: CT.positionKeyframeList,
-        childType: 'Object',
-        resultTitle: OT.animatedPosition,
-      },
-      {
-        key: 'a',
-        type: 'Constant',
-        title: IBT.animated,
-        resultTitle: {
-          defaultValue: 0,
-          values: {
-            0: OT.animatedPositionStatic,
-            1: OT.animatedPosition,
-          },
-        },
-      },
+      ...(animatedPositionProp.dependents ?? []),
       {
         key: 's',
         type: 'Boolean',
@@ -690,13 +672,13 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedValueProp,
   },
   [CT.shapeKeyframeList]: {
-    defaultTitle: OT.shapeKeyframe,
+    defaultResult: OT.shapeKeyframe,
   },
   [CT.shapeKeyframeStart]: {
-    defaultTitle: OT.bezier,
+    defaultResult: OT.bezier,
   },
   [OT.animatedShapeStatic]: {
-    defaultTitle: OT.bezier,
+    defaultResult: OT.bezier,
   },
   [ET.shapeTrimStart]: {
     ...animatedValueProp,
@@ -891,10 +873,10 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedMultidimensionalProp,
   },
   [CT.masksProperties]: {
-    defaultTitle: OT.mask,
+    defaultResult: OT.mask,
   },
   [CT.textFontList]: {
-    defaultTitle: OT.textFont,
+    defaultResult: OT.textFont,
   },
   [ET.startOpacity]: {
     ...animatedValueProp,
@@ -903,7 +885,7 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedValueProp,
   },
   [CT.strokeDashList]: {
-    defaultTitle: OT.strokeDashDefault,
+    defaultResult: OT.strokeDashDefault,
     dependents: [
       {
         key: 'n',
@@ -925,10 +907,10 @@ export const objectEntity: NoKeyEntityMap = {
     ...animatedValueProp,
   },
   [CT.markers]: {
-    defaultTitle: OT.marker,
+    defaultResult: OT.marker,
   },
   [ET.textCharacterData]: {
-    defaultTitle: OT.characterShapes,
+    defaultResult: OT.characterShapes,
     dependents: [
       { key: 'shapes', type: 'Array', title: CT.shapeList, resultTitle: OT.characterShapes },
       { key: 'refId', type: 'String', title: ST.idReference, resultTitle: OT.characterPrecomp },
@@ -940,13 +922,13 @@ export const objectEntity: NoKeyEntityMap = {
     ],
   },
   [CT.textDocumentKeyframes]: {
-    defaultTitle: OT.textDocumentKeyframe,
+    defaultResult: OT.textDocumentKeyframe,
   },
   [CT.textRanges]: {
-    defaultTitle: OT.textRange,
+    defaultResult: OT.textRange,
   },
   [CT.extraCompositions]: {
-    defaultTitle: OT.assetPrecomposition,
+    defaultResult: OT.assetPrecomposition,
   },
   [ET.selectorSmoothness]: {
     ...animatedValueProp,
@@ -983,10 +965,10 @@ export const arrayEntity: NoKeyEntityMap = {};
 export const getNoKeyEntity = (node: MomoaArray | MomoaObject, parentTitle: ParentTitle): NoKeyEntity => {
   switch (node.type) {
     case 'Object':
-      return objectEntity[parentTitle] || { defaultTitle: parentTitle };
+      return objectEntity[parentTitle] || { defaultResult: parentTitle };
 
     case 'Array':
-      return arrayEntity[parentTitle] || { defaultTitle: parentTitle };
+      return arrayEntity[parentTitle] || { defaultResult: parentTitle };
 
     default:
       throw new Error("The node.type has to be 'Array' or 'Object'");

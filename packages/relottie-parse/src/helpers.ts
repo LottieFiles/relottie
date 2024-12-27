@@ -123,9 +123,9 @@ const createKeyNode = (node: MomoaMember, options: ParseOptions): KeyValue => {
   const value = node.name.type === 'String' ? node.name.value : node.name.name;
 
   if (options.position) {
-    const posiiton = createPositionProp(node.name, options);
+    const position = createPositionProp(node.name, options);
 
-    return keyNode(value, { ...posiiton });
+    return keyNode(value, { ...position });
   } else {
     return value;
   }
@@ -189,13 +189,13 @@ const getTitleFromMemberValue = (
   dependent: Dependent,
   file: VFile,
 ): AnyTitle | undefined => {
-  const { key, resultTitle: parentTitle, type } = dependent;
+  const { key, resultTitle, type } = dependent;
 
   switch (type) {
     case 'Constant':
       if (!is<MomoaString>(node, 'String') && !is<MomoaNumber>(node, 'Number')) break;
 
-      const { defaultValue, prefix, values } = parentTitle;
+      const { defaultValue, prefix, values } = resultTitle;
 
       const defaultConstTitle = values[defaultValue];
 
@@ -223,7 +223,7 @@ const getTitleFromMemberValue = (
 
       if (!matchedMember) break;
 
-      return parentTitle;
+      return resultTitle;
 
     default:
       if (type !== node.type) {
@@ -233,7 +233,7 @@ const getTitleFromMemberValue = (
         break;
       }
 
-      return parentTitle;
+      return resultTitle;
   }
 
   return undefined;
@@ -270,7 +270,7 @@ const getDependentTitle = (
 const getObjectNodeTitle = (node: MomoaObject, parentNodeTitle: ParentTitle, file: VFile): ObjectTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
-  const { defaultTitle, dependents } = entity;
+  const { defaultResult: defaultTitle, dependents } = entity;
 
   if (!dependents) return defaultTitle as ObjectTitle;
 
@@ -281,7 +281,7 @@ const getObjectNodeTitle = (node: MomoaObject, parentNodeTitle: ParentTitle, fil
 const getArrayNodeTitle = (node: MomoaArray, parentNodeTitle: ParentTitle, file: VFile): ArrayTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
-  const { defaultTitle, dependents } = entity;
+  const { defaultResult: defaultTitle, dependents } = entity;
 
   if (!dependents) return defaultTitle as ArrayTitle;
 

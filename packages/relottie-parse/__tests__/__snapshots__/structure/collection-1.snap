@@ -7,16 +7,67 @@ Object {
       "children": Array [
         Object {
           "children": Array [],
+          "position": Object {
+            "end": Object {
+              "column": 13,
+              "line": 2,
+              "offset": 14,
+            },
+            "start": Object {
+              "column": 11,
+              "line": 2,
+              "offset": 12,
+            },
+          },
           "title": "custom-children",
           "type": "Array",
         },
       ],
-      "key": "item",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 9,
+            "line": 2,
+            "offset": 10,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 2,
+            "offset": 4,
+          },
+        },
+        "type": "Key",
+        "value": "item",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 13,
+          "line": 2,
+          "offset": 14,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+          "offset": 4,
+        },
+      },
       "title": "custom",
       "type": "Collection",
     },
   ],
   "hasExpressions": false,
+  "position": Object {
+    "end": Object {
+      "column": 2,
+      "line": 3,
+      "offset": 16,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
   "title": "animation",
   "type": "Root",
 }
