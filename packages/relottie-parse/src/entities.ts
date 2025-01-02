@@ -95,7 +95,7 @@ export interface DependentBase {
 
 export interface DependentPrimitive extends DependentBase {
   resultTitle: ParentTitle;
-  type: MomoaPrimitive['type'] | MomoaObject['type'];
+  type: MomoaPrimitive['type'];
 }
 
 export interface DependentObject extends DependentBase {

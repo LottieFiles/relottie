@@ -202,11 +202,11 @@ const getTitleFromMemberValue = (
       if (!defaultConstTitle)
         throw new Error(`[${parentNodeTitle}] '${defaultValue}' has to present in "dependent.parentTitle.values"`);
 
-      const constantKey = node.value;
-      const constTitle = values[constantKey];
+      const nodeValue = node.value;
+      const constTitle = values[nodeValue];
 
       if (!constTitle) {
-        const message = `[${parentNodeTitle}] '${constantKey}' is missing in "dependent.parentTitle.values"`;
+        const message = `[${parentNodeTitle}] '${nodeValue}' is missing in "dependent.parentTitle.values"`;
 
         file.message(message, node, fileConstants.sourceId);
       }
@@ -221,7 +221,7 @@ const getTitleFromMemberValue = (
 
       const matchedMember = childType ? node.elements.find((element) => element.value.type === childType) : undefined;
 
-      if (!matchedMember) break;
+      if (!matchedMember) return undefined;
 
       return resultTitle;
 
@@ -230,7 +230,8 @@ const getTitleFromMemberValue = (
         const message = `${parentNodeTitle}'s '${key}' type is ${node.type} but has to be ${type}`;
 
         file.message(message, node, fileConstants.sourceId);
-        break;
+
+        return undefined;
       }
 
       return resultTitle;
