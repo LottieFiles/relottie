@@ -7,9 +7,8 @@ import type {
   Root,
   KeyValue,
   KeyNode,
-  Primitive,
-  PrimitiveValue,
-  PrimitiveValueType,
+  PrimitiveNode,
+  PrimitiveNodeValue,
   ObjectNode,
   ObjectNodeValue,
   ObjectTitle,
@@ -28,10 +27,6 @@ import { u } from 'unist-builder';
 
 export interface Parts {
   position?: Position;
-}
-
-export interface PrimitiveParts<T> extends Parts {
-  valueType?: T;
 }
 
 type Children<T> = T | T[];
@@ -70,22 +65,32 @@ function normalizeMemberChild<T>(child?: MemberChild<T>): [T] | [] {
   }
 }
 
-function normalizePrimitiveValue<T>(value: T): T | string {
-  if (value === undefined) {
-    return 'empty';
-  } else {
-    return value;
-  }
-}
-
 /**
  * Create a Primitive Node
- * @param value - Primitive's value,  e.g. 7
+ * @param value - Primitive's value, e.g. 7
  * @param parts - additional data props e.g. Position
- * @returns (last) Primitive node
+ * @returns
+ * - (last) PrimitiveNode
+ * - if value is not PrimitiveNodeValue, return a String node with value "UNKNOWN"
  */
-export const pt = (value?: PrimitiveValue, parts?: PrimitiveParts<PrimitiveValueType>): Primitive => {
-  return u('primitive', { value: normalizePrimitiveValue(value) as PrimitiveValue, ...parts });
+export const pt = (value?: PrimitiveNodeValue, parts?: Parts): PrimitiveNode => {
+  if (value === null) {
+    return u('Null', { value, ...parts });
+  }
+
+  switch (typeof value) {
+    case 'string':
+      return u('String', { value, ...parts });
+
+    case 'number':
+      return u('Number', { value, ...parts });
+
+    case 'boolean':
+      return u('Boolean', { value, ...parts });
+
+    default:
+      return u('String', { value: 'UNKNOWN', ...parts });
+  }
 };
 
 /**
@@ -95,7 +100,7 @@ export const pt = (value?: PrimitiveValue, parts?: PrimitiveParts<PrimitiveValue
  * @returns (last) Key node
  */
 export const ky = (value: string, parts?: Parts): KeyNode => {
-  return u('key', { ...parts }, value);
+  return u('Key', { ...parts }, value);
 };
 
 /**
@@ -107,7 +112,7 @@ export const ky = (value: string, parts?: Parts): KeyNode => {
  */
 export const ob = (title: ObjectTitle, kids?: Children<ObjectNodeValue>, parts?: Parts): ObjectNode =>
   u(
-    'object',
+    'Object',
     {
       title,
       ...parts,
@@ -124,7 +129,7 @@ export const ob = (title: ObjectTitle, kids?: Children<ObjectNodeValue>, parts?:
  */
 export const ar = (title: ArrayTitle, kids?: Children<ArrayNodeValue>, parts?: Parts): ArrayNode =>
   u(
-    'array',
+    'Array',
     {
       title,
       ...parts,
@@ -140,8 +145,13 @@ export const ar = (title: ArrayTitle, kids?: Children<ArrayNodeValue>, parts?: P
  * @param parts - additional data props e.g. Position
  * @returns (last) Attribute node
  */
-export const at = (key: KeyValue, title: AttributeTitle, kid?: MemberChild<Primitive>, parts?: Parts): Attribute => {
-  return u('attribute', { key, title, ...parts }, normalizeMemberChild(kid));
+export const at = (
+  key: KeyValue,
+  title: AttributeTitle,
+  kid?: MemberChild<PrimitiveNode>,
+  parts?: Parts,
+): Attribute => {
+  return u('Attribute', { key, title, ...parts }, normalizeMemberChild(kid));
 };
 
 /**
@@ -153,7 +163,7 @@ export const at = (key: KeyValue, title: AttributeTitle, kid?: MemberChild<Primi
  * @returns (last) Element node
  */
 export const el = (key: KeyValue, title: ElementTitle, kid?: MemberChild<ObjectNode>, parts?: Parts): Element => {
-  return u('element', { key, title, ...parts }, normalizeMemberChild(kid));
+  return u('Element', { key, title, ...parts }, normalizeMemberChild(kid));
 };
 
 /**
@@ -165,7 +175,7 @@ export const el = (key: KeyValue, title: ElementTitle, kid?: MemberChild<ObjectN
  * @returns (last) Collection node
  */
 export const cl = (key: KeyValue, title: CollectionTitle, kid?: MemberChild<ArrayNode>, parts?: Parts): Collection => {
-  return u('collection', { key, title, ...parts }, normalizeMemberChild(kid));
+  return u('Collection', { key, title, ...parts }, normalizeMemberChild(kid));
 };
 
 /**
@@ -176,7 +186,7 @@ export const cl = (key: KeyValue, title: CollectionTitle, kid?: MemberChild<Arra
  */
 export const rt = (kids?: Children<ObjectNodeValue>, parts?: Parts): Root => {
   return u(
-    'root',
+    'Root',
     {
       title: TITLES.object.animation,
       hasExpressions: false,

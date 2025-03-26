@@ -10,63 +10,266 @@ Object {
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "position": Object {
+                    "end": Object {
+                      "column": 17,
+                      "line": 3,
+                      "offset": 30,
+                    },
+                    "start": Object {
+                      "column": 10,
+                      "line": 3,
+                      "offset": 23,
+                    },
+                  },
+                  "type": "String",
                   "value": "5.5.7",
-                  "valueType": "string",
                 },
               ],
-              "key": "v",
+              "key": Object {
+                "position": Object {
+                  "end": Object {
+                    "column": 8,
+                    "line": 3,
+                    "offset": 21,
+                  },
+                  "start": Object {
+                    "column": 5,
+                    "line": 3,
+                    "offset": 18,
+                  },
+                },
+                "type": "Key",
+                "value": "v",
+              },
+              "position": Object {
+                "end": Object {
+                  "column": 17,
+                  "line": 3,
+                  "offset": 30,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 3,
+                  "offset": 18,
+                },
+              },
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "position": Object {
+                    "end": Object {
+                      "column": 12,
+                      "line": 4,
+                      "offset": 43,
+                    },
+                    "start": Object {
+                      "column": 11,
+                      "line": 4,
+                      "offset": 42,
+                    },
+                  },
+                  "type": "Number",
                   "value": 0,
-                  "valueType": "number",
                 },
               ],
-              "key": "ip",
+              "key": Object {
+                "position": Object {
+                  "end": Object {
+                    "column": 9,
+                    "line": 4,
+                    "offset": 40,
+                  },
+                  "start": Object {
+                    "column": 5,
+                    "line": 4,
+                    "offset": 36,
+                  },
+                },
+                "type": "Key",
+                "value": "ip",
+              },
+              "position": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 4,
+                  "offset": 43,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 4,
+                  "offset": 36,
+                },
+              },
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "position": Object {
+                    "end": Object {
+                      "column": 15,
+                      "line": 5,
+                      "offset": 59,
+                    },
+                    "start": Object {
+                      "column": 10,
+                      "line": 5,
+                      "offset": 54,
+                    },
+                  },
+                  "type": "Boolean",
                   "value": false,
-                  "valueType": "boolean",
                 },
               ],
-              "key": "c",
+              "key": Object {
+                "position": Object {
+                  "end": Object {
+                    "column": 8,
+                    "line": 5,
+                    "offset": 52,
+                  },
+                  "start": Object {
+                    "column": 5,
+                    "line": 5,
+                    "offset": 49,
+                  },
+                },
+                "type": "Key",
+                "value": "c",
+              },
+              "position": Object {
+                "end": Object {
+                  "column": 15,
+                  "line": 5,
+                  "offset": 59,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 5,
+                  "offset": 49,
+                },
+              },
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
             Object {
               "children": Array [
                 Object {
-                  "type": "primitive",
+                  "position": Object {
+                    "end": Object {
+                      "column": 18,
+                      "line": 6,
+                      "offset": 78,
+                    },
+                    "start": Object {
+                      "column": 14,
+                      "line": 6,
+                      "offset": 74,
+                    },
+                  },
+                  "type": "Null",
                   "value": null,
-                  "valueType": "null",
                 },
               ],
-              "key": "empty",
+              "key": Object {
+                "position": Object {
+                  "end": Object {
+                    "column": 12,
+                    "line": 6,
+                    "offset": 72,
+                  },
+                  "start": Object {
+                    "column": 5,
+                    "line": 6,
+                    "offset": 65,
+                  },
+                },
+                "type": "Key",
+                "value": "empty",
+              },
+              "position": Object {
+                "end": Object {
+                  "column": 18,
+                  "line": 6,
+                  "offset": 78,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 6,
+                  "offset": 65,
+                },
+              },
               "title": "custom",
-              "type": "attribute",
+              "type": "Attribute",
             },
           ],
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 7,
+              "offset": 82,
+            },
+            "start": Object {
+              "column": 11,
+              "line": 2,
+              "offset": 12,
+            },
+          },
           "title": "custom-children",
-          "type": "object",
+          "type": "Object",
         },
       ],
-      "key": "name",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 9,
+            "line": 2,
+            "offset": 10,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 2,
+            "offset": 4,
+          },
+        },
+        "type": "Key",
+        "value": "name",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 4,
+          "line": 7,
+          "offset": 82,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+          "offset": 4,
+        },
+      },
       "title": "custom",
-      "type": "element",
+      "type": "Element",
     },
   ],
   "hasExpressions": false,
+  "position": Object {
+    "end": Object {
+      "column": 2,
+      "line": 8,
+      "offset": 84,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
   "title": "animation",
-  "type": "root",
+  "type": "Root",
 }
 `;

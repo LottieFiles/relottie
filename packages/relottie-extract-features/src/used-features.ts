@@ -10,7 +10,7 @@ import type {
   Element,
   Collection,
   ArrayNode,
-  Primitive,
+  PrimitiveNode,
   Root,
 } from '@lottiefiles/last';
 
@@ -52,7 +52,7 @@ export const elementNodeChecker: IsFeatureUsedChecker<Element> = (node): boolean
   return objectNodeChecker(objectNode);
 };
 
-export const primitiveNodeChecker: IsFeatureUsedChecker<Primitive> = (node): boolean => {
+export const primitiveNodeChecker = (node: PrimitiveNode): boolean => {
   const value = node.value;
 
   switch (typeof value) {
@@ -176,19 +176,19 @@ export const isFeatureUsed = (feature: AnyTitle, node: NodeWithTitle): boolean =
   }
 
   switch (node.type) {
-    case 'attribute':
+    case 'Attribute':
       return attributeValueChecker(node);
 
-    case 'element':
+    case 'Element':
       return elementNodeChecker(node);
 
-    case 'collection':
+    case 'Collection':
       return collectionNodeChecker(node);
 
-    case 'array':
+    case 'Array':
       return arrayNodeChecker(node);
 
-    case 'object':
+    case 'Object':
       return objectNodeChecker(node);
 
     default:
