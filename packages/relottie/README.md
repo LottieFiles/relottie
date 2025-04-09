@@ -97,15 +97,15 @@ const output = processor.stringify(tree);
 
 ```javascript
 {
-  "type": "root",
+  "type": "Root",
   "title": "animation",
   "hasExpressions": false
   "children": [
     {
-      "type": "attribute",
+      "type": "Attribute",
       "key": "v",
       "title": "version",
-      "children": [{ "type": "primitive", "value": "6.0.0", "valueType": "string" }]
+      "children": [{ "type": "String", "value": "6.0.0" }]
     }
   ]
 }

@@ -25,7 +25,7 @@ const processor = unified().use(relottieParse).use(relottieStringify);
 
 const tree = processor.parse('{"v":"5.5.7"}');
 
-visit(tree, 'attribute', (node: Attribute) => {
+visit(tree, 'Attribute', (node: Attribute) => {
   node.key = 'new_v';
 });
 

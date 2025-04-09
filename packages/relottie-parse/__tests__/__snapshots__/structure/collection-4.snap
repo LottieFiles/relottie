@@ -13,30 +13,132 @@ Object {
                   "children": Array [
                     Object {
                       "children": Array [],
+                      "position": Object {
+                        "end": Object {
+                          "column": 18,
+                          "line": 4,
+                          "offset": 37,
+                        },
+                        "start": Object {
+                          "column": 16,
+                          "line": 4,
+                          "offset": 35,
+                        },
+                      },
                       "title": "custom-children",
-                      "type": "array",
+                      "type": "Array",
                     },
                   ],
-                  "key": "item2",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 14,
+                        "line": 4,
+                        "offset": 33,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 4,
+                        "offset": 26,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "item2",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 18,
+                      "line": 4,
+                      "offset": 37,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 4,
+                      "offset": 26,
+                    },
+                  },
                   "title": "custom",
-                  "type": "collection",
+                  "type": "Collection",
                 },
               ],
+              "position": Object {
+                "end": Object {
+                  "column": 6,
+                  "line": 5,
+                  "offset": 43,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 3,
+                  "offset": 18,
+                },
+              },
               "title": "custom",
-              "type": "object",
+              "type": "Object",
             },
           ],
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 6,
+              "offset": 47,
+            },
+            "start": Object {
+              "column": 11,
+              "line": 2,
+              "offset": 12,
+            },
+          },
           "title": "custom-children",
-          "type": "array",
+          "type": "Array",
         },
       ],
-      "key": "item",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 9,
+            "line": 2,
+            "offset": 10,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 2,
+            "offset": 4,
+          },
+        },
+        "type": "Key",
+        "value": "item",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 4,
+          "line": 6,
+          "offset": 47,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+          "offset": 4,
+        },
+      },
       "title": "custom",
-      "type": "collection",
+      "type": "Collection",
     },
   ],
   "hasExpressions": false,
+  "position": Object {
+    "end": Object {
+      "column": 2,
+      "line": 7,
+      "offset": 49,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
   "title": "animation",
-  "type": "root",
+  "type": "Root",
 }
 `;

@@ -24,9 +24,8 @@ import type {
   Attribute,
   KeyValue,
   ObjectNode,
-  Primitive,
+  PrimitiveNode,
   Root,
-  PrimitiveValueType,
   NodeValue,
   ObjectNodeValue,
   Position,
@@ -48,7 +47,6 @@ import {
   pt as primitiveNode,
   rt as rootNode,
 } from '@lottiefiles/last-builder';
-import type { PrimitiveParts } from '@lottiefiles/last-builder';
 import { is } from 'unist-util-is';
 import type { VFile } from 'vfile';
 
@@ -70,13 +68,6 @@ export type MomoaPrimitive =
   | MomoaInfinity
   | MomoaIdentifier;
 
-const createValueType = (node: MomoaAnyNode, options: ParseOptions): PrimitiveParts<PrimitiveValueType> => {
-  if (!options.valueType || node.type === 'Element' || node.type === 'Object' || node.type === 'Document') {
-    return {};
-  }
-
-  return { valueType: node.type.toLowerCase() as PrimitiveValueType };
-};
 /**
  * Converts Momoa position into the Last position style if the related option is enabled
  * @param node - Momoa Node
@@ -121,21 +112,20 @@ export const getPrimitiveNodeValue = (node: MomoaPrimitive): string | number | b
   }
 };
 
-const createPrimitiveNode = (node: MomoaPrimitive, options: ParseOptions): Primitive => {
+const createPrimitiveNode = (node: MomoaPrimitive, options: ParseOptions): PrimitiveNode => {
   const position = createPositionProp(node, options);
-  const valueType = createValueType(node, options) as PrimitiveParts<PrimitiveValueType>;
   const value = getPrimitiveNodeValue(node);
 
-  return primitiveNode(value, { ...position, ...valueType });
+  return primitiveNode(value, { ...position });
 };
 
 const createKeyNode = (node: MomoaMember, options: ParseOptions): KeyValue => {
   const value = node.name.type === 'String' ? node.name.value : node.name.name;
 
   if (options.position) {
-    const posiiton = createPositionProp(node.name, options);
+    const position = createPositionProp(node.name, options);
 
-    return keyNode(value, { ...posiiton });
+    return keyNode(value, { ...position });
   } else {
     return value;
   }
@@ -199,24 +189,24 @@ const getTitleFromMemberValue = (
   dependent: Dependent,
   file: VFile,
 ): AnyTitle | undefined => {
-  const { key, parentTitle, type } = dependent;
+  const { key, resultTitle, type } = dependent;
 
   switch (type) {
     case 'Constant':
       if (!is<MomoaString>(node, 'String') && !is<MomoaNumber>(node, 'Number')) break;
 
-      const { defaultValue, prefix, values } = parentTitle;
+      const { defaultValue, prefix, values } = resultTitle;
 
       const defaultConstTitle = values[defaultValue];
 
       if (!defaultConstTitle)
         throw new Error(`[${parentNodeTitle}] '${defaultValue}' has to present in "dependent.parentTitle.values"`);
 
-      const constantKey = node.value;
-      const constTitle = values[constantKey];
+      const nodeValue = node.value;
+      const constTitle = values[nodeValue];
 
       if (!constTitle) {
-        const message = `[${parentNodeTitle}] '${constantKey}' is missing in "dependent.parentTitle.values"`;
+        const message = `[${parentNodeTitle}] '${nodeValue}' is missing in "dependent.parentTitle.values"`;
 
         file.message(message, node, fileConstants.sourceId);
       }
@@ -231,30 +221,32 @@ const getTitleFromMemberValue = (
 
       const matchedMember = childType ? node.elements.find((element) => element.value.type === childType) : undefined;
 
-      if (!matchedMember) break;
+      if (!matchedMember) return undefined;
 
-      return parentTitle;
+      return resultTitle;
 
     default:
       if (type !== node.type) {
         const message = `${parentNodeTitle}'s '${key}' type is ${node.type} but has to be ${type}`;
 
         file.message(message, node, fileConstants.sourceId);
-        break;
+
+        return undefined;
       }
 
-      return parentTitle;
+      return resultTitle;
   }
 
   return undefined;
 };
+
 const getDependentTitle = (
   parentTitle: ParentTitle,
   members: MomoaMember[],
   dependents: Dependent[],
   file: VFile,
 ): AnyTitle | undefined => {
-  const memberKeyValue = members.reduce((acc, member) => {
+  const membersKeyValueMap = members.reduce((acc, member) => {
     const memberName = member.name;
     const key = memberName.type === 'String' ? memberName.value : memberName.name;
 
@@ -265,11 +257,11 @@ const getDependentTitle = (
 
   for (const dependent of dependents) {
     const { key } = dependent;
-    const node = memberKeyValue[key];
+    const memberNodeValue = membersKeyValueMap[key];
 
-    if (!node) continue;
+    if (!memberNodeValue) continue;
 
-    const title = getTitleFromMemberValue(node, parentTitle, dependent, file);
+    const title = getTitleFromMemberValue(memberNodeValue, parentTitle, dependent, file);
 
     if (title) return title;
   }
@@ -279,7 +271,7 @@ const getDependentTitle = (
 const getObjectNodeTitle = (node: MomoaObject, parentNodeTitle: ParentTitle, file: VFile): ObjectTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
-  const { defaultTitle, dependents } = entity;
+  const { defaultResult: defaultTitle, dependents } = entity;
 
   if (!dependents) return defaultTitle as ObjectTitle;
 
@@ -290,7 +282,7 @@ const getObjectNodeTitle = (node: MomoaObject, parentNodeTitle: ParentTitle, fil
 const getArrayNodeTitle = (node: MomoaArray, parentNodeTitle: ParentTitle, file: VFile): ArrayTitle => {
   const entity = getNoKeyEntity(node, parentNodeTitle);
 
-  const { defaultTitle, dependents } = entity;
+  const { defaultResult: defaultTitle, dependents } = entity;
 
   if (!dependents) return defaultTitle as ArrayTitle;
 
@@ -336,7 +328,7 @@ export const traverseJsonEnter = (
           // member.value
           const element = stack.peek();
 
-          assertNodeType<Element>(element, 'element', file);
+          assertNodeType<Element>(element, 'Element', file);
           const elementValueTitle = getObjectNodeTitle(node, element.title, file);
 
           stack.push(objectNode(elementValueTitle, [], { ...position }));
@@ -345,7 +337,7 @@ export const traverseJsonEnter = (
         case 'Element':
           const array = stack.peek();
 
-          assertNodeType<ArrayNode>(array, 'array', file);
+          assertNodeType<ArrayNode>(array, 'Array', file);
           const objectTitle = getObjectNodeTitle(node, array.title, file);
 
           stack.push(objectNode(objectTitle, [], { ...position }));
@@ -366,7 +358,7 @@ export const traverseJsonEnter = (
         case 'Member':
           const collection = stack.peek();
 
-          assertNodeType<Collection>(collection, 'collection', file);
+          assertNodeType<Collection>(collection, 'Collection', file);
           const collectionValueTitle = getArrayNodeTitle(node, collection.title, file);
 
           stack.push(arrayNode(collectionValueTitle, [], { ...position }));
@@ -375,7 +367,7 @@ export const traverseJsonEnter = (
         case 'Element':
           const array = stack.peek();
 
-          assertNodeType<ArrayNode>(array, 'array', file);
+          assertNodeType<ArrayNode>(array, 'Array', file);
           const arrayTitle = getArrayNodeTitle(node, array.title, file);
 
           stack.push(arrayNode(arrayTitle, [], { ...position }));
@@ -425,20 +417,20 @@ export const traverseJsonExit = (
 
       const parentNode = stack.peek() as Root | ObjectNode;
 
-      if (parentNode.type === 'root') {
+      if (parentNode.type === 'Root') {
         parentNode.children.push(objectNodeValue);
         break;
       }
 
       switch (objectNodeValue.type) {
-        case 'element':
+        case 'Element':
           info.slots?.setNode(objectNodeValue, parentNode, node);
           break;
 
-        case 'collection':
+        case 'Collection':
           break;
 
-        case 'attribute':
+        case 'Attribute':
           if (!info.hasExpressions && objectNodeValue.title === 'expression') {
             info.hasExpressions = true;
             break;
@@ -466,11 +458,11 @@ export const traverseJsonExit = (
         case 'Member':
           const elementChild = stack.pop();
 
-          assertNodeType<ObjectNode>(elementChild, 'object', file);
+          assertNodeType<ObjectNode>(elementChild, 'Object', file);
 
           const element = stack.peek();
 
-          assertNodeType<Element>(element, 'element', file);
+          assertNodeType<Element>(element, 'Element', file);
 
           if (elementChild.title === element.title) {
             elementChild.title = `${element.title}-children` as ObjectTitle;
@@ -482,10 +474,10 @@ export const traverseJsonExit = (
         case 'Element':
           const arrayChild = stack.pop();
 
-          assertNodeType<ObjectNode>(arrayChild, 'object', file);
+          assertNodeType<ObjectNode>(arrayChild, 'Object', file);
           const array = stack.peek();
 
-          assertNodeType<ArrayNode>(array, 'array', file);
+          assertNodeType<ArrayNode>(array, 'Array', file);
           array.children.push(arrayChild);
           break;
 
@@ -504,11 +496,11 @@ export const traverseJsonExit = (
         case 'Member':
           const collectionChild = stack.pop();
 
-          assertNodeType<ArrayNode>(collectionChild, 'array', file);
+          assertNodeType<ArrayNode>(collectionChild, 'Array', file);
 
           const collection = stack.peek();
 
-          assertNodeType<Collection>(collection, 'collection', file);
+          assertNodeType<Collection>(collection, 'Collection', file);
 
           if (collectionChild.title === collection.title) {
             collectionChild.title = `${collection.title}-children` as ArrayTitle;
@@ -520,11 +512,11 @@ export const traverseJsonExit = (
         case 'Element':
           const arrayChild = stack.pop();
 
-          assertNodeType<ArrayNode>(arrayChild, 'array', file);
+          assertNodeType<ArrayNode>(arrayChild, 'Array', file);
 
           const array = stack.peek();
 
-          assertNodeType<ArrayNode>(array, 'array', file);
+          assertNodeType<ArrayNode>(array, 'Array', file);
 
           array.children.push(arrayChild);
           break;
@@ -542,10 +534,30 @@ export const traverseJsonExit = (
           if (isMomoaMemberValue(node, parent)) {
             const attributeChild = stack.pop();
 
-            assertNodeType<Primitive>(attributeChild, 'primitive', file);
+            if (!attributeChild) file.fail('Attribute child is missing');
+
+            switch (attributeChild.type) {
+              case 'String':
+                break;
+
+              case 'Number':
+                break;
+
+              case 'Boolean':
+                break;
+
+              case 'Null':
+                break;
+
+              default:
+                file.fail(
+                  `Unexpected node type found ${attributeChild.type}, has to be 'String', 'Number', 'Boolean' or 'Null'`,
+                );
+            }
+
             const attribute = stack.peek();
 
-            assertNodeType<Attribute>(attribute, 'attribute', file);
+            assertNodeType<Attribute>(attribute, 'Attribute', file);
 
             attribute.children = [attributeChild];
           }
@@ -554,11 +566,28 @@ export const traverseJsonExit = (
         case 'Element':
           const arrayChild = stack.pop();
 
-          assertNodeType<Primitive>(arrayChild, 'primitive', file);
+          switch (arrayChild?.type) {
+            case 'String':
+              break;
+
+            case 'Number':
+              break;
+
+            case 'Boolean':
+              break;
+
+            case 'Null':
+              break;
+
+            default:
+              file.fail(
+                `Unexpected node type found ${arrayChild?.type}, has to be 'String', 'Number', 'Boolean' or 'Null'`,
+              );
+          }
 
           const array = stack.peek();
 
-          assertNodeType<ArrayNode>(array, 'array', file);
+          assertNodeType<ArrayNode>(array, 'Array', file);
 
           array.children.push(arrayChild);
           break;
