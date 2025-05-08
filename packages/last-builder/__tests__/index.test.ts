@@ -20,59 +20,59 @@ describe('should create a last tree correctly', () => {
     ]);
 
     const output = {
-      type: 'root',
+      type: 'Root',
       title: 'animation',
       hasExpressions: false,
       children: [
         {
-          type: 'attribute',
+          type: 'Attribute',
           key: 'v',
           title: 'version',
           children: [
             {
-              type: 'primitive',
+              type: 'String',
               value: '4.8.0',
             },
           ],
         },
         {
-          type: 'element',
+          type: 'Element',
           key: 'meta',
           title: 'metadata',
           children: [
             {
-              type: 'object',
+              type: 'Object',
               title: 'custom',
               children: [
                 {
-                  type: 'attribute',
+                  type: 'Attribute',
                   key: 'a',
                   title: 'author',
                   children: [
                     {
-                      type: 'primitive',
+                      type: 'String',
                       value: 'LottieFiles',
                     },
                   ],
                 },
                 {
-                  type: 'attribute',
+                  type: 'Attribute',
                   key: 'd',
                   title: 'description',
                   children: [
                     {
-                      type: 'primitive',
+                      type: 'String',
                       value: 'A lottie animation.',
                     },
                   ],
                 },
                 {
-                  type: 'attribute',
+                  type: 'Attribute',
                   key: 'data',
                   title: 'custom',
                   children: [
                     {
-                      type: 'primitive',
+                      type: 'Number',
                       value: 2,
                     },
                   ],

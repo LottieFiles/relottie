@@ -162,7 +162,7 @@ It represents Lottie constructs as JSON objects.
 
 ```json
 {
-  "type": "root",
+  "type": "Root",
   "title": "animation",
   "hasExpressions": false,
   "position": {
@@ -179,7 +179,7 @@ It represents Lottie constructs as JSON objects.
   },
   "children": [
     {
-      "type": "attribute",
+      "type": "Attribute",
       "key": {
         "type": "key",
         "position": {
@@ -211,7 +211,7 @@ It represents Lottie constructs as JSON objects.
       },
       "children": [
         {
-          "type": "primitive",
+          "type": "String",
           "value": "6.0.0",
           "position": {
             "start": {
@@ -225,7 +225,6 @@ It represents Lottie constructs as JSON objects.
               "offset": 14
             }
           },
-          "valueType": "string"
         }
       ]
     }

@@ -2,7 +2,7 @@
  * Copyright 2022 Design Barn Inc.
  */
 
-import type { Root, AnyTitle, NodeValue, KeyNode, Primitive } from '@lottiefiles/last';
+import type { Root, AnyTitle, NodeValue, KeyNode, PrimitiveNode } from '@lottiefiles/last';
 import type { Plugin } from 'unified';
 import { visitParents } from 'unist-util-visit-parents';
 import type { Data, VFile } from 'vfile';
@@ -35,7 +35,7 @@ export interface ExtractFeaturesFileData extends Data {
 }
 
 type AncestorChildNode = Exclude<NodeValue, KeyNode>;
-type AncestorNode = Exclude<AncestorChildNode, Primitive>;
+type AncestorNode = Exclude<AncestorChildNode, PrimitiveNode>;
 
 const extractFeatures: Plugin<[Options?], Root> = (_ops: Options = {}) => {
   // const options = { ...DEFAULT_OPTIONS, ...ops };
@@ -44,7 +44,14 @@ const extractFeatures: Plugin<[Options?], Root> = (_ops: Options = {}) => {
     const usedData: Used = new Map();
 
     visitParents(tree, (node: AncestorChildNode, ancestor: AncestorNode[]) => {
-      if (node.type === 'root' || node.type === 'primitive') return;
+      if (
+        node.type === 'Root' ||
+        node.type === 'String' ||
+        node.type === 'Number' ||
+        node.type === 'Boolean' ||
+        node.type === 'Null'
+      )
+        return;
 
       const feature = node.title;
       const parent = ancestor.at(-1);

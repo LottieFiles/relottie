@@ -4,7 +4,19 @@ exports[`parse() fixtures structure Test in root-1.txt should parse correctly 1`
 Object {
   "children": Array [],
   "hasExpressions": false,
+  "position": Object {
+    "end": Object {
+      "column": 3,
+      "line": 1,
+      "offset": 2,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
   "title": "animation",
-  "type": "root",
+  "type": "Root",
 }
 `;

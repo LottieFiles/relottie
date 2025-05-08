@@ -79,19 +79,18 @@ Running that with `npx ts-node example.ts` yields:
 ```json
 // tree output:
 {
-  "type":"root",
+  "type":"Root",
   "title":"animation",
   "hasExpressions": false,
   "children":[
     {
-      "type":"attribute",
+      "type":"Attribute",
       "key":"v",
       "title":"version",
       "children":[
         {
-          "type":"primitive",
+          "type":"String",
           "value":"5.5.7",
-          "valueType":"string"
         }
       ]
     }

@@ -364,6 +364,7 @@ export const TITLES = {
     shapeTrim: 'shape-trim',
     shapeTwist: 'shape-twist',
     shapeZigZags: 'shape-zig-zag',
+    shapeModifier: 'shape-modifier',
     splitVector: 'split-vector',
     strokeDashDefault: 'stroke-dash-default',
     strokeDashGap: 'stroke-dash-gap',

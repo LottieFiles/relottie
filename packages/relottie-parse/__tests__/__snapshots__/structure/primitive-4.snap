@@ -14,50 +14,196 @@ Object {
                     Object {
                       "children": Array [
                         Object {
-                          "type": "primitive",
+                          "position": Object {
+                            "end": Object {
+                              "column": 23,
+                              "line": 4,
+                              "offset": 42,
+                            },
+                            "start": Object {
+                              "column": 17,
+                              "line": 4,
+                              "offset": 36,
+                            },
+                          },
+                          "type": "String",
                           "value": "text",
-                          "valueType": "string",
                         },
                         Object {
-                          "type": "primitive",
+                          "position": Object {
+                            "end": Object {
+                              "column": 26,
+                              "line": 4,
+                              "offset": 45,
+                            },
+                            "start": Object {
+                              "column": 25,
+                              "line": 4,
+                              "offset": 44,
+                            },
+                          },
+                          "type": "Number",
                           "value": 0,
-                          "valueType": "number",
                         },
                         Object {
-                          "type": "primitive",
+                          "position": Object {
+                            "end": Object {
+                              "column": 32,
+                              "line": 4,
+                              "offset": 51,
+                            },
+                            "start": Object {
+                              "column": 28,
+                              "line": 4,
+                              "offset": 47,
+                            },
+                          },
+                          "type": "Boolean",
                           "value": true,
-                          "valueType": "boolean",
                         },
                         Object {
-                          "type": "primitive",
+                          "position": Object {
+                            "end": Object {
+                              "column": 38,
+                              "line": 4,
+                              "offset": 57,
+                            },
+                            "start": Object {
+                              "column": 34,
+                              "line": 4,
+                              "offset": 53,
+                            },
+                          },
+                          "type": "Null",
                           "value": null,
-                          "valueType": "null",
                         },
                       ],
+                      "position": Object {
+                        "end": Object {
+                          "column": 39,
+                          "line": 4,
+                          "offset": 58,
+                        },
+                        "start": Object {
+                          "column": 16,
+                          "line": 4,
+                          "offset": 35,
+                        },
+                      },
                       "title": "custom-children",
-                      "type": "array",
+                      "type": "Array",
                     },
                   ],
-                  "key": "item2",
+                  "key": Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 14,
+                        "line": 4,
+                        "offset": 33,
+                      },
+                      "start": Object {
+                        "column": 7,
+                        "line": 4,
+                        "offset": 26,
+                      },
+                    },
+                    "type": "Key",
+                    "value": "item2",
+                  },
+                  "position": Object {
+                    "end": Object {
+                      "column": 39,
+                      "line": 4,
+                      "offset": 58,
+                    },
+                    "start": Object {
+                      "column": 7,
+                      "line": 4,
+                      "offset": 26,
+                    },
+                  },
                   "title": "custom",
-                  "type": "collection",
+                  "type": "Collection",
                 },
               ],
+              "position": Object {
+                "end": Object {
+                  "column": 6,
+                  "line": 5,
+                  "offset": 64,
+                },
+                "start": Object {
+                  "column": 5,
+                  "line": 3,
+                  "offset": 18,
+                },
+              },
               "title": "custom",
-              "type": "object",
+              "type": "Object",
             },
           ],
+          "position": Object {
+            "end": Object {
+              "column": 4,
+              "line": 6,
+              "offset": 68,
+            },
+            "start": Object {
+              "column": 11,
+              "line": 2,
+              "offset": 12,
+            },
+          },
           "title": "custom-children",
-          "type": "array",
+          "type": "Array",
         },
       ],
-      "key": "item",
+      "key": Object {
+        "position": Object {
+          "end": Object {
+            "column": 9,
+            "line": 2,
+            "offset": 10,
+          },
+          "start": Object {
+            "column": 3,
+            "line": 2,
+            "offset": 4,
+          },
+        },
+        "type": "Key",
+        "value": "item",
+      },
+      "position": Object {
+        "end": Object {
+          "column": 4,
+          "line": 6,
+          "offset": 68,
+        },
+        "start": Object {
+          "column": 3,
+          "line": 2,
+          "offset": 4,
+        },
+      },
       "title": "custom",
-      "type": "collection",
+      "type": "Collection",
     },
   ],
   "hasExpressions": false,
+  "position": Object {
+    "end": Object {
+      "column": 2,
+      "line": 7,
+      "offset": 70,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
   "title": "animation",
-  "type": "root",
+  "type": "Root",
 }
 `;
