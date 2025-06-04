@@ -63,7 +63,8 @@
   "pnpm": {
     "overrides": {
       "tar-fs": "^3.0.9",
-      "semver": "^7.5.2"
+      "semver": "^7.5.2",
+      "cross-spawn": "^6.0.6"
     }
   }
 }
