@@ -116,6 +116,26 @@ export const timeStretchChecker: IsFeatureUsedChecker<Attribute> = (node): boole
   }
 };
 
+export const baselineShiftChecker: IsFeatureUsedChecker<Attribute> = (node, defaultValue = 0): boolean => {
+  const title = node.title;
+
+  if (title !== NT.baselineShift) return false;
+
+  const valueNode = node.children[0];
+
+  if (!valueNode) return false;
+
+  const value = valueNode.value;
+
+  if (typeof value !== 'number') {
+    return false;
+  } else if (value === defaultValue) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
 /**
  * If dilate's (aka Mask Expansion) or Transform Skew is set to a non-animated static value of 0, then it's disabled and not used.
  */
@@ -159,6 +179,7 @@ export const FEATURE_CHECKERS = new Map<
   [IBT.randomize, intBooleanNodeChecker],
   [IBT.matteTarget, intBooleanNodeChecker],
   [NT.timeStretch, timeStretchChecker],
+  [NT.baselineShift, baselineShiftChecker],
   [ET.dilate, animatedValueStaticChecker],
   [ET.layerTransformSkew, animatedValueStaticChecker],
   [ET.shapeTransformSkew, animatedValueStaticChecker],
