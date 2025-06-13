@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.12.0
+
+### Minor Changes
+
+- 1ffb180: feat: baselineShift feature checker
+
 ## 1.11.1
 
 ### Patch Changes
