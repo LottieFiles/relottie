@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`relottie-metadata fixtures features Test in dilate-default.json should have correct data 1`] = `
+{
+  "colors": Set {
+    "#db0303",
+  },
+  "fileSize": {
+    "bytes": 1710,
+    "formated": {
+      "exponent": 1,
+      "symbol": "KiB",
+      "unit": "KiB",
+      "value": "1.67",
+    },
+  },
+  "framerate": 60,
+  "frames": 1800,
+  "generator": "@lottiefiles/toolkit-js 0.65.0",
+  "height": 1080,
+  "inPoint": 0,
+  "outPoint": 1800,
+  "version": "5.7.0",
+  "width": 1920,
+}
+`;
