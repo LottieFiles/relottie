@@ -1,5 +1,12 @@
 # @lottiefiles/relottie-metadata
 
+## 1.13.0
+
+### Patch Changes
+
+- Updated dependencies [99136ce]
+  - @lottiefiles/last@1.13.0
+
 ## 1.11.1
 
 ### Patch Changes

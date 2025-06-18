@@ -1,5 +1,17 @@
 # @lottiefiles/relottie-parse
 
+## 1.13.0
+
+### Minor Changes
+
+- 99136ce: fix: end-opacity is an Element node and related to "eo" prop
+
+### Patch Changes
+
+- Updated dependencies [99136ce]
+  - @lottiefiles/last@1.13.0
+  - @lottiefiles/last-builder@1.13.0
+
 ## 1.11.0
 
 ### Minor Changes
