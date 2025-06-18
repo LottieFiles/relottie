@@ -1,5 +1,11 @@
 # @lottiefiles/last
 
+## 1.13.0
+
+### Minor Changes
+
+- 99136ce: fix(titles): endOpacity is an element node
+
 ## 1.9.1
 
 ### Patch Changes
