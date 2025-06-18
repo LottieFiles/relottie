@@ -899,7 +899,7 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.startOpacity]: {
     ...animatedValueProp,
   },
-  [OT.endOpacity]: {
+  [ET.endOpacity]: {
     ...animatedValueProp,
   },
   [CT.strokeDashList]: {
@@ -2029,7 +2029,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [ET.transformRepeater]: ET.startOpacity,
     },
     eo: {
-      [ET.transformRepeater]: ET.startOpacity,
+      [ET.transformRepeater]: ET.endOpacity,
     },
     ks: {
       [OT.characterPrecomp]: ET.layerTransform,

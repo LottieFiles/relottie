@@ -437,7 +437,11 @@ Map {
       },
       "start-opacity" => {
         "n": 0,
-        "y": 2,
+        "y": 1,
+      },
+      "end-opacity" => {
+        "n": 0,
+        "y": 1,
       },
       "shape-transform-skew" => {
         "n": 0,
@@ -1255,10 +1259,20 @@ Map {
     "parents": Map {
       "transform-repeater-children" => {
         "n": 0,
-        "y": 2,
+        "y": 1,
       },
     },
-    "y": 2,
+    "y": 1,
+  },
+  "end-opacity" => {
+    "n": 0,
+    "parents": Map {
+      "transform-repeater-children" => {
+        "n": 0,
+        "y": 1,
+      },
+    },
+    "y": 1,
   },
   "shape-transform" => {
     "n": 0,
