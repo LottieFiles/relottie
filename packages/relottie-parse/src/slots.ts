@@ -14,6 +14,7 @@ import type { VFile } from 'vfile';
 import { fileConstants } from './constants.js';
 import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
 import type { ParseOptions } from './options.js';
+import type { Info } from './parse.js';
 import { Stack } from './stack.js';
 
 const { element: ET, string: ST } = TITLES;
@@ -62,7 +63,7 @@ export class Slots {
    *
    * @returns void
    */
-  public mutateNodeTitles(): void {
+  public mutateNodeTitles(info: Info): void {
     const file = this._file;
     const options = this._options;
 
@@ -86,7 +87,7 @@ export class Slots {
         enter(currNode: MomoaAnyNode, parentNode: MomoaParent) {
           if (!parentNode) return;
 
-          traverseJsonEnter(currNode, parentNode, stack, file, options);
+          traverseJsonEnter(currNode, parentNode, stack, file, options, info);
 
           if (
             parentNode.type === 'Member' &&

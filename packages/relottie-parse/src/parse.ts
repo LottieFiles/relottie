@@ -3,7 +3,7 @@
  */
 
 import { parse as jsonParse, traverse as jsonTraverse, type AnyNode as MomoaAnyNode } from '@humanwhocodes/momoa';
-import type { Root, NodeValue } from '@lottiefiles/last';
+import type { Root, NodeValue, AnyTitle } from '@lottiefiles/last';
 import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
@@ -20,6 +20,7 @@ export interface ParseFileData extends Data {
 
 export interface Info {
   hasExpressions?: Root['hasExpressions'];
+  slotPropertyCurrTitle?: AnyTitle;
   slots?: Slots;
 }
 
@@ -35,14 +36,14 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   jsonTraverse(jsonAst, {
     enter(node: MomoaAnyNode, parent: MomoaParent) {
-      traverseJsonEnter(node, parent, stack, file, options);
+      traverseJsonEnter(node, parent, stack, file, options, info);
     },
     exit(node: MomoaAnyNode, parent: MomoaParent) {
       traverseJsonExit(node, parent, stack, file, options, info);
     },
   });
 
-  info.slots?.mutateNodeTitles();
+  info.slots?.mutateNodeTitles(info);
 
   const tree = stack.pop();
 

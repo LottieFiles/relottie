@@ -141,7 +141,12 @@ const createKeyNode = (node: MomoaMember, options: ParseOptions): KeyValue => {
   }
 };
 
-const createMemberNode = (node: MomoaMember, parentTitle: ParentTitle, options: ParseOptions): ObjectNodeValue => {
+const createMemberNode = (
+  node: MomoaMember,
+  parentTitle: ParentTitle,
+  options: ParseOptions,
+  info: Info,
+): ObjectNodeValue => {
   const keyValue = createKeyNode(node, options);
   const key = typeof keyValue === 'string' ? keyValue : keyValue.value;
   const position = createPositionProp(node, options);
@@ -156,6 +161,10 @@ const createMemberNode = (node: MomoaMember, parentTitle: ParentTitle, options: 
       return collectionNode(keyValue, title as CollectionTitle, [], { ...parts });
 
     case 'Object':
+      if (title === info.slotPropertyCurrTitle) {
+        info.slotPropertyCurrTitle = undefined;
+      }
+
       return elementNode(keyValue, title as ElementTitle, [], { ...parts });
 
     default:
@@ -307,6 +316,7 @@ export const traverseJsonEnter = (
   stack: Stack<NodeValue>,
   file: VFile,
   options: ParseOptions,
+  info: Info,
 ): void => {
   const position = createPositionProp(node, options);
 
@@ -321,7 +331,7 @@ export const traverseJsonEnter = (
     case 'Member':
       const memberParent = stack.peek() as ArrayNode | ObjectNode | Root;
 
-      stack.push(createMemberNode(node, memberParent.title as ParentTitle, options));
+      stack.push(createMemberNode(node, memberParent.title as ParentTitle, options, info));
       break;
 
     case 'Object':
