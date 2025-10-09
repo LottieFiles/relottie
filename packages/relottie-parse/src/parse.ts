@@ -20,7 +20,8 @@ export interface ParseFileData extends Data {
 
 export interface Info {
   hasExpressions?: Root['hasExpressions'];
-  slotPropertyCurrTitle?: AnyTitle;
+  slotIdTitles?: Map<string, AnyTitle>;
+  slotPropCurrTitle?: AnyTitle;
   slots?: Slots;
 }
 
@@ -43,7 +44,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
     },
   });
 
-  info.slots?.mutateNodeTitles(info);
+  info.slots?.mutate();
 
   const tree = stack.pop();
 

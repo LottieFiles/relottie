@@ -161,11 +161,17 @@ const createMemberNode = (
       return collectionNode(keyValue, title as CollectionTitle, [], { ...parts });
 
     case 'Object':
-      if (title === info.slotPropertyCurrTitle) {
-        info.slotPropertyCurrTitle = undefined;
+      let elementTitle = title;
+      const slotIdTitle = info.slots?.idTitles.get(key);
+
+      if (slotIdTitle) {
+        info.slotPropCurrTitle = slotIdTitle;
+        elementTitle = 'slot';
+      } else if (elementTitle === 'slot-property' && info.slotPropCurrTitle) {
+        elementTitle = info.slotPropCurrTitle;
       }
 
-      return elementNode(keyValue, title as ElementTitle, [], { ...parts });
+      return elementNode(keyValue, elementTitle as ElementTitle, [], { ...parts });
 
     default:
       return attributeNode(keyValue, title as AttributeTitle, [], { ...parts });
@@ -347,7 +353,14 @@ export const traverseJsonEnter = (
           const element = stack.peek();
 
           assertNodeType<Element>(element, 'element', file);
-          const elementValueTitle = getObjectNodeTitle(node, element.title, file);
+
+          let elementValueTitle = getObjectNodeTitle(node, element.title, file);
+
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore (fix later)
+          if (element.title === 'slot' && elementValueTitle === 'slot-property' && info.slotPropCurrTitle) {
+            elementValueTitle = info.slotPropCurrTitle as ObjectTitle;
+          }
 
           stack.push(objectNode(elementValueTitle, [], { ...position }));
           break;
@@ -435,14 +448,18 @@ export const traverseJsonExit = (
 
       const parentNode = stack.peek() as Root | ObjectNode;
 
-      if (parentNode.type === 'root') {
-        parentNode.children.push(objectNodeValue);
-        break;
-      }
-
       switch (objectNodeValue.type) {
         case 'element':
-          info.slots?.setNode(objectNodeValue, parentNode, node);
+          if (parentNode.type === 'root' && objectNodeValue.title === 'slots' && info.slots) {
+            info.slots.setNodes(parentNode, node);
+          }
+
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore (fix later)
+          if (parentNode.title === 'slot' && objectNodeValue.key === 'p') {
+            objectNodeValue.title = 'slot-property';
+          }
+
           break;
 
         case 'collection':
@@ -454,7 +471,13 @@ export const traverseJsonExit = (
             break;
           }
 
-          info.slots?.setIdTitle(objectNodeValue, parentNode);
+          if (info.slots) {
+            const ancestor = stack.get(stack.size() - 2);
+
+            if (ancestor?.type === 'element') {
+              info.slots.setIdTitle(objectNodeValue, ancestor);
+            }
+          }
 
           break;
 

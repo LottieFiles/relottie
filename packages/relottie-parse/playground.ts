@@ -23,7 +23,7 @@ function emptyCompiler(this: Plugin<[], Root, string>): void {
   Object.assign(this, { Compiler: compiler });
 }
 
-const name = 'slots';
+const name = 'slots-animated-value';
 const path = `../../__fixtures__/features/${name}.json`;
 
 const lottieJsonFile = readFileSync(path, 'utf8');

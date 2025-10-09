@@ -9,6 +9,12 @@ export class Stack<T, K extends { i: number } = { i: number }> {
 
   public constructor(private readonly _capacity: number = Infinity) {}
 
+  public get(index: number): T | undefined {
+    const key = this._keys[index];
+
+    return key ? this._storage.get(key) : undefined;
+  }
+
   public peek(): T | undefined {
     const size = this.size();
     const key = this._keys[size - 1];
