@@ -2,6 +2,8 @@
  * Copyright 2024 Design Barn Inc.
  */
 
+import { writeFileSync } from 'fs';
+
 import {
   traverse as jsonTraverse,
   type MemberNode as MomoaMember,
@@ -9,10 +11,12 @@ import {
 } from '@humanwhocodes/momoa';
 import type { AnyTitle, Element, Root } from '@lottiefiles/last';
 import { type Attribute, type NodeValue, TITLES } from '@lottiefiles/last';
+import { rt } from '@lottiefiles/last-builder';
 import type { VFile } from 'vfile';
 
 import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
 import type { ParseOptions } from './options.js';
+import { DEFAULT_OPTIONS } from './options.js';
 import type { Info } from './parse.js';
 import { Stack } from './stack.js';
 
@@ -66,14 +70,18 @@ export class Slots {
 
     const stack = new Stack<NodeValue>();
 
+    stack.push(rt());
+
     jsonTraverse(this.jsonNode, {
-      enter(currNode: MomoaAnyNode, parentNode: MomoaParent) {
+      enter: (currNode: MomoaAnyNode, parentNode: MomoaParent) => {
         traverseJsonEnter(currNode, parentNode, stack, this.file, this.options, info);
       },
-      exit(currNode: MomoaAnyNode, parentNode: MomoaParent) {
+      exit: (currNode: MomoaAnyNode, parentNode: MomoaParent) => {
         traverseJsonExit(currNode, parentNode, stack, this.file, this.options, info);
       },
     });
+
+    // writeFileSync('slots.json', JSON.stringify(stack.pop(), null, 2));
   }
 
   /**
