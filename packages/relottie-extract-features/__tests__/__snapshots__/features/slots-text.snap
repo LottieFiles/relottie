@@ -140,14 +140,14 @@ Map {
     },
     "y": 1,
   },
-  "text-animated-document" => {
+  "text-animated-document-children" => {
     "n": 0,
     "parents": Map {
       "slot-property" => {
         "n": 0,
         "y": 1,
       },
-      "text-animator-data-children" => {
+      "text-animated-document" => {
         "n": 0,
         "y": 1,
       },
@@ -157,13 +157,9 @@ Map {
   "text-document-keyframes" => {
     "n": 0,
     "parents": Map {
-      "text-animated-document" => {
-        "n": 0,
-        "y": 1,
-      },
       "text-animated-document-children" => {
         "n": 0,
-        "y": 1,
+        "y": 2,
       },
     },
     "y": 2,
@@ -554,10 +550,10 @@ Map {
     },
     "y": 0,
   },
-  "text-animated-document-children" => {
+  "text-animated-document" => {
     "n": 0,
     "parents": Map {
-      "text-animated-document" => {
+      "text-animator-data-children" => {
         "n": 0,
         "y": 1,
       },

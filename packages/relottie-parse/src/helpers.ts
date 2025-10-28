@@ -169,7 +169,7 @@ const createMemberNode = (
         return elementNode(keyValue, 'slot', [], { ...parts });
       }
 
-      if (title === 'slot-property' && info.slotPropCurrTitle) {
+      if (info.slotPropCurrTitle && title === 'slot-property') {
         return elementNode(keyValue, info.slotPropCurrTitle as ElementTitle, [], { ...parts });
       }
 
@@ -360,7 +360,7 @@ export const traverseJsonEnter = (
 
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore (fix later)
-          if (element.title === 'slot' && elementValueTitle === 'slot-property' && info.slotPropCurrTitle) {
+          if (info.slotPropCurrTitle && element.title === 'slot' && elementValueTitle === 'slot-property') {
             elementValueTitle = info.slotPropCurrTitle as ObjectTitle;
           }
 
