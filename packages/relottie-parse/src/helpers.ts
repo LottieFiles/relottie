@@ -161,17 +161,19 @@ const createMemberNode = (
       return collectionNode(keyValue, title as CollectionTitle, [], { ...parts });
 
     case 'Object':
-      let elementTitle = title;
-      const slotIdTitle = info.slots?.idTitles.get(key);
+      const slotIdTitle = info.slotIdTitles?.get(key);
 
       if (slotIdTitle) {
         info.slotPropCurrTitle = slotIdTitle;
-        elementTitle = 'slot';
-      } else if (elementTitle === 'slot-property' && info.slotPropCurrTitle) {
-        elementTitle = info.slotPropCurrTitle;
+
+        return elementNode(keyValue, 'slot', [], { ...parts });
       }
 
-      return elementNode(keyValue, elementTitle as ElementTitle, [], { ...parts });
+      if (title === 'slot-property' && info.slotPropCurrTitle) {
+        return elementNode(keyValue, info.slotPropCurrTitle as ElementTitle, [], { ...parts });
+      }
+
+      return elementNode(keyValue, title as ElementTitle, [], { ...parts });
 
     default:
       return attributeNode(keyValue, title as AttributeTitle, [], { ...parts });
@@ -450,7 +452,7 @@ export const traverseJsonExit = (
 
       switch (objectNodeValue.type) {
         case 'element':
-          if (parentNode.type === 'root' && objectNodeValue.title === 'slots' && info.slots) {
+          if (info.slots && parentNode.type === 'root' && objectNodeValue.title === 'slots') {
             info.slots.setNodes(parentNode, node);
           }
 

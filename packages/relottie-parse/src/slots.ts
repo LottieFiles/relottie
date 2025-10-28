@@ -2,8 +2,6 @@
  * Copyright 2024 Design Barn Inc.
  */
 
-import { writeFileSync } from 'fs';
-
 import {
   traverse as jsonTraverse,
   type MemberNode as MomoaMember,
@@ -16,7 +14,6 @@ import type { VFile } from 'vfile';
 
 import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
 import type { ParseOptions } from './options.js';
-import { DEFAULT_OPTIONS } from './options.js';
 import type { Info } from './parse.js';
 import { Stack } from './stack.js';
 
@@ -59,7 +56,7 @@ export class Slots {
    * @returns void
    */
   public mutate(): void {
-    if (!this.jsonNode) {
+    if (!this.jsonNode || !this.parentNode) {
       // if the original JSON Slot node is not set, we don't need to mutate it
       return;
     }
@@ -70,7 +67,9 @@ export class Slots {
 
     const stack = new Stack<NodeValue>();
 
-    stack.push(rt());
+    const parentPosition = this.parentNode.position ? { position: this.parentNode.position } : {};
+
+    stack.push(rt([], { ...parentPosition }));
 
     jsonTraverse(this.jsonNode, {
       enter: (currNode: MomoaAnyNode, parentNode: MomoaParent) => {
@@ -81,7 +80,17 @@ export class Slots {
       },
     });
 
-    // writeFileSync('slots.json', JSON.stringify(stack.pop(), null, 2));
+    const tempParent = stack.pop();
+
+    if (!tempParent || tempParent.type !== 'root') return;
+
+    const newSlots = tempParent.children.find((child) => child.title === 'slots');
+
+    if (!newSlots) return;
+
+    const childIndex = this.parentNode.children.findIndex((child) => child.title === 'slots');
+
+    this.parentNode.children[childIndex] = newSlots;
   }
 
   /**
