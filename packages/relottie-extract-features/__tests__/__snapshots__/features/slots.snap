@@ -263,15 +263,15 @@ Map {
       },
       "animated-value-static" => {
         "n": 0,
-        "y": 15,
-      },
-      "animated-value" => {
-        "n": 0,
-        "y": 5,
+        "y": 16,
       },
       "animated-multidimensional-static" => {
         "n": 0,
         "y": 8,
+      },
+      "animated-value" => {
+        "n": 0,
+        "y": 4,
       },
       "animated-position-static" => {
         "n": 0,
@@ -309,7 +309,7 @@ Map {
     "parents": Map {
       "slot-property" => {
         "n": 0,
-        "y": 1,
+        "y": 2,
       },
       "transform-opacity" => {
         "n": 0,
@@ -340,47 +340,17 @@ Map {
         "y": 1,
       },
     },
-    "y": 15,
+    "y": 16,
   },
   "static-value" => {
     "n": 0,
     "parents": Map {
       "animated-value-static" => {
         "n": 0,
-        "y": 15,
-      },
-      "animated-value" => {
-        "n": 0,
-        "y": 1,
+        "y": 16,
       },
     },
     "y": 16,
-  },
-  "animated-value" => {
-    "n": 0,
-    "parents": Map {
-      "slot-property" => {
-        "n": 0,
-        "y": 1,
-      },
-      "rotation-clockwise" => {
-        "n": 0,
-        "y": 1,
-      },
-      "split-y" => {
-        "n": 0,
-        "y": 1,
-      },
-      "rounded" => {
-        "n": 0,
-        "y": 1,
-      },
-      "transform-opacity" => {
-        "n": 0,
-        "y": 1,
-      },
-    },
-    "y": 5,
   },
   "animated-multidimensional-static" => {
     "n": 0,
@@ -530,6 +500,28 @@ Map {
         "y": 3,
       },
       "shape-transform" => {
+        "n": 0,
+        "y": 1,
+      },
+    },
+    "y": 4,
+  },
+  "animated-value" => {
+    "n": 0,
+    "parents": Map {
+      "rotation-clockwise" => {
+        "n": 0,
+        "y": 1,
+      },
+      "split-y" => {
+        "n": 0,
+        "y": 1,
+      },
+      "rounded" => {
+        "n": 0,
+        "y": 1,
+      },
+      "transform-opacity" => {
         "n": 0,
         "y": 1,
       },

@@ -307,7 +307,11 @@ Map {
       },
       "animated-color-static" => {
         "n": 0,
-        "y": 8,
+        "y": 7,
+      },
+      "animated-color" => {
+        "n": 0,
+        "y": 1,
       },
     },
     "y": 44,
@@ -365,11 +369,11 @@ Map {
       },
       "keyframe-out-tangent" => {
         "n": 0,
-        "y": 64,
+        "y": 68,
       },
       "keyframe-in-tangent" => {
         "n": 0,
-        "y": 64,
+        "y": 68,
       },
       "shape-keyframe-out-tangent" => {
         "n": 0,
@@ -380,27 +384,27 @@ Map {
         "y": 16,
       },
     },
-    "y": 224,
+    "y": 232,
   },
   "keyframe-bezier-handle-x-axis" => {
     "n": 0,
     "parents": Map {
       "keyframe-bezier-handle" => {
         "n": 0,
-        "y": 224,
+        "y": 232,
       },
     },
-    "y": 224,
+    "y": 232,
   },
   "keyframe-bezier-handle-y-axis" => {
     "n": 0,
     "parents": Map {
       "keyframe-bezier-handle" => {
         "n": 0,
-        "y": 224,
+        "y": 232,
       },
     },
-    "y": 224,
+    "y": 232,
   },
   "position-keyframe-in-tangent" => {
     "n": 0,
@@ -421,20 +425,20 @@ Map {
       },
       "keyframe" => {
         "n": 0,
-        "y": 80,
+        "y": 85,
       },
     },
-    "y": 120,
+    "y": 125,
   },
   "keyframe-value-children" => {
     "n": 0,
     "parents": Map {
       "keyframe-value" => {
         "n": 0,
-        "y": 120,
+        "y": 125,
       },
     },
-    "y": 120,
+    "y": 125,
   },
   "position-keyframe-time" => {
     "n": 0,
@@ -477,58 +481,62 @@ Map {
         "n": 0,
         "y": 12,
       },
+      "animated-color" => {
+        "n": 0,
+        "y": 1,
+      },
     },
-    "y": 16,
+    "y": 17,
   },
   "keyframe-list-children" => {
     "n": 0,
     "parents": Map {
       "keyframe-list" => {
         "n": 0,
-        "y": 16,
+        "y": 17,
       },
     },
-    "y": 16,
+    "y": 17,
   },
   "keyframe" => {
     "n": 0,
     "parents": Map {
       "keyframe-list-children" => {
         "n": 0,
-        "y": 80,
+        "y": 85,
       },
     },
-    "y": 80,
+    "y": 85,
   },
   "keyframe-out-tangent" => {
     "n": 0,
     "parents": Map {
       "keyframe" => {
         "n": 0,
-        "y": 64,
+        "y": 68,
       },
     },
-    "y": 64,
+    "y": 68,
   },
   "keyframe-in-tangent" => {
     "n": 0,
     "parents": Map {
       "keyframe" => {
         "n": 0,
-        "y": 64,
+        "y": 68,
       },
     },
-    "y": 64,
+    "y": 68,
   },
   "keyframe-time" => {
     "n": 0,
     "parents": Map {
       "keyframe" => {
         "n": 0,
-        "y": 80,
+        "y": 85,
       },
     },
-    "y": 80,
+    "y": 85,
   },
   "layer-transform-skew" => {
     "n": 4,
@@ -897,34 +905,30 @@ Map {
       },
       "slot-property" => {
         "n": 0,
-        "y": 4,
+        "y": 3,
       },
     },
-    "y": 8,
+    "y": 7,
   },
   "color-rgba" => {
     "n": 0,
     "parents": Map {
       "animated-color-static" => {
         "n": 0,
-        "y": 8,
-      },
-      "color-rgba-children" => {
-        "n": 0,
-        "y": 5,
+        "y": 7,
       },
     },
-    "y": 13,
+    "y": 7,
   },
   "color-rgba-children" => {
     "n": 0,
     "parents": Map {
       "color-rgba" => {
         "n": 0,
-        "y": 8,
+        "y": 7,
       },
     },
-    "y": 8,
+    "y": 7,
   },
   "slot-id" => {
     "n": 0,
@@ -1031,10 +1035,10 @@ Map {
     "parents": Map {
       "slots-children" => {
         "n": 0,
-        "y": 5,
+        "y": 4,
       },
     },
-    "y": 5,
+    "y": 4,
   },
   "slot-children" => {
     "n": 0,
@@ -1056,33 +1060,39 @@ Map {
     },
     "y": 4,
   },
-  "custom-children" => {
-    "n": 0,
-    "parents": Map {
-      "slot" => {
-        "n": 0,
-        "y": 1,
-      },
-      "custom" => {
-        "n": 0,
-        "y": 15,
-      },
-    },
-    "y": 16,
-  },
   "custom" => {
     "n": 0,
     "parents": Map {
+      "slots-children" => {
+        "n": 0,
+        "y": 1,
+      },
       "custom-children" => {
         "n": 0,
-        "y": 19,
-      },
-      "color-rgba" => {
-        "n": 0,
-        "y": 18,
+        "y": 3,
       },
     },
-    "y": 37,
+    "y": 4,
+  },
+  "custom-children" => {
+    "n": 0,
+    "parents": Map {
+      "custom" => {
+        "n": 0,
+        "y": 3,
+      },
+    },
+    "y": 3,
+  },
+  "animated-color" => {
+    "n": 0,
+    "parents": Map {
+      "slot-property" => {
+        "n": 0,
+        "y": 1,
+      },
+    },
+    "y": 1,
   },
 }
 `;

@@ -141,7 +141,12 @@ const createKeyNode = (node: MomoaMember, options: ParseOptions): KeyValue => {
   }
 };
 
-const createMemberNode = (node: MomoaMember, parentTitle: ParentTitle, options: ParseOptions): ObjectNodeValue => {
+const createMemberNode = (
+  node: MomoaMember,
+  parentTitle: ParentTitle,
+  options: ParseOptions,
+  info: Info,
+): ObjectNodeValue => {
   const keyValue = createKeyNode(node, options);
   const key = typeof keyValue === 'string' ? keyValue : keyValue.value;
   const position = createPositionProp(node, options);
@@ -156,6 +161,18 @@ const createMemberNode = (node: MomoaMember, parentTitle: ParentTitle, options: 
       return collectionNode(keyValue, title as CollectionTitle, [], { ...parts });
 
     case 'Object':
+      const slotIdTitle = info.slotIdTitles?.get(key);
+
+      if (slotIdTitle) {
+        info.slotPropCurrTitle = slotIdTitle;
+
+        return elementNode(keyValue, 'slot', [], { ...parts });
+      }
+
+      if (info.slotPropCurrTitle && title === 'slot-property') {
+        return elementNode(keyValue, info.slotPropCurrTitle as ElementTitle, [], { ...parts });
+      }
+
       return elementNode(keyValue, title as ElementTitle, [], { ...parts });
 
     default:
@@ -307,6 +324,7 @@ export const traverseJsonEnter = (
   stack: Stack<NodeValue>,
   file: VFile,
   options: ParseOptions,
+  info: Info,
 ): void => {
   const position = createPositionProp(node, options);
 
@@ -321,7 +339,7 @@ export const traverseJsonEnter = (
     case 'Member':
       const memberParent = stack.peek() as ArrayNode | ObjectNode | Root;
 
-      stack.push(createMemberNode(node, memberParent.title as ParentTitle, options));
+      stack.push(createMemberNode(node, memberParent.title as ParentTitle, options, info));
       break;
 
     case 'Object':
@@ -337,7 +355,14 @@ export const traverseJsonEnter = (
           const element = stack.peek();
 
           assertNodeType<Element>(element, 'element', file);
-          const elementValueTitle = getObjectNodeTitle(node, element.title, file);
+
+          let elementValueTitle = getObjectNodeTitle(node, element.title, file);
+
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore (fix later)
+          if (info.slotPropCurrTitle && element.title === 'slot' && elementValueTitle === 'slot-property') {
+            elementValueTitle = info.slotPropCurrTitle as ObjectTitle;
+          }
 
           stack.push(objectNode(elementValueTitle, [], { ...position }));
           break;
@@ -425,14 +450,18 @@ export const traverseJsonExit = (
 
       const parentNode = stack.peek() as Root | ObjectNode;
 
-      if (parentNode.type === 'root') {
-        parentNode.children.push(objectNodeValue);
-        break;
-      }
-
       switch (objectNodeValue.type) {
         case 'element':
-          info.slots?.setNode(objectNodeValue, parentNode, node);
+          if (info.slots && parentNode.type === 'root' && objectNodeValue.title === 'slots') {
+            info.slots.setNodes(parentNode, node);
+          }
+
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore (fix later)
+          if (parentNode.title === 'slot' && objectNodeValue.key === 'p') {
+            objectNodeValue.title = 'slot-property';
+          }
+
           break;
 
         case 'collection':
@@ -444,7 +473,13 @@ export const traverseJsonExit = (
             break;
           }
 
-          info.slots?.setIdTitle(objectNodeValue, parentNode);
+          if (info.slots) {
+            const ancestor = stack.get(stack.size() - 2);
+
+            if (ancestor?.type === 'element') {
+              info.slots.setIdTitle(objectNodeValue, ancestor);
+            }
+          }
 
           break;
 
