@@ -334,6 +334,7 @@ export const traverseJsonEnter = (
         file.fail(new Error(`Lottie must be "Object" but it's "${node.body.type}"`));
       }
 
+      stack.push(rootNode([], { ...position }));
       break;
 
     case 'Member':
@@ -347,7 +348,6 @@ export const traverseJsonEnter = (
 
       switch (parent.type) {
         case 'Document':
-          stack.push(rootNode([], { ...position }));
           break;
 
         case 'Member':
