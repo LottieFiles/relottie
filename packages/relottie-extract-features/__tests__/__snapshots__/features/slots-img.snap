@@ -83,7 +83,7 @@ Map {
       },
       "asset-image" => {
         "n": 0,
-        "y": 2,
+        "y": 1,
       },
       "layer-solid-color" => {
         "n": 0,
@@ -94,7 +94,7 @@ Map {
         "y": 9,
       },
     },
-    "y": 13,
+    "y": 12,
   },
   "height" => {
     "n": 0,
@@ -105,14 +105,14 @@ Map {
       },
       "asset-image" => {
         "n": 0,
-        "y": 2,
+        "y": 1,
       },
       "layer-solid-color" => {
         "n": 0,
         "y": 1,
       },
     },
-    "y": 4,
+    "y": 3,
   },
   "name" => {
     "n": 0,
@@ -192,79 +192,37 @@ Map {
     },
     "y": 1,
   },
-  "slot" => {
-    "n": 0,
+  "custom" => {
+    "n": 1,
     "parents": Map {
       "slots-children" => {
         "n": 0,
         "y": 1,
       },
-    },
-    "y": 1,
-  },
-  "slot-children" => {
-    "n": 0,
-    "parents": Map {
-      "slot" => {
-        "n": 0,
-        "y": 1,
-      },
-    },
-    "y": 1,
-  },
-  "slot-property" => {
-    "n": 0,
-    "parents": Map {
-      "slot-children" => {
-        "n": 0,
-        "y": 1,
-      },
-    },
-    "y": 1,
-  },
-  "asset-image" => {
-    "n": 0,
-    "parents": Map {
-      "slot-property" => {
-        "n": 0,
-        "y": 1,
-      },
-      "assets-children" => {
-        "n": 0,
-        "y": 1,
-      },
-    },
-    "y": 2,
-  },
-  "path" => {
-    "n": 1,
-    "parents": Map {
-      "asset-image" => {
+      "custom-children" => {
         "n": 1,
+        "y": 5,
+      },
+      "layer-solid-color" => {
+        "n": 0,
         "y": 1,
       },
+      "keyframe" => {
+        "n": 0,
+        "y": 8,
+      },
     },
-    "y": 1,
+    "y": 15,
   },
-  "filename" => {
+  "custom-children" => {
     "n": 0,
     "parents": Map {
-      "asset-image" => {
+      "custom" => {
         "n": 0,
-        "y": 2,
+        "y": 10,
       },
     },
-    "y": 2,
-  },
-  "embedded" => {
-    "n": 2,
-    "parents": Map {
-      "asset-image" => {
-        "n": 2,
-        "y": 0,
-      },
-    },
-    "y": 0,
+    "y": 10,
   },
   "assets" => {
     "n": 0,
@@ -286,6 +244,16 @@ Map {
     },
     "y": 1,
   },
+  "asset-image" => {
+    "n": 0,
+    "parents": Map {
+      "assets-children" => {
+        "n": 0,
+        "y": 1,
+      },
+    },
+    "y": 1,
+  },
   "id-asset-image" => {
     "n": 0,
     "parents": Map {
@@ -295,6 +263,36 @@ Map {
       },
     },
     "y": 1,
+  },
+  "filename" => {
+    "n": 0,
+    "parents": Map {
+      "asset-image" => {
+        "n": 0,
+        "y": 1,
+      },
+    },
+    "y": 1,
+  },
+  "path" => {
+    "n": 0,
+    "parents": Map {
+      "asset-image" => {
+        "n": 0,
+        "y": 1,
+      },
+    },
+    "y": 1,
+  },
+  "embedded" => {
+    "n": 1,
+    "parents": Map {
+      "asset-image" => {
+        "n": 1,
+        "y": 0,
+      },
+    },
+    "y": 0,
   },
   "slot-id" => {
     "n": 0,
@@ -1095,20 +1093,6 @@ Map {
       },
     },
     "y": 1,
-  },
-  "custom" => {
-    "n": 0,
-    "parents": Map {
-      "layer-solid-color" => {
-        "n": 0,
-        "y": 1,
-      },
-      "keyframe" => {
-        "n": 0,
-        "y": 8,
-      },
-    },
-    "y": 9,
   },
   "layer-shape" => {
     "n": 0,
@@ -1935,16 +1919,6 @@ Map {
       },
     },
     "y": 1,
-  },
-  "custom-children" => {
-    "n": 0,
-    "parents": Map {
-      "custom" => {
-        "n": 0,
-        "y": 8,
-      },
-    },
-    "y": 8,
   },
   "shape-gradient-fill-end-point" => {
     "n": 0,
