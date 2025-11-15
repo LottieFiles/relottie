@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-parse
 
+## 1.14.0
+
+### Minor Changes
+
+- 77768ef: fix(slots): titles detection
+
 ## 1.13.0
 
 ### Minor Changes
