@@ -2,7 +2,7 @@
  * Copyright 2022 Design Barn Inc.
  */
 
-import type { Root } from '@lottiefiles/last';
+import type { NodeValue, Root } from '@lottiefiles/last';
 import type { ParserFunction, Plugin } from 'unified';
 
 import type { ParseOptions } from './options.js';
@@ -22,7 +22,7 @@ const relottieParse: Plugin<[Options?], string, Root> = function relottieParse(o
 
   settings.parse = { ...settings.parse, ...options };
 
-  const parser: ParserFunction<Root> = (doc, file) => {
+  const parser: ParserFunction<NodeValue> = (doc, file) => {
     return parse(doc, file, settings);
   };
 
