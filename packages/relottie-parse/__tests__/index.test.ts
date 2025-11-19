@@ -5,8 +5,8 @@
 import { readdirSync, readFileSync } from 'fs';
 import path from 'path';
 
-import type { ArrayNode } from '@lottiefiles/last';
-import { ar, cl, el, ob, pt } from '@lottiefiles/last-builder';
+import type { ArrayNode, Attribute, ObjectNode, Primitive } from '@lottiefiles/last';
+import { ar, at, cl, el, ob, pt } from '@lottiefiles/last-builder';
 import { toMatchSpecificSnapshot } from 'jest-specific-snapshot';
 import { unified } from 'unified';
 
@@ -69,7 +69,7 @@ describe('parse()', () => {
 });
 
 describe('parse() with phantomRoot', () => {
-  test('should parse phantomRoot as ArrayNode correctly', () => {
+  test('should parse phantomRoot as Collection correctly', () => {
     const json = [
       {
         o: {
@@ -91,6 +91,34 @@ describe('parse() with phantomRoot', () => {
         ]),
       ]),
     ]);
+
+    expect(tree).toEqual(expected);
+  });
+
+  test('should parse phantomRoot as Element correctly', () => {
+    const json = {
+      sid: 'something',
+    };
+
+    const phantomRoot = el('r', 'rotation-clockwise');
+
+    const tree = unified().use(relottieParse, { phantomRoot, position: false }).parse(JSON.stringify(json));
+
+    const expected: ObjectNode = ob('animated-value-static', [
+      at('sid', 'slot-id', pt('something', { valueType: 'string' })),
+    ]);
+
+    expect(tree).toEqual(expected);
+  });
+
+  test('should parse phantomRoot as Attribute correctly', () => {
+    const json = 'something';
+
+    const phantomRoot = at('sid', 'slot-id');
+
+    const tree = unified().use(relottieParse, { phantomRoot, position: false }).parse(JSON.stringify(json));
+
+    const expected: Primitive = pt('something', { valueType: 'string' });
 
     expect(tree).toEqual(expected);
   });

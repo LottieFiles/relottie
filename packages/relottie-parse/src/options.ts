@@ -2,14 +2,14 @@
  * Copyright 2023 Design Barn Inc.
  */
 
-import type { ArrayNode, Collection, Element, ObjectNode, Attribute } from '@lottiefiles/last';
+import type { ArrayNode, Collection, Element, Attribute } from '@lottiefiles/last';
 
 export interface ParseOptions {
   /**
    * Optionally provides a phantom node that helps to parse a node
    * or fragment whose parent is not an animation root node.
    */
-  phantomRoot?: ArrayNode | ObjectNode | Collection | Element | Attribute;
+  phantomRoot?: ArrayNode | Collection | Element | Attribute;
   /**
    * Include 'position' prop into nodes (default, true)
    */

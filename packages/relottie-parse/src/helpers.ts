@@ -439,6 +439,14 @@ export const traverseJsonEnter = (
       if (!parent) break;
 
       switch (parent.type) {
+        case 'Document':
+          if (!phantomRoot) break;
+
+          if (is<Attribute>(phantomRoot, 'attribute')) {
+            stack.push(createPrimitiveNode(node, options));
+          }
+          break;
+
         case 'Member':
           if (isMomoaMemberValue(node, parent)) {
             stack.push(createPrimitiveNode(node, options));
