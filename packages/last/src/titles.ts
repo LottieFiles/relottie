@@ -408,7 +408,7 @@ export const TITLES = {
     documentFillColorChildren: 'document-fill-color-children',
     documentStrokeColorChildren: 'document-stroke-color-children',
     wrapPositionChildren: 'wrap-position-children',
-    wrapSizeChildren: 'wrap-size-children'
+    wrapSizeChildren: 'wrap-size-children',
   },
   collection: {
     assets: 'assets',
