@@ -326,12 +326,14 @@ export const traverseJsonEnter = (
   options: ParseOptions,
   info: Info,
 ): void => {
+  const { phantomRoot } = options;
   const position = createPositionProp(node, options);
 
   switch (node.type) {
     case 'Document':
-      if (node.body.type !== 'Object') {
-        file.fail(new Error(`Lottie must be "Object" but it's "${node.body.type}"`));
+      if (!phantomRoot) {
+        if (node.body.type !== 'Object') file.fail(new Error(`Lottie must be "Object" but it's "${node.body.type}"`));
+        stack.push(rootNode([], { ...position }));
       }
 
       break;
@@ -347,7 +349,16 @@ export const traverseJsonEnter = (
 
       switch (parent.type) {
         case 'Document':
-          stack.push(rootNode([], { ...position }));
+          if (!phantomRoot) break;
+
+          if (is<Element>(phantomRoot, 'element') || is<ArrayNode>(phantomRoot, 'array')) {
+            const objectValueTitle = getObjectNodeTitle(node, phantomRoot.title, file);
+
+            stack.push(objectNode(objectValueTitle, [], { ...position }));
+          } else {
+            file.fail(`Phantom node has to be "Element" or "Array" but it's "${phantomRoot.type}"`);
+          }
+
           break;
 
         case 'Member':
@@ -388,6 +399,19 @@ export const traverseJsonEnter = (
       if (!parent) break;
 
       switch (parent.type) {
+        case 'Document':
+          if (!phantomRoot) break;
+
+          if (is<ArrayNode>(phantomRoot, 'array') || is<Collection>(phantomRoot, 'collection')) {
+            const arrayValueTitle = getArrayNodeTitle(node, phantomRoot.title, file);
+
+            stack.push(arrayNode(arrayValueTitle, [], { ...position }));
+          } else {
+            file.fail(`Phantom node has to be "Array" or "Collection" but it's "${phantomRoot.type}"`);
+          }
+
+          break;
+
         case 'Member':
           const collection = stack.peek();
 
@@ -415,6 +439,14 @@ export const traverseJsonEnter = (
       if (!parent) break;
 
       switch (parent.type) {
+        case 'Document':
+          if (!phantomRoot) break;
+
+          if (is<Attribute>(phantomRoot, 'attribute')) {
+            stack.push(createPrimitiveNode(node, options));
+          }
+          break;
+
         case 'Member':
           if (isMomoaMemberValue(node, parent)) {
             stack.push(createPrimitiveNode(node, options));
@@ -437,12 +469,13 @@ export const traverseJsonExit = (
   parent: MomoaParent,
   stack: Stack<NodeValue>,
   file: VFile,
-  _options: ParseOptions,
+  options: ParseOptions,
   info: Info = {},
 ): void => {
+  const { phantomRoot } = options;
+
   switch (node.type) {
     case 'Document':
-      // finish traversing
       break;
 
     case 'Member':
@@ -495,7 +528,16 @@ export const traverseJsonExit = (
 
       switch (parent.type) {
         case 'Document':
-          // root node
+          if (!phantomRoot) break;
+
+          const phantomChild = stack.peek();
+
+          assertNodeType<ObjectNode>(phantomChild, 'object', file);
+
+          if (phantomRoot.title === phantomChild.title) {
+            phantomChild.title = `${phantomRoot.title}-children` as ObjectTitle;
+          }
+
           break;
 
         case 'Member':
@@ -536,6 +578,18 @@ export const traverseJsonExit = (
       if (!parent) break;
 
       switch (parent.type) {
+        case 'Document':
+          if (!phantomRoot) break;
+
+          const phantomChild = stack.peek();
+
+          assertNodeType<ArrayNode>(phantomChild, 'array', file);
+
+          if (phantomRoot.title === phantomChild.title) {
+            phantomChild.title = `${phantomRoot.title}-children` as ArrayTitle;
+          }
+          break;
+
         case 'Member':
           const collectionChild = stack.pop();
 

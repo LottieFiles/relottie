@@ -107,7 +107,35 @@ You can import the parser `Options` and `FileData` type definitions as well.
 ### `unified().use(relottieParse)`
 
 Add support for parsing Lottie input.
+`relottieParse` returns a [`NodeValue`](https://github.com/LottieFiles/relottie/tree/main/packages/last)
+that contains the parsed fragment.
+When you parse a complete animation the top-level node is still the `root`,
+but fragment parsing can now return any valid last node type.
 There are plugin options as well.
+
+#### Options
+
+All options map to the underlying parser:
+
+* `position` (default: `true`): include positional info on each node.
+* `valueType` (default: `true`): include the inferred value type (`string`, `number`, etc.).
+* `phantomRoot`: provide a synthetic parent node to parse an arbitrary fragment
+  outside of a full animation.
+  The phantom node is only used to resolve titles/slots and is never emitted in the AST.
+
+Example – parsing a single layer with `phantomRoot`:
+
+```ts
+const layerAst = unified()
+  .use(relottieParse, {
+    phantomRoot: {
+      type: 'collection',
+      title: 'composition',
+      children: [],
+    },
+  })
+  .parse('{"ty":4,"nm":"Shape Layer 1"}');
+```
 
 ## Examples
 

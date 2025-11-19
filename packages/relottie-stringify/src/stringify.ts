@@ -2,7 +2,7 @@
  * Copyright 2023 Design Barn Inc.
  */
 
-import type { Root } from '@lottiefiles/last';
+import type { NodeValue } from '@lottiefiles/last';
 import type { VFile, Data } from 'vfile';
 
 import { evaluate } from './helpers.js';
@@ -18,7 +18,7 @@ export interface StringifyFileData extends Data {
  * Converts a Lottie AST back into the LottieJSON
  * @returns The JSON representation of the Lottie AST.
  */
-export function stringify(node: Root, _file: VFile, settings: SettingsOptions = {}): string {
+export function stringify(node: NodeValue, _file: VFile, settings: SettingsOptions = {}): string {
   const options: StringifyOptions = { ...DEFAULT_OPTIONS, ...settings.stringify };
 
   const lottieJson = evaluate(node);

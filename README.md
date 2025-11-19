@@ -91,7 +91,7 @@ This GitHub repository is a monorepo that contains the following packages:
 *   [`relottie`][relottie-pkg]
     — a unified processor with support for parsing Lottie input and serializing Lottie as output
 *   [`relottie-parse`][relottie-parse]
-    — plugin to take Lottie as input and turn it into a syntax tree [last][]
+    — plugin to take Lottie as input and turn it into a syntax tree ([`NodeValue`][last]) with support for fragment parsing via `phantomRoot`
 *   [`relottie-stringify`][relottie-stringify]
     — plugin to take a syntax tree (last) and turn it into Lottie as output
 *   [`relottie-cli`][relottie-cli]

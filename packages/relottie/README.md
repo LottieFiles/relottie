@@ -83,9 +83,14 @@ const lottie = '{ "v": "6.0.0" }';
 
 const options: Options = {
   parse: {
-    position: false
+    position: false,
+    phantomRoot: {
+      type: 'object',
+      title: 'animated-color',
+      children: [],
+    },
   },
-}
+};
 
 const processor = relottie().data('settings', options);
 
@@ -116,6 +121,9 @@ const output = processor.stringify(tree);
 ```javascript
 {"v":"6.0.0"}
 ```
+
+`processor.parse` now returns a [`NodeValue`][last], so when you parse a complete animation you still get the `root`, but fragment parsing with a `phantomRoot` returns whichever node you targeted.
+The synthetic parent only provides context for titles/slots and is not emitted in the resulting tree.
 
 ## Types
 

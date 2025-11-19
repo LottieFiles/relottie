@@ -6,14 +6,14 @@
 
 import { readFileSync } from 'fs';
 
-import type { Root } from '@lottiefiles/last';
+import type { NodeValue } from '@lottiefiles/last';
 import type { CompilerFunction, Plugin } from 'unified';
 import { unified } from 'unified';
 import { reporter } from 'vfile-reporter';
 
 import relottieParse from './src/index.js';
 
-function emptyCompiler(this: Plugin<[], Root, string>): void {
+function emptyCompiler(this: Plugin<[], NodeValue, string>): void {
   const compiler: CompilerFunction<Root, string> = (_tree, file): string => {
     file.data['test'] = 'hi';
 
