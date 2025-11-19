@@ -5,7 +5,7 @@
 import { readdirSync, readFileSync } from 'fs';
 import path from 'path';
 
-import type { Collection } from '@lottiefiles/last';
+import type { ArrayNode } from '@lottiefiles/last';
 import { ar, cl, el, ob, pt } from '@lottiefiles/last-builder';
 import { toMatchSpecificSnapshot } from 'jest-specific-snapshot';
 import { unified } from 'unified';
@@ -69,7 +69,7 @@ describe('parse()', () => {
 });
 
 describe('parse() with phantomRoot', () => {
-  test('should parse Collection phantomRoot correctly', () => {
+  test('should parse phantomRoot as ArrayNode correctly', () => {
     const json = [
       {
         o: {
@@ -82,15 +82,11 @@ describe('parse() with phantomRoot', () => {
 
     const tree = unified().use(relottieParse, { phantomRoot, position: false }).parse(JSON.stringify(json));
 
-    const expected: Collection = cl('k', 'keyframe-list', [
-      ar('keyframe-list-children', [
-        ob('keyframe', [
-          el('o', 'keyframe-out-tangent', [
-            ob('keyframe-bezier-handle', [
-              cl('x', 'bezier-x-axis', [
-                ar('bezier-x-axis-children', [pt(0.3290197926422512, { valueType: 'number' })]),
-              ]),
-            ]),
+    const expected: ArrayNode = ar('keyframe-list-children', [
+      ob('keyframe', [
+        el('o', 'keyframe-out-tangent', [
+          ob('keyframe-bezier-handle', [
+            cl('x', 'bezier-x-axis', [ar('bezier-x-axis-children', [pt(0.3290197926422512, { valueType: 'number' })])]),
           ]),
         ]),
       ]),

@@ -331,14 +331,11 @@ export const traverseJsonEnter = (
 
   switch (node.type) {
     case 'Document':
-      if (phantomRoot) {
-        stack.push(phantomRoot);
-        break;
-      } else if (node.body.type !== 'Object') {
-        file.fail(new Error(`Lottie must be "Object" but it's "${node.body.type}"`));
+      if (!phantomRoot) {
+        if (node.body.type !== 'Object') file.fail(new Error(`Lottie must be "Object" but it's "${node.body.type}"`));
+        stack.push(rootNode([], { ...position }));
       }
 
-      stack.push(rootNode([], { ...position }));
       break;
 
     case 'Member':
@@ -354,12 +351,14 @@ export const traverseJsonEnter = (
         case 'Document':
           if (!phantomRoot) break;
 
-          const phantomElementChild = stack.peek();
+          if (is<Element>(phantomRoot, 'element') || is<ArrayNode>(phantomRoot, 'array')) {
+            const objectValueTitle = getObjectNodeTitle(node, phantomRoot.title, file);
 
-          assertNodeType<Element>(phantomElementChild, 'element', file);
-          const phantomElementValueTitle = getObjectNodeTitle(node, phantomElementChild.title, file);
+            stack.push(objectNode(objectValueTitle, [], { ...position }));
+          } else {
+            file.fail(`Phantom node has to be "Element" or "Array" but it's "${phantomRoot.type}"`);
+          }
 
-          stack.push(objectNode(phantomElementValueTitle, [], { ...position }));
           break;
 
         case 'Member':
@@ -403,12 +402,14 @@ export const traverseJsonEnter = (
         case 'Document':
           if (!phantomRoot) break;
 
-          const phantomCollectionChild = stack.peek();
+          if (is<ArrayNode>(phantomRoot, 'array') || is<Collection>(phantomRoot, 'collection')) {
+            const arrayValueTitle = getArrayNodeTitle(node, phantomRoot.title, file);
 
-          assertNodeType<Collection>(phantomCollectionChild, 'collection', file);
-          const phantomNodeChildValueTitle = getArrayNodeTitle(node, phantomCollectionChild.title, file);
+            stack.push(arrayNode(arrayValueTitle, [], { ...position }));
+          } else {
+            file.fail(`Phantom node has to be "Array" or "Collection" but it's "${phantomRoot.type}"`);
+          }
 
-          stack.push(arrayNode(phantomNodeChildValueTitle, [], { ...position }));
           break;
 
         case 'Member':
@@ -521,18 +522,12 @@ export const traverseJsonExit = (
         case 'Document':
           if (!phantomRoot) break;
 
-          const phantomChild = stack.pop();
+          const phantomChild = stack.peek();
 
           assertNodeType<ObjectNode>(phantomChild, 'object', file);
 
-          const phantomParent = stack.peek();
-
-          if (!phantomParent) {
-            break;
-          } else if (is<Element>(phantomParent, 'element')) {
-            (phantomParent as unknown as Element).children = [phantomChild];
-          } else if (!is<ArrayNode>(phantomParent, 'array')) {
-            (phantomParent as unknown as ArrayNode).children.push(phantomChild);
+          if (phantomRoot.title === phantomChild.title) {
+            phantomChild.title = `${phantomRoot.title}-children` as ObjectTitle;
           }
 
           break;
@@ -578,19 +573,13 @@ export const traverseJsonExit = (
         case 'Document':
           if (!phantomRoot) break;
 
-          const phantomChild = stack.pop();
+          const phantomChild = stack.peek();
 
           assertNodeType<ArrayNode>(phantomChild, 'array', file);
 
-          const phantomParent = stack.peek();
-
-          assertNodeType<Collection>(phantomParent, 'collection', file);
-
-          if (phantomChild.title === phantomParent.title) {
-            phantomChild.title = `${phantomParent.title}-children` as ArrayTitle;
+          if (phantomRoot.title === phantomChild.title) {
+            phantomChild.title = `${phantomRoot.title}-children` as ArrayTitle;
           }
-
-          phantomParent.children = [phantomChild];
           break;
 
         case 'Member':

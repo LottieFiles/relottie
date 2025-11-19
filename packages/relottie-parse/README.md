@@ -119,7 +119,7 @@ All options map to the underlying parser:
 
 * `position` (default: `true`): include positional info on each node.
 * `valueType` (default: `true`): include the inferred value type (`string`, `number`, etc.).
-* `phantomRoot`: provide a synthetic parent node to parse an arbitrary fragment (for example a single layer)
+* `phantomRoot`: provide a synthetic parent node to parse an arbitrary fragment
   outside of a full animation.
   The phantom node is only used to resolve titles/slots and is never emitted in the AST.
 

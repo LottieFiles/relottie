@@ -2,16 +2,14 @@
  * Copyright 2023 Design Barn Inc.
  */
 
-import type { ArrayNode, Attribute, Collection, Element, ObjectNode } from '@lottiefiles/last';
+import type { ArrayNode, Collection, Element, ObjectNode, Attribute } from '@lottiefiles/last';
 
 export interface ParseOptions {
   /**
-   * Optionally provides a synthetic root node (phantomRoot) that helps to prase any node or fragment
-   * whose parent is not an animation root node. The phantomRoot must be a valid Parent node and is used exclusively
-   * to provide parent context during parsing, such as for resolving titles. If not set, the parser always uses
-   * the "animation" as the root node.
+   * Optionally provides a phantom node that helps to parse a node
+   * or fragment whose parent is not an animation root node.
    */
-  phantomRoot?: ArrayNode | ObjectNode | Attribute | Element | Collection;
+  phantomRoot?: ArrayNode | ObjectNode | Collection | Element | Attribute;
   /**
    * Include 'position' prop into nodes (default, true)
    */
