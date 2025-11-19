@@ -26,7 +26,7 @@ export interface Info {
 }
 
 // eslint-disable-next-line consistent-return
-export function parse(document: string, file: VFile, settings: SettingsOptions = {}): Root {
+export function parse(document: string, file: VFile, settings: SettingsOptions = {}): NodeValue {
   const jsonAst = jsonParse(document);
 
   const options: ParseOptions = { ...DEFAULT_OPTIONS, ...settings.parse };
@@ -48,7 +48,9 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   const tree = stack.pop();
 
-  if (is<Root>(tree, 'root')) {
+  if (tree && options.phantomRoot) {
+    return tree;
+  } else if (is<Root>(tree, 'root')) {
     tree.hasExpressions = info.hasExpressions || false;
 
     return tree;

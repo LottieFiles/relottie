@@ -326,11 +326,15 @@ export const traverseJsonEnter = (
   options: ParseOptions,
   info: Info,
 ): void => {
+  const { phantomRoot } = options;
   const position = createPositionProp(node, options);
 
   switch (node.type) {
     case 'Document':
-      if (node.body.type !== 'Object') {
+      if (phantomRoot) {
+        stack.push(phantomRoot);
+        break;
+      } else if (node.body.type !== 'Object') {
         file.fail(new Error(`Lottie must be "Object" but it's "${node.body.type}"`));
       }
 
@@ -348,6 +352,14 @@ export const traverseJsonEnter = (
 
       switch (parent.type) {
         case 'Document':
+          if (!phantomRoot) break;
+
+          const phantomElementChild = stack.peek();
+
+          assertNodeType<Element>(phantomElementChild, 'element', file);
+          const phantomElementValueTitle = getObjectNodeTitle(node, phantomElementChild.title, file);
+
+          stack.push(objectNode(phantomElementValueTitle, [], { ...position }));
           break;
 
         case 'Member':
@@ -388,6 +400,17 @@ export const traverseJsonEnter = (
       if (!parent) break;
 
       switch (parent.type) {
+        case 'Document':
+          if (!phantomRoot) break;
+
+          const phantomCollectionChild = stack.peek();
+
+          assertNodeType<Collection>(phantomCollectionChild, 'collection', file);
+          const phantomNodeChildValueTitle = getArrayNodeTitle(node, phantomCollectionChild.title, file);
+
+          stack.push(arrayNode(phantomNodeChildValueTitle, [], { ...position }));
+          break;
+
         case 'Member':
           const collection = stack.peek();
 
@@ -437,12 +460,13 @@ export const traverseJsonExit = (
   parent: MomoaParent,
   stack: Stack<NodeValue>,
   file: VFile,
-  _options: ParseOptions,
+  options: ParseOptions,
   info: Info = {},
 ): void => {
+  const { phantomRoot } = options;
+
   switch (node.type) {
     case 'Document':
-      // finish traversing
       break;
 
     case 'Member':
@@ -495,7 +519,22 @@ export const traverseJsonExit = (
 
       switch (parent.type) {
         case 'Document':
-          // root node
+          if (!phantomRoot) break;
+
+          const phantomChild = stack.pop();
+
+          assertNodeType<ObjectNode>(phantomChild, 'object', file);
+
+          const phantomParent = stack.peek();
+
+          if (!phantomParent) {
+            break;
+          } else if (is<Element>(phantomParent, 'element')) {
+            (phantomParent as unknown as Element).children = [phantomChild];
+          } else if (!is<ArrayNode>(phantomParent, 'array')) {
+            (phantomParent as unknown as ArrayNode).children.push(phantomChild);
+          }
+
           break;
 
         case 'Member':
@@ -536,6 +575,24 @@ export const traverseJsonExit = (
       if (!parent) break;
 
       switch (parent.type) {
+        case 'Document':
+          if (!phantomRoot) break;
+
+          const phantomChild = stack.pop();
+
+          assertNodeType<ArrayNode>(phantomChild, 'array', file);
+
+          const phantomParent = stack.peek();
+
+          assertNodeType<Collection>(phantomParent, 'collection', file);
+
+          if (phantomChild.title === phantomParent.title) {
+            phantomChild.title = `${phantomParent.title}-children` as ArrayTitle;
+          }
+
+          phantomParent.children = [phantomChild];
+          break;
+
         case 'Member':
           const collectionChild = stack.pop();
 

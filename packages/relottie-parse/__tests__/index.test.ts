@@ -5,6 +5,8 @@
 import { readdirSync, readFileSync } from 'fs';
 import path from 'path';
 
+import type { Collection } from '@lottiefiles/last';
+import { ar, cl, el, ob, pt } from '@lottiefiles/last-builder';
 import { toMatchSpecificSnapshot } from 'jest-specific-snapshot';
 import { unified } from 'unified';
 
@@ -63,5 +65,37 @@ describe('parse()', () => {
         });
       });
     });
+  });
+});
+
+describe('parse() with phantomRoot', () => {
+  test('should parse Collection phantomRoot correctly', () => {
+    const json = [
+      {
+        o: {
+          x: [0.3290197926422512],
+        },
+      },
+    ];
+
+    const phantomRoot = cl('k', 'keyframe-list');
+
+    const tree = unified().use(relottieParse, { phantomRoot, position: false }).parse(JSON.stringify(json));
+
+    const expected: Collection = cl('k', 'keyframe-list', [
+      ar('keyframe-list-children', [
+        ob('keyframe', [
+          el('o', 'keyframe-out-tangent', [
+            ob('keyframe-bezier-handle', [
+              cl('x', 'bezier-x-axis', [
+                ar('bezier-x-axis-children', [pt(0.3290197926422512)]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]);
+
+    expect(tree).toEqual(expected);
   });
 });
