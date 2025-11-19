@@ -1,5 +1,12 @@
 # @lottiefiles/last
 
+## 1.15.0
+
+### Minor Changes
+
+- 5db2c76: fix: add missing array titles with children suffix
+- 5db2c76: fix: add missing temp array titiles
+
 ## 1.13.0
 
 ### Minor Changes
