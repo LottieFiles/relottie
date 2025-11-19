@@ -1,5 +1,19 @@
 # @lottiefiles/relottie-parse
 
+## 1.15.0
+
+### Minor Changes
+
+- 5db2c76: feat(options): introduce phantomRoot option to enable parsing from/for any Lottie node
+- 5db2c76: feat: change parse return type from Root to NodeValue
+
+### Patch Changes
+
+- Updated dependencies [5db2c76]
+- Updated dependencies [5db2c76]
+  - @lottiefiles/last@1.15.0
+  - @lottiefiles/last-builder@1.15.0
+
 ## 1.14.0
 
 ### Minor Changes
