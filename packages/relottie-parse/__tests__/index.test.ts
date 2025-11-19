@@ -88,7 +88,7 @@ describe('parse() with phantomRoot', () => {
           el('o', 'keyframe-out-tangent', [
             ob('keyframe-bezier-handle', [
               cl('x', 'bezier-x-axis', [
-                ar('bezier-x-axis-children', [pt(0.3290197926422512)]),
+                ar('bezier-x-axis-children', [pt(0.3290197926422512, { valueType: 'number' })]),
               ]),
             ]),
           ]),
