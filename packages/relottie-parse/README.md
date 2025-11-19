@@ -129,12 +129,12 @@ Example – parsing a single layer with `phantomRoot`:
 const layerAst = unified()
   .use(relottieParse, {
     phantomRoot: {
-      type: 'array',
-      title: 'layers',
+      type: 'collection',
+      title: 'composition',
       children: [],
     },
   })
-  .parse('[{"ty":4,"nm":"Shape Layer 1"}]');
+  .parse('{"ty":4,"nm":"Shape Layer 1"}');
 ```
 
 ## Examples

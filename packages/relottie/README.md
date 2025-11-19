@@ -85,8 +85,8 @@ const options: Options = {
   parse: {
     position: false,
     phantomRoot: {
-      type: 'array',
-      title: 'layers',
+      type: 'object',
+      title: 'animated-color',
       children: [],
     },
   },
