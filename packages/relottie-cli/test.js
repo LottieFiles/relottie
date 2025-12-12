@@ -18,7 +18,7 @@ test('relottie-cli', (t) => {
 
     const { stdout } = await execa(bin, ['--help']);
 
-    t.match(stdout, /Usage: relottie \[options] \[path \| glob \.\.\.]/u, 'should show usage header');
+    t.ok(stdout.includes('Usage: relottie [options] [path | glob ...]'), 'should show usage header');
     t.ok(stdout.includes('Command line interface to inspect and change Lottie files'), 'should include description');
     t.ok(stdout.includes('--help'), 'should list --help option');
     t.ok(stdout.includes('--version'), 'should list --version option');
