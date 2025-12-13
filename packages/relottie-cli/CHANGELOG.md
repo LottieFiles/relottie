@@ -1,5 +1,11 @@
 # @lottiefiles/relottie-cli
 
+## 1.15.1
+
+### Patch Changes
+
+- e1e7ec4: chore: bump unified-args to v11.0.1
+
 ## 1.15.0
 
 ### Patch Changes
