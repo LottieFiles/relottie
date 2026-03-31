@@ -16,7 +16,7 @@ overrides:
   rollup: ^4.59.0
   basic-ftp: ^5.2.0
   minimatch: ^9.0.7
-  serialize-javascript: ^7.0.3
+  serialize-javascript: ^7.0.5
   flatted: ^3.4.2
   lodash: ^4.17.23
   brace-expansion: ^2.0.3
@@ -6605,8 +6605,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serialize-javascript@7.0.4:
-    resolution: {integrity: sha512-DuGdB+Po43Q5Jxwpzt1lhyFSYKryqoNjQSA9M92tyw0lyHIOur+XCalOUe0KTJpyqzT8+fQ5A0Jf7vCx/NKmIg==}
+  serialize-javascript@7.0.5:
+    resolution: {integrity: sha512-F4LcB0UqUl1zErq+1nYEEzSHJnIwb3AF2XWB94b+afhrekOUijwooAYqFyRbjYkm2PAKBabx6oYv/xDxNi8IBw==}
     engines: {node: '>=20.0.0'}
 
   set-blocking@2.0.0:
@@ -15912,7 +15912,7 @@ snapshots:
 
   semver@7.7.2: {}
 
-  serialize-javascript@7.0.4: {}
+  serialize-javascript@7.0.5: {}
 
   set-blocking@2.0.0: {}
 
@@ -16491,7 +16491,7 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.29
       jest-worker: 27.5.1
       schema-utils: 4.3.2
-      serialize-javascript: 7.0.4
+      serialize-javascript: 7.0.5
       terser: 5.43.1
       webpack: 5.99.9(esbuild@0.25.7)
     optionalDependencies:
