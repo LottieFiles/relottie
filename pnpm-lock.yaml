@@ -21,6 +21,7 @@ overrides:
   lodash: ^4.17.23
   brace-expansion: ^2.0.3
   ajv: '>=6.14.0'
+  zod: ^3.22.3
 
 importers:
 
@@ -7881,9 +7882,6 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@3.13.4:
-    resolution: {integrity: sha512-LZRucWt4j/ru5azOkJxCfpR87IyFDn8h2UODdqvXzZLb3K7bb9chUrUIGTy3BPsr8XnbQYfQ5Md5Hu2OYIo1mg==}
-
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
@@ -9366,7 +9364,7 @@ snapshots:
       jest-image-snapshot: 4.5.1(jest@29.7.0(@types/node@18.18.9)(ts-node@10.9.1(@types/node@18.18.9)(typescript@4.7.4)))
       jest-json-schema: 6.1.0
       jest-watch-typeahead: 1.0.0(jest@29.7.0(@types/node@18.18.9)(ts-node@10.9.1(@types/node@18.18.9)(typescript@4.7.4)))
-      zod: 3.13.4
+      zod: 3.22.4
     transitivePeerDependencies:
       - supports-color
 
@@ -9381,7 +9379,7 @@ snapshots:
       jest-image-snapshot: 4.5.1(jest@29.7.0(@types/node@18.18.9)(ts-node@10.9.1(@types/node@20.5.1)(typescript@4.7.4)))
       jest-json-schema: 6.1.0
       jest-watch-typeahead: 1.0.0(jest@29.7.0(@types/node@18.18.9)(ts-node@10.9.1(@types/node@20.5.1)(typescript@4.7.4)))
-      zod: 3.13.4
+      zod: 3.22.4
     transitivePeerDependencies:
       - supports-color
 
@@ -9396,7 +9394,7 @@ snapshots:
       jest-image-snapshot: 4.5.1(jest@29.7.0(@types/node@22.19.2)(ts-node@10.9.1(@types/node@22.19.2)(typescript@4.7.4)))
       jest-json-schema: 6.1.0
       jest-watch-typeahead: 1.0.0(jest@29.7.0(@types/node@22.19.2)(ts-node@10.9.1(@types/node@22.19.2)(typescript@4.7.4)))
-      zod: 3.13.4
+      zod: 3.22.4
     transitivePeerDependencies:
       - supports-color
 
@@ -17534,8 +17532,6 @@ snapshots:
   yn@3.1.1: {}
 
   yocto-queue@0.1.0: {}
-
-  zod@3.13.4: {}
 
   zod@3.22.4: {}
 
