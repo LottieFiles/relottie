@@ -494,7 +494,7 @@ export const TITLES = {
     animatedGradientColors: 'animated-gradient-colors',
     animatedMultidimensionalProp: 'animated-multidimensional-prop',
     animatedPositionProp: 'animated-position-prop',
-    animatedShapeBezier: 'animated-shape-bezier',
+    animatedShapeStaticBezier: 'animated-shape-static-bezier',
     animatedShapeProp: 'animated-shape-prop',
     animatedValueProp: 'animated-value-prop',
     bevelStyle: 'bevel-style',
