@@ -133,7 +133,15 @@ jobs:
           fi
 
           # Suspicious npm token description (left as ransom marker).
-          if grep -rq "IfYouRevokeThisTokenItWillWipeTheComputerOfTheOwner" . 2>/dev/null; then
+          # Skip our own docs/workflow files which intentionally reference
+          # the marker string for documentation purposes.
+          if grep -rq \
+              --exclude-dir=node_modules \
+              --exclude-dir=.git \
+              --exclude=SECURITY.md \
+              --exclude=security.yml \
+              "IfYouRevokeThisTokenItWillWipeTheComputerOfTheOwner" \
+              . 2>/dev/null; then
             echo "::error::Ransom-marker token description found in repo content"
             fail=1
           fi
