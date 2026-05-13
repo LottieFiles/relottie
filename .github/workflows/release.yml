@@ -21,13 +21,13 @@ jobs:
         node-version: ['20']
     steps:
       - name: ⬇ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Validate
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
@@ -52,7 +52,7 @@ jobs:
 
       - name: 📏 Report bundle size
         if: github.event.event_name == 'pull_request'
-        uses: andresz1/size-limit-action@v1
+        uses: andresz1/size-limit-action@94bc357df29c36c8f8d50ea497c3e225c3c95d1d # v1.8.0
         continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -74,17 +74,17 @@ jobs:
 
     steps:
       - name: ⬇ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           # https://github.com/changesets/action/issues/201#issuecomment-1206088289
           # check out all commits and tags so changeset can skip duplicate tags
           fetch-depth: 0
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for NPM
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
@@ -97,7 +97,7 @@ jobs:
         run: npm install -g npm@latest
 
       - name: 🚀 Create Release Pull Request or Release to NPM
-        uses: changesets/action@v1
+        uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
         with:
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
@@ -124,17 +124,17 @@ jobs:
 
     steps:
       - name: ⬇ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         # https://github.com/changesets/action/issues/201#issuecomment-1206088289
         # check out all commits and tags so changeset can skip duplicate tags
         with:
           fetch-depth: 0
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
@@ -146,7 +146,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚀 Release to Github Packages
-        uses: changesets/action@v1
+        uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
         with:
           commit: 'chore: update versions'
           title: 'chore: update versions'
