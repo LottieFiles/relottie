@@ -27,6 +27,8 @@ jobs:
 
       - name: ⬇ Checkout repo
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
 
       - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
@@ -105,6 +107,7 @@ jobs:
           # https://github.com/changesets/action/issues/201#issuecomment-1206088289
           # check out all commits and tags so changeset can skip duplicate tags
           fetch-depth: 0
+          persist-credentials: false
 
       - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
@@ -160,6 +163,7 @@ jobs:
         # check out all commits and tags so changeset can skip duplicate tags
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0

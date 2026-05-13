@@ -32,6 +32,7 @@ jobs:
         with:
           # Full history so gitleaks can scan every commit, not just HEAD.
           fetch-depth: 0
+          persist-credentials: false
 
       - name: 📦 Install gitleaks
         env:
