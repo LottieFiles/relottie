@@ -33,7 +33,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
@@ -91,7 +91,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: ⬆️ Update npm for OIDC trusted publishing
         run: npm install -g npm@latest
@@ -141,7 +141,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
 
       - name: 📥 Install dependencies for Github Packages
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
