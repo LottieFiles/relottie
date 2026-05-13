@@ -265,6 +265,29 @@ Our projects sometimes work with older versions, but this is not guaranteed.
 
 As last properties can have [expressions][], and improper use of **last** can open you up to cross-site scripting [cross-site scripting (XSS)][XSS]. Carefully assess each plugin and the risks involved in using them.
 
+### Supply-chain hardening
+
+This repository runs a layered set of automated security checks on every push, PR, and a weekly schedule. The full disclosure policy and a self-detection runbook live in [`SECURITY.md`](./SECURITY.md).
+
+CI workflows:
+
+| Workflow file | What it does |
+|---|---|
+| `.github/workflows/release.yml` | Validate job runs `pnpm audit --prod --audit-level=high`, generates a CycloneDX SBOM artifact, and verifies sigstore provenance attestations on every published package after release |
+| `.github/workflows/security.yml` | Three jobs run independently: **gitleaks** scans the full git history for committed secrets, **OSV-Scanner** cross-references `pnpm-lock.yaml` against the OSV vulnerability database, and **`ioc-scan`** searches the installed tree for the specific indicators of compromise published for the mini Shai-Hulud npm worm family |
+| `.github/workflows/codeql.yml` | Runs GitHub's `security-and-quality` query pack against JavaScript/TypeScript |
+
+Every CI job is wrapped by [StepSecurity Harden-Runner](https://github.com/step-security/harden-runner) in `audit` mode so any unexpected outbound network call from the runner is surfaced. Every `actions/checkout` sets `persist-credentials: false` so `GITHUB_TOKEN` never lands in `.git/config`. All GitHub Action references are pinned to 40-character commit SHAs.
+
+Repo-side policies live alongside the workflows:
+
+- `.npmrc` — `ignore-scripts=true` blocks dependency lifecycle scripts during `pnpm install`. This is why `pnpm prepare` has to be run manually after the first install (the side note below in *Setting up Monorepo*).
+- `pnpm.onlyBuiltDependencies: []` (in root `package.json`) — explicit empty allowlist for packages permitted to run install scripts.
+- `socket.yml` — declares which Socket.dev alert classes block a PR (`error`) vs warn vs are ignored. Takes effect once the [Socket Security GitHub App](https://github.com/apps/socket-security) is installed.
+- `osv-scanner.toml` — documents the three advisories with no upstream fix yet, each with an `ignoreUntil` date so the scanner re-flags them on a schedule.
+- `.github/CODEOWNERS` — supply-chain-sensitive paths (`package.json`, lockfile, `.github/`, `.npmrc`, `.husky/`) require review from the [@LottieFiles/rnd](https://github.com/orgs/LottieFiles/teams/rnd) team.
+- `.github/dependabot.yml` — weekly grouped updates for the `npm` and `github-actions` ecosystems so the pinned action SHAs stay current.
+
 ## Setting up Monorepo
 
     git clone https://github.com/LottieFiles/relottie.git
