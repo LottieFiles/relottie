@@ -129,6 +129,7 @@ jobs:
         run: npm install -g npm@latest
 
       - name: 🚀 Create Release Pull Request or Release to NPM
+        id: changesets
         uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
         with:
           commit: 'chore: 🤖 update versions'
@@ -138,6 +139,30 @@ jobs:
           createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔏 Verify provenance attestations of published packages
+        if: steps.changesets.outputs.published == 'true'
+        # Best-effort post-publish check: install each just-published
+        # package via `npm` (which can verify sigstore-signed provenance,
+        # unlike pnpm) and confirm the attestation matches. Failures here
+        # do not roll back the publish — they alert that the release went
+        # out without a valid attestation and needs investigation.
+        shell: bash
+        run: |
+          set -euo pipefail
+          pkgs=$(printf '%s' '${{ steps.changesets.outputs.publishedPackages }}' \
+            | jq -r '.[] | "\(.name)@\(.version)"')
+          [ -z "$pkgs" ] && { echo "No published packages reported."; exit 0; }
+          TMPDIR=$(mktemp -d)
+          trap 'rm -rf "$TMPDIR"' EXIT
+          cd "$TMPDIR"
+          npm init -y >/dev/null
+          echo "$pkgs" | while IFS= read -r pkg; do
+            echo "::group::Verifying $pkg"
+            npm install --no-save --ignore-scripts "$pkg"
+            npm audit signatures
+            echo "::endgroup::"
+          done
 
   release-gpr:
     name: Release to GPR
