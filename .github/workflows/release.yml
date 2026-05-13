@@ -179,9 +179,11 @@ jobs:
           registry-url: https://npm.pkg.github.com/
 
       - name: 📥 Install dependencies for Github Packages
+        # NODE_AUTH_TOKEN intentionally NOT set: install resolves from
+        # registry.npmjs.org (pinned via the repo .npmrc) and does not
+        # need GHPR auth. Token is scoped to the publish step below so a
+        # compromised dependency cannot read it during `pnpm install`.
         run: pnpm install --frozen-lockfile --ignore-scripts
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚀 Release to Github Packages
         uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
