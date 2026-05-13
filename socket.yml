@@ -1,0 +1,52 @@
+# Socket Security policy.
+# Docs: https://docs.socket.dev/docs/socket-yml
+#
+# Goal: block the alert classes that map directly to the worm-class
+# threat model defended elsewhere in this repo (install scripts, env/fs
+# access, obfuscation), warn on degraded-quality signals, and ignore
+# license-style noise. Pair this file with the Socket GitHub App so PR
+# diffs surface inline alerts and merges block on `error`-level issues.
+
+version: 2
+
+# Apply rules to every PR, not just main.
+projectIgnorePaths: []
+
+githubApp:
+  enabled: true
+  # Comment on PRs that introduce alerts at or above the configured level.
+  pullRequestAlertsEnabled: true
+  # Surface security-relevant alerts even when triggered by transitive deps.
+  projectReportsEnabled: true
+
+issueRules:
+  # --- Install-time worm vectors (block) ---
+  installScripts: error
+  envVars: error
+  filesystemAccess: error
+  networkAccess: error
+  shellAccess: error
+  binScriptConfusion: error
+
+  # --- Source-level red flags (block) ---
+  obfuscatedFile: error
+  obfuscatedRequire: error
+  unencryptedData: warn
+
+  # --- Maintenance / ecosystem health (warn) ---
+  deprecated: warn
+  unmaintained: warn
+  trivialPackage: warn
+  noWebsite: warn
+  noRepository: warn
+  noLicense: warn
+  unstableOwnership: warn
+  newAuthor: warn
+  highEntropyStrings: warn
+  potentialVulnerability: warn
+
+  # --- Identity / typosquat (block) ---
+  typosquat: error
+  didYouMean: error
+  missingDependency: error
+  malware: error

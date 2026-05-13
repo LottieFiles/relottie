@@ -1,0 +1,164 @@
+name: Security
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    # Run weekly on Mondays at 06:00 UTC to catch new vulnerabilities
+    # in already-merged dependencies without a triggering push.
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  secret-scan:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛡️ Harden runner
+        uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176 # v2.17.0
+        with:
+          egress-policy: audit
+
+      - name: ⬇ Checkout repo
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          # Full history so gitleaks can scan every commit, not just HEAD.
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: 📦 Install gitleaks
+        env:
+          GITLEAKS_VERSION: '8.23.1'
+          # sha256 of gitleaks_8.23.1_linux_x64.tar.gz from upstream release assets
+          GITLEAKS_SHA256: '6fac0fe2602d8aeaf5135b7a957bbac27984b1ad14def0574be0e115e3d73252'
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" -o gitleaks.tar.gz
+          echo "${GITLEAKS_SHA256}  gitleaks.tar.gz" | sha256sum -c -
+          tar -xzf gitleaks.tar.gz gitleaks
+          sudo mv gitleaks /usr/local/bin/gitleaks
+          gitleaks version
+
+      - name: 🔎 Scan repository history
+        run: gitleaks detect --source . --redact --verbose --exit-code 1
+
+  osv-scan:
+    name: OSV scan (known-compromised packages)
+    # Calls Google's reusable OSV-Scanner workflow. Cross-references the
+    # pnpm-lock.yaml against the OSV vulnerability database, which is the
+    # corpus the wider ecosystem uses to track packages compromised by
+    # campaigns like mini Shai-Hulud. Complements `pnpm audit` (npm
+    # advisory DB) — OSV catches advisories that the npm registry has
+    # not yet indexed.
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@c51854704019a247608d928f370c98740469d4b5 # v2.3.5
+    with:
+      # `--config` is explicit because the auto-detection of
+      # osv-scanner.toml happens relative to the directory being
+      # scanned, and `--lockfile=` mode treats the lockfile as a file
+      # path rather than a directory — so the auto-discovery fails.
+      scan-args: |-
+        --config=osv-scanner.toml
+        --lockfile=pnpm-lock.yaml
+
+  ioc-scan:
+    name: Mini Shai-Hulud IoC scan
+    # Greps the lockfile and the installed dependency tree for the
+    # specific filenames, package patterns, and commit-author markers
+    # reported by StepSecurity / Socket for the mini Shai-Hulud npm
+    # worm family. Catches the exact threat even when OSV / pnpm audit
+    # have not yet indexed a newly disclosed compromise.
+    #
+    # Ref: https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: 🛡️ Harden runner
+        uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176 # v2.17.0
+        with:
+          egress-policy: audit
+
+      - name: ⬇ Checkout repo
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+
+      - name: ⎔ Setup pnpm
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          cache: pnpm
+          node-version: '20'
+
+      - name: 📥 Install dependencies (no scripts)
+        # --ignore-scripts is critical here: we are about to scan a tree
+        # that may contain a worm; refuse to execute any of its install
+        # hooks during the scan itself.
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: 🔎 Scan for known IoCs
+        shell: bash
+        run: |
+          set -uo pipefail
+          fail=0
+
+          # Known malicious payload filenames from the mini Shai-Hulud campaign.
+          for ioc in router_init.js tanstack_runner.js; do
+            hits=$(find node_modules -type f -name "$ioc" 2>/dev/null || true)
+            if [ -n "$hits" ]; then
+              echo "::error::IoC file found: $ioc"
+              echo "$hits" | sed 's/^/  /'
+              fail=1
+            fi
+          done
+
+          # Suspicious package patterns: the worm hides as
+          # @tanstack/setup pointing at a github: spec inside otherwise
+          # legitimate scopes.
+          if grep -Eq '"@tanstack/setup"|@tanstack/setup@github:' pnpm-lock.yaml; then
+            echo "::error::Suspicious package reference @tanstack/setup found in pnpm-lock.yaml"
+            grep -nE '"@tanstack/setup"|@tanstack/setup@github:' pnpm-lock.yaml | sed 's/^/  /'
+            fail=1
+          fi
+
+          # Suspicious npm token description (left as ransom marker).
+          # Skip our own docs/workflow files which intentionally reference
+          # the marker string for documentation purposes.
+          if grep -rq \
+              --exclude-dir=node_modules \
+              --exclude-dir=.git \
+              --exclude=SECURITY.md \
+              --exclude=security.yml \
+              "IfYouRevokeThisTokenItWillWipeTheComputerOfTheOwner" \
+              . 2>/dev/null; then
+            echo "::error::Ransom-marker token description found in repo content"
+            fail=1
+          fi
+
+          # Persistence artefacts written by the worm on dev machines.
+          # These should never be committed; flag if any landed in repo.
+          for path in .claude/router_runtime.js .claude/setup.mjs .vscode/setup.mjs; do
+            if [ -e "$path" ]; then
+              echo "::error::Persistence artefact present: $path"
+              fail=1
+            fi
+          done
+
+          if [ "$fail" -eq 0 ]; then
+            echo "No known mini Shai-Hulud IoCs detected."
+          fi
+          exit "$fail"

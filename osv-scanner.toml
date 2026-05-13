@@ -1,0 +1,33 @@
+# OSV-Scanner configuration.
+# Docs: https://google.github.io/osv-scanner/configuration/
+#
+# Each entry suppresses one advisory the scanner would otherwise flag.
+# Suppressions are not blanket waivers — they document why a fix is not
+# available today and (where possible) when to re-check.
+#
+# Audited: 2026-05-13.
+
+[[IgnoredVulns]]
+id = "GHSA-848j-6mx2-7j84"
+# elliptic@6.6.1 is the current latest release; no patched version
+# has shipped upstream. Repo is on the highest available version
+# already (override "elliptic": "^6.6.1" in package.json).
+reason = "No fix available upstream; tracking https://github.com/indutny/elliptic/issues for a patched release."
+ignoreUntil = "2026-08-13"
+
+[[IgnoredVulns]]
+id = "GHSA-p8p7-x288-28g6"
+# `request` was deprecated by its maintainer in 2020. It is pulled in
+# transitively by tooling that has not yet migrated to a successor
+# (got / undici / native fetch). No upstream fix is coming; the only
+# durable remediation is for that downstream consumer to drop request.
+reason = "Upstream `request` is deprecated and unmaintained; no patched version will ship. Tracked as a follow-up to drop the transitive consumer."
+ignoreUntil = "2026-11-13"
+
+[[IgnoredVulns]]
+id = "GHSA-rmmh-p597-ppvv"
+# showdown@2.1.0 is the current latest release; no patched version
+# has shipped upstream. Repo is on the highest available version
+# already (override "showdown": "^2.1.0" in package.json).
+reason = "No fix available upstream; tracking https://github.com/showdownjs/showdown for a patched release."
+ignoreUntil = "2026-08-13"

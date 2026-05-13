@@ -8,7 +8,7 @@
     "url": "git+https://github.com/LottieFiles/relottie.git",
     "directory": "packages/relottie"
   },
-  "homepage": "https://github.com/LottieFiles/relottie/packages/relottie#readme",
+  "homepage": "https://github.com/LottieFiles/relottie/tree/main/packages/relottie#readme",
   "bugs": "https://github.com/LottieFiles/relottie/issues",
   "author": "LottieFiles",
   "contributors": [
@@ -16,7 +16,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "npm": ">=9.5.0"
   },
   "main": "dist/index.js",
   "exports": {
