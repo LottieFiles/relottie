@@ -79,5 +79,9 @@
     "unified": "10.1.2",
     "unist-util-visit": "4.1.2",
     "vfile": "5.3.7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }
