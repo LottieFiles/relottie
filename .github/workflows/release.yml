@@ -10,6 +10,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# Deny by default. Each job below re-grants only the scopes it needs.
+permissions: {}
+
 jobs:
   validate:
     name: Validate
