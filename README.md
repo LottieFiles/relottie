@@ -273,6 +273,11 @@ As last properties can have [expressions][], and improper use of **last** can op
 
     pnpm install
 
+Git hooks are not installed automatically (the repo sets `ignore-scripts=true` in
+`.npmrc` as a supply-chain defense). After the initial install, run:
+
+    pnpm prepare
+
 ### Running in dev mode
 
     pnpm dev
