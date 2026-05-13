@@ -1,0 +1,45 @@
+name: Security
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    # Run weekly on Mondays at 06:00 UTC to catch new vulnerabilities
+    # in already-merged dependencies without a triggering push.
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  secret-scan:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇ Checkout repo
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          # Full history so gitleaks can scan every commit, not just HEAD.
+          fetch-depth: 0
+
+      - name: 📦 Install gitleaks
+        env:
+          GITLEAKS_VERSION: '8.23.1'
+          # sha256 of gitleaks_8.23.1_linux_x64.tar.gz from upstream release assets
+          GITLEAKS_SHA256: '6fac0fe2602d8aeaf5135b7a957bbac27984b1ad14def0574be0e115e3d73252'
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" -o gitleaks.tar.gz
+          echo "${GITLEAKS_SHA256}  gitleaks.tar.gz" | sha256sum -c -
+          tar -xzf gitleaks.tar.gz gitleaks
+          sudo mv gitleaks /usr/local/bin/gitleaks
+          gitleaks version
+
+      - name: 🔎 Scan repository history
+        run: gitleaks detect --source . --redact --verbose --exit-code 1
