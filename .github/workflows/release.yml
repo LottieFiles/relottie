@@ -58,6 +58,19 @@ jobs:
       - name: 🛡️ Test
         run: pnpm test
 
+      - name: 📦 Generate SBOM (CycloneDX)
+        run: pnpm dlx @cyclonedx/cdxgen@^11 -t pnpm -o bom.json --spec-version 1.5
+        env:
+          FETCH_LICENSE: 'false'
+
+      - name: ⬆️ Upload SBOM artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: sbom-cyclonedx
+          path: bom.json
+          if-no-files-found: error
+          retention-days: 90
+
       - name: 📏 Report bundle size
         if: github.event.event_name == 'pull_request'
         uses: andresz1/size-limit-action@94bc357df29c36c8f8d50ea497c3e225c3c95d1d # v1.8.0
