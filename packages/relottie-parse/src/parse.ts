@@ -36,11 +36,11 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
   const info: Info = { hasExpressions: false, slots: new Slots(file, options) };
 
   jsonTraverse(jsonAst, {
-    enter(node: MomoaAnyNode, parent: MomoaParent) {
-      traverseJsonEnter(node, parent, stack, file, options, info);
+    enter(node, parent) {
+      traverseJsonEnter(node as MomoaAnyNode, parent as MomoaParent, stack, file, options, info);
     },
-    exit(node: MomoaAnyNode, parent: MomoaParent) {
-      traverseJsonExit(node, parent, stack, file, options, info);
+    exit(node, parent) {
+      traverseJsonExit(node as MomoaAnyNode, parent as MomoaParent, stack, file, options, info);
     },
   });
 
