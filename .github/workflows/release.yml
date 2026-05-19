@@ -130,7 +130,7 @@ jobs:
 
       - name: 🚀 Create Release Pull Request or Release to NPM
         id: changesets
-        uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
+        uses: changesets/action@63a615b9cd06ba9a3e6d13796c7fbcb080a60a0b # v1.8.0
         with:
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
@@ -211,7 +211,7 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: 🚀 Release to Github Packages
-        uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
+        uses: changesets/action@63a615b9cd06ba9a3e6d13796c7fbcb080a60a0b # v1.8.0
         with:
           commit: 'chore: update versions'
           title: 'chore: update versions'
