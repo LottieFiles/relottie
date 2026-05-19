@@ -10,6 +10,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# Deny by default. Each job below re-grants only the scopes it needs.
+permissions: {}
+
 jobs:
   validate:
     name: Validate
@@ -20,20 +23,30 @@ jobs:
       matrix:
         node-version: ['20']
     steps:
+      - name: 🛡️ Harden runner
+        uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176 # v2.17.0
+        with:
+          egress-policy: audit
+
       - name: ⬇ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Validate
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
 
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: 🛡️ Audit production dependencies
+        run: pnpm audit --prod --audit-level=high
 
       - name: 🏗 Build
         run: pnpm clean && pnpm build
@@ -50,9 +63,22 @@ jobs:
       - name: 🛡️ Test
         run: pnpm test
 
+      - name: 📦 Generate SBOM (CycloneDX)
+        run: pnpm dlx @cyclonedx/cdxgen@^11 -t pnpm -o bom.json --spec-version 1.5
+        env:
+          FETCH_LICENSE: 'false'
+
+      - name: ⬆️ Upload SBOM artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: sbom-cyclonedx
+          path: bom.json
+          if-no-files-found: error
+          retention-days: 90
+
       - name: 📏 Report bundle size
         if: github.event.event_name == 'pull_request'
-        uses: andresz1/size-limit-action@v1
+        uses: andresz1/size-limit-action@94bc357df29c36c8f8d50ea497c3e225c3c95d1d # v1.8.0
         continue-on-error: true
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -73,31 +99,38 @@ jobs:
       pull-requests: write # Required for creating a release PR
 
     steps:
+      - name: 🛡️ Harden runner
+        uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176 # v2.17.0
+        with:
+          egress-policy: audit
+
       - name: ⬇ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           # https://github.com/changesets/action/issues/201#issuecomment-1206088289
           # check out all commits and tags so changeset can skip duplicate tags
           fetch-depth: 0
+          persist-credentials: false
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for NPM
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org
 
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: ⬆️ Update npm for OIDC trusted publishing
         run: npm install -g npm@latest
 
       - name: 🚀 Create Release Pull Request or Release to NPM
-        uses: changesets/action@v1
+        id: changesets
+        uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
         with:
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
@@ -106,6 +139,30 @@ jobs:
           createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔏 Verify provenance attestations of published packages
+        if: steps.changesets.outputs.published == 'true'
+        # Best-effort post-publish check: install each just-published
+        # package via `npm` (which can verify sigstore-signed provenance,
+        # unlike pnpm) and confirm the attestation matches. Failures here
+        # do not roll back the publish — they alert that the release went
+        # out without a valid attestation and needs investigation.
+        shell: bash
+        run: |
+          set -euo pipefail
+          pkgs=$(printf '%s' '${{ steps.changesets.outputs.publishedPackages }}' \
+            | jq -r '.[] | "\(.name)@\(.version)"')
+          [ -z "$pkgs" ] && { echo "No published packages reported."; exit 0; }
+          TMPDIR=$(mktemp -d)
+          trap 'rm -rf "$TMPDIR"' EXIT
+          cd "$TMPDIR"
+          npm init -y >/dev/null
+          echo "$pkgs" | while IFS= read -r pkg; do
+            echo "::group::Verifying $pkg"
+            npm install --no-save --ignore-scripts "$pkg"
+            npm audit signatures
+            echo "::endgroup::"
+          done
 
   release-gpr:
     name: Release to GPR
@@ -123,30 +180,38 @@ jobs:
       pull-requests: write # Required for creating a release PR
 
     steps:
+      - name: 🛡️ Harden runner
+        uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176 # v2.17.0
+        with:
+          egress-policy: audit
+
       - name: ⬇ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         # https://github.com/changesets/action/issues/201#issuecomment-1206088289
         # check out all commits and tags so changeset can skip duplicate tags
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: ⎔ Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@a15d269cd4658e1107c09f1fabf4cbd7bd1f308a # v4.4.0
 
       - name: ⎔ Setup Node.js ${{ matrix.node-version }} for Github Packages
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
           registry-url: https://npm.pkg.github.com/
 
       - name: 📥 Install dependencies for Github Packages
-        run: pnpm install
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # NODE_AUTH_TOKEN intentionally NOT set: install resolves from
+        # registry.npmjs.org (pinned via the repo .npmrc) and does not
+        # need GHPR auth. Token is scoped to the publish step below so a
+        # compromised dependency cannot read it during `pnpm install`.
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: 🚀 Release to Github Packages
-        uses: changesets/action@v1
+        uses: changesets/action@d94a5c301145045a0960133674e003b265942a22 # v1.8.0
         with:
           commit: 'chore: update versions'
           title: 'chore: update versions'

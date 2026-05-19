@@ -1,0 +1,31 @@
+# CODEOWNERS — security-sensitive paths require maintainer review.
+# Syntax: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Branch protection must be configured to require code-owner review on
+# these paths for this file to take effect.
+#
+# Owner: https://github.com/orgs/LottieFiles/teams/rnd
+
+# Default fallback — any path not matched below.
+*                                @LottieFiles/rnd
+
+# Dependency and lockfile changes — supply-chain critical.
+/package.json                    @LottieFiles/rnd
+/pnpm-lock.yaml                  @LottieFiles/rnd
+/pnpm-workspace.yaml             @LottieFiles/rnd
+/packages/*/package.json         @LottieFiles/rnd
+
+# Package manager / install configuration — controls postinstall script policy.
+/.npmrc                          @LottieFiles/rnd
+/.pnpmrc                         @LottieFiles/rnd
+
+# CI/CD — has access to publish credentials via OIDC.
+/.github/                        @LottieFiles/rnd
+/.github/workflows/              @LottieFiles/rnd
+/.github/CODEOWNERS              @LottieFiles/rnd
+
+# Git hooks — execute on every commit.
+/.husky/                         @LottieFiles/rnd
+
+# Changeset and release plumbing.
+/.changeset/config.json          @LottieFiles/rnd

@@ -16,7 +16,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "npm": ">=9.5.0"
   },
   "bin": {
     "relottie": "cli.js"
@@ -44,7 +45,7 @@
   },
   "dependencies": {
     "@lottiefiles/relottie": "workspace:*",
-    "unified-args": "^11.0.1"
+    "unified-args": "11.0.1"
   },
   "devDependencies": {
     "execa": "6.1.0",

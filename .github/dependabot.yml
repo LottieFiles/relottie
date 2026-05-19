@@ -1,0 +1,62 @@
+# Dependabot configuration.
+# Docs: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+#
+# Goals:
+#   1. Keep GitHub Actions pinned SHAs current (without auto-merging tag
+#      updates that bypass review).
+#   2. Group routine npm updates so security-critical PRs don't drown in
+#      noise.
+
+version: 2
+
+updates:
+  # GitHub Actions — auto-update the SHA pins we set in release.yml,
+  # security.yml, codeql.yml. Without this, the pinned SHAs go stale and
+  # security fixes from upstream actions never reach us.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: UTC
+    open-pull-requests-limit: 5
+    groups:
+      actions-minor-and-patch:
+        update-types:
+          - minor
+          - patch
+      actions-major:
+        update-types:
+          - major
+    commit-message:
+      prefix: chore(ci)
+      include: scope
+
+  # npm — root + workspaces. pnpm-lock.yaml updates flow through here.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: UTC
+    open-pull-requests-limit: 10
+    groups:
+      production-dependencies:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+      development-dependencies:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      major-updates:
+        update-types:
+          - major
+    commit-message:
+      prefix: chore(deps)
+      prefix-development: chore(deps-dev)
+      include: scope
