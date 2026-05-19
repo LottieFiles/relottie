@@ -36,7 +36,7 @@
     "type-check": "turbo run type-check"
   },
   "devDependencies": {
-    "@changesets/cli": "2.26.2",
+    "@changesets/cli": "2.31.0",
     "@commitlint/cli": "17.8.1",
     "@lottiefiles/commitlint-config": "2.0.0",
     "@lottiefiles/eslint-plugin": "3.0.0",
@@ -46,7 +46,7 @@
     "@size-limit/preset-big-lib": "11.2.0",
     "clinic": "13.0.0",
     "cross-env": "7.0.3",
-    "esbuild": "0.25.7",
+    "esbuild": "0.28.0",
     "eslint": "7.32.0",
     "husky": "8.0.3",
     "jest": "29.7.0",
