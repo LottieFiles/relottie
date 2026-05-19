@@ -72,11 +72,11 @@ export class Slots {
     stack.push(rt([], { ...parentPosition }));
 
     jsonTraverse(this.jsonNode, {
-      enter: (currNode: MomoaAnyNode, parentNode: MomoaParent) => {
-        traverseJsonEnter(currNode, parentNode, stack, this.file, this.options, info);
+      enter: (currNode, parentNode) => {
+        traverseJsonEnter(currNode as MomoaAnyNode, parentNode as MomoaParent, stack, this.file, this.options, info);
       },
-      exit: (currNode: MomoaAnyNode, parentNode: MomoaParent) => {
-        traverseJsonExit(currNode, parentNode, stack, this.file, this.options, info);
+      exit: (currNode, parentNode) => {
+        traverseJsonExit(currNode as MomoaAnyNode, parentNode as MomoaParent, stack, this.file, this.options, info);
       },
     });
 
