@@ -50,7 +50,6 @@ import {
   rt as rootNode,
 } from '@lottiefiles/last-builder';
 import type { PrimitiveParts } from '@lottiefiles/last-builder';
-import { is } from 'unist-util-is';
 import type { VFile } from 'vfile';
 
 import { fileConstants } from './constants.js';
@@ -194,7 +193,7 @@ function assertNodeType<T extends NodeValue>(
   type: T['type'],
   file: VFile,
 ): asserts node is T {
-  if (!is<T>(node, type)) {
+  if (node?.type !== type) {
     file.fail(`Unexpected node type found ${node?.type}, has to be ${type}`);
   }
 }
@@ -204,7 +203,7 @@ const getMembersFromArrNode = (node: MomoaArray): MomoaMember[] => {
   node.elements.forEach((element) => {
     const elementValue = element.value;
 
-    if (is<MomoaObject>(elementValue, 'Object')) {
+    if (elementValue.type === 'Object') {
       elementValue.members.forEach((member) => members.push(member));
     }
   });
@@ -221,7 +220,7 @@ const getTitleFromMemberValue = (
 
   switch (type) {
     case 'Constant':
-      if (!is<MomoaString>(node, 'String') && !is<MomoaNumber>(node, 'Number')) break;
+      if (node.type !== 'String' && node.type !== 'Number') break;
 
       const { defaultValue, prefix, values } = parentTitle;
 
@@ -244,7 +243,7 @@ const getTitleFromMemberValue = (
       return (prefix && prefix.length > 0 ? `${prefix}-${title}` : title) as AnyTitle;
 
     case 'Array':
-      if (!is<MomoaArray>(node, 'Array')) break;
+      if (node.type !== 'Array') break;
       const childType = dependent.childType;
 
       const matchedMember = childType ? node.elements.find((element) => element.value.type === childType) : undefined;
@@ -352,7 +351,7 @@ export const traverseJsonEnter = (
         case 'Document':
           if (!phantomRoot) break;
 
-          if (is<Element>(phantomRoot, 'element') || is<ArrayNode>(phantomRoot, 'array')) {
+          if (phantomRoot.type === 'element' || phantomRoot.type === 'array') {
             const objectValueTitle = getObjectNodeTitle(node, phantomRoot.title, file);
 
             stack.push(objectNode(objectValueTitle, [], { ...position }));
@@ -403,7 +402,7 @@ export const traverseJsonEnter = (
         case 'Document':
           if (!phantomRoot) break;
 
-          if (is<ArrayNode>(phantomRoot, 'array') || is<Collection>(phantomRoot, 'collection')) {
+          if (phantomRoot.type === 'array' || phantomRoot.type === 'collection') {
             const arrayValueTitle = getArrayNodeTitle(node, phantomRoot.title, file);
 
             stack.push(arrayNode(arrayValueTitle, [], { ...position }));
@@ -443,7 +442,7 @@ export const traverseJsonEnter = (
         case 'Document':
           if (!phantomRoot) break;
 
-          if (is<Attribute>(phantomRoot, 'attribute')) {
+          if (phantomRoot.type === 'attribute') {
             stack.push(createPrimitiveNode(node, options));
           }
           break;

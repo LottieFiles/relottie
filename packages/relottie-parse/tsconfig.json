@@ -4,7 +4,8 @@
 
   // Compiler options
   "compilerOptions": {
-    "typeRoots": ["./types", "./node_modules/@types"]
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "types": ["jest", "node"]
   },
 
   "ts-node": {

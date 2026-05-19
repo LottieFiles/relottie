@@ -4,7 +4,6 @@
 
 import { parse as jsonParse, traverse as jsonTraverse, type AnyNode as MomoaAnyNode } from '@humanwhocodes/momoa';
 import type { Root, NodeValue, AnyTitle } from '@lottiefiles/last';
-import { is } from 'unist-util-is';
 import type { VFile, Data } from 'vfile';
 
 import { traverseJsonEnter, traverseJsonExit, type MomoaParent } from './helpers.js';
@@ -50,7 +49,7 @@ export function parse(document: string, file: VFile, settings: SettingsOptions =
 
   if (tree && options.phantomRoot) {
     return tree;
-  } else if (is<Root>(tree, 'root')) {
+  } else if (tree?.type === 'root') {
     tree.hasExpressions = info.hasExpressions || false;
 
     return tree;

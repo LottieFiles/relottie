@@ -4,7 +4,8 @@
 
   // Compiler options
   "compilerOptions": {
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": ["jest", "node"]
   },
 
   "ts-node": {
