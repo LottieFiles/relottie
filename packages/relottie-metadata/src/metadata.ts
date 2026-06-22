@@ -76,7 +76,9 @@ const processAttributeNode = (node: Attribute, data: Metadata, parent: ObjectNod
 
   const value = valueNode.value;
 
-  if (!value) return;
+  // Nullish-only guard: a legitimate `0` (e.g. framerate/width/inPoint) or
+  // empty string must not be discarded as falsy.
+  if (value === undefined || value === null) return;
 
   const nodeTitle = node.title;
 
