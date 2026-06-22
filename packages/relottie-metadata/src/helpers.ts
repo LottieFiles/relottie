@@ -49,7 +49,17 @@ export const formatBytes = (bytes: number, options: FileSizeOptions): FileSizeVa
 };
 
 export const getFileSize = (file: VFile, settings: FileSizeOptions): FileSizeValue => {
-  const lottieString = JSON.stringify(JSON.parse(file.value as string));
+  // Re-serialize to measure the canonical byte size, but fall back to the raw
+  // value if the input is malformed or pathologically nested — a `RangeError`
+  // from re-parsing untrusted JSON must not crash metadata collection.
+  let lottieString: string;
+
+  try {
+    lottieString = JSON.stringify(JSON.parse(file.value as string));
+  } catch {
+    lottieString = file.value as string;
+  }
+
   const bytes = getByteSize(lottieString);
 
   return formatBytes(bytes, settings);

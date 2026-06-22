@@ -279,7 +279,10 @@ const getDependentTitle = (
     acc[key] = member.value;
 
     return acc;
-  }, {} as Record<string, MomoaValue>);
+    // Null-prototype accumulator: keys come straight from JSON member names,
+    // so a `__proto__` key must land as a plain data property rather than hit
+    // the inherited prototype setter.
+  }, Object.create(null) as Record<string, MomoaValue>);
 
   for (const dependent of dependents) {
     const { key } = dependent;
