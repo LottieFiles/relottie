@@ -20,11 +20,6 @@
     "npm": ">=9.5.0"
   },
   "main": "dist/index.js",
-  "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js",
-    "./package.json": "./package.json"
-  },
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -33,6 +28,11 @@
         "dist/index.d.ts"
       ]
     }
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"

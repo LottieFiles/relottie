@@ -271,14 +271,17 @@ const getDependentTitle = (
   dependents: Dependent[],
   file: VFile,
 ): AnyTitle | undefined => {
-  const memberKeyValue = members.reduce((acc, member) => {
-    const memberName = member.name;
-    const key = memberName.type === 'String' ? memberName.value : memberName.name;
+  const memberKeyValue = members.reduce(
+    (acc, member) => {
+      const memberName = member.name;
+      const key = memberName.type === 'String' ? memberName.value : memberName.name;
 
-    acc[key] = member.value;
+      acc[key] = member.value;
 
-    return acc;
-  }, {} as Record<string, MomoaValue>);
+      return acc;
+    },
+    {} as Record<string, MomoaValue>,
+  );
 
   for (const dependent of dependents) {
     const { key } = dependent;

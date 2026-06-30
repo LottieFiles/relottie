@@ -19,11 +19,6 @@
     "node": ">=18",
     "npm": ">=9.5.0"
   },
-  "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js",
-    "./package.json": "./package.json"
-  },
   "typesVersions": {
     "*": {
       "*": [
@@ -31,6 +26,11 @@
         "dist/*.d.ts"
       ]
     }
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"

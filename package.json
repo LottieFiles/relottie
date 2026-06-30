@@ -6,6 +6,7 @@
     "packages/*",
     "scripts/"
   ],
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
   "scripts": {
     "build": "turbo run build",
     "changelog": "changeset add",
@@ -19,9 +20,9 @@
     "format": "pnpm run format:prettier",
     "format:prettier": "prettier --loglevel=warn --no-editorconfig --write .",
     "format:remark": "remark . --output --ignore-path .remarkignore --silently-ignore",
+    "preinstall": "npx only-allow pnpm",
     "lint": "eslint .",
     "lint:prod": "cross-env NODE_ENV=production eslint --fix .",
-    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "release": "pnpm release:version && pnpm release:publish",
     "release:publish": "pnpm clean && pnpm build && changeset publish",
@@ -60,7 +61,6 @@
     "turbo": "2.9.14",
     "typescript": "6.0.3"
   },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
   "pnpm": {
     "overrides": {
       "tar-fs": "^3.1.1",
@@ -96,7 +96,8 @@
       "tmp": "^0.2.5",
       "d3-color": "^3.1.0",
       "got": "^11.8.5",
-      "tough-cookie": "^4.1.3"
+      "tough-cookie": "^4.1.3",
+      "prettier-plugin-pkg": "^0.22.1"
     },
     "onlyBuiltDependencies": []
   }
