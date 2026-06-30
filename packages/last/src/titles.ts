@@ -676,21 +676,21 @@ export type TitleHelper<T extends string> = T | CustomTitle;
 
 export type ChildrenTitleHelper<T extends string> = T | `${T}-children` | CustomTitle;
 
-export type NumberTitle = TitleHelper<typeof TITLES.number[keyof typeof TITLES.number]>;
+export type NumberTitle = TitleHelper<(typeof TITLES.number)[keyof typeof TITLES.number]>;
 
-export type IntegerBooleanTitle = TitleHelper<typeof TITLES.intBoolean[keyof typeof TITLES.intBoolean]>;
+export type IntegerBooleanTitle = TitleHelper<(typeof TITLES.intBoolean)[keyof typeof TITLES.intBoolean]>;
 
-export type StringTitle = TitleHelper<typeof TITLES.string[keyof typeof TITLES.string]>;
+export type StringTitle = TitleHelper<(typeof TITLES.string)[keyof typeof TITLES.string]>;
 
-export type BooleanTitle = TitleHelper<typeof TITLES.boolean[keyof typeof TITLES.boolean]>;
+export type BooleanTitle = TitleHelper<(typeof TITLES.boolean)[keyof typeof TITLES.boolean]>;
 
-export type ObjectTitle = ChildrenTitleHelper<typeof TITLES.object[keyof typeof TITLES.object]>;
+export type ObjectTitle = ChildrenTitleHelper<(typeof TITLES.object)[keyof typeof TITLES.object]>;
 
-export type ArrayTitle = ChildrenTitleHelper<typeof TITLES.array[keyof typeof TITLES.array]>;
+export type ArrayTitle = ChildrenTitleHelper<(typeof TITLES.array)[keyof typeof TITLES.array]>;
 
-export type CollectionTitle = TitleHelper<typeof TITLES.collection[keyof typeof TITLES.collection]>;
+export type CollectionTitle = TitleHelper<(typeof TITLES.collection)[keyof typeof TITLES.collection]>;
 
-export type ElementTitle = TitleHelper<typeof TITLES.element[keyof typeof TITLES.element]>;
+export type ElementTitle = TitleHelper<(typeof TITLES.element)[keyof typeof TITLES.element]>;
 
 export type AttributeTitle = NumberTitle | StringTitle | BooleanTitle | IntegerBooleanTitle;
 

@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`parse() fixtures structure Test in attribute-3.json should parse correctly 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "children": Array [
-                            Object {
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
                               "type": "primitive",
                               "value": "5.5.7",
                               "valueType": "string",
@@ -25,9 +25,9 @@ Object {
                           "title": "custom",
                           "type": "attribute",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
+                        {
+                          "children": [
+                            {
                               "type": "primitive",
                               "value": 0,
                               "valueType": "number",
@@ -37,9 +37,9 @@ Object {
                           "title": "custom",
                           "type": "attribute",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
+                        {
+                          "children": [
+                            {
                               "type": "primitive",
                               "value": false,
                               "valueType": "boolean",
@@ -49,9 +49,9 @@ Object {
                           "title": "custom",
                           "type": "attribute",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
+                        {
+                          "children": [
+                            {
                               "type": "primitive",
                               "value": null,
                               "valueType": "null",

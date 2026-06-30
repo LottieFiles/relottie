@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`parse() fixtures features Test in dilate-animated.json should parse correctly 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
+{
+  "children": [
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": "Comp 1",
           "valueType": "string",
@@ -15,9 +15,9 @@ Object {
       "title": "name",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": 0,
           "valueType": "number",
@@ -27,9 +27,9 @@ Object {
       "title": "threedimensional",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": 1080,
           "valueType": "number",
@@ -39,9 +39,9 @@ Object {
       "title": "height",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": 1920,
           "valueType": "number",
@@ -51,13 +51,13 @@ Object {
       "title": "width",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
                   "type": "primitive",
                   "value": "@lottiefiles/toolkit-js 0.65.0",
                   "valueType": "string",
@@ -76,15 +76,15 @@ Object {
       "title": "metadata",
       "type": "element",
     },
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [
-                    Object {
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 4,
                       "valueType": "number",
@@ -94,9 +94,9 @@ Object {
                   "title": "layer-type",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": "Shape Layer 1",
                       "valueType": "string",
@@ -106,9 +106,9 @@ Object {
                   "title": "name",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 1,
                       "valueType": "number",
@@ -118,9 +118,9 @@ Object {
                   "title": "time-stretch",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 0,
                       "valueType": "number",
@@ -130,9 +130,9 @@ Object {
                   "title": "start-time",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 1800,
                       "valueType": "number",
@@ -142,9 +142,9 @@ Object {
                   "title": "out-point",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 0,
                       "valueType": "number",
@@ -154,9 +154,9 @@ Object {
                   "title": "in-point",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": "15",
                       "valueType": "string",
@@ -166,9 +166,9 @@ Object {
                   "title": "layer-xml-id",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": true,
                       "valueType": "boolean",
@@ -178,9 +178,9 @@ Object {
                   "title": "has-mask",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 0,
                       "valueType": "number",
@@ -190,17 +190,17 @@ Object {
                   "title": "auto-orient",
                   "type": "attribute",
                 },
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -210,16 +210,16 @@ Object {
                                   "title": "animated",
                                   "type": "attribute",
                                 },
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
                                         },
-                                        Object {
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -242,13 +242,13 @@ Object {
                           "title": "anchor-point",
                           "type": "element",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -258,16 +258,16 @@ Object {
                                   "title": "animated",
                                   "type": "attribute",
                                 },
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 100,
                                           "valueType": "number",
                                         },
-                                        Object {
+                                        {
                                           "type": "primitive",
                                           "value": 100,
                                           "valueType": "number",
@@ -290,13 +290,13 @@ Object {
                           "title": "layer-transform-scale",
                           "type": "element",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -306,16 +306,16 @@ Object {
                                   "title": "animated",
                                   "type": "attribute",
                                 },
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 960,
                                           "valueType": "number",
                                         },
-                                        Object {
+                                        {
                                           "type": "primitive",
                                           "value": 540,
                                           "valueType": "number",
@@ -338,13 +338,13 @@ Object {
                           "title": "translation",
                           "type": "element",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -354,9 +354,9 @@ Object {
                                   "title": "animated",
                                   "type": "attribute",
                                 },
-                                Object {
-                                  "children": Array [
-                                    Object {
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -375,13 +375,13 @@ Object {
                           "title": "rotation-clockwise",
                           "type": "element",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -391,9 +391,9 @@ Object {
                                   "title": "animated",
                                   "type": "attribute",
                                 },
-                                Object {
-                                  "children": Array [
-                                    Object {
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -412,13 +412,13 @@ Object {
                           "title": "layer-transform-skew-axis",
                           "type": "element",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 0,
                                       "valueType": "number",
@@ -428,9 +428,9 @@ Object {
                                   "title": "animated",
                                   "type": "attribute",
                                 },
-                                Object {
-                                  "children": Array [
-                                    Object {
+                                {
+                                  "children": [
+                                    {
                                       "type": "primitive",
                                       "value": 100,
                                       "valueType": "number",
@@ -458,15 +458,15 @@ Object {
                   "title": "layer-transform",
                   "type": "element",
                 },
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "Mask 1",
                                   "valueType": "string",
@@ -476,9 +476,9 @@ Object {
                               "title": "name",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": false,
                                   "valueType": "boolean",
@@ -488,9 +488,9 @@ Object {
                               "title": "inverted",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "a",
                                   "valueType": "string",
@@ -500,13 +500,13 @@ Object {
                               "title": "mask-mode-add",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 1,
                                           "valueType": "number",
@@ -516,19 +516,19 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
                                                               "type": "primitive",
                                                               "value": 0.167,
                                                               "valueType": "number",
@@ -538,9 +538,9 @@ Object {
                                                           "title": "keyframe-bezier-handle-x-axis",
                                                           "type": "attribute",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
+                                                        {
+                                                          "children": [
+                                                            {
                                                               "type": "primitive",
                                                               "value": 0.167,
                                                               "valueType": "number",
@@ -559,13 +559,13 @@ Object {
                                                   "title": "keyframe-out-tangent",
                                                   "type": "element",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
                                                               "type": "primitive",
                                                               "value": 0.833,
                                                               "valueType": "number",
@@ -575,9 +575,9 @@ Object {
                                                           "title": "keyframe-bezier-handle-x-axis",
                                                           "type": "attribute",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
+                                                        {
+                                                          "children": [
+                                                            {
                                                               "type": "primitive",
                                                               "value": 0.833,
                                                               "valueType": "number",
@@ -596,11 +596,11 @@ Object {
                                                   "title": "keyframe-in-tangent",
                                                   "type": "element",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 59,
                                                           "valueType": "number",
@@ -614,9 +614,9 @@ Object {
                                                   "title": "keyframe-value",
                                                   "type": "collection",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -630,13 +630,13 @@ Object {
                                               "title": "keyframe",
                                               "type": "object",
                                             },
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -84,
                                                           "valueType": "number",
@@ -650,9 +650,9 @@ Object {
                                                   "title": "keyframe-value",
                                                   "type": "collection",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 1381.989,
                                                       "valueType": "number",
@@ -684,13 +684,13 @@ Object {
                               "title": "dilate",
                               "type": "element",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -700,9 +700,9 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 100,
                                           "valueType": "number",
@@ -721,13 +721,13 @@ Object {
                               "title": "mask-opacity",
                               "type": "element",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -737,13 +737,13 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
                                                   "type": "primitive",
                                                   "value": true,
                                                   "valueType": "boolean",
@@ -753,18 +753,18 @@ Object {
                                               "title": "bezier-closed",
                                               "type": "attribute",
                                             },
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 192.014,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
@@ -773,14 +773,14 @@ Object {
                                                       "title": "bezier-in-tangents",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": -226.325,
                                                           "valueType": "number",
@@ -789,14 +789,14 @@ Object {
                                                       "title": "bezier-in-tangents",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -192.014,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
@@ -805,14 +805,14 @@ Object {
                                                       "title": "bezier-in-tangents",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 226.324,
                                                           "valueType": "number",
@@ -830,18 +830,18 @@ Object {
                                               "title": "bezier-in-tangents",
                                               "type": "collection",
                                             },
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -192.014,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
@@ -850,14 +850,14 @@ Object {
                                                       "title": "bezier-out-tangents",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 226.324,
                                                           "valueType": "number",
@@ -866,14 +866,14 @@ Object {
                                                       "title": "bezier-out-tangents",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 192.014,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
@@ -882,14 +882,14 @@ Object {
                                                       "title": "bezier-out-tangents",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": -226.325,
                                                           "valueType": "number",
@@ -907,18 +907,18 @@ Object {
                                               "title": "bezier-out-tangents",
                                               "type": "collection",
                                             },
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -216.422,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": -420,
                                                           "valueType": "number",
@@ -927,14 +927,14 @@ Object {
                                                       "title": "bezier-vertices",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -564.094,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": -10.203,
                                                           "valueType": "number",
@@ -943,14 +943,14 @@ Object {
                                                       "title": "bezier-vertices",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -216.422,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 399.594,
                                                           "valueType": "number",
@@ -959,14 +959,14 @@ Object {
                                                       "title": "bezier-vertices",
                                                       "type": "array",
                                                     },
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 131.25,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": -10.203,
                                                           "valueType": "number",
@@ -1015,15 +1015,15 @@ Object {
                   "title": "masks-properties",
                   "type": "collection",
                 },
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "gr",
                                   "valueType": "string",
@@ -1033,9 +1033,9 @@ Object {
                               "title": "shape-type",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "Rectangle 1",
                                   "valueType": "string",
@@ -1045,15 +1045,15 @@ Object {
                               "title": "name",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "sh",
                                               "valueType": "string",
@@ -1063,9 +1063,9 @@ Object {
                                           "title": "shape-type",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "Path 1",
                                               "valueType": "string",
@@ -1075,9 +1075,9 @@ Object {
                                           "title": "name",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
@@ -1087,13 +1087,13 @@ Object {
                                           "title": "shape-direction-clockwise",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1103,13 +1103,13 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
                                                               "type": "primitive",
                                                               "value": true,
                                                               "valueType": "boolean",
@@ -1119,34 +1119,18 @@ Object {
                                                           "title": "bezier-closed",
                                                           "type": "attribute",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
-                                                              "children": Array [
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                  ],
-                                                                  "title": "bezier-in-tangents",
-                                                                  "type": "array",
-                                                                },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1155,14 +1139,14 @@ Object {
                                                                   "title": "bezier-in-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1171,14 +1155,30 @@ Object {
                                                                   "title": "bezier-in-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                  ],
+                                                                  "title": "bezier-in-tangents",
+                                                                  "type": "array",
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1196,34 +1196,18 @@ Object {
                                                           "title": "bezier-in-tangents",
                                                           "type": "collection",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
-                                                              "children": Array [
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                  ],
-                                                                  "title": "bezier-out-tangents",
-                                                                  "type": "array",
-                                                                },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1232,14 +1216,14 @@ Object {
                                                                   "title": "bezier-out-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1248,14 +1232,30 @@ Object {
                                                                   "title": "bezier-out-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                  ],
+                                                                  "title": "bezier-out-tangents",
+                                                                  "type": "array",
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1273,18 +1273,18 @@ Object {
                                                           "title": "bezier-out-tangents",
                                                           "type": "collection",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
-                                                              "children": Array [
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 289.625,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": -225.375,
                                                                       "valueType": "number",
@@ -1293,14 +1293,14 @@ Object {
                                                                   "title": "bezier-vertices",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 289.625,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 225.375,
                                                                       "valueType": "number",
@@ -1309,14 +1309,14 @@ Object {
                                                                   "title": "bezier-vertices",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": -289.625,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 225.375,
                                                                       "valueType": "number",
@@ -1325,14 +1325,14 @@ Object {
                                                                   "title": "bezier-vertices",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": -289.625,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": -225.375,
                                                                       "valueType": "number",
@@ -1372,11 +1372,11 @@ Object {
                                       "title": "shape-path",
                                       "type": "object",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "st",
                                               "valueType": "string",
@@ -1386,9 +1386,9 @@ Object {
                                           "title": "shape-type",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "Stroke 1",
                                               "valueType": "string",
@@ -1398,9 +1398,9 @@ Object {
                                           "title": "name",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
@@ -1410,9 +1410,9 @@ Object {
                                           "title": "line-cap-butt",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
@@ -1422,9 +1422,9 @@ Object {
                                           "title": "line-join-miter",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 4,
                                               "valueType": "number",
@@ -1434,13 +1434,13 @@ Object {
                                           "title": "miter-limit-value",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1450,9 +1450,9 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 100,
                                                       "valueType": "number",
@@ -1471,13 +1471,13 @@ Object {
                                           "title": "stroke-opacity",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1487,9 +1487,9 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 28,
                                                       "valueType": "number",
@@ -1508,13 +1508,13 @@ Object {
                                           "title": "stroke-width",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1524,21 +1524,21 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 1,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 1,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 1,
                                                           "valueType": "number",
@@ -1565,11 +1565,11 @@ Object {
                                       "title": "shape-stroke",
                                       "type": "object",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "fl",
                                               "valueType": "string",
@@ -1579,9 +1579,9 @@ Object {
                                           "title": "shape-type",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "Fill 1",
                                               "valueType": "string",
@@ -1591,13 +1591,13 @@ Object {
                                           "title": "name",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1607,21 +1607,21 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0.8589,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0.0137,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0.0137,
                                                           "valueType": "number",
@@ -1644,9 +1644,9 @@ Object {
                                           "title": "shape-fill-color",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
@@ -1656,13 +1656,13 @@ Object {
                                           "title": "fill-rule-non-zero",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1672,9 +1672,9 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 100,
                                                       "valueType": "number",
@@ -1697,11 +1697,11 @@ Object {
                                       "title": "shape-fill",
                                       "type": "object",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "sh",
                                               "valueType": "string",
@@ -1711,9 +1711,9 @@ Object {
                                           "title": "shape-type",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "Path 2",
                                               "valueType": "string",
@@ -1723,9 +1723,9 @@ Object {
                                           "title": "name",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
@@ -1735,13 +1735,13 @@ Object {
                                           "title": "shape-direction-clockwise",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -1751,13 +1751,13 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
                                                               "type": "primitive",
                                                               "value": true,
                                                               "valueType": "boolean",
@@ -1767,34 +1767,18 @@ Object {
                                                           "title": "bezier-closed",
                                                           "type": "attribute",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
-                                                              "children": Array [
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                  ],
-                                                                  "title": "bezier-in-tangents",
-                                                                  "type": "array",
-                                                                },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1803,14 +1787,14 @@ Object {
                                                                   "title": "bezier-in-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1819,14 +1803,30 @@ Object {
                                                                   "title": "bezier-in-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                  ],
+                                                                  "title": "bezier-in-tangents",
+                                                                  "type": "array",
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1844,34 +1844,18 @@ Object {
                                                           "title": "bezier-in-tangents",
                                                           "type": "collection",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
-                                                              "children": Array [
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                  ],
-                                                                  "title": "bezier-out-tangents",
-                                                                  "type": "array",
-                                                                },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
-                                                                      "type": "primitive",
-                                                                      "value": 0,
-                                                                      "valueType": "number",
-                                                                    },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1880,14 +1864,14 @@ Object {
                                                                   "title": "bezier-out-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1896,14 +1880,30 @@ Object {
                                                                   "title": "bezier-out-tangents",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                  ],
+                                                                  "title": "bezier-out-tangents",
+                                                                  "type": "array",
+                                                                },
+                                                                {
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "primitive",
+                                                                      "value": 0,
+                                                                      "valueType": "number",
+                                                                    },
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 0,
                                                                       "valueType": "number",
@@ -1921,18 +1921,18 @@ Object {
                                                           "title": "bezier-out-tangents",
                                                           "type": "collection",
                                                         },
-                                                        Object {
-                                                          "children": Array [
-                                                            Object {
-                                                              "children": Array [
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "children": [
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 173.531,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 143.469,
                                                                       "valueType": "number",
@@ -1941,14 +1941,14 @@ Object {
                                                                   "title": "bezier-vertices",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 173.531,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 594.219,
                                                                       "valueType": "number",
@@ -1957,14 +1957,14 @@ Object {
                                                                   "title": "bezier-vertices",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": -405.719,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 594.219,
                                                                       "valueType": "number",
@@ -1973,14 +1973,14 @@ Object {
                                                                   "title": "bezier-vertices",
                                                                   "type": "array",
                                                                 },
-                                                                Object {
-                                                                  "children": Array [
-                                                                    Object {
+                                                                {
+                                                                  "children": [
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": -405.719,
                                                                       "valueType": "number",
                                                                     },
-                                                                    Object {
+                                                                    {
                                                                       "type": "primitive",
                                                                       "value": 143.469,
                                                                       "valueType": "number",
@@ -2020,11 +2020,11 @@ Object {
                                       "title": "shape-path",
                                       "type": "object",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": "tr",
                                               "valueType": "string",
@@ -2034,13 +2034,13 @@ Object {
                                           "title": "shape-type",
                                           "type": "attribute",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2050,16 +2050,16 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 0,
                                                           "valueType": "number",
@@ -2082,13 +2082,13 @@ Object {
                                           "title": "anchor-point",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2098,16 +2098,16 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": 100,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": 100,
                                                           "valueType": "number",
@@ -2130,13 +2130,13 @@ Object {
                                           "title": "shape-transform-scale",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2146,16 +2146,16 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
-                                                      "children": Array [
-                                                        Object {
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [
+                                                        {
                                                           "type": "primitive",
                                                           "value": -158.375,
                                                           "valueType": "number",
                                                         },
-                                                        Object {
+                                                        {
                                                           "type": "primitive",
                                                           "value": -194.625,
                                                           "valueType": "number",
@@ -2178,13 +2178,13 @@ Object {
                                           "title": "translation",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2194,9 +2194,9 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2215,13 +2215,13 @@ Object {
                                           "title": "rotation-clockwise",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2231,9 +2231,9 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2252,13 +2252,13 @@ Object {
                                           "title": "shape-transform-skew-axis",
                                           "type": "element",
                                         },
-                                        Object {
-                                          "children": Array [
-                                            Object {
-                                              "children": Array [
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 0,
                                                       "valueType": "number",
@@ -2268,9 +2268,9 @@ Object {
                                                   "title": "animated",
                                                   "type": "attribute",
                                                 },
-                                                Object {
-                                                  "children": Array [
-                                                    Object {
+                                                {
+                                                  "children": [
+                                                    {
                                                       "type": "primitive",
                                                       "value": 100,
                                                       "valueType": "number",
@@ -2306,11 +2306,11 @@ Object {
                           "title": "shape-group",
                           "type": "object",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "st",
                                   "valueType": "string",
@@ -2320,9 +2320,9 @@ Object {
                               "title": "shape-type",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "Stroke 1",
                                   "valueType": "string",
@@ -2332,9 +2332,9 @@ Object {
                               "title": "name",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": 1,
                                   "valueType": "number",
@@ -2344,9 +2344,9 @@ Object {
                               "title": "line-cap-butt",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": 1,
                                   "valueType": "number",
@@ -2356,9 +2356,9 @@ Object {
                               "title": "line-join-miter",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": 4,
                                   "valueType": "number",
@@ -2368,13 +2368,13 @@ Object {
                               "title": "miter-limit-value",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -2384,9 +2384,9 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 100,
                                           "valueType": "number",
@@ -2405,13 +2405,13 @@ Object {
                               "title": "stroke-opacity",
                               "type": "element",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -2421,9 +2421,9 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 28,
                                           "valueType": "number",
@@ -2442,13 +2442,13 @@ Object {
                               "title": "stroke-width",
                               "type": "element",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -2458,21 +2458,21 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
                                             },
-                                            Object {
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
                                             },
-                                            Object {
+                                            {
                                               "type": "primitive",
                                               "value": 1,
                                               "valueType": "number",
@@ -2499,11 +2499,11 @@ Object {
                           "title": "shape-stroke",
                           "type": "object",
                         },
-                        Object {
-                          "children": Array [
-                            Object {
-                              "children": Array [
-                                Object {
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "fl",
                                   "valueType": "string",
@@ -2513,9 +2513,9 @@ Object {
                               "title": "shape-type",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": "Fill 1",
                                   "valueType": "string",
@@ -2525,13 +2525,13 @@ Object {
                               "title": "name",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -2541,21 +2541,21 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
-                                          "children": Array [
-                                            Object {
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
                                               "type": "primitive",
                                               "value": 0.8589,
                                               "valueType": "number",
                                             },
-                                            Object {
+                                            {
                                               "type": "primitive",
                                               "value": 0.0137,
                                               "valueType": "number",
                                             },
-                                            Object {
+                                            {
                                               "type": "primitive",
                                               "value": 0.0137,
                                               "valueType": "number",
@@ -2578,9 +2578,9 @@ Object {
                               "title": "shape-fill-color",
                               "type": "element",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
+                            {
+                              "children": [
+                                {
                                   "type": "primitive",
                                   "value": 1,
                                   "valueType": "number",
@@ -2590,13 +2590,13 @@ Object {
                               "title": "fill-rule-non-zero",
                               "type": "attribute",
                             },
-                            Object {
-                              "children": Array [
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 0,
                                           "valueType": "number",
@@ -2606,9 +2606,9 @@ Object {
                                       "title": "animated",
                                       "type": "attribute",
                                     },
-                                    Object {
-                                      "children": Array [
-                                        Object {
+                                    {
+                                      "children": [
+                                        {
                                           "type": "primitive",
                                           "value": 100,
                                           "valueType": "number",
@@ -2640,9 +2640,9 @@ Object {
                   "title": "shape-list",
                   "type": "collection",
                 },
-                Object {
-                  "children": Array [
-                    Object {
+                {
+                  "children": [
+                    {
                       "type": "primitive",
                       "value": 1,
                       "valueType": "number",
@@ -2665,9 +2665,9 @@ Object {
       "title": "composition",
       "type": "collection",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": "5.7.0",
           "valueType": "string",
@@ -2677,9 +2677,9 @@ Object {
       "title": "version",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": 60,
           "valueType": "number",
@@ -2689,9 +2689,9 @@ Object {
       "title": "framerate",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": 1800,
           "valueType": "number",
@@ -2701,9 +2701,9 @@ Object {
       "title": "out-point",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
+    {
+      "children": [
+        {
           "type": "primitive",
           "value": 0,
           "valueType": "number",
@@ -2713,10 +2713,10 @@ Object {
       "title": "in-point",
       "type": "attribute",
     },
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [],
+    {
+      "children": [
+        {
+          "children": [],
           "title": "assets-children",
           "type": "array",
         },

@@ -20,10 +20,6 @@
     "npm": ">=9.5.0"
   },
   "main": "dist/index.js",
-  "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js"
-  },
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -32,6 +28,10 @@
         "dist/index.d.ts"
       ]
     }
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*.js"
   },
   "files": [
     "dist"
@@ -58,17 +58,17 @@
   },
   "dependencies": {
     "@lottiefiles/last": "workspace:*",
-    "unist-builder": "3.0.1"
+    "unist-builder": "4.0.0"
   },
   "devDependencies": {
-    "@jest/globals": "29.7.0",
+    "@jest/globals": "30.4.1",
     "@lottie-animation-community/lottie-types": "1.2.0",
     "@lottiefiles/jest-config": "1.0.0",
-    "@types/jest": "29.5.8",
-    "@types/unist": "2.0.7",
+    "@types/jest": "30.0.0",
+    "@types/unist": "3.0.3",
     "esbuild": "0.28.1",
     "tsup": "8.5.1",
-    "typescript": "4.7.4"
+    "typescript": "6.0.3"
   },
   "publishConfig": {
     "access": "public",

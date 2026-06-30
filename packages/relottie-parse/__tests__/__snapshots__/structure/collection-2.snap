@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`parse() fixtures structure Test in collection-2.json should parse correctly 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [],
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
               "title": "custom",
               "type": "array",
             },
-            Object {
-              "children": Array [],
+            {
+              "children": [],
               "title": "custom",
               "type": "array",
             },

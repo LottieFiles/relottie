@@ -26,7 +26,7 @@ export type FileSizeOptions = Parameters<typeof filesize>[1];
  * @param jsonFile - JSON file
  * @returns JSON file size in bytes
  */
-export const getByteSize = (jsonFile: string | Buffer): number => {
+export const getByteSize = (jsonFile: string): number => {
   const data = new Blob([jsonFile]);
 
   return data.size;
