@@ -64,5 +64,18 @@ describe('parse() — input hardening', () => {
 
       expect(({} as Record<string, unknown>).polluted).toBeUndefined();
     });
+
+    it.each(['constructor', 'toString', 'hasOwnProperty', '__proto__'])(
+      'resolves an entity lookup for the inherited-prototype-shaped key "%s" without throwing a TypeError',
+      (key) => {
+        // entities.ts looks up `entity.required[key]` / `entity.known[key]` — these keys
+        // resolve to inherited Object.prototype members on a plain-object map, which the
+        // Object.hasOwn guard must treat as absent rather than crashing or misresolving.
+        const doc = `{"v":"5.5.2","fr":0,"ip":0,"op":10,"w":1,"h":1,"ddd":0,"layers":[{"ty":4,"${key}":1}]}`;
+
+        expect(() => parseDoc(doc)).not.toThrow(TypeError);
+        expect(({} as Record<string, unknown>).polluted).toBeUndefined();
+      },
+    );
   });
 });
