@@ -21,7 +21,7 @@ export interface StringifyFileData extends Data {
 export function stringify(node: NodeValue, _file: VFile, settings: SettingsOptions = {}): string {
   const options: StringifyOptions = { ...DEFAULT_OPTIONS, ...settings.stringify };
 
-  const lottieJson = evaluate(node);
+  const lottieJson = evaluate(node, options.maxDepth);
 
   return JSON.stringify(lottieJson, null, options.indent);
 }

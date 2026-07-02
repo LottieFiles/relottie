@@ -29,6 +29,13 @@ describe('evaluate() — recursion depth guard', () => {
 
     expect(() => evaluate(tree)).not.toThrow();
   });
+
+  test('honours a custom maxDepth', () => {
+    const tree = rt([el('e', 'metadata', buildNested(5))]);
+
+    expect(() => evaluate(tree, 3)).toThrow(/AST nesting depth exceeds the maximum of 3/u);
+    expect(() => evaluate(tree, 10)).not.toThrow();
+  });
 });
 
 describe('evaluate() — null-prototype objects', () => {

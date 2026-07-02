@@ -1,6 +1,6 @@
 ---
 '@lottiefiles/relottie-parse': minor
-'@lottiefiles/relottie-stringify': patch
+'@lottiefiles/relottie-stringify': minor
 '@lottiefiles/relottie-metadata': patch
 ---
 
@@ -17,7 +17,8 @@ Harden parsing of untrusted Lottie JSON.
   lookups and accumulators use null-prototype objects / `Object.hasOwn` guards
   to avoid inherited-property confusion. Adds regression tests for the depth /
   size / malformed-JSON / prototype-key paths.
-- **relottie-stringify**: `evaluate` now enforces a recursion depth limit
-  (`1024`) and builds objects with a null prototype.
+- **relottie-stringify**: `evaluate` now enforces a recursion depth limit and
+  builds objects with a null prototype. A new `stringify` option, `maxDepth`
+  (default `1024`), lets callers tune the limit.
 - **relottie-metadata**: numeric `0` and empty-string values are no longer
   dropped by a falsy guard; `getFileSize` no longer throws on malformed input.

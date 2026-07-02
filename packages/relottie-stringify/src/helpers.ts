@@ -13,21 +13,23 @@ export interface JSONObject {
 export interface JSONArray extends Array<JSONValue> {}
 
 /**
- * Maximum AST nesting depth `evaluate` will recurse through before bailing
- * out. Guards against stack-overflow denial-of-service from a pathologically
- * deep tree (well beyond any real-world Lottie, which nests ~20 levels).
+ * Default maximum AST nesting depth `evaluate` will recurse through before
+ * bailing out. Guards against stack-overflow denial-of-service from a
+ * pathologically deep tree (well beyond any real-world Lottie, which nests
+ * ~20 levels).
  */
-const MAX_EVALUATE_DEPTH = 1024;
+export const DEFAULT_MAX_EVALUATE_DEPTH = 1024;
 
 /**
  * Evaluates a Lottie AST node into a JavaScript value.
  * @param node - The AST node to evaluate.
+ * @param maxDepth - Maximum recursion depth before bailing out with a `RangeError`.
  * @param depth - Current recursion depth (internal).
  * @returns The JavaScript value for the node.
  */
-export function evaluate(node: NodeValue, depth = 0): JSONValue {
-  if (depth > MAX_EVALUATE_DEPTH) {
-    throw new RangeError(`relottie-stringify: AST nesting depth exceeds the maximum of ${MAX_EVALUATE_DEPTH}`);
+export function evaluate(node: NodeValue, maxDepth: number = DEFAULT_MAX_EVALUATE_DEPTH, depth = 0): JSONValue {
+  if (depth > maxDepth) {
+    throw new RangeError(`relottie-stringify: AST nesting depth exceeds the maximum of ${maxDepth}`);
   }
 
   const getObjectValue = (objectLikeNode: Root | ObjectNode): JSONObject => {
@@ -41,7 +43,7 @@ export function evaluate(node: NodeValue, depth = 0): JSONValue {
       const value = member.children[0];
 
       if (value) {
-        objectValue[key] = evaluate(value, depth + 1);
+        objectValue[key] = evaluate(value, maxDepth, depth + 1);
       }
     });
 
@@ -68,16 +70,16 @@ export function evaluate(node: NodeValue, depth = 0): JSONValue {
       }
 
     case 'attribute':
-      return node.children[0] ? evaluate(node.children[0], depth + 1) : null;
+      return node.children[0] ? evaluate(node.children[0], maxDepth, depth + 1) : null;
 
     case 'collection':
-      return node.children[0] ? evaluate(node.children[0], depth + 1) : null;
+      return node.children[0] ? evaluate(node.children[0], maxDepth, depth + 1) : null;
 
     case 'element':
-      return node.children[0] ? evaluate(node.children[0], depth + 1) : null;
+      return node.children[0] ? evaluate(node.children[0], maxDepth, depth + 1) : null;
 
     case 'array':
-      return node.children.map((child) => evaluate(child, depth + 1));
+      return node.children.map((child) => evaluate(child, maxDepth, depth + 1));
 
     case 'root':
       return getObjectValue(node);
