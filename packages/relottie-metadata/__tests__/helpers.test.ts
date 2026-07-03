@@ -2,7 +2,41 @@
  * Copyright 2024 Design Barn Inc.
  */
 
-import { isHexValid } from '../src';
+import { VFile } from 'vfile';
+
+import { getFileSize, isHexValid } from '../src';
+import { DEFAULT_FILESIZE_OPTIONS } from '../src/options.js';
+
+describe('getFileSize()', () => {
+  test('measures the canonical re-serialized byte size for valid JSON', () => {
+    const file = new VFile('{"a":   1}');
+
+    const result = getFileSize(file, DEFAULT_FILESIZE_OPTIONS);
+
+    expect(result.bytes).toBe(JSON.stringify(JSON.parse('{"a":   1}')).length);
+  });
+
+  test('falls back to the raw value instead of throwing on malformed JSON', () => {
+    const file = new VFile('{not valid json');
+
+    expect(() => getFileSize(file, DEFAULT_FILESIZE_OPTIONS)).not.toThrow();
+
+    const result = getFileSize(file, DEFAULT_FILESIZE_OPTIONS);
+
+    expect(result.bytes).toBe('{not valid json'.length);
+  });
+
+  test('falls back to the raw value instead of throwing on pathologically nested JSON', () => {
+    const deep = '['.repeat(50_000) + ']'.repeat(50_000);
+    const file = new VFile(deep);
+
+    expect(() => getFileSize(file, DEFAULT_FILESIZE_OPTIONS)).not.toThrow();
+
+    const result = getFileSize(file, DEFAULT_FILESIZE_OPTIONS);
+
+    expect(result.bytes).toBe(deep.length);
+  });
+});
 
 // Import the function to be tested
 describe('isValidHexColor', () => {

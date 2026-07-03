@@ -33,6 +33,14 @@ describe('stringify()', () => {
 
     expect(String(result)).toEqual(output);
   });
+
+  test('honours a custom maxDepth via SettingsOptions', () => {
+    const tree = rt([el('meta', 'metadata', ob('custom', [at('a', 'author', pt('LottieFiles'))]))]);
+
+    expect(() => stringify(tree, new VFile(), { stringify: { maxDepth: 1 } })).toThrow(
+      /AST nesting depth exceeds the maximum of 1/u,
+    );
+  });
 });
 
 describe('relottie-stringify', () => {
@@ -41,5 +49,11 @@ describe('relottie-stringify', () => {
 
     expect(file.data['stringify']).toEqual(undefined);
     expect(String(file.value)).toEqual(lottie);
+  });
+
+  test('honours a custom maxDepth passed to the plugin', () => {
+    expect(() =>
+      unified().use(relottieParse).use(relottieStringify, { maxDepth: 0 }).processSync('{"v":"5.5.7","fr":30}'),
+    ).toThrow(/AST nesting depth exceeds the maximum of 0/u);
   });
 });

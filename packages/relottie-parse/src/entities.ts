@@ -2176,7 +2176,9 @@ export const getEntityData = <T extends AnyTitle>(
   entity: EntityMap<T>,
   type: EntityType,
 ): Entity<T> => {
-  const requiredMap = entity.required[key] || {};
+  // `key` is attacker-controlled; guard with hasOwn so inherited members
+  // (`__proto__`, `constructor`, `toString`, …) cannot resolve to a value.
+  const requiredMap = (Object.hasOwn(entity.required, key) && entity.required[key]) || {};
   const requiredTitle = requiredMap[parentTitle];
 
   if (requiredTitle) {
@@ -2188,7 +2190,7 @@ export const getEntityData = <T extends AnyTitle>(
     };
   }
 
-  const knownMap = entity.known[key] || {};
+  const knownMap = (Object.hasOwn(entity.known, key) && entity.known[key]) || {};
   const title = knownMap[parentTitle] || (CUSTOM as T);
 
   return {
