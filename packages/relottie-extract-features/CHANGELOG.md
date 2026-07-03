@@ -1,5 +1,12 @@
 # @lottiefiles/relottie-extract-features
 
+## 1.16.0
+
+### Patch Changes
+
+- Updated dependencies [2df1aa9]
+  - @lottiefiles/last@1.16.0
+
 ## 1.15.0
 
 ### Patch Changes
