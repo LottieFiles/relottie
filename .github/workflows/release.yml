@@ -159,7 +159,19 @@ jobs:
           npm init -y >/dev/null
           echo "$pkgs" | while IFS= read -r pkg; do
             echo "::group::Verifying $pkg"
-            npm install --no-save --ignore-scripts "$pkg"
+            # Registry metadata can lag briefly right after publish, so retry
+            # on failure instead of erroring out on a transient ETARGET.
+            for attempt in 1 2 3 4 5; do
+              if npm install --no-save --ignore-scripts "$pkg"; then
+                break
+              fi
+              if [ "$attempt" -eq 5 ]; then
+                echo "::error::$pkg not resolvable after $attempt attempts"
+                exit 1
+              fi
+              echo "Retrying in $((attempt * 10))s (attempt $attempt/5)..."
+              sleep $((attempt * 10))
+            done
             npm audit signatures
             echo "::endgroup::"
           done
