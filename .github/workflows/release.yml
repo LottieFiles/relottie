@@ -21,7 +21,7 @@ jobs:
       contents: read
     strategy:
       matrix:
-        node-version: ['20']
+        node-version: ['24']
     steps:
       - name: 🛡️ Harden runner
         uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
@@ -90,7 +90,7 @@ jobs:
     if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
     strategy:
       matrix:
-        node-version: ['20']
+        node-version: ['24']
 
     permissions:
       contents: write # Allow creating a release in the repository
@@ -125,8 +125,30 @@ jobs:
       - name: 📥 Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
 
-      - name: ⬆️ Update npm for OIDC trusted publishing
-        run: npm install -g npm@latest
+      - name: 🔎 Verify release toolchain versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm_version="$(npm --version)"
+          echo "npm $npm_version"
+          node -e '
+            const match = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/.exec(
+              process.argv[1],
+            )
+            const [major, minor, patch] = match ? match.slice(1).map(Number) : []
+            const supportsTrustedPublishing =
+              match !== null &&
+              (major > 11 ||
+                (major === 11 && (minor > 5 || (minor === 5 && patch >= 1))))
+
+            if (!supportsTrustedPublishing) {
+              console.error(
+                `::error::npm ${process.argv[1]} does not support OIDC trusted publishing (>=11.5.1)`,
+              )
+              process.exit(1)
+            }
+          ' "$npm_version"
 
       - name: 🚀 Create Release Pull Request or Release to NPM
         id: changesets
@@ -183,7 +205,7 @@ jobs:
     if: ${{ github.repository == 'LottieFiles/relottie' && github.event_name == 'push' }}
     strategy:
       matrix:
-        node-version: ['20']
+        node-version: ['24']
 
     permissions:
       contents: write # Allow creating a release in the repository
