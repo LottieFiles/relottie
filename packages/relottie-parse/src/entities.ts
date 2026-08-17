@@ -389,7 +389,7 @@ export const objectEntity: NoKeyEntityMap = {
   [ET.animatedShapeProp]: {
     ...animatedShapeProp,
   },
-  [ET.animatedShapeBezier]: {
+  [ET.animatedShapeStaticBezier]: {
     defaultTitle: OT.bezier,
   },
   [ET.animatedColorProp]: {
@@ -1799,7 +1799,7 @@ export const elementEntity: EntityMap<ElementTitle> = {
       [ET.textAnimatorData]: ET.textAnimatedDocument,
     },
     k: {
-      [OT.animatedShapeStatic]: ET.animatedShapeBezier,
+      [OT.animatedShapeStatic]: ET.animatedShapeStaticBezier,
       [ET.animatedGradientColors]: ET.animatedMultidimensionalProp,
     },
     lv: { [ET.layerAudioSettings]: ET.audioLevel },
