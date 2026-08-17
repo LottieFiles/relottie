@@ -37,29 +37,29 @@
     "type-check": "turbo run type-check"
   },
   "devDependencies": {
-    "@changesets/cli": "2.31.0",
+    "@changesets/cli": "3.0.0",
     "@commitlint/cli": "21.0.1",
     "@lottiefiles/commitlint-config": "2.0.0",
     "@lottiefiles/eslint-plugin": "3.0.0",
     "@lottiefiles/jest-config": "1.0.0",
     "@lottiefiles/prettier-config": "3.0.0",
     "@lottiefiles/tsconfig": "2.0.0",
-    "@size-limit/file": "12.1.0",
-    "@size-limit/webpack": "12.1.0",
+    "@size-limit/file": "13.0.3",
+    "@size-limit/webpack": "13.0.3",
     "cross-env": "10.1.0",
     "esbuild": "0.28.1",
-    "eslint": "7.32.0",
+    "eslint": "10.8.1",
     "husky": "9.1.7",
     "jest": "30.4.2",
     "jest-specific-snapshot": "8.0.0",
     "lint-staged": "17.0.5",
-    "npm-check-updates": "22.2.0",
+    "npm-check-updates": "23.0.2",
     "prettier": "3.8.3",
     "remark-cli": "12.0.1",
-    "size-limit": "12.1.0",
+    "size-limit": "13.0.3",
     "syncpack": "15.3.1",
     "turbo": "2.9.14",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "pnpm": {
     "overrides": {
